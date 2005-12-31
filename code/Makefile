@@ -1,9 +1,10 @@
-VERSION = 1.2
+VERSION = 1.3
 ZIPFILES = *.TSP *.TUP README.txt
 ZIPFILE = /tmp/Tischendorf-$(VERSION).zip
 
 CLEANFILES = out.txt *~ *.pyc *.TD2 *.TSP *.TUP \
-             $(DERIVED_MQLFILES) $(DERIVED_TXTFILES)
+             $(DERIVED_MQLFILES) $(DERIVED_TXTFILES) \
+             README.txt
 
 DERIVED_MQLFILES = Byzantine.mql Stephens.mql \
                    tischendorfmorph.mql tischendorf.mql \

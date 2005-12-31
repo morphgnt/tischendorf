@@ -23,6 +23,17 @@ def read_NA27(read_what):
     else:
         return True
 
+def read_StrongsLemmas():
+    mapping = StrongsMapping()
+    mapping.read("../text/lemmas/lemmatable.txt")
+    return mapping
+
+def read_ANLEXLemmas():
+    mapping = StrongsMapping()
+    mapping.read("../text/lemmas/lemmatable_ANLEX.txt")
+    return mapping
+
+
 book_list_OLB = ["MT", "MR", "LU", "JOH", "AC", "RO", "1CO", "2CO",
                  "GA", "EPH", "PHP", "COL", "1TH", "2TH", "1TI", "2TI",
                  "TIT", "PHM", "HEB", "JAS", "1PE", "2PE", "1JO", "2JO", "3JO",
@@ -41,125 +52,63 @@ class Reader:
         self.books = []
         self.lexicon = None
 
-    def read_MT(self):
-        self.read_book("MT",0)
-
-    def read_MT(self, read_what):
-        self.read_book("MT",read_what)
-
-    def read_MT_Tisch(self):
-        self.read_book("mt",read_tischendorf)
-
-    def read_MT_NA27(self):
-        self.read_book("MT",1)
-
-    def read_GA(self):
-        self.read_book("GA",0)
-
     def read_NT(self, read_what):
         for bkname in book_list_OLB:
-            if read_what == read_tischendorf:
-                self.read_book(bkname.lower(), read_what)
-            else:
-                self.read_book(bkname, read_what)
-            
-
-    def read_NT_write_SFM(self):
-        mapping = StrongsMapping()
-        mapping.read("./lemmatable.txt")
-        cur_monad = 1
-        for index in range(0,27):
-            olb_bookname = book_list_OLB[index]
-            self.read_book(olb_bookname, read_wh_only)
-            self.books[-1].applyLemma(mapping, kStrongs)
-            gdb_bookname = book_list_UBS[index]
-            cur_monad = self.writeSFM(gdb_bookname + ".TD2", self.books[-1], cur_monad)
+            self.read_book(bkname, read_what)
 
     def write_SFM(self):
         cur_monad = 1
         for index in range(0,27):
             gdb_bookname = book_list_UBS[index]
-            cur_monad = self.writeSFM(gdb_bookname + ".TD2", self.books[index], cur_monad)
+            cur_monad = self.writeBookAsSFM(gdb_bookname + ".TD2", self.books[index], cur_monad)
+
+    def writeBookAsSFM(self, filename, book, cur_monad):
+        f = open(filename, "w")
+        cur_monad = book.writeSFM(f, cur_monad)
+        f.close()
+        return cur_monad
 
     def write_TUP(self):
         for index in range(0,27):
             olb_bookname = book_list_OLB[index]
             cur_monad = self.write_book_MORPH_style(index, olb_bookname, "./", "TUP", kUnicode)
 
-
-    def read_NT_AccentedTischendorf_write_SFM(self):
-        mapping = StrongsMapping()
-        mapping.read("./lemmatable.txt")
+    def write_StrippedLinear(self):
         cur_monad = 1
         for index in range(0,27):
             olb_bookname = book_list_OLB[index]
-            self.read_book(olb_bookname, read_AccentedTischendorf)
-            self.books[-1].applyLemma(mapping, kStrongs)
-            gdb_bookname = book_list_UBS[index]
-            cur_monad = self.writeSFM(gdb_bookname + ".TD2", self.books[-1], cur_monad)
+            self.books[index].write_StrippedLinear(olb_bookname + ".SLN")
 
-    def read_NT_AccentedTischendorf_write_stripped_linear(self):
+    def write_Linear(self):
         cur_monad = 1
         for index in range(0,27):
             olb_bookname = book_list_OLB[index]
-            self.read_book(olb_bookname, read_AccentedTischendorf)
-            self.books[-1].write_StrippedLinear(olb_bookname + ".SLN")
+            self.books[index].write_Linear(olb_bookname + ".SLN")
 
-    def read_NT_AccentedTischendorf_write_linear(self):
-        cur_monad = 1
-        for index in range(0,27):
-            olb_bookname = book_list_OLB[index]
-            self.read_book(olb_bookname, read_AccentedTischendorf)
-            self.books[-1].write_Linear(olb_bookname + ".SLN")
-
-    def read_NT_AccentedTischendorf(self):
-        cur_monad = 1
-        for index in range(0,27):
-            olb_bookname = book_list_OLB[index]
-            self.read_book(olb_bookname, read_AccentedTischendorf)
-
-    def read_NT_write_MQL(self, mqlfilename, read_what, bUseOldStyle):
-        mapping = StrongsMapping()
-        mapping.read("./lemmatable.txt")
+    def write_MQL(self, mqlfilename, bUseOldStyle):
         fout = open(mqlfilename, "w")
-        cur_monad = 1
         for index in range(0,27):
-            olb_bookname = book_list_OLB[index]
-            self.read_book(olb_bookname, read_what)
-            self.books[index].applyLemma(mapping, kStrongs)
-            gdb_bookname = book_list_UBS[index]
             self.books[index].writeMQL(fout, bUseOldStyle)
         fout.close()
 
-        
 
     def applyLemma(self, lemmaType):
-        mapping = StrongsMapping()
         if lemmaType == kStrongs:
-            mapping.read("./lemmatable.txt")
+            mapping = read_StrongsLemmas()
         else:
-            mapping.read("./lemmatable_ANLEX.txt")
-        for index in range(0,27):
+            mapping = read_ANLEXLemmas()
+        for index in range(0,len(self.books)):
             self.books[index].applyLemma(mapping, lemmaType)
         
+    def applyMappingStrongs(self):
+        self.applyLemma(kStrongs)
 
-    def read_NA27_ApplyMapping(self):
-        mapping = StrongsMapping()
-        mapping.read("./lemmatable.txt")
-        cur_monad = 1
-        for index in range(0,27):
-            olb_bookname = book_list_OLB[index]
-            self.read_book(olb_bookname, read_na27_only)
-            self.books[-1].applyLemma(mapping, kANLEX)
+    def applyMappingANLEX(self):
+        self.applyLemma(kANLEX)
 
-    def read_NA27_ApplyMapping_MT(self):
-        mapping = StrongsMapping()
-        mapping.read("./lemmatable.txt")
-        cur_monad = 1
-        for index in range(0,1):
-            olb_bookname = book_list_OLB[index]
-            self.read_book(olb_bookname, read_na27_only)
-            self.books[-1].applyLemma(mapping, kANLEX)
+    def applyMappings(self):
+        self.applyMappingStrongs()
+        self.applyMappingANLEX()
 
     def read_book(self, bookname, read_what):
         if self.suffix == "":
@@ -171,22 +120,6 @@ class Reader:
         book = Book(filename)
         self.books.append(book)
         self.current_monad = book.read(self.current_monad, read_what) + 1
-
-    def applyMappingStrongs(self):
-        strongsmapping = StrongsMapping()
-        strongsmapping.read("./lemmatable.txt")
-        for index in range(0,len(self.books)):
-            self.books[index].applyLemma(strongsmapping, kStrongs)
-
-    def applyMappingANLEX(self):
-        ANLEXmapping = StrongsMapping()
-        ANLEXmapping.read("./lemmatable_ANLEX.txt")
-        for index in range(0,len(self.books)):
-            self.books[index].applyLemma(ANLEXmapping, kANLEX)
-
-    def applyMappings(self):
-        self.applyMappingStrongs()
-        self.applyMappingANLEX()
 
     def writeBooks_MORPH_style(self, output_dir, output_suffix, encodingStyle):
         for index in range(0,27):
@@ -214,21 +147,8 @@ class Reader:
         book = self.books[index]
         book.write_subset_MORPH_style(f, word_predicate, manualanalyses, encodingStyle)
 
-    def write_MQL(self, filename, bUseOldStyle):
-        f = open(filename, "w")
-        for b in self.books:
-            b.writeMQL(f, bUseOldStyle)
-        f.close()
-
-    def writeSFM(self, filename, book, cur_monad):
-        f = open(filename, "w")
-        cur_monad = book.writeSFM(f, cur_monad)
-        f.close()
-        return cur_monad
-
     def compareTischendorf(self, tischrd, lexicon, manualanalyses):
-        mapping = StrongsMapping()
-        mapping.read("./lemmatable.txt")
+        mapping = read_StrongsLemmas()
         self.produceLexicon(lexicon)
         tischrd.addVersesToVerseDicts()
         for index in range(0, len(self.books)):
