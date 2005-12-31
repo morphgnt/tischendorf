@@ -321,21 +321,21 @@ class Verse:
             base_ref = "%s %d:%d" % (reader.book_list_OLB[self.booknumber-1], int(self.chapter), int(self.verse))
         return base_ref
         
-    def write_MORPH_style(self, f, verse_copy):
+    def write_MORPH_style(self, f, verse_copy, encodingStyle):
         base_ref = self.get_MORPH_ref(verse_copy, False)
         index = 1
         for w in self.words:
-            w.write_MORPH_style(f, base_ref, index, True)
+            w.write_MORPH_style(f, base_ref, index, True, encodingStyle)
             index += 1
 
-    def write_subset_MORPH_style(self, f, verse_copy, word_predicate, manualanalyses):
+    def write_subset_MORPH_style(self, f, verse_copy, word_predicate, manualanalyses, encodingStyle):
         base_ref = self.get_MORPH_ref(verse_copy)
         index = 1
         for w in self.words:
             thisref = "%s.%d" % (base_ref, index)
             #thisref = "%s" % (base_ref, index)            
             if manualanalyses.getTuple(thisref) <> None or word_predicate(w):
-                w.write_MORPH_style(f, base_ref, index, False)
+                w.write_MORPH_style(f, base_ref, index, False, encodingStyle)
             index += 1
 
     def write_StrippedLinear(self, f, verse_copy):

@@ -25,6 +25,8 @@ reolbstrip = re.compile("[\\[\\]<>]+")
 reaccentsstrip = re.compile("[/+\\|\\(\\)\\\\=,.;':\*]+")
 
 reUpperCaseBETA = re.compile(r'([A-Z])')
+reMoveDiacriticsBETA = re.compile(r'\*([AEHIOUW])([\(\)][/=\\|]*)')
+reMoveBreathingRhoBETA = re.compile(r'\*R([\(\)])')
 
 alternate_spellings = { "SAMAREITWN" : "SAMARITWN" ,
                         "OUTWS" : "OUTW",
@@ -165,7 +167,7 @@ alternate_Tischendorf_spellings = { "DAUID" : [ "DAUEID" ],
                                     "PAIDEIAN" : [ "PAIDIAN" ],
                                     "PAIDEIAS" : [ "PAIDIAS" ],
                                     "PALIGGENESIAS" : [ "PALINGENESIAS" ],
-                                    "PANDOXEION" : [ "PANDOXION" ],
+                                    "PANDOXEION" : [ "PANDOKION" ],
                                     "PILATOU" : [ "PEILATOU" ],
                                     "QRHSKEIA" : [ "QRHSKIA" ],
                                     "QRHSKEIAS" : [ "QRHSKIAS" ],
@@ -385,6 +387,8 @@ def MixedCaseBETAtoBETAtranslate(str):
 
 def MixedCaseBETAtoBETAtranslateWithStar(str):
     newstr = reUpperCaseBETA.sub(r'*\1', str)
+    newstr = reMoveDiacriticsBETA.sub(r'*\2\1', newstr)
+    newstr = reMoveBreathingRhoBETA.sub(r'*\1R', newstr)
     newstr = newstr.replace("(*", "*(").replace("(/*", "*(/").replace("(\\*", "*(\\").replace("(=*", "*(=").replace(")*", "*)").replace(")/*", "*)/").replace(")\\*", "*)\\").replace(")=*", "*)=")
     return newstr.translate(MixedCaseBETAtoBETAtrans)
 
@@ -453,15 +457,19 @@ class Word:
 
     def writeSFM(self, f, booknumber, chapter, verse, word_index, monad):
         print >>f, self.getSFMReference(f, booknumber, chapter, verse, word_index)
-        print >>f, "\\text %s\r" % OLBtoGALATIAtranslate(self.surface)
+        if self.accented_surface != "":
+            surfaceBETA = self.beta2galatia(self.accented_surface)
+        else:
+            surfaceBETA = OLBtoBETAtranslate(self.surface)
+        print >>f, "\\text %s\r" % surfaceBETA
         if len(self.parsing) > 0:
             print >>f, "\\pars %s\r" % self.parsing
         print >>f, "\\monad %d\r" % monad
-        if self.strongslemma == "":
+        if self.ANLEXlemma == "":
             #lemma = "NOLEMMA"
             raise Exception("Error: lemma is empty.")
         else:
-            lemma = self.strongslemma
+            lemma = self.ANLEXlemma
         if lemma != "":
             galatia = self.beta2galatia(lemma)
             print >>f, "\\lemma %s %s\r" % (self.getStrongs(), galatia)
@@ -765,7 +773,7 @@ class Word:
             self.Strongs1 = whword.Strongs1
             # FIXME: Should we add whword.Strongs2?
 
-    def write_MORPH_style(self, f, base_ref, index, bPrintLemma):
+    def write_MORPH_style(self, f, base_ref, index, bPrintLemma, encodingStyle):
         ref = "%s.%d" % (base_ref, index)
         #ref = "%s" % base_ref
         if self.parsing == "":
@@ -782,16 +790,28 @@ class Word:
             surf = self.accented_surface
         else:
             surf = OLBtoBETAtranslate(self.surface)
+
         if bPrintLemma:
             lemma = self.strongslemma
             ANLEXlemma = self.ANLEXlemma
             if lemma == "":
-                print "Error: Strong's lemma for strong's %d does not exist. ref=%s surface=%s prs=%s", strongs, ref, surf, prs
+                print "Error: Strong's lemma for strong's %s does not exist. ref=%s surface=%s prs=%s" % (str(strongs), ref, surf, prs)
                 lemma = "NOLEMMA"
                 ANLEXlemma = "NOLEMMA"
             if ANLEXlemma == "":
-                print "Error: ANLEX lemma for strong's %d does not exist. ref=%s surface=%s prs=%s", strongs, ref, surf, prs
+                print "Error: ANLEX lemma for strong's %s does not exist. ref=%s surface=%s prs=%s" % (str(strongs), ref, surf, prs)
                 ANLEXlemma = "NOLEMMA"
+
+        if encodingStyle == kBETA:
+            pass
+        elif encodingStyle == kUnicode:
+            lemma = self.beta2utf8(lemma)
+            ANLEXlemma = self.beta2utf8(ANLEXlemma)
+            surf = self.beta2utf8(surf)
+        else:
+            raise "Error: Unknown encodingStyle parameter = %s" % str(encodingStyle)
+
+        if bPrintLemma:
             print >>f, "%s %s %s %s %s ! %s" % (ref, surf, prs, strongs, lemma, ANLEXlemma)
         else:
             print >>f, "%s %s %s %s" % (ref, surf, prs, strongs)

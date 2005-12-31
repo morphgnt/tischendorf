@@ -2,6 +2,7 @@ from book import Book
 from strongsmapping import StrongsMapping
 from lexicon import Lexicon
 from kind import *
+from word import *
 
 read_wh_only = 0
 read_wh_and_na27 = 1
@@ -74,6 +75,18 @@ class Reader:
             gdb_bookname = book_list_UBS[index]
             cur_monad = self.writeSFM(gdb_bookname + ".TD2", self.books[-1], cur_monad)
 
+    def write_SFM(self):
+        cur_monad = 1
+        for index in range(0,27):
+            gdb_bookname = book_list_UBS[index]
+            cur_monad = self.writeSFM(gdb_bookname + ".TD2", self.books[index], cur_monad)
+
+    def write_TUP(self):
+        for index in range(0,27):
+            olb_bookname = book_list_OLB[index]
+            cur_monad = self.write_book_MORPH_style(index, olb_bookname, "./", "TUP", kUnicode)
+
+
     def read_NT_AccentedTischendorf_write_SFM(self):
         mapping = StrongsMapping()
         mapping.read("./lemmatable.txt")
@@ -113,11 +126,21 @@ class Reader:
         for index in range(0,27):
             olb_bookname = book_list_OLB[index]
             self.read_book(olb_bookname, read_what)
-            self.books[index].applyLemma(mapping)
+            self.books[index].applyLemma(mapping, kStrongs)
             gdb_bookname = book_list_UBS[index]
             self.books[index].writeMQL(fout, bUseOldStyle)
         fout.close()
 
+        
+
+    def applyLemma(self, lemmaType):
+        mapping = StrongsMapping()
+        if lemmaType == kStrongs:
+            mapping.read("./lemmatable.txt")
+        else:
+            mapping.read("./lemmatable_ANLEX.txt")
+        for index in range(0,27):
+            self.books[index].applyLemma(mapping, lemmaType)
         
 
     def read_NA27_ApplyMapping(self):
@@ -127,7 +150,7 @@ class Reader:
         for index in range(0,27):
             olb_bookname = book_list_OLB[index]
             self.read_book(olb_bookname, read_na27_only)
-            self.books[-1].applyLemma(mapping)
+            self.books[-1].applyLemma(mapping, kANLEX)
 
     def read_NA27_ApplyMapping_MT(self):
         mapping = StrongsMapping()
@@ -136,7 +159,7 @@ class Reader:
         for index in range(0,1):
             olb_bookname = book_list_OLB[index]
             self.read_book(olb_bookname, read_na27_only)
-            self.books[-1].applyLemma(mapping)
+            self.books[-1].applyLemma(mapping, kANLEX)
 
     def read_book(self, bookname, read_what):
         if self.suffix == "":
@@ -165,19 +188,19 @@ class Reader:
         self.applyMappingStrongs()
         self.applyMappingANLEX()
 
-    def writeBooks_MORPH_style(self, output_dir, output_suffix):
+    def writeBooks_MORPH_style(self, output_dir, output_suffix, encodingStyle):
         for index in range(0,27):
             olb_bookname = book_list_OLB[index]
-            self.write_book_MORPH_style(index, olb_bookname, output_dir, output_suffix)
+            self.write_book_MORPH_style(index, olb_bookname, output_dir, output_suffix, encodingStyle)
 
-    def writeSubset_MORPH_style(self, filename, word_predicate, manualanalyses):
+    def writeSubset_MORPH_style(self, filename, word_predicate, manualanalyses, encodingStyle):
         f = open(filename, "w")
         for index in range(0,27):
             olb_bookname = book_list_OLB[index]
-            self.write_subset_MORPH_style(f, index, word_predicate, manualanalyses)
+            self.write_subset_MORPH_style(f, index, word_predicate, manualanalyses, encodingStyle)
         f.close()
 
-    def write_book_MORPH_style(self, index, bookname, output_dir, output_suffix):
+    def write_book_MORPH_style(self, index, bookname, output_dir, output_suffix, encodingStyle):
         if output_suffix == "":
             print bookname
             filename = output_dir + "/" + bookname
@@ -185,13 +208,13 @@ class Reader:
             print bookname + "." + output_suffix
             filename = output_dir + "/" + bookname + "." + output_suffix
         book = self.books[index]
-        book.write_MORPH_style(filename)
+        book.write_MORPH_style(filename, encodingStyle)
         
-    def write_subset_MORPH_style(self, f, index, word_predicate, manualanalyses):
+    def write_subset_MORPH_style(self, f, index, word_predicate, manualanalyses, encodingStyle):
         book = self.books[index]
-        book.write_subset_MORPH_style(f, word_predicate, manualanalyses)
+        book.write_subset_MORPH_style(f, word_predicate, manualanalyses, encodingStyle)
 
-    def writeMQL(self, filename, bUseOldStyle):
+    def write_MQL(self, filename, bUseOldStyle):
         f = open(filename, "w")
         for b in self.books:
             b.writeMQL(f, bUseOldStyle)

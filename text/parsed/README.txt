@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 1.1
+                             Version 1.2
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
@@ -190,10 +190,10 @@ The format is as follows:
 - Up to ten fields (at least eight):
   - Book (corresponds to the filename, which is the Online Bible standard)
   - Chapter:Verse.word-within-verse
-  - The text (in TLG BETA encoding)
+  - The text
   - The morphological tag
   - The Strong's number
-  - The lemma in TLG BETA encoding, and in two versions:
+  - The lemma in two versions:
     - The first version, which corresponds to The NEW Strong's
       Complete Dictionary of Bible Words.
     - Followed by an "exclamation mark" ("!")
@@ -202,6 +202,10 @@ The format is as follows:
     There may be several words in each lemma.
 
 All Strong's numbers are single numbers with 1,2,3, or 4 digits.
+
+The text exists in two versions: One with a ".TSP" extension for each
+file, and one with a ".TUP" extension for each file. The former is in
+TLG BETA encoding, whereas the latter is in Unicode UTF-8.
 
 
 ChangeLog
@@ -212,5 +216,12 @@ v. 1.0 (2005-12-13): Initial release.
 v. 1.1 (2005-12-19):
    - Proofed the text against a facsimile, and made around 830 changes.
    - Changed a few parsings and lemmas.
+
+v. 1.2 (2005-12-27):
+   - Proofed the text against a facsimile, and made around 230 changes.
+   - Changed a few parsings.
+   - Rearranged diacritics such that they appear before a capital
+     letter, not after it.
+   - Fixed some Unicode-conversion errors.
 
 

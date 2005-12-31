@@ -22,3 +22,8 @@ def recognize(str):
 
 kStrongs = 0
 kANLEX = 1
+
+kOLB = 0
+kBETA = 1
+kUnicode = 2
+

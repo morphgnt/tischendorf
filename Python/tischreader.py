@@ -3,6 +3,7 @@ from book import Book
 from verse import Verse
 from word import Word
 from variant import *
+from kind import *
 
 tisch_book_list_OLB = ["mt", "mr", "lu", "joh", "ac", "ro", "1co", "2co",
                  "ga", "eph", "php", "col", "1th", "2th", "1ti", "2ti",
@@ -101,17 +102,17 @@ class TischReader:
             self.verse.words = words_list
             self.books[-1].verses.append(self.verse)
 
-    def writeAsMORPH(self, output_dir, output_suffix):
+    def writeAsMORPH(self, output_dir, output_suffix, encodingStyle):
         for index in range(0,27):
             olb_bookname = book_list_OLB[index]
-            self.write_book_MORPH_style(index, olb_bookname, output_dir, output_suffix)
+            self.write_book_MORPH_style(index, olb_bookname, output_dir, output_suffix, encodingStyle)
 
     def addVersesToVerseDicts(self):
         for index in range(0, len(self.books)):
             whbook = self.books[index]
             whbook.addVersesToVerseDict()
 
-    def write_book_MORPH_style(self, index, bookname, output_dir, output_suffix):
+    def write_book_MORPH_style(self, index, bookname, output_dir, output_suffix, encodingStyle):
         if output_suffix == "":
             print bookname
             filename = output_dir + "/" + bookname
@@ -119,7 +120,7 @@ class TischReader:
             print bookname + "." + output_suffix
             filename = output_dir + "/" + bookname + "." + output_suffix
         book = self.books[index]
-        book.write_MORPH_style(filename)
+        book.write_MORPH_style(filename, encodingStyle)
         
     
         

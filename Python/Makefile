@@ -1,4 +1,8 @@
-CLEANFILES = out.txt *~ *.pyc *.TD2 *.TSP \
+VERSION = 1.2
+ZIPFILES = *.TSP *.TUP README.txt
+ZIPFILE = /tmp/Tischendorf-$(VERSION).zip
+
+CLEANFILES = out.txt *~ *.pyc *.TD2 *.TSP *.TUP \
              $(DERIVED_MQLFILES) $(DERIVED_TXTFILES)
 
 DERIVED_MQLFILES = Byzantine.mql Stephens.mql \
@@ -46,3 +50,11 @@ UnAccented: RE.TSP
 
 Accented: Accented/RE.SLN
 	for f in Accented/*.SLN; do cat $$f | sed -e 's/\([0-9]\+\).[a-z]/\1/' > /tmp/SLN; mv /tmp/SLN $$f; done
+
+zip: README.txt
+	rm -f  $(ZIPFILE)
+	zip $(ZIPFILE) $(ZIPFILES)
+
+README.txt : ../text/Parsed/README.txt
+	cp $< $@
+

@@ -4,11 +4,13 @@ from lexicon import Lexicon
 from tischreader import TischReader
 import linearreader
 from manual_analyses import ManualAnalyses
+import kind
 
 byzbasedir = "/home/ulrikp/build/GNT/www-byztxt-com"
 WHParsedBasedir = "/projects/Tischendorf/Tisch/text/WHParsed"
 tischbasedir = "/projects/Tischendorf/Tisch/text/Unparsed"
 AccentedTischbasedir = "/projects/Tischendorf/Tisch/text/Accented"
+#AccentedTischbasedir = "/home/ulrikp/tmp/Tisch/text/Accented"
 ClintYaleAccentedTischbasedir = "/home/ulrikp/Ongoing/ClintYale4/OLB"
 tisch_out_basedir = "."
 
@@ -163,13 +165,32 @@ def read_Tischendorf_MT():
 
 def read_Tischendorf_writeMQL():
     rd = read_Tischendorf()
-    rd.writeMQL("tischendorf.mql", False)
+    rd.write_MQL("tischendorf.mql", False)
 
 def read_TSP_writeMQL():
     dir="."
     suffix = "TSP"
     rd = linearreader.LinearReader(dir, suffix)
-    rd.read_NT_write_MQL("tischendorfmorph.mql", reader.read_wh_only, False)
+    rd.read_NT(reader.read_wh_only)
+    rd.write_MQL("tischendorfmorph.mql", False) # False = bUseOldStyle
+    return rd
+
+def read_TSP_writeSFM():
+    dir="."
+    suffix = "TSP"
+    rd = linearreader.LinearReader(dir, suffix)
+    rd.read_NT(reader.read_wh_only)
+    rd.applyLemma(kind.kANLEX)
+    rd.write_SFM()
+    return rd
+
+def read_TSP_writeTUP():
+    dir="."
+    suffix = "TSP"
+    rd = linearreader.LinearReader(dir, suffix)
+    rd.read_NT(reader.read_wh_only)
+    rd.addVersesToVerseDicts()
+    rd.write_TUP()
     return rd
 
 def read_Tischendorf_WH_compare_them():
@@ -184,7 +205,7 @@ def read_Tischendorf_WH_compare_them():
     #lexicon = trstephrd.produceLexicon(lexicon)
     whrd.compareTischendorf(tischrd, lexicon, ma)
     tischrd.applyMappings()    
-    tischrd.writeBooks_MORPH_style(tisch_out_basedir, "TSP")
+    tischrd.writeBooks_MORPH_style(tisch_out_basedir, "TSP", kind.kBETA)
     lexicon = whrd.lexicon
     lexicon.writeLexicon("lexicon_nonunique.txt", False)
     tischlexicon = Lexicon()
@@ -194,21 +215,23 @@ def read_Tischendorf_WH_compare_them():
 def read_Tischendorf_WH_compare_them_writeAmbiguities():
     ma = ManualAnalyses("./manual_analyses.txt")
     tischrd = read_Tischendorf_WH_compare_them()
-    tischrd.writeSubset_MORPH_style("out.txt", myambiguityfinder,ma)
+    tischrd.writeSubset_MORPH_style("out.txt", myambiguityfinder,ma, kind.kBETA)
 
 def read_Tischendorf_WH_compare_them_writeMQL():
     tischrd = read_Tischendorf_WH_compare_them()
-    tischrd.writeMQL("tischendorfmorph.mql", False)
+    tischrd.write_MQL("tischendorfmorph.mql", False)
+
+def read_Tischendorf_WH_compare_them_writeSFM():
+    tischrd = read_Tischendorf_WH_compare_them()
+    tischrd.write_SFM()
 
 def read_Tischendorf_WH_MT_compare_them():
     tischrd = read_Tischendorf_MT()
-    whrd = read_WH_MT();
+    whrd = read_WH_MT()
     whrd.compareTischendorf(tischrd, lexicon)
-    #tischrd.writeSubset_MORPH_style("out.txt", myambiguityfinder)
     tischrd.applyMappings()    
     lexicon = whrd.lexicon
     lexicon.writeLexicon("lexicon_nonunique.txt", False)
-    #tischrd.writeMQL("tischendorfmorph.mql", False)
 
 
 def read_WH_write_lexicon():
@@ -226,7 +249,7 @@ def parseTischendorfBETA():
     tr = TischReader()
     tr.read_BETA_file("./Tischendorf.BETA.txt")
     tr.addVersesToVerseDicts()
-    tr.writeAsMORPH(".", "TBA")
+    tr.writeAsMORPH(".", "TBA", kind.kBETA)
 
 
 #read_Stephanus()
@@ -243,7 +266,6 @@ def parseTischendorfBETA():
 #read_WH_write_lexicon()
 #read_Tischendorf_WH_compare_them_writeAmbiguities()
 #read_Tischendorf_WH_MT_compare_them()
-#read_TSP_writeMQL()
 #getSingleStrongsList()
 #parseTischendorfBETA()
 #read_WH_add_lemmas()
@@ -252,5 +274,8 @@ def parseTischendorfBETA():
 #read_Tischendorf_WH_compare_them_writeMQL()
 #read_ClintYaleAccentedTischendorf_write_linear()
 #read_AccentedTischendorf_write_linear()
+#read_Tischendorf_WH_compare_them_writeSFM()
+#read_TSP_writeSFM()
 read_Tischendorf_WH_compare_them()
-
+#read_TSP_writeTUP()
+#read_TSP_writeMQL()

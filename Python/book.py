@@ -140,8 +140,24 @@ class Book:
             mysurface = myarr[2]
             mytag = myarr[3]
             mystrongs = myarr[4]
+            strongslemma = ""
+            ANLEXlemma = ""
+            if len(myarr) > 5:
+                whatamIdoing = kStrongs
+                strongslemmas = []
+                ANLEXlemmas = []
+                for mystr in myarr[5:]:
+                    if mystr == "!":
+                        whatamIdoing = kANLEX
+                    else:
+                        if whatamIdoing == kStrongs:
+                            strongslemmas.append(mystr)
+                        else:
+                            ANLEXlemmas.append(mystr)
+                strongslemma = " ".join(strongslemmas)
+                ANLEXlemma = " ".join(ANLEXlemmas)
             self.process_linear_verse(mychapterverse)
-            self.process_linear_word(mysurface, mytag, mystrongs)
+            self.process_linear_word(mysurface, mytag, mystrongs, strongslemma, ANLEXlemma)
         self.parseChapter(self.chapter, self.end_monad)
 
     def process_linear_verse(self, mychapterverse):
@@ -164,11 +180,13 @@ class Book:
             self.verses.append(verse)
 
 
-    def process_linear_word(self, mysurface, mytag, mystrongs):
+    def process_linear_word(self, mysurface, mytag, mystrongs, strongslemma, ANLEXlemma):
         w = word.Word(self.end_monad, variant_none)
         w.surface = mysurface
         w.parsing = mytag
         w.Strongs1 = mystrongs
+        w.strongslemma = strongslemma
+        w.ANLEXlemma = ANLEXlemma
         self.verses[-1].words.append(w)
         self.verses[-1].last_monad = self.end_monad
 
@@ -370,15 +388,15 @@ class Book:
             raise Exception("Error: On ref %s: whverse is not in list!" % ref)
 
 
-    def write_MORPH_style(self, filename):
+    def write_MORPH_style(self, filename, encodingStyle):
         f = open(filename, "w")
         for whverse in self.verses:
-            whverse.write_MORPH_style(f, self.getVerseCopy(whverse))
+            whverse.write_MORPH_style(f, self.getVerseCopy(whverse), encodingStyle)
         f.close()
 
-    def write_subset_MORPH_style(self, f, word_predicate, manualanalyses):
+    def write_subset_MORPH_style(self, f, word_predicate, manualanalyses, encodingStyle):
         for whverse in self.verses:
-            whverse.write_subset_MORPH_style(f, self.getVerseCopy(whverse), word_predicate, manualanalyses)
+            whverse.write_subset_MORPH_style(f, self.getVerseCopy(whverse), word_predicate, manualanalyses, encodingStyle)
             
     def write_StrippedLinear(self, filename):
         self.addVersesToVerseDict()

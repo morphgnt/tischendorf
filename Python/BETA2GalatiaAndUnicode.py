@@ -118,8 +118,8 @@ def beta2unicodeTrie():
     t.add("S'",     u"\u03C2'")
     t.add("S,",     u"\u03C2,")
     t.add("S.",     u"\u03C2.")
-    t.add("S:",     u"\u03C2:")
-    t.add("S;",     u"\u03C2;")
+    t.add("S:",     u"\u03C2\u0387")
+    t.add("S;",     u"\u03C2\u037E")
     t.add("S]",     u"\u03C2]")
     t.add("S@",     u"\u03C2@")
     t.add("S_",     u"\u03C2_")
@@ -193,12 +193,13 @@ def beta2unicodeTrie():
     t.add("*)A",     u"\u1F08")
     t.add("*A(",     u"\u1F09")
     t.add("*(A",     u"\u1F09")
-    #
     t.add("*(\A",    u"\u1F0B")
     t.add("*A)/",    u"\u1F0C")
     t.add("*)/A",    u"\u1F0C")
     t.add("*A(/",    u"\u1F0D")
     t.add("*(/A",    u"\u1F0D")
+    t.add("*A)=",    u"\u1F0E")
+    t.add("*)=A",    u"\u1F0E")
     t.add("*A(=",    u"\u1F0F")
     t.add("*(=A",    u"\u1F0F")
     t.add("*E)",     u"\u1F18")
@@ -206,6 +207,7 @@ def beta2unicodeTrie():
     t.add("*E(",     u"\u1F19")
     t.add("*(E",     u"\u1F19")
     #
+    t.add("*)\E",    u"\u1F1A")
     t.add("*(\E",    u"\u1F1B")
     t.add("*E)/",    u"\u1F1C")
     t.add("*)/E",    u"\u1F1C")
@@ -218,26 +220,34 @@ def beta2unicodeTrie():
     t.add("*(H",     u"\u1F29")
     t.add("*H)\\",   u"\u1F2A")
     t.add(")\\*H",   u"\u1F2A")
-    t.add("*)\\H",    u"\u1F2A")
+    t.add("*)\\H",   u"\u1F2A")
+    t.add("(\\*H",   u"\u1F2B")
+    t.add("*(\\H",   u"\u1F2B")
     #
     t.add("*H)/",    u"\u1F2C")
     t.add("*)/H",    u"\u1F2C")
+    t.add("*H(/",    u"\u1F2D")
+    t.add("*(/H",    u"\u1F2D")
     #
     t.add("*)=H",    u"\u1F2E")
-    t.add("(/*H",    u"\u1F2F")
-    t.add("*(/H",    u"\u1F2F")
+    t.add("(=*H",    u"\u1F2F")
+    t.add("*(=H",    u"\u1F2F")
     t.add("*I)",     u"\u1F38")
     t.add("*)I",     u"\u1F38")
     t.add("*I(",     u"\u1F39")
     t.add("*(I",     u"\u1F39")
-    #
-    #
+    t.add("*I)\\",   u"\u1F3A")
+    t.add("*)\\I",   u"\u1F3A")
+    t.add("*I(/",    u"\u1F3B")
+    t.add("*(/I",    u"\u1F3B")
     t.add("*I)/",    u"\u1F3C")
     t.add("*)/I",    u"\u1F3C")
-    #
-    #
-    t.add("*I(/",    u"\u1F3F")
-    t.add("*(/I",    u"\u1F3F")
+    t.add("*I(/",    u"\u1F3D")
+    t.add("*(/I",    u"\u1F3D")
+    t.add("*I)=",    u"\u1F3E")
+    t.add("*)=I",    u"\u1F3E")
+    t.add("*I(=",    u"\u1F3F")
+    t.add("*(=I",    u"\u1F3F")
     #
     t.add("*O)",     u"\u1F48")
     t.add("*)O",     u"\u1F48")
@@ -245,18 +255,25 @@ def beta2unicodeTrie():
     t.add("*(O",     u"\u1F49")
     #
     #
-    t.add("*(\O",    u"\u1F4B")
+    t.add("*O)\\",   u"\u1F4A")
+    t.add("*)\\O",   u"\u1F4A")
+    t.add("*O(\\",   u"\u1F4B")
+    t.add("*(\\O",   u"\u1F4B")
     t.add("*O)/",    u"\u1F4C")
     t.add("*)/O",    u"\u1F4C")
-    t.add("*O(/",    u"\u1F4F")
-    t.add("*(/O",    u"\u1F4F")
+    t.add("*O(/",    u"\u1F4D")
+    t.add("*(/O",    u"\u1F4D")
     #
     t.add("*U(",     u"\u1F59")
     t.add("*(U",     u"\u1F59")
+    t.add("*U(\\",   u"\u1F5B")
+    t.add("*(\\U",   u"\u1F5B")
     #
     t.add("*(/U",    u"\u1F5D")
+    t.add("*U(/",    u"\u1F5D")
     #
     t.add("*(=U",    u"\u1F5F")
+    t.add("*U(=",    u"\u1F5F")
     
     t.add("*W)",     u"\u1F68")
     t.add("*)W",     u"\u1F68")
@@ -264,14 +281,15 @@ def beta2unicodeTrie():
     t.add("*(W",     u"\u1F69")
     #
     #
+    t.add("*W)\\",   u"\u1F6A")
+    t.add("*)\\W",   u"\u1F6A")
+    t.add("*W(\\",   u"\u1F6B")
+    t.add("*(\\W",   u"\u1F6B")
     t.add("*W)/",    u"\u1F6C")
     t.add("*)/W",    u"\u1F6C")
     t.add("*W(/",    u"\u1F6F")
     t.add("*(/W",    u"\u1F6F")
 
-    t.add("*A)=",    u"\u1F0E")
-    t.add("*)=A",    u"\u1F0E")
-    t.add("*A(=",    u"\u1F0F")
     t.add("*W)=",    u"\u1F6E")
     t.add("*)=W",    u"\u1F6E")
     t.add("*W(=",    u"\u1F6F")
@@ -360,10 +378,11 @@ def beta2unicodeTrie():
     t.add(".", u".")
     t.add(",", u",")
     t.add("'", u"'")
-    t.add(":", u":")
+    t.add(":", u"\u0387")
     t.add(";", u"\u037e")
     t.add("_", u"_")
     t.add("-", u"-")
+    t.add("!", u"!")
     
 
     t.add("[", u"[")
@@ -469,6 +488,7 @@ def beta2GalatiaTrie():
     t.add("I)",     "\xb8")
     t.add("I(",     "\xb3")
     t.add("I(\\",   "\xbe")
+    #t.add("I)\\",   "i\xae")    # NOTE: This is a hack! iota + smooth-grave...
     t.add("I)/",    "\xb9")
     t.add("I(/",    "\xb4")
     t.add("O)",     "\xec")
@@ -712,6 +732,7 @@ def beta2GalatiaTrie():
     
     t.add("[2", "(")
     t.add("]2", ")")
+    t.add("!", "!")
     
     t.add("\n", "")
 
