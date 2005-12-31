@@ -335,8 +335,8 @@ alternate_Tischendorf_spellings = { "DAUID" : [ "DAUEID" ],
                                     "SUMMAQHTAIS" : [ "SUNMAQHTAIS" ],
                                     "SUSTAURWQENTOS" : [ "SUNSTAURWQENTOS" ],
                                     "EMPROSQEN" : [ "ENPROSQEN" ],
-#                                    "" : [ "" ],
-#                                    "" : [ "" ],
+                                    "SMURNAN" : [ "ZMURNAN" ],
+                                    "SMURNH" : [ "ZMURNH" ],
 #                                    "" : [ "" ],
 #                                    "" : [ "" ],
 
@@ -786,9 +786,12 @@ class Word:
             lemma = self.strongslemma
             ANLEXlemma = self.ANLEXlemma
             if lemma == "":
-                raise Exception("Error: Strong's lemma for strong's %d does not exist. ref=%s surface=%s prs=%s", strongs, ref, surf, prs)
+                print "Error: Strong's lemma for strong's %d does not exist. ref=%s surface=%s prs=%s", strongs, ref, surf, prs
+                lemma = "NOLEMMA"
+                ANLEXlemma = "NOLEMMA"
             if ANLEXlemma == "":
-                raise Exception("Error: ANLEX lemma for strong's %d does not exist. ref=%s surface=%s prs=%s", strongs, ref, surf, prs)
+                print "Error: ANLEX lemma for strong's %d does not exist. ref=%s surface=%s prs=%s", strongs, ref, surf, prs
+                ANLEXlemma = "NOLEMMA"
             print >>f, "%s %s %s %s %s ! %s" % (ref, surf, prs, strongs, lemma, ANLEXlemma)
         else:
             print >>f, "%s %s %s %s" % (ref, surf, prs, strongs)

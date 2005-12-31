@@ -216,7 +216,10 @@ class Book:
             if w[0] in "0123456789":
                 myarr = w.split(":")
                 mychapter = int(myarr[0])
-                myverse = int(myarr[1])
+                try:
+                    myverse = int(myarr[1])
+                except:
+                    print "UP100: w = '%s'" % w
                 chapter_end = self.end_monad-1
                 if self.chapter != mychapter:
                     if self.chapter <> 0:

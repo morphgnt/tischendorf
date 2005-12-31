@@ -376,7 +376,9 @@ def beta2unicodeTrie():
     t.add("]2", u")")
 
     t.add("\n", u"")
-    
+
+    t.add("*#2", u"\u03da")  # GREEK (CAPITAL) LETTER STIGMA
+    t.add("#2", u"\u03db")   # GREEK SMALL LETTER STIGMA
     
     return t
 
@@ -712,6 +714,10 @@ def beta2GalatiaTrie():
     t.add("]2", ")")
     
     t.add("\n", "")
+
+    t.add("*#2", "v")  # GREEK (CAPITAL) LETTER STIGMA  # FIXME: This is not supposed to be final sigma, but there is no stigma in Galatia.
+    t.add("#2", "v")   # GREEK SMALL LETTER STIGMA  # FIXME: This is not supposed to be final sigma, but there is no stigma in Galatia.
+
     
     return t
 

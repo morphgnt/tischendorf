@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 1.0
+                             Version 1.1
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
@@ -202,4 +202,15 @@ The format is as follows:
     There may be several words in each lemma.
 
 All Strong's numbers are single numbers with 1,2,3, or 4 digits.
+
+
+ChangeLog
+=========
+
+v. 1.0 (2005-12-13): Initial release.
+
+v. 1.1 (2005-12-19):
+   - Proofed the text against a facsimile, and made around 830 changes.
+   - Changed a few parsings and lemmas.
+
 

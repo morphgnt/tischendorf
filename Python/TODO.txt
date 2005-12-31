@@ -26,6 +26,10 @@ TODO for Tischendorf
   - [X] Check [1 in lemmatable.
 
 
+- Text
+
+  - [X] Check all chapter-beginnings which do not start in a capital letter.
+
 - Communication
 
   - [X] Write to all Bible Software vendors:

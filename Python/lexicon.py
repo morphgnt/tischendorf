@@ -144,7 +144,6 @@ Tischendorf_lexicon = { "PROS" : ("4314", "PREP"),
                         "ASQENWN" : ("770/772", "V-PAP-NSM/A-GPM"),
                         "BAPTISWNTAI" : ("907", "V-AMS-3P"), 
 #                        "FAINENTAI" : ("5316", "V-PPI-3P"),  # Was in Mk 14:64.  Tischendorf's text said FAINE-NETAI; Clint Yale had FAINENTAI. I fixed it to FAINETAI, since that's what the appartus says.  It must have been a typo.
-                        "FOINIKAS" : ("5403", "N-APM"), 
                         "GEMWN" : ("1073", "V-PAP-NSM"),
                         "ECWSAI" : ("1856", "V-AAN"),
                         "EGKATALEIPW" : ("1459", "V-PAI-1S"),

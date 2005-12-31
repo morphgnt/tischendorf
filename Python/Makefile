@@ -42,5 +42,7 @@ UnAccented: RE.TSP
 	mkdir UnAccented
 	for f in *.TSP; do NN=`echo $$f | sed -e 's/TSP/SLN/g'`; echo $$f; cat $$f | awk '{ print $$1 " " $$2 " " $$3;}' | sed -e 's/\([0-9]\+:[0-9]\+\).[0-9]\+/\1/' > UnAccented/$$NN; done
 
+.PHONY: Accented
+
 Accented: Accented/RE.SLN
 	for f in Accented/*.SLN; do cat $$f | sed -e 's/\([0-9]\+\).[a-z]/\1/' > /tmp/SLN; mv /tmp/SLN $$f; done
