@@ -1,0 +1,10 @@
+SELECT ALL OBJECTS
+WHERE
+[word strongs1 = 2228]
+[word psp=noun 
+      AND case = nominative 
+      AND gender = feminine
+      AND number = singular
+]
+GO
+

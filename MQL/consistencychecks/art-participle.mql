@@ -1,0 +1,15 @@
+SELECT ALL OBJECTS
+WHERE
+[Verse
+  [Word as w1 FOCUS strongs1=3588]
+  [word FOCUS psp=verb AND mood=participle 
+        AND (case <> w1.case OR number <> w1.number OR gender <> w1.gender)
+  ]
+]
+GO
+
+
+
+
+
+

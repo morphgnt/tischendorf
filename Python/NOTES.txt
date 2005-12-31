@@ -1,0 +1,1924 @@
+2005-07-01 19:05:
+
+I've just completed checking the SWORD text for differences between it
+and my text.  Apart from extraneous text in verse 0 in some chapters,
+and apart from text that is misplaced, there are no significant
+differences that are not accounted for by my changes to Clint Yale's
+text.  Thus it is basically Clint Yale's text.
+
+2005-07-02 15:59:
+
+I had to remove the code that checks for equality except for final S
+or final N.  There was a case where WH had TH=S but Tischendorf had
+TH=|, which didn't get caught.
+
+This brought about 42 instances which did not get parsed, of which 34
+were unique pairs of WH and Tischendorf.
+
+I added the ones that were simple spelling differences to word.py, and
+added the two that needed a parsing to lexicon.py.
+
+This brought about some differences in stuff that was now ambiguous
+where it had not been before, or was not unambiguous where it had been
+ambiguous before.  So I added or removed whatever was necessary
+to/from manual_analyses.txt.
+
+
+2005-07-03 03:30am
+
+Heb 12:11.3 PAIDIA (children), I chose to analyze as though it were
+PAIDEIA (rearing). This is because it has to agree with PASA (N-GSF)
+in 12:11.1, but PAIDIA is N-APN/N-NPN/N-VPN 3813.
+
+2005-07-03 04:15am
+
+Re 17:3.18: Is EXONTA V-PAP-ASM or V-PAP-NPN here?  It refers to the
+Beast which the woman is riding, which is neuter singular.  Yet the
+preceding GEMONTA is APN, presumably referring to both the woman and
+the beast.  I have chosen to say V-PAP-ASM, agreeing in case and not
+in gender.
+
+2005-07-03 04:25am
+
+FINISHED DISAMBIGUATING!
+
+
+2005-07-03 05:22am
+
+Just added code to use the manual_analyses.txt file.
+
+==> Just learned that 94 words are not analyzed at all because there
+is no such verse in Westcott Hort.
+
+And another 25 words now need disambiguation.
+
+2005-07-03 06:35am
+
+Nope, it's not so bad. 25 words still need disambiguation, but after I
+had bugfixed the new code to add manual_analyses, only 1 word remains
+unanalyzed.
+
+2005-07-03 06:50am
+
+Disambiguated those 25 words.
+
+2005-07-04 06:00am
+
+Found out that the manual analyses were not always applied: Sometimes,
+the algorithm would skip ahead.  Changed it so that it always takes
+the preference of a manual analysis if needing to skip.
+
+This brought up 86 new words to be disambiguated.
+
+2005-07-04 06:40am
+
+It turned out that I could change the algorithm yet again and avoid
+disambiguating those 86 words.  At this time, however, I had already
+disambiguated some of them.
+
+The algorithm now:
+
+1) First applies all manual analyses, then
+2) When it compares with WH:
+
+   a) it skips those words that already have an analysis, and 
+   b) if something compares equal, it doesn't alter any existing
+      analysis (i.e., from the manual analyses).
+
+
+
+2005-07-07 07:03pm
+
+Yesterday, I asked Dr. Robinson about EUQUS being 2112 rather than
+2117.  Strong's has 2117 as EU)QU/S, and 2112 and EU)QE/WS.
+Dr. Robinson replied this:
+
+------------ reply begins ------------
+Believe it or not, this is deliberate on my part. 8-O
+
+Strong dropped the ball by placing EUQEWS ("immediately") under the
+same number as EUQEIAS ("straight"), when those two terms are quite
+different from each other. At best, the adjective EUQUS and the adverb
+EUQEWS are virtually interchangeable synonyms and should have been
+grouped under the same number from the beginning or separate numbers
+should have been assigned to all three (EUQUS, EUQEWS, EUQEIAS). Since
+there were only two available numbers to work with, I reorganized, and
+grouped EUQUS and EUQEWS under 2112, leaving EUQEIAS by itself at
+2117.
+------------ reply ends ------------
+
+I have decided not to change his analysis.  Thus lexicon.py was
+changed to make EUQUS be 2112 rather than 2117.
+
+
+2005-08-23 04:29pm
+
+I noticed that ANOICEI in RE 3:7.29 was analyzed as
+
+RE 3:7.29 ANOICEI N-DSF 457 A)/NOICIS
+
+However, this made no linguistic sense, as it needed to be a verb.  I
+consulted Liddell-Scott and found that ANOI/GNUMI did indeed have a
+future active indicative of ANOI/CW, and so this had to be:
+
+RE 3:7.29 ANOICEI V-FAI-3S 455 A)NOI/GW
+
+[Note: Check grammar before publishing!]
+
+I proceeded to adding RE 3:7.29 to manual_analyses.txt.
+
+ANOICEI appears in EPH 6:19.9 as follows:
+
+EPH 6:19.9 ANOICEI N-DSF 457 A)/NOICIS
+
+There, however, N-DSF 457 is the correct interpretation.
+
+
+
+2005-10-08 04:55am
+
+DU/O is indeclinable except in the dative (DUSI(N)), according to
+Abbott-Smith and Perschbacher.  Strong's is silent on the issue,
+whereas BDAG merely mentions that nom, gen & acc are the same.
+
+Robinson parses non-dative as N-OI (Noun, indeclinable, other type),
+whereas dative is parsed correctly.
+
+I choose to leave DUO as N-OI even though it could be made more
+explicit.
+
+
+2005-10-08 04:58am
+
+LU 23:53.12 OU ADV 3757
+
+was added, since Robinson had misparsed it (I believe) as R-GSN.
+
+It does mean "where" in this case, as BDAG also says (OU(=, 1.beta).
+
+
+2005-10-08 04:59am
+
+MONON ADV was misparsed as 3441 (it should be 3440) in two places:
+
+MT 17:8.12 MONON ADV 3440
+JAS 2:24.11 MONON ADV 3440
+
+
+
+2005-10-08 06:13am
+
+I did a study on PERISSOTERON.  It should be (according to Strong's)
+either 4054 (in an adverbial sense) or 4055 (in an adjectival sense).
+Robinson had parsed 12 instances as either 4053 (PERIOSSOS) or 4054.
+
+I changed all to 4055, except for the following:
+
+
+MR 7:36.13 PERISSOTERON ADV 4054
+HEB 6:17.3 PERISSOTERON ADV 4054
+HEB 7:15.2 PERISSOTERON ADV 4054
+
+This was because BDAG listed these as having the adverbial sense.
+
+
+2005-10-08 06:49am
+
+PROTERON is 4386 in Strong's, but only when adverbial.
+
+BDAG says that it is always adverbial, but can be used as an adjective.
+
+I have changed all 9 instances to ADV-C 4386.
+
+JOH 6:62.12 PROTERON ADV-C 4386
+JOH 9:8.9 PROTERON ADV-C 4386
+2CO 1:15.6 PROTERON ADV-C 4386
+GA 4:13.11 PROTERON ADV-C 4386
+1TI 1:13.2 PROTERON ADV-C 4386
+HEB 4:6.10 PROTERON ADV-C 4386
+HEB 7:27.10 PROTERON ADV-C 4386
+HEB 10:32.4 PROTERON ADV-C 4386
+1PE 1:14.7 PROTERON ADV-C 4386
+
+
+
+2005-10-08 06:58am
+
+I had misparsed PRWTON as ADV instead of ADV-S on two occasions in
+manual_analyses.txt:
+
+MR 9:11.16 PRWTON ADV 4412
+MR 16:9.7 PRWTON ADV 4412
+
+These have been fixed to ADV-S, bringing them into accord with all the
+other instances of PRWTON 4412.
+
+
+
+2005-10-08 07:07am
+
+SOI is ambiguous between:
+
+SOI S-2NPM 4674 SO/S
+
+and
+
+SOI P-2DS 4771 SU/
+
+Robinson parses it as 4674 in three places:
+
+JOH 17:6.13 SOI S-2NPM 4674
+LU 5:33.21 SOI S-2NPM 4674
+MR 2:18.27 SOI S-2NPM 4674
+
+That's correct in all three cases.
+
+I have checked that the ones I have in manual_analyses.txt are indeed
+P-2DS 4771:
+
+MT 12:47.16 SOI P-2DS 4771
+JOH 1:51.8 SOI P-2DS 4771
+JOH 18:34.10 SOI P-2DS 4771
+3JO 1:15.2 SOI P-2DS 4771
+RE 17:7.9 SOI P-2DS 4771
+
+I haven't checked whether all the other instances of SOI really are
+meant to be P-2DS 4771, as they are parsed as.
+
+
+2005-10-08 07:22am
+
+All forms of OU(=TOS beginning with TOU have been reclassified into
+Strong's number 3778 in lexicon.py.  Before, they were in their
+separate categories 5124-5130, but Dr. Robinson had standardized on
+3778, so I follow suit.
+
+Also, manual_analyses.txt had some of these, but I reclassified them
+as well into 3778.
+
+
+2005-10-08 07:33am
+
+UPARXONTA is ambiguous between 5224 (as noun) and 5225 (as verb).  In
+all cases where UPARXONTA is preceded by an article, Robinson parses
+it as 5224, whereas in all other cases, it is parsed as 5225.  I
+believe this is correct.  The only possible exception might be 2PE
+1:8.4, where the participle is preceded by TAUTA, but I believe it is
+really a verbal participle here (if that's the right term).
+
+
+2005-10-08 07:39am
+
+I discovered that Strong's has the lemma XRU/SEOS for 5552, whereas
+ANLEX has XRUSOU=S.  I changed the lemmatable to conform to Strong's.
+
+
+2005-10-08 07:43am
+
+WOOHOOO!  I finished checking the ambiguities in the
+tischlexicon_nonunique.txt.
+
+2005-10-08 07:51am
+
+Checking that N-PRI really are indeclinable:
+
+- BHQSAIDA(N) is indeclinable according to BDAG, so I leave it as
+  such, even though Thayer mentions that BHQSAIDAN could be the
+  accusative (but then says that it may also just be an alteration).
+  ANLEX says it's indeclinable.
+
+
+
+2005-10-09 03:16pm
+
+Just finished "proof-reading" lemmatable.txt.
+
+I did this by taking the Public Domain Strong's dictionary in raw
+format from SWORD, then extracting the headwords with an awk script (I
+had already done this), then writing a small Python program to
+transform the lemmatable into something that resembled the headword
+list from Strong's, then doing a diff between the two, then carefully
+checking each and every instance of a mismatch.
+
+612 lemmas were changed.
+
+
+2005-10-09 04:18pm
+
+1) Reclassified UPEREKPERISSOU as 5228&4053 (not 4055): 4053 is
+   PERI/SSOS, whereas 4055 is PERISSO/TEROS.
+
+2) Reclassified MHPOU as CONJ-N (not CONJ).  It was decided to leave
+   it as CONJ, not ADV-N or PRT-N, since BDAG says that MHPOU is a
+   conjunction (see POU/ section 2).
+
+3) Reclassified MHPWS as CONJ-N (not CONJ).
+
+4) Reclassified EIGE as 1489 (not 1490).
+
+5) Reclassified DIATI as PRT-I (not PRT).
+
+6) Reclassified EKPERISSWS as 1537&4053 rather than 4055.
+
+7) Reclassified PERISSOTERWS as 4056 (not 4057).
+
+8) Reclassified EKTENESTERON as ADV-C rather than ADV (LU 22:44.5;
+   1617).
+
+9) Reclassified PERISSOTERON ADV 4054 as ADV-C.
+
+10) Reclassified TOLMHROTERON ADV 5112 as ADV-C.
+
+11) Reclassified USTERON ADV 5305 as ADV-C.
+
+12) Reclassified KATWTERW ADV 2736 as ADV-C (MT 2:16.29).
+
+13) Reclassified AKRIBESTERON ADV-C 199 as 197.
+
+14) Fixed typo in lemmatable: 957 is BELTI/ON, not BELTI/WN.
+
+
+
+2005-10-09 07:15pm
+
+I finally got around to actually using the analytical TischLexicon in
+assigning unique, unambiguous entries before attempting a match.
+
+After some bugfixing, it ran beautifully.
+
+I then updated the lexicon so that the following was changed:
+
+27,33c27,34
+<                         "UMIN" : ("4771", "P-2DP"),
+<                         "UMWN" : ("4771", "P-2GP"),
+<                         "UMAS" : ("4771", "P-2AP"),
+<                         "UMEIS" : ("4771", "P-2NP"),
+<                         "HMIN" : ("1473", "P-1DP"),
+<                         "HMAS" : ("1473", "P-1AP"),
+<                         "HMEIS" : ("1473", "P-1NP"),
+---
+>                         "UMIN" : ("5210", "P-2DP"),
+>                         "UMWN" : ("5210", "P-2GP"),
+>                         "UMAS" : ("5210", "P-2AP"),
+>                         "UMEIS" : ("5210", "P-2NP"),
+>                         "HMIN" : ("2248", "P-1DP"),
+>                         "HMAS" : ("2248", "P-1AP"),
+>                         "HMEIS" : ("2248", "P-1NP"),
+>                         "HMWN" : ("2248", "P-1GP"),
+
+This was because for the S- entries, it was split between singular and
+plural.
+
+
+I ran the stuff, and found that the following had also changed:
+
+> MT 17:4.26 HLEIA N-GSM 2243 *(HLI/AS
+> MR 3:27.14 DIARPASAI V-AAS-3S 1283 DIARPA/ZW
+> MR 9:5.24 HLEIA N-GSM 2243 *(HLI/AS
+> LU 9:33.32 HLEIA N-GSM 2243 *(HLI/AS
+> LU 24:47.15 ARCAMENOI V-AMP-NPM 756 A)/RXOMAI
+> RO 11:2.14 HLEIA N-GSM 2243 *(HLI/AS
+> RE 18:3.10 PEPWKAN V-RAI-3P 4095 PI/NW
+
+The *(HLIA/S entries were all N-GSM because that's what was in the
+lexicon, but of course that is both *(HLIA and *(HLIA|, the latter
+being dative.  So I changed the lexicon to be ambiguous here.
+
+This brought the differences (apart from HMEIS/UMEIS) down to:
+
+> LU 24:47.15 ARCAMENOI V-AMP-NPM 756 A)/RXOMAI
+> MR 3:27.14 DIARPASAI V-AAS-3S 1283 DIARPA/ZW
+> RE 18:3.10 PEPWKAN V-RAI-3P 4095 PI/NW
+
+About LU 24:47.15: It is absolutely correct, since A)/RXOMAI (756) is
+the middle voice of A)/RXW (757).  It was 757 before, but 756 is
+actually what the other instances of ARCAMENOI are.
+
+About MR 3:27.14: It is actually V-AAN, not V-AAS-3S.  Lexicon.py was
+corrected.
+
+About RE 18:3.10: It should be 4095 PI/NW, as I had written in the
+lexicon.  word.py had PEPTWKAN as a substitute for PEPWKAN, which was
+wrong!
+
+
+2005-10-22
+
+09:14am
+
+I've made a bunch of updates to the WH-Parsed text.  They are now
+reflected in the Tischendorf Parsed CVS directory.  NOTE: The changes
+have been made in WHParsed, even though they are not authorized by
+Dr. Robinson yet.
+
+
+2005-10-22
+
+09:14am
+
+I found that
+
+AC 17:20.3 TINA X-APN 5100
+
+was unaccented in Tischendorf's printed, but accented (TI/NA) in
+Westcott-Hort.  To keep it as X-APN 5100 (which is TI\S), I needed to
+add the above line to manual_analyses.txt.
+
+
+2005-10-22
+
+09:19am
+
+I believe that in the following text from Luke 12:25:
+
+TI/S DE\ E)C U(MW=N MERIMNW=N DU/NATAI PROSQEI=NAI E)PI\ TH\N
+H(LIKI/AN AU)TOU= PH=XUN;
+
+MERIMNW=N is really a participle:
+
+LU 12:25.5 MERIMNWN V-PAP-NSM 3309
+
+rather than a noun:
+
+LU 12:25.5 MERIMNWN N-GSF 3308
+
+I have changed manual_analyses.txt accordingly.
+
+
+
+2005-10-22
+
+10:12am
+
+I've now added ANLEX lemmas.
+
+
+2005-10-22
+10:14am
+
+I decided that it was ugly to have special cases for strongs&strongs,
+so I removed those from the code.  This is because Robinson did
+without them, so many more cases like them would have to be introduced
+to be consistent.
+
+The new principle is that the most important word of the combination
+is used as the basis for the Strong's number.
+
+
+In particular, the following changes were made:
+
+Index: manual_analyses.txt
+===================================================================
+RCS file: /projects/Tischendorf/cvsroot/Tisch/Python/manual_analyses.txt,v
+retrieving revision 1.54
+diff -r1.54 manual_analyses.txt
+176c176
+< MR 14:31.3 EKPERISSWS ADV 1537&4053
+---
+> MR 14:31.3 EKPERISSWS ADV 4057
+Index: lexicon.py
+===================================================================
+RCS file: /projects/Tischendorf/cvsroot/Tisch/Python/lexicon.py,v
+retrieving revision 1.21
+diff -r1.21 lexicon.py
+155c155
+<                         "EIKOSITREIS" : ("1501&5140", "A-NPF"),  #NOTE: This only occurs once, in 1Co 10:8, and there it is feminine, since it modifies XILIADES, which is feminine.  Otherwise, if it occurred more than once, we might have had to make it ambiguous
+---
+>                         "EIKOSITREIS" : ("1501", "A-NPF"),  #NOTE: This only occurs once, in 1Co 10:8, and there it is feminine, since it modifies XILIADES, which is feminine.  Otherwise, if it occurred more than once, we might have had to make it ambiguous
+206c206
+<                         "UPEREKPERISSOU" : ("5228&4053", "ADV"), # NOTE: This parsing is taken from that suggested by Strong's dictionary entry for UPEREKPERISSOU
+---
+>                         "PERISSOU" : ("4053", "ADV"), # NOTE: This parsing is taken from that suggested by Strong's dictionary entry for UPEREKPERISSOU
+211c211
+<                         "MHPOU" : ("3361&4225", "CONJ-N"), # The CONJ interpretation is warranted by BDAG for POU/ section 2, where it says that MHPOU is a conjunction.
+---
+>                         "MHPOU" : ("4225", "CONJ-N"), # The CONJ interpretation is warranted by BDAG for POU/ section 2, where it says that MHPOU is a conjunction.
+214c214
+<                         "UPERLIAN" : ("5228&3029", "ADV"),
+---
+>                         "UPERLIAN" : ("3029", "ADV"),
+219c219
+<                         "PERIRERAMMENON" : ("4012&4472", "V-RPR-ASN"),
+---
+>                         "PERIRERAMMENON" : ("4472", "V-RPR-ASN"),
+228c228
+<                         "EKPERISSWS" : ("1537&4053", "ADV"),
+---
+>                         "EKPERISSWS" : ("4057", "ADV"),
+
+
+Note that EKPERISSWS is really 4057 (PERISSW=S) rather than 4053
+(PERISSO/S).
+
+
+2005-10-22
+
+10:22am
+
+Well,
+
+Index: lexicon.py
+===================================================================
+RCS file: /projects/Tischendorf/cvsroot/Tisch/Python/lexicon.py,v
+retrieving revision 1.22
+diff -r1.22 lexicon.py
+206c206
+<                         "PERISSOU" : ("4053", "ADV"), # NOTE: This parsing is taken from that suggested by Strong's dictionary entry for UPEREKPERISSOU
+---
+>                         "UPEREKPERISSOU" : ("4053", "ADV"), # NOTE: This parsing is taken from that suggested by Strong's dictionary entry for UPEREKPERISSOU
+[ulrikp@ulrikp-1 Python]$ cvs commit -m "It IS UPEREKPERISSOU, not PERISSOU that I wish to look for." lexicon.py
+
+
+2005-10-22
+
+10:51am
+
+I ran two queries, 2228-N-NSF.mql and 1722-not-dative.mql.  The first
+one turned up no surprises, but the second turned me on to something
+that Clint Yale had missed in preparing the text, namely an E)N in
+Mark 10:44 which needed to be deleted.
+
+(W-H has E)N U(MI=N, whereas Tischendorf just has U(MW=N.)
+
+
+
+2005-10-22
+
+11:01am
+
+I ran another query, 1519-not-accusative (EIS), and found another bug
+in Clint Yale's text:
+
+diff -r1.11 LU.TSP
+18454c18454
+< LU 23:42.8 EIS PREP 1519 EI)S ! EI)S
+---
+> LU 23:42.8 EN PREP 1722 E)N ! E)N
+
+
+
+2005-10-22
+
+11:27am
+
+I ran some more queries.  One of them found a bug in
+manual_analyses.txt:
+
+
+diff -r1.55 manual_analyses.txt
+797c798,799
+< 2PE 3:13.8 TA T-NPN 3588
+---
+> 2PE 3:13.8 TA T-APN 3588
+> 2PE 3:13.9 EPAGGELMATA N-APN 1862
+
+What comes before TA is KATA, so it needs to be accusative, not
+nominative!
+
+
+2005-10-22
+
+11:43am
+
+I ran some more, this time 4012-not-genitive-nor-accusative.mql turned
+up another textual error:
+
+17301c17301
+< LU 22:37.21 EMOI P-1DS 1473 E)GW/ ! E)GW/
+---
+> LU 22:37.21 EMOU P-1GS 1473 E)GW/ ! E)GW/
+
+Thus EMOI= is really EMOU=.I checked against the facsimile: It is an
+understandable mistake on Clint Yale's part, since it does look like
+an iota, missing the right part of the upsilon. However:
+
+1) there is a circumflex accent over it, and 
+
+2) it curves downwards to the left, showing that it really is meant to
+be an upsilon. Also, 
+
+3) the word before it is PERI, which does not take the dative, but
+which does take the genitive.
+
+
+2005-10-22
+
+11:55am
+
+I found out (running a query on EPI) that in John 8:3, something had flown under my radar, namely this:
+
+5739c5739
+< JOH 8:3.9 AMARTEIA N-NSF 266 A(MARTI/A ! A(MARTI/A
+---
+> JOH 8:3.9 AMARTEIA N-ASF 266 A(MARTI/A ! A(MARTI/A
+
+The word before it is EPI, which of course does not take nominative,
+but accusative.
+
+
+2005-10-22
+
+12:06am
+
+The same (EPI) query turned up another textual error:
+
+1277c1277
+< AC 2:43.22 PANTES A-NPM 3956 PA=S ! PA=S
+---
+> AC 2:43.22 PANTAS A-APM 3956 PA=S ! PA=S
+
+I checked it against the facsimile.
+
+
+2005-10-22
+
+12:30
+
+grepped for 686 and 687.
+
+Found that the following needed mending, also in WHParsed:
+
+
+6457c6457
+< LU 8:25.15 ARA PRT-I 687 A)=RA ! A)=RA
+---
+> LU 8:25.15 ARA PRT 686 A)/RA ! A)/RA
+
+
+
+2005-12-22
+
+13:07
+
+I am looking at lexicon_nonunique.txt for neuter accusative and
+nominative singular and plural nouns that are unique.  Those may or
+may not be unique, since the forms are often the same in accusative
+and nominative.
+
+I dug up Luke 14:12, where this was changed:
+
+
+11870c11870
+< LU 14:12.9 ARISTON N-NSN 712 A)/RISTON ! A)/RISTON
+---
+> LU 14:12.9 ARISTON N-ASN 712 A)/RISTON ! A)/RISTON
+
+
+
+2005-10-22
+
+13:23
+
+Found out that RE 10:8 had a textual error (still going through list
+of accusative/nominative neuter nouns).
+
+4077c4077
+< RE 10:8.18 BIBLARIDON N-ASN 974 BIBLIARI/DION ! BIBLARI/DION
+---
+> RE 10:8.18 BIBLARIDION N-ASN 974 BIBLIARI/DION ! BIBLARI/DION
+
+
+2005-10-22
+
+13:54
+
+Still going through the list of neuters.
+
+3146,3147c3146,3147
+< RO 8:4.2 TO T-ASN 3588 O( ! O(
+< RO 8:4.3 DIKAIWMA N-ASN 1345 DIKAI/WMA ! DIKAI/WMA
+---
+> RO 8:4.2 TO T-NSN 3588 O( ! O(
+> RO 8:4.3 DIKAIWMA N-NSN 1345 DIKAI/WMA ! DIKAI/WMA
+
+I think this is nominative, because it is the subject of the passive
+verb.
+
+
+
+2005-10-22
+
+14:04
+
+I'm calling it quits for now.
+
+Command to get the list of neuter nouns:
+
+grep -v "/" tischlexicon_nonunique.txt | grep "N\-[AN].N" | wc -l
+
+That gets me (right now) 326 lines.
+
+I've done through Delta, which means I have 257 to go:
+
+"ECERAMA" : ("1829", "N-ASN"),
+"EDAFOS" : ("1475", "N-ASN"),
+"EDRAIWMA" : ("1477", "N-NSN"),
+"EGKLHMA" : ("1462", "N-ASN"),
+"EIDWLA" : ("1497", "N-APN"),
+"EIDWLON" : ("1497", "N-NSN"),
+"EIERON" : ("2411", "N-ASN"),
+"ELAION" : ("1637", "N-ASN"),
+"ELKH" : ("1668", "N-APN"),
+"ELKOS" : ("1668", "N-NSN"),
+"ENDEIGMA" : ("1730", "N-NSN"),
+"ENERGHMATA" : ("1755", "N-NPN"),
+"ENKAINIA" : ("1456", "N-NPN"),
+"ENTALMATA" : ("1778", "N-APN"),
+"EPERWTHMA" : ("1906", "N-NSN"),
+"EPIBLHMA" : ("1915", "N-ASN"),
+"EPIKALUMMA" : ("1942", "N-ASN"),
+"EPOS" : ("2031", "N-ASN"),
+"EQH" : ("1485", "N-APN"),
+"ERIFIA" : ("2055", "N-APN"),
+"ERION" : ("2053", "N-NSN"),
+"ETOS" : ("2094", "N-ASN"),
+"FANTASMA" : ("5326", "N-NSN"),
+"FEGGOS" : ("5338", "N-ASN"),
+"FILHMA" : ("5370", "N-ASN"),
+"FOBHTRA" : ("5400", "N-NPN"),
+"FORTIA" : ("5413", "N-APN"),
+"FRAGELLION" : ("5416", "N-ASN"),
+"FRONHMA" : ("5427", "N-NSN"),
+"FULAKTHRIA" : ("5440", "N-APN"),
+"FWTA" : ("5457", "N-APN"),
+"GALA" : ("1051", "N-ASN"),
+"GAZOFULAKION" : ("1049", "N-ASN"),
+"GENHMATA" : ("1081", "N-APN"),
+"GEWRGION" : ("1091", "N-NSN"),
+"GLWSSOKOMON" : ("1101", "N-ASN"),
+"GONATA" : ("1119", "N-APN"),
+"GRAMMA" : ("1121", "N-NSN"),
+"GUNAIKARIA" : ("1133", "N-APN"),
+"HDUOSMON" : ("2238", "N-ASN"),
+"HMIWRION" : ("2256", "N-ASN"),
+"HQH" : ("2239", "N-APN"),
+"HTTHMA" : ("2275", "N-NSN"),
+"IERON" : ("2411", "N-ASN"),
+"IKONION" : ("2430", "N-ASN"),
+"ILASTHRION" : ("2435", "N-ASN"),
+"IXQUDIA" : ("2485", "N-APN"),
+"KARFOS" : ("2595", "N-ASN"),
+"KATALUMA" : ("2646", "N-NSN"),
+"KATAQEMA" : ("2652", "N-NSN"),
+"KEFALAION" : ("2774", "N-NSN"),
+"KENTRA" : ("2759", "N-APN"),
+"KENTRON" : ("2759", "N-NSN"),
+"KERAMION" : ("2765", "N-ASN"),
+"KERAS" : ("2768", "N-ASN"),
+"KERDH" : ("2771", "N-NPN"),
+"KERDOS" : ("2771", "N-NSN"),
+"KERMA" : ("2772", "N-ASN"),
+"KINNAMWMON" : ("2792", "N-ASN"),
+"KLASMATA" : ("2801", "N-APN"),
+"KLEOS" : ("2811", "N-NSN"),
+"KLHMATA" : ("2814", "N-NPN"),
+"KLIMATA" : ("2824", "N-APN"),
+"KLINIDION" : ("2826", "N-ASN"),
+"KOLLURION" : ("2854", "N-ASN"),
+"KOPRIA" : ("2874", "N-APN"),
+"KORASION" : ("2877", "N-NSN"),
+"KRANION" : ("2898", "N-ASN"),
+"KRASPEDA" : ("2899", "N-APN"),
+"KREA" : ("2907", "N-APN"),
+"KRINA" : ("2918", "N-APN"),
+"KRITHRIA" : ("2922", "N-APN"),
+"KTHMA" : ("2933", "N-ASN"),
+"KTHMATA" : ("2933", "N-APN"),
+"KTHNH" : ("2934", "N-APN"),
+"KTHNOS" : ("2934", "N-ASN"),
+"KUMATA" : ("2949", "N-NPN"),
+"KUMBALON" : ("2950", "N-NSN"),
+"KUMINON" : ("2951", "N-ASN"),
+"KUNARIA" : ("2952", "N-NPN"),
+"KWLA" : ("2966", "N-NPN"),
+"LAXANA" : ("3001", "N-APN"),
+"LAXANON" : ("3001", "N-ASN"),
+"LEIMMA" : ("3005", "N-NSN"),
+"LENTION" : ("3012", "N-ASN"),
+"LEPTA" : ("3016", "N-APN"),
+"LEPTON" : ("3016", "N-ASN"),
+"LINON" : ("3043", "N-ASN"),
+"LOGIA" : ("3051", "N-APN"),
+"LUTRON" : ("3083", "N-ASN"),
+"MEGEQOS" : ("3174", "N-NSN"),
+"MELOS" : ("3196", "N-NSN"),
+"MERH" : ("3313", "N-APN"),
+"MESONUKTION" : ("3317", "N-ASN"),
+"MESOTOIXON" : ("3320", "N-ASN"),
+"METRON" : ("3358", "N-ASN"),
+"METWPON" : ("3359", "N-ASN"),
+"MHKOS" : ("3372", "N-NSN"),
+"MIASMATA" : ("3393", "N-APN"),
+"MIGMA" : ("3395", "N-ASN"),
+"MILION" : ("3400", "N-ASN"),
+"MNHMOSUNON" : ("3422", "N-ASN"),
+"MURA" : ("3464", "N-APN"),
+"MURRA" : ("3460", "N-APN"),
+"MUSTHRIA" : ("3466", "N-APN"),
+"NEFOS" : ("3509", "N-ASN"),
+"NHSION" : ("3519", "N-ASN"),
+"NOHMA" : ("3540", "N-ASN"),
+"NOMISMA" : ("3546", "N-ASN"),
+"NOSSIA" : ("3556", "N-APN"),
+"NUXQHMERON" : ("3574", "N-ASN"),
+"OCOS" : ("3690", "N-ASN"),
+"OFEILHMA" : ("3783", "N-ASN"),
+"OFEILHMATA" : ("3783", "N-APN"),
+"OFELOS" : ("3786", "N-NSN"),
+"OIKHTHRION" : ("3613", "N-ASN"),
+"OLOKAUTWMATA" : ("3646", "N-APN"),
+"OMMATA" : ("3659", "N-APN"),
+"OMOIWMATA" : ("3667", "N-NPN"),
+"ONARION" : ("3678", "N-ASN"),
+"ONEIDOS" : ("3681", "N-ASN"),
+"OQONIA" : ("3608", "N-APN"),
+"ORIA" : ("3725", "N-APN"),
+"ORNEA" : ("3732", "N-NPN"),
+"OSTEA" : ("3747", "N-APN"),
+"OSTOUN" : ("3747", "N-NSN"),
+"OYARIA" : ("3795", "N-APN"),
+"OYARION" : ("3795", "N-ASN"),
+"OYWNIA" : ("3800", "N-NPN"),
+"OYWNION" : ("3800", "N-ASN"),
+"PAIDARION" : ("3808", "N-NSN"),
+"PANDOXION" : ("3829", "N-ASN"),
+"PAQHMA" : ("3804", "N-ASN"),
+"PAQOS" : ("3806", "N-ASN"),
+"PARAMUQION" : ("3890", "N-NSN"),
+"PARAPTWMA" : ("3900", "N-NSN"),
+"PARAPTWMATA" : ("3900", "N-APN"),
+"PATARA" : ("3959", "N-APN"),
+"PELAGOS" : ("3989", "N-ASN"),
+"PERAS" : ("4009", "N-NSN"),
+"PERATA" : ("4009", "N-APN"),
+"PERIBOLAION" : ("4018", "N-NSN"),
+"PERIKAQARMATA" : ("4027", "N-NPN"),
+"PERISSEUMA" : ("4051", "N-NSN"),
+"PERISSEUMATA" : ("4051", "N-APN"),
+"PERIYHMA" : ("4067", "N-NSN"),
+"PHGANON" : ("4076", "N-ASN"),
+"PINAKIDION" : ("4093", "N-ASN"),
+"PLASMA" : ("4110", "N-NSN"),
+"PLHQH" : ("4128", "N-NPN"),
+"PLHRWMATA" : ("4138", "N-APN"),
+"PLOIARIA" : ("4142", "N-APN"),
+"PLOIARION" : ("4142", "N-NSN"),
+"POIHMA" : ("4161", "N-NSN"),
+"POLITEUMA" : ("4175", "N-NSN"),
+"POMA" : ("4188", "N-ASN"),
+"PRESBUTERION" : ("4244", "N-NSN"),
+"PROAULION" : ("4259", "N-ASN"),
+"PROBATIA" : ("4263", "N-APN"),
+"PROSABBATON" : ("4315", "N-NSN"),
+"PROSFAGION" : ("4371", "N-ASN"),
+"PROSKEFALAION" : ("4344", "N-ASN"),
+"PRWTOTOKIA" : ("4415", "N-APN-S"),
+"PTERUGION" : ("4419", "N-ASN"),
+"PTUON" : ("4425", "N-NSN"),
+"PTWMATA" : ("4430", "N-APN"),
+"QAMBOS" : ("2285", "N-NSN"),
+"QARSOS" : ("2294", "N-ASN"),
+"QELHMATA" : ("2307", "N-APN"),
+"QEMELIA" : ("2310", "N-APN"),
+"QEROS" : ("2330", "N-NSN"),
+"QREMMATA" : ("2353", "N-NPN"),
+"QUATEIRA" : ("2363", "N-APN"),
+"QUGATRION" : ("2365", "N-NSN"),
+"QUMIATHRION" : ("2369", "N-ASN"),
+"QUSIASTHRIA" : ("2379", "N-APN"),
+"RADIOURGHMA" : ("4467", "N-NSN"),
+"RAPISMA" : ("4475", "N-ASN"),
+"RAPISMATA" : ("4475", "N-APN"),
+"RHGION" : ("4484", "N-ASN"),
+"RHGMA" : ("4485", "N-NSN"),
+"SABBATA" : ("4521", "N-APN"),
+"SANDALIA" : ("4547", "N-APN"),
+"SARDION" : ("4556", "N-NSN"),
+"SAREPTA" : ("4558", "N-APN"),
+"SATA" : ("4568", "N-APN"),
+"SEBASMA" : ("4574", "N-ASN"),
+"SEBASMATA" : ("4574", "N-APN"),
+"SFAGIA" : ("4968", "N-APN"),
+"SFUDRA" : ("4974", "N-NPN"),
+"SIMIKINQIA" : ("4612", "N-APN"),
+"SITIA" : ("4621", "N-APN"),
+"SITOMETRION" : ("4620", "N-ASN"),
+"SKANDALA" : ("4625", "N-APN"),
+"SKEPASMATA" : ("4629", "N-APN"),
+"SKHNWMA" : ("4638", "N-ASN"),
+"SKUBALA" : ("4657", "N-APN"),
+"SKULA" : ("4661", "N-APN"),
+"SODOMA" : ("4670", "N-NPN"),
+"SOUDARIA" : ("4676", "N-APN"),
+"SOUDARION" : ("4676", "N-ASN"),
+"SPHLAIA" : ("4693", "N-APN"),
+"STADIA" : ("4712", "N-APN"),
+"STADIOUS" : ("4712", "N-APN"),
+"STEMMATA" : ("4725", "N-APN"),
+"STEREWMA" : ("4733", "N-ASN"),
+"STHQH" : ("4738", "N-APN"),
+"STHQOS" : ("4738", "N-ASN"),
+"STIGMATA" : ("4742", "N-APN"),
+"STOMATA" : ("4750", "N-APN"),
+"STRATEUMA" : ("4753", "N-ASN"),
+"STROUQIA" : ("4765", "N-NPN"),
+"SUKA" : ("4810", "N-APN"),
+"SUMBOULION" : ("4824", "N-ASN"),
+"SUMPOSIA" : ("4849", "N-APN"),
+"SUNEDRIA" : ("4892", "N-APN"),
+"SUNSHMON" : ("4953", "N-ASN"),
+"SUNTRIMMA" : ("4938", "N-NSN"),
+"SXHMA" : ("4976", "N-NSN"),
+"SXISMA" : ("4978", "N-NSN"),
+"SXOINIA" : ("4979", "N-APN"),
+"TALANTA" : ("5007", "N-APN"),
+"TALANTON" : ("5007", "N-ASN"),
+"TEIXH" : ("5038", "N-NPN"),
+"TELWNION" : ("5058", "N-ASN"),
+"TOCON" : ("5115", "N-ASN"),
+"TOPAZION" : ("5116", "N-NSN"),
+"TRAUMATA" : ("5134", "N-APN"),
+"TRUBLION" : ("5165", "N-ASN"),
+"UPERWON" : ("5253", "N-ASN"),
+"UPODEIGMA" : ("5262", "N-ASN"),
+"UPODEIGMATA" : ("5262", "N-APN"),
+"UPODHMA" : ("5266", "N-ASN"),
+"UPODHMATA" : ("5266", "N-APN"),
+"UPOLEIMMA" : ("2640", "N-NSN"),
+"UPOLHNION" : ("5276", "N-ASN"),
+"UPOZUGION" : ("5268", "N-NSN"),
+"USTERHMA" : ("5303", "N-ASN"),
+"USTERHMATA" : ("5303", "N-APN"),
+"WON" : ("5609", "N-ASN"),
+"WTARION" : ("5621", "N-ASN"),
+"WTION" : ("5621", "N-ASN"),
+"XARAGMA" : ("5480", "N-ASN"),
+"XASMA" : ("5490", "N-ASN"),
+"XEILH" : ("5491", "N-APN"),
+"XEILOS" : ("5491", "N-ASN"),
+"XEIROGRAFON" : ("5498", "N-ASN"),
+"XORTASMATA" : ("5527", "N-APN"),
+"XRHMA" : ("5536", "N-ASN"),
+"XRHMATA" : ("5536", "N-APN"),
+"XWRIA" : ("5564", "N-NPN"),
+"XWRION" : ("5564", "N-ASN"),
+"YWMION" : ("5596", "N-ASN"),
+"ZEUGH" : ("2201", "N-APN"),
+"ZEUGOS" : ("2201", "N-NSN"),
+"ZWA" : ("2226", "N-NPN"),
+"ZWON" : ("2226", "N-NSN"),
+
+
+2005-12-05 01:27am
+
+Just spent about 3 hours correcting the text by comparing it with
+Clint Yale's accented text.
+
+This led to some changes in the parsing.
+
+The following were added to word.py:
+
+"GUNAICIN" : [ "GUNAICI" ],
+"KAISAREIA" : [ "KAISARIA" ],
+"SUMPARALABONTES" : [ "SUNPARALABONTES" ],
+"QELWSIN" : [ "QELWSI" ],
+"EPEGNWKOSIN" : [ "EPEGNWKOSI" ],
+"HGAPHKOSIN" : [ "HGAPHKOSI" ],
+"EIXEN" : [ "EIXE" ],
+"KRIQWSIN" : [ "KRIQWSI" ],
+
+
+
+
+diff -r1.57 manual_analyses.txt
+566,572c566,572
+< AC 8:1.3 EN PREP 1722
+< AC 8:1.4 EKEINH D-DSF 1565
+< AC 8:1.6 HMERA N-DSF 2250
+< AC 8:1.13 EN PREP 1722
+< AC 8:1.19 XWRAS N-APF 5561
+< AC 8:1.21 IOUDAIAS N-GSF 2449
+< AC 8:1.25 TWN T-GPM 3588
+---
+> AC 8:1.10 EN PREP 1722
+> AC 8:1.11 EKEINH D-DSF 1565
+> AC 8:1.13 HMERA N-DSF 2250
+> AC 8:1.20 EN PREP 1722
+> AC 8:1.26 XWRAS N-APF 5561
+> AC 8:1.28 IOUDAIAS N-GSF 2449
+> AC 8:1.32 TWN T-GPM 3588
+646,647c646,647
+< 1CO 7:13.4 EI COND 1487
+< 1CO 7:13.5 TIS X-NSF 5100
+---
+> 1CO 7:13.3 EI COND 1487
+> 1CO 7:13.4 TIS X-NSF 5100
+757a758,759
+> HEB 7:9.5 DIA PREP 1223
+> HEB 7:10.12 O T-NSM 3588
+769a772
+> HEB 12:15.18 DIA PREP 1223
+
+
+
+The following was added to lexicon.py:
+
+"AXELDAMAX" : ("184", "N-PRI")
+
+This was previously AKELDAMAX, but Tischendorf spelled it AXELDAMAX.
+
+
+In a previous session, I added machinery to print a "stripped" version
+of Clint Yale's accented text, which he had sent me and which I had
+extracted from his SGML.
+
+
+
+2005-12-05 08:36am
+
+I've been going through the text, using the diffs between Clint Yale's
+Accented Tischendorf and the unaccented text, since around 07:00am.
+
+One thing worth mentioning now: In MR 14:64, the printed text has
+FAI/NE-NETAI.  This, of course, makes no sense, as you cannot have an
+accent on the ante-ante-penult (if that's what it is called).  So I've
+left the text as FAINETAI, thinking it is one of those cases where the
+text is "typographically challenged", as Clint Yale so aptly puts it
+in his introduction to his Tischendorf.
+
+
+
+2005-12-05 08:50am
+
+Came to Matthew 6:4; saw that the senses of H( and H)=| had been
+reversed; added them to manual_analyses.txt.  This was because WH had
+H)=| for H(.
+
+
+
+
+
+2005-12-05 09:22am
+
+In RE 17:14, there is another "typographically challenged" word:
+SU)TOU/S, which I've chosen to let it stay as AU)TOUS.
+
+
+2005-12-05 09:33am
+
+Just finished what I started around 7:00am, namely checking the ~1800
+lines of diffs between Clint Yale's accented text and the unparsed
+text.
+
+
+2005-12-05 09:59am
+
+In MR 8:4, the word NH/STIS occurs.
+
+I think this is a typographically challenged form of NH/STEIS, for the
+following reasons:
+
+1) It should be NH=STIS, since the ultima is short (IS).
+2) But it is NH/STIS, indicating that the ultima should have been long.
+3) Therefore, we may infer a missing epsilon, meaning NH/STEIS.
+4) This makes contextually sense, since Jesus is speaking about the
+   crowds, and if he sends them away "hungry" (A-APM) to their house,
+   some of them will falter on the way.  It would not have made sense
+   to say NH=STIS, since they are plural, and NH=STIS is singular.
+
+I have decided to:
+
+a) Leave the text as it is (NHSTIS), and
+b) Parse it as A-APM.
+
+
+
+2005-12-05 10:19am
+
+In MR 14:65.12, KOLAFIZEN occurs.  This is not a form of Koine Greek,
+so far as I know, since it should have had the augment if it really
+ended in ZEN.  But Tischendorf's apparatus says that KOLFAIZEIN is the
+text intended, so that is how I have parsed it:
+
+MR 14:65.12 KOLAFIZEN V-PAN 2852
+
+
+
+2005-12-05 10:31am
+
+One of the textual changes was LU 23:33.3:
+
+LU 23:33.3 APHLQON V-2AAI-3P 565
+
+This is ambiguous between V-2AAI-1S and the parsing above.  It should
+be 3P because the rest of the sentence is 3P.
+
+
+
+
+2005-12-05 10:36am
+
+Another textual change which is only a typographically challenged
+version of something real:
+
+JOH 6:23.13 EUXARISTHTANTOS V-AAP-GSM 2168
+
+The apparatus says the intended meaning is EUXARISTHSANTOS.  The
+-TANTOS is on the next page, so that may be why the error crept in.
+
+
+
+2005-12-05 11:04am
+
+In RE 18:12.23, we find:
+
+QU/I+ON
+
+since all the lexica agree that this should be QU/I+NON, I have parsed
+it as such, but left it as QU/I+ON.
+
+
+
+
+2005-12-05 11:05am
+
+Ze latest rround of tchangez include:
+
+diff -r1.17 word.py
+328a329,333
+>                                     "SUGXARHTE" : [ "SUNXARHTE" ],
+>                                     "SUZHTEIN" : [ "SUNZHTEIN" ],
+>                                     "SUMMAQHTAIS" : [ "SUNMAQHTAIS" ],
+>                                     "SUSTAURWQENTOS" : [ "SUNSTAURWQENTOS" ],
+>                                     "EMPROSQEN" : [ "ENPROSQEN" ],
+
+
+
+
+diff -r1.58 manual_analyses.txt
+2a3,4
+> MT 6:4.2 H T-NSF 3588
+> MT 6:4.5 H V-PAS-3S 1510
+80a83
+> MT 24:24.13 PLANHQHNAI V-APN 4105
+129a133
+> MR 8:3.5 NHSTIS A-APM 3523
+179a184
+> MR 14:65.12 KOLAFIZEN V-PAN 2852
+208a214
+> LU 3:37.8 MELELEHL N-PRI 3121
+322a329
+> LU 23:33.3 APHLQON V-2AAI-3P 565
+336a344
+> JOH 1:15.11 EIPON V-2AAI-1S 3004
+426c434
+< JOH 6:7.1 APEKRINETAI V-PNI-3S 611
+---
+> JOH 6:7.1 APOKRINETAI V-PNI-3S 611
+436a445
+> JOH 6:23.13 EUXARISTHTANTOS V-AAP-GSM 2168
+444a454
+> JOH 6:71.13 WN V-PAP-NSM 1510
+511a522,523
+> JOH 11:56.6 ELEGAN V-IAI-3P 3004
+> JOH 12:3.3 MARIA N-NSF 3137
+810a823
+> JUDE 1:4.1 PAREISEDUSAN V-AAI-3P 3921
+837a851
+> RE 6:11.16 PLHRWSWSIN V-AAS-3P 4137
+871a886
+> RE 18:12.21 QUION A-ASN 2367
+872a888
+> RE 20:2.9 O R-NSN 3739
+
+
+
+
+2005-12-05 11:22am
+
+Just to restate something I wrote earlier:
+
+I need to go through all nominative and accusative neuter forms that
+are unique in the lexicon, since they may or may not be unique (they
+are often the same on the surface, but may be either case).
+
+Since they are unique in the lexicon, it means they only occur in that
+case.  I need to check that they have the right case.
+
+
+190 left:
+
+"KORASION" : ("2877", "N-NSN"),
+"KRANION" : ("2898", "N-ASN"),
+"KRASPEDA" : ("2899", "N-APN"),
+"KREA" : ("2907", "N-APN"),
+"KRINA" : ("2918", "N-APN"),
+"KRITHRIA" : ("2922", "N-APN"),
+"KTHMA" : ("2933", "N-ASN"),
+"KTHMATA" : ("2933", "N-APN"),
+"KTHNH" : ("2934", "N-APN"),
+"KTHNOS" : ("2934", "N-ASN"),
+"KUMATA" : ("2949", "N-NPN"),
+"KUMBALON" : ("2950", "N-NSN"),
+"KUMINON" : ("2951", "N-ASN"),
+"KUNARIA" : ("2952", "N-NPN"),
+"KWLA" : ("2966", "N-NPN"),
+"LAXANA" : ("3001", "N-APN"),
+"LAXANON" : ("3001", "N-ASN"),
+"LEIMMA" : ("3005", "N-NSN"),
+"LENTION" : ("3012", "N-ASN"),
+"LEPTA" : ("3016", "N-APN"),
+"LEPTON" : ("3016", "N-ASN"),
+"LINON" : ("3043", "N-ASN"),
+"LOGIA" : ("3051", "N-APN"),
+"LUTRON" : ("3083", "N-ASN"),
+"MEGEQOS" : ("3174", "N-NSN"),
+"MELOS" : ("3196", "N-NSN"),
+"MERH" : ("3313", "N-APN"),
+"MESONUKTION" : ("3317", "N-ASN"),
+"MESOTOIXON" : ("3320", "N-ASN"),
+"METRON" : ("3358", "N-ASN"),
+"METWPON" : ("3359", "N-ASN"),
+"MHKOS" : ("3372", "N-NSN"),
+"MIASMATA" : ("3393", "N-APN"),
+"MIGMA" : ("3395", "N-ASN"),
+"MILION" : ("3400", "N-ASN"),
+"MNHMOSUNON" : ("3422", "N-ASN"),
+"MURA" : ("3464", "N-APN"),
+"MURRA" : ("3460", "N-APN"),
+"MUSTHRIA" : ("3466", "N-APN"),
+"NEFOS" : ("3509", "N-ASN"),
+"NHSION" : ("3519", "N-ASN"),
+"NOHMA" : ("3540", "N-ASN"),
+"NOMISMA" : ("3546", "N-ASN"),
+"NOSSIA" : ("3556", "N-APN"),
+"NUXQHMERON" : ("3574", "N-ASN"),
+"OCOS" : ("3690", "N-ASN"),
+"OFEILHMA" : ("3783", "N-ASN"),
+"OFEILHMATA" : ("3783", "N-APN"),
+"OFELOS" : ("3786", "N-NSN"),
+"OIKHTHRION" : ("3613", "N-ASN"),
+"OLOKAUTWMATA" : ("3646", "N-APN"),
+"OMMATA" : ("3659", "N-APN"),
+"OMOIWMATA" : ("3667", "N-NPN"),
+"ONARION" : ("3678", "N-ASN"),
+"ONEIDOS" : ("3681", "N-ASN"),
+"OQONIA" : ("3608", "N-APN"),
+"ORIA" : ("3725", "N-APN"),
+"ORNEA" : ("3732", "N-NPN"),
+"OSTEA" : ("3747", "N-APN"),
+"OSTOUN" : ("3747", "N-NSN"),
+"OYARIA" : ("3795", "N-APN"),
+"OYARION" : ("3795", "N-ASN"),
+"OYWNIA" : ("3800", "N-NPN"),
+"OYWNION" : ("3800", "N-ASN"),
+"PAIDARION" : ("3808", "N-NSN"),
+"PANDOXION" : ("3829", "N-ASN"),
+"PAQHMA" : ("3804", "N-ASN"),
+"PAQOS" : ("3806", "N-ASN"),
+"PARAMUQION" : ("3890", "N-NSN"),
+"PARAPTWMA" : ("3900", "N-NSN"),
+"PARAPTWMATA" : ("3900", "N-APN"),
+"PATARA" : ("3959", "N-APN"),
+"PELAGOS" : ("3989", "N-ASN"),
+"PERAS" : ("4009", "N-NSN"),
+"PERATA" : ("4009", "N-APN"),
+"PERIBOLAION" : ("4018", "N-NSN"),
+"PERIKAQARMATA" : ("4027", "N-NPN"),
+"PERISSEUMA" : ("4051", "N-NSN"),
+"PERISSEUMATA" : ("4051", "N-APN"),
+"PERIYHMA" : ("4067", "N-NSN"),
+"PHGANON" : ("4076", "N-ASN"),
+"PINAKIDION" : ("4093", "N-ASN"),
+"PLASMA" : ("4110", "N-NSN"),
+"PLHQH" : ("4128", "N-NPN"),
+"PLHRWMATA" : ("4138", "N-APN"),
+"PLOIARIA" : ("4142", "N-APN"),
+"PLOIARION" : ("4142", "N-NSN"),
+"POIHMA" : ("4161", "N-NSN"),
+"POLITEUMA" : ("4175", "N-NSN"),
+"POMA" : ("4188", "N-ASN"),
+"PRESBUTERION" : ("4244", "N-NSN"),
+"PROAULION" : ("4259", "N-ASN"),
+"PROBATIA" : ("4263", "N-APN"),
+"PROSABBATON" : ("4315", "N-NSN"),
+"PROSFAGION" : ("4371", "N-ASN"),
+"PROSKEFALAION" : ("4344", "N-ASN"),
+"PRWTOTOKIA" : ("4415", "N-APN-S"),
+"PTERUGION" : ("4419", "N-ASN"),
+"PTUON" : ("4425", "N-NSN"),
+"PTWMATA" : ("4430", "N-APN"),
+"QAMBOS" : ("2285", "N-NSN"),
+"QARSOS" : ("2294", "N-ASN"),
+"QELHMATA" : ("2307", "N-APN"),
+"QEMELIA" : ("2310", "N-APN"),
+"QEROS" : ("2330", "N-NSN"),
+"QREMMATA" : ("2353", "N-NPN"),
+"QUATEIRA" : ("2363", "N-APN"),
+"QUGATRION" : ("2365", "N-NSN"),
+"QUMIATHRION" : ("2369", "N-ASN"),
+"QUSIASTHRIA" : ("2379", "N-APN"),
+"RADIOURGHMA" : ("4467", "N-NSN"),
+"RAPISMA" : ("4475", "N-ASN"),
+"RAPISMATA" : ("4475", "N-APN"),
+"RHGION" : ("4484", "N-ASN"),
+"RHGMA" : ("4485", "N-NSN"),
+"SABBATA" : ("4521", "N-APN"),
+"SANDALIA" : ("4547", "N-APN"),
+"SARDION" : ("4556", "N-NSN"),
+"SAREPTA" : ("4558", "N-APN"),
+"SATA" : ("4568", "N-APN"),
+"SEBASMA" : ("4574", "N-ASN"),
+"SEBASMATA" : ("4574", "N-APN"),
+"SFAGIA" : ("4968", "N-APN"),
+"SFUDRA" : ("4974", "N-NPN"),
+"SIMIKINQIA" : ("4612", "N-APN"),
+"SITIA" : ("4621", "N-APN"),
+"SITOMETRION" : ("4620", "N-ASN"),
+"SKANDALA" : ("4625", "N-APN"),
+"SKEPASMATA" : ("4629", "N-APN"),
+"SKHNWMA" : ("4638", "N-ASN"),
+"SKUBALA" : ("4657", "N-APN"),
+"SKULA" : ("4661", "N-APN"),
+"SODOMA" : ("4670", "N-NPN"),
+"SOUDARIA" : ("4676", "N-APN"),
+"SOUDARION" : ("4676", "N-ASN"),
+"SPHLAIA" : ("4693", "N-APN"),
+"STADIA" : ("4712", "N-APN"),
+"STADIOUS" : ("4712", "N-APN"),
+"STEMMATA" : ("4725", "N-APN"),
+"STEREWMA" : ("4733", "N-ASN"),
+"STHQH" : ("4738", "N-APN"),
+"STHQOS" : ("4738", "N-ASN"),
+"STIGMATA" : ("4742", "N-APN"),
+"STOMATA" : ("4750", "N-APN"),
+"STRATEUMA" : ("4753", "N-ASN"),
+"STROUQIA" : ("4765", "N-NPN"),
+"SUKA" : ("4810", "N-APN"),
+"SUMBOULION" : ("4824", "N-ASN"),
+"SUMPOSIA" : ("4849", "N-APN"),
+"SUNEDRIA" : ("4892", "N-APN"),
+"SUNSHMON" : ("4953", "N-ASN"),
+"SUNTRIMMA" : ("4938", "N-NSN"),
+"SXHMA" : ("4976", "N-NSN"),
+"SXISMA" : ("4978", "N-NSN"),
+"SXOINIA" : ("4979", "N-APN"),
+"TALANTA" : ("5007", "N-APN"),
+"TALANTON" : ("5007", "N-ASN"),
+"TEIXH" : ("5038", "N-NPN"),
+"TELWNION" : ("5058", "N-ASN"),
+"TOCON" : ("5115", "N-ASN"),
+"TOPAZION" : ("5116", "N-NSN"),
+"TRAUMATA" : ("5134", "N-APN"),
+"TRUBLION" : ("5165", "N-ASN"),
+"UPERWON" : ("5253", "N-ASN"),
+"UPODEIGMA" : ("5262", "N-ASN"),
+"UPODEIGMATA" : ("5262", "N-APN"),
+"UPODHMA" : ("5266", "N-ASN"),
+"UPODHMATA" : ("5266", "N-APN"),
+"UPOLEIMMA" : ("2640", "N-NSN"),
+"UPOLHNION" : ("5276", "N-ASN"),
+"UPOZUGION" : ("5268", "N-NSN"),
+"USTERHMA" : ("5303", "N-ASN"),
+"USTERHMATA" : ("5303", "N-APN"),
+"WON" : ("5609", "N-ASN"),
+"WTARION" : ("5621", "N-ASN"),
+"WTION" : ("5621", "N-ASN"),
+"XARAGMA" : ("5480", "N-ASN"),
+"XASMA" : ("5490", "N-ASN"),
+"XEILH" : ("5491", "N-APN"),
+"XEILOS" : ("5491", "N-ASN"),
+"XEIROGRAFON" : ("5498", "N-ASN"),
+"XORTASMATA" : ("5527", "N-APN"),
+"XRHMA" : ("5536", "N-ASN"),
+"XRHMATA" : ("5536", "N-APN"),
+"XWRIA" : ("5564", "N-NPN"),
+"XWRION" : ("5564", "N-ASN"),
+"YWMION" : ("5596", "N-ASN"),
+"ZEUGH" : ("2201", "N-APN"),
+"ZEUGOS" : ("2201", "N-NSN"),
+"ZWA" : ("2226", "N-NPN"),
+"ZWON" : ("2226", "N-NSN"),
+
+
+2005-12-07 02:30pm
+
+I'm going through the list of unique neuters again.
+
+Here's what I have left:
+
+"OFEILHMA" : ("3783", "N-ASN"),
+"OFEILHMATA" : ("3783", "N-APN"),
+"OFELOS" : ("3786", "N-NSN"),
+"OIKHTHRION" : ("3613", "N-ASN"),
+"OLOKAUTWMATA" : ("3646", "N-APN"),
+"OMMATA" : ("3659", "N-APN"),
+"OMOIWMATA" : ("3667", "N-NPN"),
+"ONARION" : ("3678", "N-ASN"),
+"ONEIDOS" : ("3681", "N-ASN"),
+"OQONIA" : ("3608", "N-APN"),
+"ORIA" : ("3725", "N-APN"),
+"ORNEA" : ("3732", "N-NPN"),
+"OSTEA" : ("3747", "N-APN"),
+"OSTOUN" : ("3747", "N-NSN"),
+"OYARIA" : ("3795", "N-APN"),
+"OYARION" : ("3795", "N-ASN"),
+"OYWNIA" : ("3800", "N-NPN"),
+"OYWNION" : ("3800", "N-ASN"),
+"PAIDARION" : ("3808", "N-NSN"),
+"PANDOXION" : ("3829", "N-ASN"),
+"PAQHMA" : ("3804", "N-ASN"),
+"PAQOS" : ("3806", "N-ASN"),
+"PARAMUQION" : ("3890", "N-NSN"),
+"PARAPTWMA" : ("3900", "N-NSN"),
+"PARAPTWMATA" : ("3900", "N-APN"),
+"PATARA" : ("3959", "N-APN"),
+"PELAGOS" : ("3989", "N-ASN"),
+"PERAS" : ("4009", "N-NSN"),
+"PERATA" : ("4009", "N-APN"),
+"PERIBOLAION" : ("4018", "N-NSN"),
+"PERIKAQARMATA" : ("4027", "N-NPN"),
+"PERISSEUMA" : ("4051", "N-NSN"),
+"PERISSEUMATA" : ("4051", "N-APN"),
+"PERIYHMA" : ("4067", "N-NSN"),
+"PHGANON" : ("4076", "N-ASN"),
+"PINAKIDION" : ("4093", "N-ASN"),
+"PLASMA" : ("4110", "N-NSN"),
+"PLHQH" : ("4128", "N-NPN"),
+"PLHRWMATA" : ("4138", "N-APN"),
+"PLOIARIA" : ("4142", "N-APN"),
+"PLOIARION" : ("4142", "N-NSN"),
+"POIHMA" : ("4161", "N-NSN"),
+"POLITEUMA" : ("4175", "N-NSN"),
+"POMA" : ("4188", "N-ASN"),
+"PRESBUTERION" : ("4244", "N-NSN"),
+"PROAULION" : ("4259", "N-ASN"),
+"PROBATIA" : ("4263", "N-APN"),
+"PROSABBATON" : ("4315", "N-NSN"),
+"PROSFAGION" : ("4371", "N-ASN"),
+"PROSKEFALAION" : ("4344", "N-ASN"),
+"PRWTOTOKIA" : ("4415", "N-APN-S"),
+"PTERUGION" : ("4419", "N-ASN"),
+"PTUON" : ("4425", "N-NSN"),
+"PTWMATA" : ("4430", "N-APN"),
+"QAMBOS" : ("2285", "N-NSN"),
+"QARSOS" : ("2294", "N-ASN"),
+"QELHMATA" : ("2307", "N-APN"),
+"QEMELIA" : ("2310", "N-APN"),
+"QEROS" : ("2330", "N-NSN"),
+"QREMMATA" : ("2353", "N-NPN"),
+"QUATEIRA" : ("2363", "N-APN"),
+"QUGATRION" : ("2365", "N-NSN"),
+"QUMIATHRION" : ("2369", "N-ASN"),
+"QUSIASTHRIA" : ("2379", "N-APN"),
+"RADIOURGHMA" : ("4467", "N-NSN"),
+"RAPISMA" : ("4475", "N-ASN"),
+"RAPISMATA" : ("4475", "N-APN"),
+"RHGION" : ("4484", "N-ASN"),
+"RHGMA" : ("4485", "N-NSN"),
+"SABBATA" : ("4521", "N-APN"),
+"SANDALIA" : ("4547", "N-APN"),
+"SARDION" : ("4556", "N-NSN"),
+"SAREPTA" : ("4558", "N-APN"),
+"SATA" : ("4568", "N-APN"),
+"SEBASMA" : ("4574", "N-ASN"),
+"SEBASMATA" : ("4574", "N-APN"),
+"SFAGIA" : ("4968", "N-APN"),
+"SFUDRA" : ("4974", "N-NPN"),
+"SIMIKINQIA" : ("4612", "N-APN"),
+"SITIA" : ("4621", "N-APN"),
+"SITOMETRION" : ("4620", "N-ASN"),
+"SKANDALA" : ("4625", "N-APN"),
+"SKEPASMATA" : ("4629", "N-APN"),
+"SKHNWMA" : ("4638", "N-ASN"),
+"SKUBALA" : ("4657", "N-APN"),
+"SKULA" : ("4661", "N-APN"),
+"SODOMA" : ("4670", "N-NPN"),
+"SOUDARIA" : ("4676", "N-APN"),
+"SOUDARION" : ("4676", "N-ASN"),
+"SPHLAIA" : ("4693", "N-APN"),
+"STADIA" : ("4712", "N-APN"),
+"STADIOUS" : ("4712", "N-APN"),
+"STEMMATA" : ("4725", "N-APN"),
+"STEREWMA" : ("4733", "N-ASN"),
+"STHQH" : ("4738", "N-APN"),
+"STHQOS" : ("4738", "N-ASN"),
+"STIGMATA" : ("4742", "N-APN"),
+"STOMATA" : ("4750", "N-APN"),
+"STRATEUMA" : ("4753", "N-ASN"),
+"STROUQIA" : ("4765", "N-NPN"),
+"SUKA" : ("4810", "N-APN"),
+"SUMBOULION" : ("4824", "N-ASN"),
+"SUMPOSIA" : ("4849", "N-APN"),
+"SUNEDRIA" : ("4892", "N-APN"),
+"SUNSHMON" : ("4953", "N-ASN"),
+"SUNTRIMMA" : ("4938", "N-NSN"),
+"SXHMA" : ("4976", "N-NSN"),
+"SXISMA" : ("4978", "N-NSN"),
+"SXOINIA" : ("4979", "N-APN"),
+"TALANTA" : ("5007", "N-APN"),
+"TALANTON" : ("5007", "N-ASN"),
+"TEIXH" : ("5038", "N-NPN"),
+"TELWNION" : ("5058", "N-ASN"),
+"TOCON" : ("5115", "N-ASN"),
+"TOPAZION" : ("5116", "N-NSN"),
+"TRAUMATA" : ("5134", "N-APN"),
+"TRUBLION" : ("5165", "N-ASN"),
+"UPERWON" : ("5253", "N-ASN"),
+"UPODEIGMA" : ("5262", "N-ASN"),
+"UPODEIGMATA" : ("5262", "N-APN"),
+"UPODHMA" : ("5266", "N-ASN"),
+"UPODHMATA" : ("5266", "N-APN"),
+"UPOLEIMMA" : ("2640", "N-NSN"),
+"UPOLHNION" : ("5276", "N-ASN"),
+"UPOZUGION" : ("5268", "N-NSN"),
+"USTERHMA" : ("5303", "N-ASN"),
+"USTERHMATA" : ("5303", "N-APN"),
+"WON" : ("5609", "N-ASN"),
+"WTARION" : ("5621", "N-ASN"),
+"WTION" : ("5621", "N-ASN"),
+"XARAGMA" : ("5480", "N-ASN"),
+"XASMA" : ("5490", "N-ASN"),
+"XEILH" : ("5491", "N-APN"),
+"XEILOS" : ("5491", "N-ASN"),
+"XEIROGRAFON" : ("5498", "N-ASN"),
+"XORTASMATA" : ("5527", "N-APN"),
+"XRHMA" : ("5536", "N-ASN"),
+"XRHMATA" : ("5536", "N-APN"),
+"XWRIA" : ("5564", "N-NPN"),
+"XWRION" : ("5564", "N-ASN"),
+"YWMION" : ("5596", "N-ASN"),
+"ZEUGH" : ("2201", "N-APN"),
+"ZEUGOS" : ("2201", "N-NSN"),
+"ZWA" : ("2226", "N-NPN"),
+"ZWON" : ("2226", "N-NSN"),
+
+
+2005-12-08 03:30pm
+
+Still going through the list of neuters.
+
+Here's what I have left:
+
+
+STEMMATA : (4725, N-APN),
+STEREWMA : (4733, N-ASN),
+STHQH : (4738, N-APN),
+STHQOS : (4738, N-ASN),
+STIGMATA : (4742, N-APN),
+STOMATA : (4750, N-APN),
+STRATEUMA : (4753, N-ASN),
+STROUQIA : (4765, N-NPN),
+SUKA : (4810, N-APN),
+SUMBOULION : (4824, N-ASN),
+SUMPOSIA : (4849, N-APN),
+SUNEDRIA : (4892, N-APN),
+SUNSHMON : (4953, N-ASN),
+SUNTRIMMA : (4938, N-NSN),
+SXHMA : (4976, N-NSN),
+SXISMA : (4978, N-NSN),
+SXOINIA : (4979, N-APN),
+TALANTA : (5007, N-APN),
+TALANTON : (5007, N-ASN),
+TEIXH : (5038, N-NPN),
+TELWNION : (5058, N-ASN),
+TOCON : (5115, N-ASN),
+TOPAZION : (5116, N-NSN),
+TRAUMATA : (5134, N-APN),
+TRUBLION : (5165, N-ASN),
+UPERWON : (5253, N-ASN),
+UPODEIGMA : (5262, N-ASN),
+UPODEIGMATA : (5262, N-APN),
+UPODHMA : (5266, N-ASN),
+UPODHMATA : (5266, N-APN),
+UPOLEIMMA : (2640, N-NSN),
+UPOLHNION : (5276, N-ASN),
+UPOZUGION : (5268, N-NSN),
+USTERHMA : (5303, N-ASN),
+USTERHMATA : (5303, N-APN),
+WON : (5609, N-ASN),
+WTARION : (5621, N-ASN),
+WTION : (5621, N-ASN),
+XARAGMA : (5480, N-ASN),
+XASMA : (5490, N-ASN),
+XEILH : (5491, N-APN),
+XEILOS : (5491, N-ASN),
+XEIROGRAFON : (5498, N-ASN),
+XORTASMATA : (5527, N-APN),
+XRHMA : (5536, N-ASN),
+XRHMATA : (5536, N-APN),
+XWRIA : (5564, N-NPN),
+XWRION : (5564, N-ASN),
+YWMION : (5596, N-ASN),
+ZEUGH : (2201, N-APN),
+ZEUGOS : (2201, N-NSN),
+ZWA : (2226, N-NPN),
+ZWON : (2226, N-NSN),
+
+
+2005-12-08 04:54pm
+
+I found out that STA/DIOS means "unit of length", and is masculine,
+whereas "STA/DION" menas "stadium", and is neuter.  They occur as
+follows:
+
+
+1CO.TSP:1CO 9:24.6 STADIW N-DSN 4712 STA/DION ! STA/DION
+JOH.TSP:JOH 6:19.4 STADIA N-APN 4712 STA/DION ! STA/DION
+JOH.TSP:JOH 11:18.9 STADIWN N-GPN 4712 STA/DION ! STA/DION
+LU.TSP:LU 24:13.15 STADIOUS N-APN 4712 STA/DION ! STA/DION
+RE.TSP:RE 14:20.20 STADIWN N-GPN 4712 STA/DION ! STA/DION
+RE.TSP:RE 21:16.20 STADIWN N-GPN 4712 STA/DION ! STA/DION
+
+All of these are neuter.
+
+Strong grouped both words under 4712, so no dice in distinguishing
+them by Strong's number.
+
+I decided to change manual_analyses.txt to make the ones that are
+clearly masculine, masculine.
+
+
+diff -r1.59 manual_analyses.txt
+334a335
+> LU 24:13.15 STADIOUS N-APM 4712
+517a519
+> JOH 11:18.9 STADIWN N-GPM 4712
+874a877
+> RE 14:20.20 STADIWN N-GPM 4712
+891a895
+> RE 21:16.20 STADIWN N-GPM 4712
+
+
+
+2005-12-08 04:57pm
+
+Still going through the list of neuters.
+
+Here's what I have left:
+
+TALANTA : (5007, N-APN),
+TALANTON : (5007, N-ASN),
+TEIXH : (5038, N-NPN),
+TELWNION : (5058, N-ASN),
+TOCON : (5115, N-ASN),
+TOPAZION : (5116, N-NSN),
+TRAUMATA : (5134, N-APN),
+TRUBLION : (5165, N-ASN),
+UPERWON : (5253, N-ASN),
+UPODEIGMA : (5262, N-ASN),
+UPODEIGMATA : (5262, N-APN),
+UPODHMA : (5266, N-ASN),
+UPODHMATA : (5266, N-APN),
+UPOLEIMMA : (2640, N-NSN),
+UPOLHNION : (5276, N-ASN),
+UPOZUGION : (5268, N-NSN),
+USTERHMA : (5303, N-ASN),
+USTERHMATA : (5303, N-APN),
+WON : (5609, N-ASN),
+WTARION : (5621, N-ASN),
+WTION : (5621, N-ASN),
+XARAGMA : (5480, N-ASN),
+XASMA : (5490, N-ASN),
+XEILH : (5491, N-APN),
+XEILOS : (5491, N-ASN),
+XEIROGRAFON : (5498, N-ASN),
+XORTASMATA : (5527, N-APN),
+XRHMA : (5536, N-ASN),
+XRHMATA : (5536, N-APN),
+XWRIA : (5564, N-NPN),
+XWRION : (5564, N-ASN),
+YWMION : (5596, N-ASN),
+ZEUGH : (2201, N-APN),
+ZEUGOS : (2201, N-NSN),
+ZWA : (2226, N-NPN),
+ZWON : (2226, N-NSN),
+
+Stopped here at 05:22pm.
+
+
+2005-12-10 09:50pm
+
+Still going through the list of neuters.
+
+Here's what I have left:
+
+
+XEILH : (5491, N-APN),
+XEILOS : (5491, N-ASN),
+XEIROGRAFON : (5498, N-ASN),
+XORTASMATA : (5527, N-APN),
+XRHMA : (5536, N-ASN),
+XRHMATA : (5536, N-APN),
+XWRIA : (5564, N-NPN),
+XWRION : (5564, N-ASN),
+YWMION : (5596, N-ASN),
+ZEUGH : (2201, N-APN),
+ZEUGOS : (2201, N-NSN),
+ZWA : (2226, N-NPN),
+ZWON : (2226, N-NSN),
+
+
+2005-12-10  10:18pm
+
+I found a passive that took an accusative subject in W-H, which I
+reported to Dr. Robinson.
+
+diff -r1.60 manual_analyses.txt
+289a290,291
+> LU 16:26.9 XASMA N-NSN 5490
+> LU 16:26.10 MEGA A-NSN 3173
+
+
+
+2005-12-10 10:19pm
+
+Still going through the list of neuters.
+
+Here's what I have left:
+
+
+ZWA : (2226, N-NPN),
+ZWON : (2226, N-NSN),
+
+
+
+2005-12-10 10:42pm
+
+I found another one:
+
+diff -r1.61 manual_analyses.txt
+210a211
+> LU 2:24.12 ZEUGOS N-ASN 2201
+
+
+This was nominative.
+
+Has been reported to Dr. Robinson.
+
+
+2005-12-10 10:42pm
+
+Still going through the list of neuters.
+
+
+2005-12-10 10:47pm
+
+FINISHED!
+
+PRAISE THE LORD GOD OF ISRAEL, WHO GAVE STRENGTH TO HIS LOWLY SERVANT
+TO FINISH HIS WORK. MAY HE BE PRAISED FOR EVERMORE, AND MAY HIS WORD
+BE SPREAD AND HONORED BECAUSE OF THE WORK OF HIS LOWLY SERVANT!
+
+
+
+
+2005-12-10 10:56pm
+
+Going through the list of lemmas which, in ANLEX, have a roman numeral
+in parentheses.
+
+
+$ grep "\[1" *.TSP | awk '{ print $8 " " $9 " " $10; }' | sort | uniq
+A)/PEIMI [1I]1
+A)/PEIMI [1II]1
+BA/TOS [1I]1
+BA/TOS [1II]1
+DOU=LOS [1II]1
+E)/CESTI[1N]1
+H)=XOS [1II]1
+LOIMO/S [1II]1
+MH/N [1I]1
+MH/N [1II]1
+SU/NEIMI [1I]1
+SU/NEIMI [1II]1
+XW=ROS [1II]1
+
+
+Found that DOU=LOS 1401 needed to be DOU=LON 1400 (ANLEX: DOU=LOS
+[1I]1) in the following places:
+
+diff -r1.62 manual_analyses.txt
+652a653,654
+> RO 6:19.15 DOULA A-APN 1400
+> RO 6:19.30 DOULA A-APN 1400
+
+
+2005-12-10  11:06pm
+
+I found out that H)=XOS exists in two lemmas:
+
+H)=XOS, -OU, O(  which in ANLEX is given the designation H)=XOS [11]1
+
+H)=XOS, -OUS, TO/  which in ANLEX is given the designation H)=XOS [1II]1
+
+Now, the neuter only occurs in LU 21:25.18 (according to BDAG),
+whereas the masculine occurs in AC 2:2.7, HEB 12:19.3, and LU 4:37.3.
+
+Strong's has only one entry for this, so I can't distinguish the
+lemmas by the Strong's number.
+
+ANLEX cuts the cake differently, and says (with BDAG) that HE 12:19 is
+masculine, but calls the others neuters.
+
+Since the masculine occurs more often, I have decided to change the
+[1II]1 to [1I]1 in lemmatable_ANLEX.txt.
+
+FIXME: Distinguish!
+
+
+2005-12-10 11:12pm
+
+FINISHED going through the list of lemmas which, in ANLEX, have a
+roman numeral in parentheses!
+
+
+PRAISE THE LORD!
+
+
+2005-12-11 04:57am
+
+I spoke with Clint Yale for about an hour on the phone.  He gave me
+permission to import the diacritics and punctuation from his big
+Tischendorf.  (!)
+
+Hence I've proof-read the Accented text, and have brought both it and
+the Unparsed text into conformity with the printed Tischendorf,
+reversing my decisions above to let the electronic edition not conform
+to the printed edition when it was clear what was being meant.
+
+This has brought the following changes:
+
+diff -r1.63 manual_analyses.txt
+142a143
+> MR 9:38.16 AKOLOUQEI V-PAI-3S 190
+183a185
+> MR 14:64.6 FAINENETAI V-PEI-3S 5316
+507a510
+> JOH 8:10.b.18 OI T-NPM 3588
+889a893
+> RE 17:14.10 SUTOUS P-APM 846
+
+
+
+2005-12-11 06:43am
+
+I've rewritten the Python code to read straight from the Accented
+Tischendorf, bypassing the Unparsed (and unaccented) text altogether.
+
+I had to change manual_analyses.txt thusly:
+
+diff -r1.64 manual_analyses.txt
+193c193
+< MR 15:43.3 O T-NSM 3588
+---
+> MR 15:43.3 [O] T-NSM 3588
+259c259
+< LU 11:14.7 HN V-IAI-3S 1510
+---
+> LU 11:14.7 HN] V-IAI-3S 1510
+646c646
+< AC 25:17.3 AUTWN P-GPM 846
+---
+> AC 25:17.3 [AUTWN] P-GPM 846
+649c649
+< AC 26:26.15 TI X-ASN 5100
+---
+> AC 26:26.15 [TI] X-ASN 5100
+809c809
+< 1PE 1:12.18 EN PREP 1722
+---
+> 1PE 1:12.18 [EN] PREP 1722
+
+
+2005-12-11 07:48am
+
+I am converting to MQL as I write.  I have fixed quite a few textual
+errors in the Accented text, found by letting the BETA2Unicode Python
+code loose on the text.
+
+I have retained the printed text throughout, EXCEPT for the following:
+
+
+AC 27:21.15 W)=| INJ 5599 W)= ! W)=
+
+here, I have removed the iota subscriptum, even though the printed
+text has it.  AFAIK, there IS no such thing as W)=| in Unicode, so I
+am leaving it out.
+
+
+2005-12-11 08:06am
+
+I found this:
+
+RE 13:18.21 XCS/. A-NUI-ABB 5516 XCS ! XCS'
+
+It does look like an acute accent, but it should be a ', as the ANLEX
+lemma says, and as also is shown for, e.g. PROS KORINQIOUS A'.
+
+
+2005-12-11 08:31am
+
+With the new acented text, I had to mangle "\" into "\\", so that was
+added to word.py.
+

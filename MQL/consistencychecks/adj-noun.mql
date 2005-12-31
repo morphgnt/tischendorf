@@ -1,0 +1,8 @@
+SELECT ALL OBJECTS
+WHERE
+NOTEXIST [Word psp=noun]
+[Word as w1 FOCUS psp=adjective AND strongs1 <> 3762]
+[Word FOCUS psp=noun AND 
+      (case <> w1.case OR number <> w1.number OR gender <> w1.gender) 
+      AND case <> genitive]
+

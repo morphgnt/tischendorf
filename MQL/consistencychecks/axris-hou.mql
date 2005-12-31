@@ -1,0 +1,19 @@
+/*
+ * AXRIS/AXRI/MEXRIS/MEXRI hOU
+ *
+ * Hypothesis: All instances of AXRIS/AXRI/MEXRIS/MEXRI + OU
+ * have R-GSM as the parsing of OU.
+ *
+ * Test: Test for AXRIS/AXRI/MEXRIS/MEXRI followed by OU that does not
+ * have R-GSM as the parsing.
+ *
+ * If even one shows up, it is falsified.
+ *
+ * Result: This was not falsified.
+ */
+SELECT ALL OBJECTS
+WHERE
+[Word surface="MEXRI" or surface="MEXRIS" 
+      or surface="AXRI" or surface="AXRIS"]
+[Word surface="OU" and parsing <> "R-GSM"]
+GO

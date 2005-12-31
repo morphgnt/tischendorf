@@ -1,0 +1,25 @@
+alpha            | A | a
+beta             | B | b
+gamma            | G | g
+delta            | D | d
+epsilon          | E | e
+zeta             | Z | z
+eta              | H | h
+theta            | Q | y
+iota             | I | i
+kappa            | K | k
+lambda           | L | l
+mu               | M | m
+nu               | N | n
+xi               | C | x
+omicron          | O | o
+pi               | P | p
+rho              | R | r
+sigma            | S | s
+sigma finalis    | S | v
+tau              | T | t
+upsilon          | U | u
+phi              | F | f
+chi              | X | c
+psi              | Y | q
+omega            | W | w

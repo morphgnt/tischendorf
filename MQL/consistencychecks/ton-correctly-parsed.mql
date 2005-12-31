@@ -1,0 +1,10 @@
+/*
+ * Hypothesis: All instances of TON are parsed as T-ASM 3588.
+ *
+ * This was not falsified.
+ *
+ */
+SELECT ALL OBJECTS
+WHERE
+[Word surface="TON" and (parsing<>"T-ASM" OR strongs1<>3588)]
+

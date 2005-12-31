@@ -1,0 +1,8 @@
+/*
+ * Hypothesis: All instances of PANTI have Strong's number 3956.
+ * 
+ * This was not falsified.
+ */
+SELECT ALL OBJECTS
+WHERE
+[Word FOCUS surface="PANTI" and (strongs1 <> 3956)]

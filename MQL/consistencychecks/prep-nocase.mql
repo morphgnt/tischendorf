@@ -1,0 +1,6 @@
+SELECT ALL OBJECTS
+WHERE
+[Word FOCUS psp=preposition]
+[Word FOCUS case=NA and not psp IN (proper_noun_indeclinable, conjunction, numeral_indeclinable,adverb,particle,noun_other_type_indeclinable) ]
+GO
+

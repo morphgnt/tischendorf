@@ -1,0 +1,15 @@
+SELECT ALL OBJECTS
+WHERE
+[Verse
+  NOTEXIST [Word psp=noun]
+  [Word as w1 FOCUS psp=noun]
+  [Word as w2 FOCUS psp=adjective AND 
+        (case <> w1.case OR number <> w1.number OR gender <> w1.gender)AND case <> nominative
+  ]
+  [Word NOT (case = w2.case AND number = w2.number AND gender = w2.gender) 
+     ]
+]
+GO
+
+
+

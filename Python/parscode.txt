@@ -1,0 +1,478 @@
+		    THE ONLINE GREEK NEW TESTAMENT
+		     DECLENSION CODES FOR NOUNS,
+	 ADJECTIVES, PREPOSITIONS, CONJUNCTIONS AND PARTICLES
+
+		 Derived, compared and corrected from
+		Davidson's "Analytical Greek Lexicon,"
+		     with comparison made against
+	    Perschbacher's "New Analytical Greek Lexicon"
+
+	    Abbreviated in a form similar to that found in
+	      Friberg's "Analytical Greek New Testament"
+
+		    Maurice A. Robinson 2 May 2000
+
+The codes which follow reflect an original abridgment and correction
+of the parsing data presented in Samuel Davidson, "The Analytical
+Greek Lexicon" (London: Samuel Bagster and Sons, 1859), which volume
+is now in the public domain.
+
+Comparison also has been made against the parsing information cited in
+Wesley J. Perschbacher, "The New Analytical Greek Lexicon" (Peabody,
+MA: Hendrickson, 1990). The Perschbacher volume is itself an updated
+and corrected revision of the original Davidson "Analytical Greek
+Lexicon".
+
+Note that more than 500 parsing or other errors which occurred in
+Davidson and remained uncorrected in the Perschbacher revision have
+been corrected within the present Online Bible parsing data.
+
+The abbreviation system herein utilized, although developed
+independently, retains features similar but not identical to those
+found in Timothy and Barbara Friberg "The Analytical Greek New
+Testament" (Grand Rapids: Baker, 1981), and can be used with ease by
+anyone familiar with either the Davidson, Perschbacher, or Friberg
+volumes.
+
+Many non-verbal New Testament Greek forms (e.g., nouns, adjectives,
+conjunctions, prepositions, and particles) can be declined in more
+than one manner. Following the example of Davidson and Perschbacher,
+the declensions given reflect only those forms which actually occur in
+the Greek New Testament.
+
+The present parsing list makes no claim to be error-free; should the
+user discover any errors in either the parsing/declension codes or
+Strong's numbers while using the Online Bible, please inform the
+present editor c/o SEBTS, P. O. Box 1889, Wake Forest, NC 27588.
+
+UNDECLINED FORMS:
+
+    ADV = ADVerb or adverb and particle combined
+    CONJ = CONJunction or conjunctive particle
+    COND = CONDitional particle or conjunction
+    PRT = PaRTicle, disjunctive particle
+    PREP = PREPosition
+    INJ = INterJection
+    ARAM = ARAMaic transliterated word (indeclinable)
+    HEB = HEBrew transliterated word (indeclinable)
+    N-PRI = Indeclinable PRoper Noun
+    A-NUI = Indeclinable NUmeral (Adjective)
+    N-LI = Indeclinable Letter (Noun)
+    N-OI = Indeclinable Noun of Other type
+
+DECLINED FORMS:
+
+    All follow the order: prefix-case-number-gender-(suffix)
+
+    Prefixes:
+
+    N- = Noun
+    A- = Adjective
+    R- = Relative pronoun
+    C- = reCiprocal pronoun
+    D- = Demonstrative pronoun
+    T- = definite article
+    K- = correlative pronoun
+    I- = Interrogative pronoun
+    X- = indefinite pronoun
+    Q- = correlative or interrogative pronoun
+    F- = reFlexive pronoun (person 1,2,3 added)
+    S- = poSsessive pronoun (person 1,2,3 added)
+    P- = Personal pronoun (person 1,2,3 added) > (Note: 1st and 2nd personal pronouns have no gender)
+
+Cases (5-case system only):
+
+    -N = Nominative
+    -V = Vocative
+    -G = Genitive
+    -D = Dative
+    -A = Accusative
+
+ 
+
+Number:
+
+    S = Singular
+    P = Plural
+
+ 
+
+Gender:
+
+    M = Masculine
+    F = Feminine
+    N = Neuter
+
+Suffixes:
+
+    -S = Superlative (used only with adjectives and some adverbs)
+    -C = Comparative (used only with adjectives and some adverbs)
+    -ABB = ABBreviated form (used only with various numerals)
+    -I = Interrogative
+    -N = Negative (used only with particles as PRT-N)
+    -C = Contracted form, or two words merged by crasis
+    -ATT = ATTic Greek form
+    -P = Particle attached (with relative pronoun)
+
+SEARCHING FOR WORDS USING THE PARSING CODES:
+
+All parsing and declension code information for the Online Bible Greek
+text is supplied in CAPITAL letters whereas the Greek text appears
+entirely in lower case letters. The Online Bible search routine allows
+case-sensitive searching, so that one can easily use lower case to
+search for Greek words only (with or without wildcards), and upper
+case to search by parsing or declension only (also with or without
+wildcards). Using Boolean search capabilities, one can combine lower
+and upper case search requests to select specific Greek forms in
+association with specified parsing or declension information.
+
+Note that in order to search across hyphenated sections of the
+declension parsing (e.g., for N-GSM), one must make a "phrase >
+search" request, since the Online Bible disregards hyphens in its >
+search routine. Thus, to search for N-GSM, the request must be
+specific for either the phrase "N GSM" or "N-GSM".
+
+Note that, even though one could search for all the forms of "logov"
+by "log*", or for all Genitive plural nouns by typing "GPM | GPM |
+GPN", in order to link a word directly with its own particular
+declension, a fully inclusive PHRASE SEARCH must be requested which
+includes the preliminary part-of-speech identifier (N-, A-, or V-)
+when appropriate. E.g., to search for all genitive plural forms of
+"logov", one must enter a phrase search request for either "log* N-GPM
+| log* N-GPF | log* N-GPN" or "log* N-GP*"
+
+Note that the Strong's numbers may also be judiciously utilized when
+making search requests to reduce the amount of time and space needed
+to otherwise frame such a request. E.g., one equally could do a phrase
+search for all genitive plural forms of "logov" by "3056 & N-GPM |
+N-GPF | N-GPN" or "3056 & N-GP*".
+
+To search for phrases based solely on grammatical analysis (e.g., for
+all prepositional phrases followed by an articular neuter genitive
+noun), one must use the wildcard (*) symbol before each requested
+parsing in a phrase search request (e.g., "* PREP * > T-GSN * N-GSN").
+
+STRONG'S NUMBERS: For access to the lexical definitions of the root
+form of each Greek word, the appropriate Strong's concordance number
+has been added immediately following each Greek word. The definition
+of that word can then be ascertained by following the normal Online
+Bible F4 key or definition function as found in English-language based
+texts.
+
+The user should be cautioned, however, that the Strong's numbers
+utilized for the Greek New Testament are NOT always identical with
+those used in coding the English version text. The reason for this
+discrepancy is simple: James Strong was attempting to help out the lay
+reader of the Authorized Version in assigning numbers to each unique
+word root form. For some reason, he then decided that the user might
+be additionally aided if certain words (e.g., the verb "to be", or
+comparative and superlative forms of adjectives and adverbs) were
+further subdivided into uniquely-numbered forms; or, conversely, if
+frequent expressions comprising more than one word (e.g. "ou mh") were
+subsumed under > a single number, rather than giving the usual
+separate numbers to such forms.
+
+Thus, the Strong's apparatus -- well-suited as it may be for use of
+the concordance he produced, as well as to aid the English reader who
+does not know Greek -- is quite confusing and detrimental to the
+student who might seek to use the same numbers for understanding the
+root forms of the Greek New Testament.
+
+In order to eliminate the various problems which would otherwise arise
+from an incautious use of Strong's numbers as originally provided for
+the English Bible, the present Greek edition of the Online Bible has
+reduced the Strong's numbers considerably so as to guide the user
+directly to the root form of most Greek words,without adding in the
+extra step of having further to enquire via the lexicon as to the
+component or root forms of such words.
+
+This revision of the Strong's numbers for the Greek text of the New
+Testament is not yet complete. Future editions of the Online Bible
+Greek text will eventually bring all Strong's numbers into conformity
+with the principle of providing only the base root form for all Greek
+New Testament words. The user's patience is requested during this
+period of development.
+
+ADDITIONAL NOTES:
+
+Declined proper nouns are not specifically identified as such; only
+indeclinable forms are so identified.
+
+It is ASSUMED that all Strong's numbers are correct; these have not
+all been verified, except in a few cases where errors were corrected
+during the process.
+
+Reflexive pronouns have the Person (1,2,3) attached, e.g. F-3DSF See
+"auth" in Perschbacher for further examples.
+
+"rmd" is the abbreviated numeral for 144,000. This term has no >
+Strong's number. It therefore has been assigned three Strong's
+numbers, reflecting the individual Greek words which make up its >
+component parts.
+
+Top of Page
+
+===========================
+
+		    THE ONLINE GREEK NEW TESTAMENT
+		 PARSING CODES FOR VERB-RELATED FORMS
+
+		 Derived, compared and corrected from
+		Davidson's "Analytical Greek Lexicon,"
+		     with comparison made against
+	    Perschbacher's "New Analytical Greek Lexicon"
+
+	    Abbreviated in a form similar to that found in
+	      Friberg's "Analytical Greek New Testament"
+				   
+		    Maurice A. Robinson 2 May 2000
+
+The codes which follow reflect an original abridgment and correction
+of the parsing data presented in Samuel Davidson, "The Analytical
+Greek Lexicon" (London: Samuel Bagster and Sons, 1859), which volume
+is now in the public domain.
+
+Comparison also has been made against the parsing information cited in
+Wesley J. Perschbacher, "The New Analytical Greek Lexicon" (Peabody,
+MA: Hendrickson, 1990). The Perschbacher volume is itself an updated
+and corrected revision of the original Davidson "Analytical Greek
+Lexicon".
+
+Note that more than 500 parsing or other errors which occurred in
+Davidson and remained uncorrected in the Perschbacher revision have
+been corrected within the present Online Bible parsing data.
+
+The abbreviation system herein utilized, although developed
+independently, retains features similar but not identical to those
+found in Timothy and Barbara Friberg "The Analytical Greek New
+Testament" (Grand Rapids: Baker, 1981), and can be used with ease by
+anyone familiar with either the Davidson, Perschbacher, or Friberg
+volumes.
+
+Many non-verbal New Testament Greek forms (e.g., nouns, adjectives,
+conjunctions, prepositions, and particles) can be declined in more
+than one manner. Following the example of Davidson and Perschbacher,
+the declensions given reflect only those forms which actually occur in
+the Greek New Testament.
+
+The present verbal codes exhaustively cover every possible verb
+parsing situation cited by Perschbacher, and reflect the totality of
+forms used in the Online Bible Greek module for verb parsings.
+
+The present parsing list makes no claim to be error-free; should the
+user discover any errors in either the parsing/declension codes or
+Strong's numbers while using the Online Bible, please inform the
+present editor c/o SEBTS, P. O. Box 1889, Wake Forest, NC 27588.
+
+All Greek verbs are listed in one of three various forms:
+
+1) V-tense-voice-mood
+2) V-tense-voice-mood-person-number
+3) V-tense-voice-mood-case-number-gender
+
+The abbreviations which pertain to each of these categories are the following:
+
+Tense:
+
+P = Present
+I = Imperfect
+F = Future
+Second Future = 2F
+A = Aorist
+Second Aorist = 2A
+R = peRfect
+Second peRfect = 2R
+L = pLuperfect
+Second pLuperfect = 2L
+X = no tense stated (adverbial imperative)
+
+Voice:
+
+A = Active
+M = Middle
+P = Passive
+E = Either middle or passive
+D = middle Deponent
+O = passive depOnent
+N = middle or passive depoNent
+Q = impersonal active
+X = no voice stated
+
+Mood:
+
+I = Indicative
+S = Subjunctive
+O = Optative
+M = iMperative
+N = iNfinitive
+P = Participle
+R = impeRative-sense participle
+
+Extra:
+
+-M = Middle significance
+-C = Contracted form
+-T = Transitive
+-A = Aeolic
+-ATT = Attic
+-AP = Apocopated form
+-IRR = Irregular or Impure form
+
+Person: 1, 2, 3 = First, Second, Third person
+
+Number: S, P = Singular, Plural
+
+Gender: M, F, N = Masculine, Feminine, Neuter
+
+Case:
+
+N = Nominative (5-case system only!)
+G = Genitive
+D = Dative
+A = Accusative
+V = Vocative
+
+SEARCHING FOR WORDS USING THE PARSING CODES:
+
+All parsing and declension code information for the Online Bible Greek
+text is supplied in CAPITAL letters whereas the Greek text appears
+entirely in lower case letters. The Online Bible search routine allows
+case-sensitive searching, so that one can easily use lower case to
+search for Greek words only (with or without > wildcards), and upper
+case to search by parsing or declension only (also with or without
+wildcards). Using Boolean search capabilities, one can combine lower
+and upper case search requests to select specific Greek forms in
+association with specified parsing or declension information.
+
+Note that in order to search across hyphenated sections of the parsing
+(e.g., for V-PAI-3S), one must make a "phrase search" request, since
+the Online Bible disregards hyphens in its search routine. Thus, to
+search for V-PAI-3S, the request must be specific for either the
+phrase "V PAI 3S" or "V-PAI-3S".
+
+Note that, even though one could search for all the forms of "legw" by
+"leg* | eleg*", or for all Present Active Indicative forms by "PAI",
+in order to link a word directly with its own particular parsing, a
+fully inclusive PHRASE SEARCH must be requested which indicates the
+preliminary part-of-speech identifier (V-, N-, or A-) when
+appropriate. E.g., to search for > all the Present Active Indicative
+forms of "legw" one would have to request a phrase search for search
+for "leg* V-PAI".
+
+Note that the Strong's numbers may also be judiciously utilized when
+making search requests to reduce the amount of time and space needed
+to otherwise frame such a request. E.g., one equally could do a phrase
+search for all Present Indicative Active forms of "legw" by "3004
+V-PAI"
+
+To search for phrases based solely on grammatical analysis (e.g., for
+all prepositional phrases followed by an articular neuter genitive
+noun), one must use the wildcard (*) symbol before each requested
+parsing in a phrase search request (e.g., "* PREP * T-GSN * N-GSN").
+
+Special note: the so called "Second" forms of the Aorist, Future,
+Perfect and Pluperfect are respectively designated as 2A, 2F, 2P and
+2L preceding the voice and mood designations. Functionally, however,
+these forms are equivalent to the otherwise undesignated (First)
+Aorist, Future, Perfect, and Pluperfect forms.
+
+Search requests which expect to take in BOTH the first and second
+forms of either the Aorist, Future, Perfect or Pluperfect tenses MUST
+be prefixed with an asterisk (*). Failure to use the wildcard prefix
+will result in the second tense forms NOT being found.
+
+Example: to search for all Perfect Active Indicative forms (i.e., both
+RAI and 2RAI), the wildcard form *RAI should be used. Similarly, to
+search for all Aorist Active Subjunctive forms, (i.e., AAS and 2AAS),
+the wildcard form *AAS should be used.
+
+STRONG'S NUMBERS:
+
+For access to the lexical definitions of the root form of each Greek
+word, the appropriate Strong's concordance number has been added
+immediately following each Greek word. The definition of that word can
+then be ascertained by following the normal Online Bible F4 key or
+definition function as found in English-language based texts.
+
+The user should be cautioned, however, that the Strong's numbers
+utilized for the Greek New Testament are NOT always identical with
+those used in coding the English version text. The reason for this
+discrepancy is simple: James Strong was attempting to help out the lay
+reader of the Authorized Version in assigning numbers to each unique
+word root form. For some reason, he then decided that the user might
+be additionally aided if certain words (e.g., the verb "to be", or
+comparative and superlative forms of adjectives and adverbs) were
+further subdivided into uniquely-numbered forms; or, conversely, if
+frequent expressions comprising more than one word (e.g. "ou mh") were
+subsumed under a single number, rather than giving the usual separate
+numbers to such forms.
+
+Thus, the Strong's apparatus -- well-suited as it may be for use of
+the concordance he produced, as well as to aid the English reader who
+does not know Greek -- is quite confusing and detrimental to the
+student who might seek to use the same numbers for understanding the
+root forms of the Greek New Testament.
+
+In order to eliminate the various problems which would otherwise arise
+from an incautious use of Strong's numbers as originally provided for
+the English Bible, the present Greek edition of the Online Bible has
+reduced the Strong's numbers considerably so as to guide the user
+directly to the root form of most Greek words, without adding in the
+extra step of having further to enquire via the lexicon as to the
+component or root forms of such words.
+
+This revision of the Strong's numbers for the Greek text of the New
+Testament is not yet complete. Future editions of the Online > Bible
+Greek text will eventually bring all Strong's numbers into conformity
+with the principle of providing only the base root form > for all
+Greek New Testament words. The user's patience is requested during
+this period of development.
+
+ADDITIONAL NOTE REGARDING THE VARIOUS FORMS OF THE VERB "TO BE"
+
+Strong's Concordance at times gives separate numbers to various forms
+of the verb "to be". All of these properly derive from "eimi" (1510)
+alone. Perschbacher gives both numbers: the separate Strong's number
+in the left margin and the root number in the right margin. For the
+present time the Online Bible has retained Strong's number in these
+cases, even though Strong's own lexicon entry indicates the proper
+derivation from the root form 1510.
+
+Since accents and breathings are not provided within the Online Bible
+Greek text, some forms will appear identical even though they possess
+different parsings or declensions. Within the forms of the verb "to
+be" the following cases specifically should be noted:
+
+    The verb form "h" (3s-pxs of 1510, numbered 2229 by Strong) occurs
+    infrequently, while the definite article, relative pronoun, and
+    disjunctive particle forms of "h" dominate within the Greek NT.
+
+    The verb form "ei" (2s-pxi of 1510) also occurs (in the absence of
+    > accents and breathings) as a conditional particle, in fact, most
+    frequently so.
+
+    The verb form "hn" (3s-ixi of 1510) occurs also as a relative
+    pronoun. However, the verb form is dominant within the Greek NT.
+
+    The verb form "wsin" is not from 5607 (participle), but is a
+    subjunctive of (1510). Note also that "wsin" may be a plural noun
+    form of 3775.
+
+    Of particular note: the verb form "hv" stems from 1510 if it is a
+    > present subjunctive, but from 2229 if it is an imperfect
+    indicative.
+
+SAMPLE OF CURRENT CODING AS APPLIED:
+
+Perschbacher:
+
+agayopoihsai (15) aor. act. inf.
+agayopoihte (15) 2 pers. pl. pres. act. subj.
+agayopoiountav (17) acc. pl. m. pres. act. part.
+
+Online Bible:
+
+AAN <15>
+2P-PAS <15>
+APM-PAP <17>
+

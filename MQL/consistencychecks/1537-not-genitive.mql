@@ -1,0 +1,12 @@
+SELECT ALL OBJECTS
+WHERE
+[word FOCUS strongs1 = 1537] // E)K
+[word FOCUS case <> genitive
+	AND psp IN (noun, article, adjective, 
+		    correlative_or_interrogative_pronoun, 
+		    correlative_pronoun, demonstrative_pronoun, 
+                    indefinite_pronoun, personal_pronoun, 
+                    possessive_pronoun, reciprocal_pronoun, 
+                    reflexive_pronoun, relative_pronoun)]
+GO
+

@@ -1,0 +1,35 @@
+/*
+ * Art-noun
+ *
+ * Hypothesis:
+ *
+ * The two agree on case, number, and gender.
+ *
+ * Falsification:
+ *
+ * If even one of them does not agree, it is falsified.
+ *
+ * Facts:
+ *
+ * It occurs in Greek without being bad grammar, e.g. TO IWANNOU in Mt 21:25.
+ * It also occurs where we have a proper noun modifying another noun:
+ * THS MWUSEWS KAQEDRAS (Mt 23:2)
+ * 
+ * Also, I found some instances that seemed to be errors on Dr. Robinson's
+ * part. They have been reported,  and corrected in my own data.
+ *
+ *
+ */
+SELECT ALL OBJECTS
+WHERE
+[Verse
+  [Word as w1 FOCUS strongs1=3588]
+  [word FOCUS psp=noun AND (case <> w1.case OR number <> w1.number OR gender <> w1.gender)]
+  [Word FOCUS NOT (case = w1.case AND number=w1.number AND gender=w1.gender)]
+]
+GO
+
+
+
+
+

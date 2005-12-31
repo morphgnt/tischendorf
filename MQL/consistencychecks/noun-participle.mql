@@ -1,0 +1,22 @@
+SELECT ALL OBJECTS
+WHERE
+[Verse
+  [Word as w2]
+  [Word as w1 FOCUS psp=article]
+      [Word psp=noun]
+  [word FOCUS psp=verb AND mood=pariticiple 
+        AND (case <> w1.case OR number <> w1.number OR gender <> w1.gender)
+        AND strongs1<>3004 AND case<>nominative
+        AND (case <> w2.case OR number <> w2.number OR gender <> w2.gender)
+  ]
+]
+GO
+
+
+
+
+
+
+
+
+

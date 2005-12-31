@@ -1,0 +1,227 @@
+CREATE ENUMERATION book_name_t = {
+   Matthew,
+   Mark,
+   Luke,
+   John,
+   Acts,
+   Romans,
+   I_Corinthians,
+   II_Corinthians,
+   Galatians,
+   Ephesians,
+   Philippians,
+   Colossians,
+   I_Thessalonians,
+   II_Thessalonians,
+   I_Timothy,
+   II_Timothy,
+   Titus,
+   Philemon,
+   Hebrews,
+   James,
+   I_Peter,
+   II_Peter,
+   I_John,
+   II_John,
+   III_John,
+   Jude,
+   Revelation
+}
+GO
+
+CREATE ENUMERATION variant_t = {
+   none,
+   var_first,
+   var_second
+}
+GO
+
+CREATE ENUMERATION psp_t = {
+  NA,
+  adverb,                                   // "ADV"
+  conjunction,                              // "CONJ"
+  cond,                                     // "COND"
+  particle,                                 // "PRT"
+  preposition,                              // "PREP"
+  interjection,                             // "INJ"
+  aramaic,                                  // "ARAM"
+  hebrew,                                   // "HEB"
+  proper_noun_indeclinable,                 // "N-PRI"
+  numeral_indeclinable,                     // "A-NUI"
+  letter_indeclinable,                      // "N-LI"
+  noun_other_type_indeclinable,             // "N-OI"
+  noun,                                     // "N-"
+  adjective,                                // "A-"
+  relative_pronoun,                         // "R-"
+  reciprocal_pronoun,                       // "C-"
+  demonstrative_pronoun,                    // "D-"
+  article,                                  // "T-"
+  correlative_pronoun,                      // "K-"
+  interrogative_pronoun,                    // "I-"
+  indefinite_pronoun,                       // "X-"
+  correlative_or_interrogative_pronoun,     // "Q-"
+  reflexive_pronoun,                        // "F-"
+  possessive_pronoun,                       // "S-"
+  personal_pronoun,                         // "P-"
+  verb                                      // "V-"
+}
+GO
+
+
+CREATE ENUMERATION case_t = {
+  NA,
+  nominative,            // "N"
+  vocative,              // "V"
+  genitive,              // "G"
+  dative,                // "D"
+  accusative             // "A"
+}
+GO
+
+
+CREATE ENUMERATION number_t = {
+  NA,
+  singular,                      // "S"
+  plural                         // "P"
+}
+GO
+
+CREATE ENUMERATION gender_t = {
+  NA,
+  masculine,                     // "M"
+  feminine,                      // "F"
+  neuter                         // "N"
+}
+GO
+
+CREATE ENUMERATION suffix_t = { 
+  NA,
+  superlative,                   // "-S"
+  comparative,                   // "-C"
+  abbreviated,                   // "-ABB"
+  interrogative,                 // "-I"
+  negative,                      // "-N"
+  contracted_form,               // "-C"
+  attic,                         // "-ATT"
+  particle_attached,             // "-P"
+  crasis                         // "-K"
+	  
+}
+GO
+
+CREATE ENUMERATION tense_t = {
+  NA,
+  present,                       // "P"
+  imperfect,                     // "I"
+  future,                        // "F"
+  second_future,                 // "2F"
+  aorist,                        // "A"
+  second_aorist,                 // "2A"
+  perfect,                       // "R"
+  second_perfect,                // "2R"
+  pluperfect,                    // "L"
+  second_pluperfect,             // "2L"
+  no_tense_stated,               // "X"
+  unknown_K                      // "-K"
+
+}
+GO
+
+CREATE ENUMERATION voice_t = {
+  NA,
+  active,                        // "A"
+  middle,                        // "M"
+  passive,                       // "P"
+  middle_or_passive,             // "E"
+  middle_deponent,               // "D"
+  passive_deponent,              // "O"
+  middle_or_passive_deponent,    // "N"
+  impersonal_active,             // "Q"
+  no_voice                       // "X"
+}
+GO
+
+CREATE ENUMERATION mood_t = {
+  NA,
+  indicative,               // "I"
+  subjunctive,              // "S"
+  optative,                 // "O"
+  imperative,               // "M"
+  infinitive,               // "N"
+  participle,               // "P"
+  imperative_participle     // "R"
+}
+GO
+
+CREATE ENUMERATION extra_t = {
+  NA,
+  middle_significance,          // "-M"
+  contracted_form,              // "-C"
+  transitive,                   // "-T" 
+  aeolic,                       // "-A"
+  attic,                        // "-ATT"
+  apocopated_form,              // "-AP"
+  irregular_or_impure_form      // "-IRR"
+}
+GO
+
+CREATE ENUMERATION person_t = {
+  NA,              
+  first_person,   // "1"
+  second_person,  // "2"
+  third_person    // "3"
+}
+GO
+
+
+CREATE OBJECT TYPE
+[Book
+   book : book_name_t;
+]
+GO
+
+CREATE OBJECT TYPE
+[Chapter
+   book : book_name_t;
+   chapter : integer;
+]
+GO
+
+CREATE OBJECT TYPE
+[Verse
+   book : book_name_t;
+   chapter : integer;
+   verse : integer;
+]
+GO
+
+CREATE OBJECT TYPE
+[Word
+   surface : STRING;
+   surfaceutf8 : STRING;
+   olb_surface : STRING;
+   parsing : ASCII;
+   strongs1 : integer;
+   strongs2 : integer;
+   alt_parsing : ASCII;
+   alt_strongs1 : integer;
+   alt_strongs2 : integer;
+   is_variant : variant_t DEFAULT none;
+   lemmabeta : ASCII;
+   lemmautf8 : STRING;
+   alt_lemmabeta : ASCII;
+   alt_lemmautf8 : STRING;
+   variant : variant_t;
+   psp : psp_t;
+   case : case_t;
+   number : number_t;
+   gender : gender_t;
+   suffix : suffix_t;
+   tense  : tense_t;
+   voice : voice_t;
+   mood : mood_t;
+   extra : extra_t;
+   person : person_t;
+]
+GO
+

@@ -1,0 +1,6 @@
+SELECT ALL OBJECTS
+WHERE
+[Word FOCUS surface="POLLW"]
+[Word FOCUS surface="MALLON"]
+GO
+

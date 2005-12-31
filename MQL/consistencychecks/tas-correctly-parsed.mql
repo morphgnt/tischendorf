@@ -1,0 +1,10 @@
+/*
+ * Hypothesis: All instances of TAS are parsed as T-APF 3588.
+ *
+ * This was not falsified.
+ *
+ */
+SELECT ALL OBJECTS
+WHERE
+[Word surface="TAS" and (parsing<>"T-APF" OR strongs1<>3588)]
+

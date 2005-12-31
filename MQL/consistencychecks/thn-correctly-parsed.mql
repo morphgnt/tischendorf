@@ -1,0 +1,10 @@
+/*
+ * Hypothesis: All instances of THN are parsed as T-ASF 3588.
+ *
+ * This was not falsified.
+ *
+ */
+SELECT ALL OBJECTS
+WHERE
+[Word surface="THN" and (parsing<>"T-ASF" OR strongs1<>3588)]
+
