@@ -35,6 +35,7 @@ class StrongsMapping:
         self.strongs2lemma_keys = self.strongs2lemma.keys()
 
     def getLemmaFromStrongs(self, strongs):
+        strongs = str(strongs)
         try:
             lemma = self.strongs2lemma[strongs]
             return lemma
@@ -51,6 +52,24 @@ class StrongsMapping:
                 print "UP256: strongs missing: %s" % strongs_single
             return lemma
 
+    def getSingleNumberKeys(self):
+        single_number_keys = {}
+        for strongs in self.strongs2lemma.keys():
+            # Get single strong's
+            if "&" in strongs:
+                strongs_single = int(strongs.split("&")[0])
+            else:
+                strongs_single = int(strongs)
+
+            try:
+                single_number_keys[strongs_single]
+            except KeyError:
+                single_number_keys[strongs_single] = None
+        key_list = single_number_keys.keys()
+        key_list.sort()
+        return key_list
+
+                           
     def getSingleNumberDictionary(self):
         other = {}
         other_lemma2strongs = {}
