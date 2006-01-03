@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 1.2
+                             Version 1.3
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
@@ -203,9 +203,10 @@ The format is as follows:
 
 All Strong's numbers are single numbers with 1,2,3, or 4 digits.
 
-The text exists in two versions: One with a ".TSP" extension for each
-file, and one with a ".TUP" extension for each file. The former is in
-TLG BETA encoding, whereas the latter is in Unicode UTF-8.
+The text exists in two versions: One in the "BETA" directory and one
+in the "Unicode" directory. The only difference is the encoding: The
+former is in TLG BETA encoding, whereas the latter is in Unicode
+UTF-8.
 
 
 ChangeLog
@@ -224,4 +225,8 @@ v. 1.2 (2005-12-27):
      letter, not after it.
    - Fixed some Unicode-conversion errors.
 
-
+v. 1.3 (2006-01-03)
+   - Fixed 16 parsing-errors, 2 to do with case and 14 to do with
+     A)/RA being misparsed as non-interrogative.
+   - Changed structure such that BETA and Unicode versions are in
+     separate directories, and the file extension is always .txt.
