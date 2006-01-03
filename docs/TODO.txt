@@ -49,13 +49,9 @@ TODO for Tischendorf
 
   - [X] See if you can find other hosting (e.g., Crosswire)
 
-  - [ ] Announce it on B-Greek.
+  - [X] Announce it on B-Greek.
 
-  - [ ] Write a press release
-
-  - [ ] Design website
-
-  - [ ] Make initial, small website
+  - [X] Make initial, small website
 
   - [X] Write introductory notes (probably short)
 
@@ -64,6 +60,8 @@ TODO for Tischendorf
      - [X] Get Maurice Robinson and Clint Yale to comment on it.
 
   - [ ] Write an article about it.
+
+  - [ ] Write a press release
 
 
 - Software
