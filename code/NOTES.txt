@@ -3872,3 +3872,13 @@ ZW/OU	ZW/OU
 
 Finished!
 
+
+2006-01-03 02:21am
+
+Today I incorporated 16 changes due to Dr. Robinson, and released
+version 1.3.
+
+
+--------------------------- 1.3 released ---------------------------
+
+
