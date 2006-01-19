@@ -183,12 +183,14 @@ class Book:
     def process_linear_word(self, mysurface, mytag, mystrongs, strongslemma, ANLEXlemma):
         w = word.Word(self.end_monad, variant_none)
         w.surface = mysurface
+        w.accented_surface = mysurface
         w.parsing = mytag
         w.Strongs1 = mystrongs
         w.strongslemma = strongslemma
         w.ANLEXlemma = ANLEXlemma
         self.verses[-1].words.append(w)
         self.verses[-1].last_monad = self.end_monad
+        
 
     def open_file(self):
         f = open(self.filename, "r")
