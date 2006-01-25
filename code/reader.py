@@ -60,7 +60,7 @@ class Reader:
         cur_monad = 1
         for index in range(0,27):
             gdb_bookname = book_list_UBS[index]
-            cur_monad = self.writeBookAsSFM(gdb_bookname + ".TD2", self.books[index], cur_monad)
+            cur_monad = self.writeBookAsSFM(gdb_bookname + ".TIS", self.books[index], cur_monad)
 
     def writeBookAsSFM(self, filename, book, cur_monad):
         f = open(filename, "w")

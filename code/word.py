@@ -458,10 +458,10 @@ class Word:
     def writeSFM(self, f, booknumber, chapter, verse, word_index, monad):
         print >>f, self.getSFMReference(f, booknumber, chapter, verse, word_index)
         if self.accented_surface != "":
-            surfaceBETA = self.beta2galatia(self.accented_surface)
+            surfaceUTF8 = self.accented_surface
         else:
-            surfaceBETA = OLBtoBETAtranslate(self.surface)
-        print >>f, "\\text %s\r" % surfaceBETA
+            surfaceUTF8 = self.beta2utf8(OLBtoBETAtranslate(self.surface))
+        print >>f, "\\text %s\r" % surfaceUTF8
         if len(self.parsing) > 0:
             print >>f, "\\pars %s\r" % self.parsing
         print >>f, "\\monad %d\r" % monad
@@ -471,10 +471,8 @@ class Word:
         else:
             lemma = self.ANLEXlemma
         if lemma != "":
-            galatia = self.beta2galatia(lemma)
-            print >>f, "\\lemma %s %s\r" % (self.getStrongs(), galatia)
-            print >>f, "\\betalemma %s\r" % lemma
-        print >>f, "\\strongs %s\r" % self.getStrongs()
+            lemma_encoded = self.beta2utf8(lemma)
+            print >>f, "\\lemma %s %s\r" % (self.getStrongs(), lemma_encoded)
         print >>f, "\\re\r"
         print >>f, "\r"
 
