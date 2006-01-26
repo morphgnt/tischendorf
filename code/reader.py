@@ -119,7 +119,7 @@ class Reader:
             filename = self.dir + "/" + bookname + "." + self.suffix
         book = Book(filename)
         self.books.append(book)
-        self.current_monad = book.read(self.current_monad, read_what) + 1
+        self.current_monad = book.read(self.current_monad, read_what)
 
     def writeBooks_MORPH_style(self, output_dir, output_suffix, encodingStyle):
         for index in range(0,27):
