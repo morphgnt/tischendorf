@@ -242,7 +242,6 @@ Tischendorf_lexicon = { "PROS" : ("4314", "PREP"),
                         "KATABIBASQHSH" : ("2601", "V-FPI-2S"),
                         "KATEILHFQH" : ("2638", "V-API-3S"),
                         "KATEQHKEN" : ("2698", "V-AAI-3S"),
-                        "KATHLQAMEN" : ("2718", "V-AAI-1P"),
                         "KAUQHSOMAI" : ("2545", "V-FPI-1S"),
                         "KEIRANTOS" : ("2751", "V-AAP-GSM"),
                         "KHMWSEIS" : ("5392", "V-FAI-2S"), # NOTE: FIMO/W used at Thayer's recommendation because KHMO/W not present in Strong's
@@ -261,7 +260,6 @@ Tischendorf_lexicon = { "PROS" : ("4314", "PREP"),
                         "PARENEGKAI" : ("3911", "V-AAN"),
                         "PARESTWTWN" : ("3936", "V-RAP-GPM"),
                         "PEPWKAN" : ("4095", "V-RAI-3P"), # Re 18:3.10: It is clearly PI/NW, not PI/PTW, so 4095, not 4098.
-                        "PERIELQONTES" : ("4022", "V-AAP-NPM"),
                         "PESATE" : ("4098", "V-AAM-2P"),
                         "PISTEUSONTES" : ("4100", "V-FAP-NPM"),
                         "PORRWTERW" : ("4208", "ADV-C"),
@@ -290,6 +288,18 @@ Tischendorf_lexicon = { "PROS" : ("4314", "PREP"),
                         "SAMARIAS" : ("4540", "N-GSF"),
                         "ESTAQHN" : ("2476", "V-API-1S"),
                         "ALA" : ("217", "N-ASN/N-NSN"),
+                        "PROSHLQON" : ("4334", "V-2AAI-3P"), # Added so as to get 2nd aorist
+                        "ECELQATE" : ("1831", "V-2AAM-2P"), # Added so as to get 2nd aorist
+                        "ECHLQATE" : ("1831", "V-2AAI-2P"), # Added so as to get 2nd aorist
+                        "EISELQATE" : ("1525", "V-2AAM-2P"), # Added so as to get 2nd aorist
+                        "EISHLQATE" : ("1525", "V-2AAI-2P"), # Added so as to get 2nd aorist
+                        "EISELQATW" : ("1525", "V-2AAM-3S"), # Added so as to get 2nd aorist
+                        "EPHLQAN" : ("1904", "V-2AAI-3P"), # Added so as to get 2nd aorist
+                        "KATHLQAMEN" : ("2718", "V-2AAI-1P"),  # Added so as to get 2nd aorist
+                        "PERIELQONTES" : ("4022", "V-2AAP-NPM"),  # Added so as to get 2nd aorist
+#                        "" : ("", ""),
+#                        "" : ("", ""),
+#                        "" : ("", ""),
 #                        "" : ("", ""),
 #                        "" : ("", ""),
 #                        "" : ("", ""),
