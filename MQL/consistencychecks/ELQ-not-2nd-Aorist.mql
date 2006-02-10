@@ -1,0 +1,6 @@
+SELECT ALL OBJECTS
+WHERE
+[Verse GET book, chapter, verse
+  [Word strongs1 IN (424,492,565,1330,1525,1831,1880,1904,2064,2718,3922,3928,4022,4281,4334,4897,4905) AND tense = aorist GET surface]
+]
+GO
