@@ -1,3 +1,26 @@
+// The list of strongs's numbers is:
+// 
+//   424 A)NE/RXOMAI
+//   492 A)NTIPARE/RXOMAI
+//   565 A)PE/RXOMAI
+//   1330 DIE/RXOMAI
+//   1525 EI)SE/RXOMAI
+//   1831 E)CE/RXOMAI
+//   1880 E)PANE/RXOMAI
+//   1904 E)PE/RXOMAI
+//   2064 E)/RXOMAI
+//   2718 KATE/RXOMAI
+//   3922 PAREISE/RXOMAI
+//   3928 PARE/RXOMAI
+//   4022 PERIE/RXOMAI
+//   4281 PROE/RXOMAI
+//   4334 PROSE/RXOMAI
+//   4897 SUNEISE/RXOMAI
+//   4905 SUNE/RXOMAI 
+//
+// The theory is that if it is aorist, it needs to be 2nd aorist.
+// This finds such cases as are only "aorist" but not "second_aorist".
+//
 SELECT ALL OBJECTS
 WHERE
 [Verse GET book, chapter, verse
