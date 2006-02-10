@@ -3888,3 +3888,43 @@ Found some bugs in word.py:
 
 - BASILEU != BASILEUS (N-VSM vs N-NSM)
 - SUGKEKERASMENOUS != SUNKEKERASMENOS (V-RPP-APM vs V-RPP-NSM)
+
+
+2006-02-10 03:25am
+
+MT 10:13.8 E)LQA/TW V-AAM-3S 2064 E)/RXOMAI ! E)/RXOMAI
+
+That should be 2nd aorist!  But WHP has V-AAM-3S...
+
+
+2006-02-10 04:02am
+
+1CO 9:12.22 E)KKOPH\N N-ASF 1464 E)GKOPH/ ! E)GKOPH/
+
+That should be the lemma "E)KKOPH/"...  But ANLEX has both E)GKOPH/
+and E)KKOPH/ under the same entry.
+
+There is no E)KKKOPH/ in Strong's.
+
+
+
+2006-02-10 04:37am
+
+Still checking word.py...
+
+
+SUGKLHRONOMOI != SUNKLHRONOMOIS
+
+Turns out that I had added SUNKLHRONOMOIS also to lexicon.py, where I
+had given it an analysis of N-DPM, which should be A-DPM.
+
+
+2006-02-10 04:44am
+
+Someone pointed out to me that the following should be changed:
+
+884c884
+< HEB 4:2.16 SUNKEKERASME/NOS V-RPP-APM 4786 SUGKERA/NNUMI ! SUGKERA/NNUMI
+---
+> HEB 4:2.16 SUNKEKERASME/NOS V-RPP-NSM 4786 SUGKERA/NNUMI ! SUGKERA/NNUMI
+
