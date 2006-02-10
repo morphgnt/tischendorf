@@ -275,7 +275,7 @@ Tischendorf_lexicon = { "PROS" : ("4314", "PREP"),
                         "SUNETELESQH" : ("4931", "V-API-3S"),
                         "SUNISTANTES" : ("4921", "V-PAP-NPM"),
                         "SUNKAMYON" : ("4781", "V-AAM-2S"),
-                        "SUNKLHRONOMOIS" : ("4789", "N-DPM"),
+                        "SUNKLHRONOMOIS" : ("4789", "A-DPM"),
                         "TETAXENAI" : ("5021", "V-RAN"),
                         "UFAINEI" : ("5307", "V-AAI-3S"), # NOTE: This is U(FANTO/S instead of U(FAI/NW because U(FAI/NW does not exist in Strong's.
                         "UGIEIS" : ("5199", "A-APM"),
