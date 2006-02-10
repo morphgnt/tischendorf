@@ -27,7 +27,7 @@ class StrongsMapping:
                 strongs_single = strongs.split("&")[0]
             else:
                 strongs_single = strongs
-            lemma = arr[1].replace("['", "").replace("']", "").replace("\\\\", "\\").replace("\n", "")
+            lemma = arr[1].replace("\n", "").split("!")[0].strip()
             self.strongs2lemma[strongs] = lemma
             self.strongs2lemma_single[strongs_single] = lemma
             self.lemma2strongs[lemma] = strongs
