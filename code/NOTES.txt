@@ -3904,7 +3904,7 @@ That should be 2nd aorist!  But WHP has V-AAM-3S...
 That should be the lemma "E)KKOPH/"...  But ANLEX has both E)GKOPH/
 and E)KKOPH/ under the same entry.
 
-There is no E)KKKOPH/ in Strong's.
+There is no E)KKOPH/ in Strong's.
 
 
 
@@ -3928,3 +3928,14 @@ Someone pointed out to me that the following should be changed:
 ---
 > HEB 4:2.16 SUNKEKERASME/NOS V-RPP-NSM 4786 SUGKERA/NNUMI ! SUGKERA/NNUMI
 
+
+2006-02-11 10:24pm
+
+Today I've spent all day working on other morphgnt projects -- and now
+in the last 10 minutes, I've applied those changes to Tischendorf.
+
+Also, Dr. Robinson sent me his latest files today as well (he did the
+same yesterday, after I had informed him about the 2nd aorist -LQ-
+problems.
+
+Only changes to lemmas were made.
