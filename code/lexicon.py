@@ -297,7 +297,7 @@ Tischendorf_lexicon = { "PROS" : ("4314", "PREP"),
                         "EPHLQAN" : ("1904", "V-2AAI-3P"), # Added so as to get 2nd aorist
                         "KATHLQAMEN" : ("2718", "V-2AAI-1P"),  # Added so as to get 2nd aorist
                         "PERIELQONTES" : ("4022", "V-2AAP-NPM"),  # Added so as to get 2nd aorist
-#                        "" : ("", ""),
+                        "OTOU" : ("3748", "R-GSN-ATT"),  # Added so as to not make it 3755.
 #                        "" : ("", ""),
 #                        "" : ("", ""),
 #                        "" : ("", ""),
