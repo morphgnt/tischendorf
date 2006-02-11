@@ -3939,3 +3939,10 @@ same yesterday, after I had informed him about the 2nd aorist -LQ-
 problems.
 
 Only changes to lemmas were made.
+
+
+2006-02-11 11:20pm
+
+I made it so (in lexicon.py) that OTOU (i.e., "O(/TOU" is always 3748
+O(/STIS rather than 3755 O(/TOU.
+
