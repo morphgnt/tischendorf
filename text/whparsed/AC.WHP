@@ -2918,13 +2918,14 @@ eufrosunhv 2167 {N-GSF} tav 3588 {T-APF} kardiav 2588 {N-APF} umwn 4771
 {V-PAP-NPM} moliv 3433 {ADV} katepausan 2664 5656 {V-AAI-3P} touv 3588
 {T-APM} oclouv 3793 {N-APM} tou 3588 {T-GSN} mh 3361 {PRT-N} yuein 2380
 5721 {V-PAN} autoiv 846 {P-DPM}
-     14:19 ephlyan 1904 5656 {V-AAI-3P} de 1161 {CONJ} apo 575 {PREP} antioceiav
-490 {N-GSF} kai 2532 {CONJ} ikoniou 2430 {N-GSN} ioudaioi 2453 {A-NPM} kai
-2532 {CONJ} peisantev 3982 5660 {V-AAP-NPM} touv 3588 {T-APM} oclouv 3793
-{N-APM} kai 2532 {CONJ} liyasantev 3034 5660 {V-AAP-NPM} ton 3588 {T-ASM}
-paulon 3972 {N-ASM} esuron 4951 5707 {V-IAI-3P} exw 1854 {ADV} thv 3588
-{T-GSF} polewv 4172 {N-GSF} nomizontev 3543 5723 {V-PAP-NPM} auton 846 {P-ASM}
-teynhkenai 2348 5760 {V-RAN}
+     14:19 ephlyan 1904 5627 {V-2AAI-3P} de 1161 {CONJ} apo 575 {PREP}
+antioceiav 490 {N-GSF} kai 2532 {CONJ} ikoniou 2430 {N-GSN} ioudaioi
+2453 {A-NPM} kai 2532 {CONJ} peisantev 3982 5660 {V-AAP-NPM} touv 3588
+{T-APM} oclouv 3793 {N-APM} kai 2532 {CONJ} liyasantev 3034 5660
+{V-AAP-NPM} ton 3588 {T-ASM} paulon 3972 {N-ASM} esuron 4951 5707
+{V-IAI-3P} exw 1854 {ADV} thv 3588 {T-GSF} polewv 4172 {N-GSF}
+nomizontev 3543 5723 {V-PAP-NPM} auton 846 {P-ASM} teynhkenai 2348 5760
+{V-RAN}
      14:20 kuklwsantwn 2944 5660 {V-AAP-GPM} de 1161 {CONJ} twn 3588
 {T-GPM} mayhtwn 3101 {N-GPM} auton 846 {P-ASM} anastav 450 5631
 {V-2AAP-NSM} eishlyen 1525 5627 {V-2AAI-3S} eiv 1519 {PREP} thn 3588
@@ -4643,11 +4644,13 @@ ciliarcw 5506 {N-DSM} aphggeilen 518 5656 {V-AAI-3S} legwn 3004 5723
 {V-PAP-NSM} ti 5101 {I-ASN} melleiv 3195 5719 {V-PAI-2S} poiein 4160 5721
 {V-PAN} o 3588 {T-NSM} gar 1063 {CONJ} anyrwpov 444 {N-NSM} outov 3778
 {D-NSM} rwmaiov 4514 {A-NSM} estin 1510 5719 {V-PAI-3S}
-     22:27 proselywn 4334 5631 {V-2AAP-NSM} de 1161 {CONJ} o 3588 {T-NSM}
-ciliarcov 5506 {N-NSM} eipen 3004 5627 {V-2AAI-3S} autw 846 {P-DSM} lege
-3004 5720 {V-PAM-2S} moi 1473 {P-1DS} su 4771 {P-2NS} rwmaiov 4514 {A-NSM}
-ei 1510 5719 {V-PAI-2S} o 3588 {T-NSM} de 1161 {CONJ} efh 5346 5707 {V-IAI-3S} 
-nai 3483 {PRT}
+
+     22:27 proselywn 4334 5631 {V-2AAP-NSM} de 1161 {CONJ} o 3588
+{T-NSM} ciliarcov 5506 {N-NSM} eipen 3004 5627 {V-2AAI-3S} autw 846
+{P-DSM} lege 3004 5720 {V-PAM-2S} moi 1473 {P-1DS} su 4771 {P-2NS}
+rwmaiov 4514 {A-NSM} ei 1510 5719 {V-PAI-2S} o 3588 {T-NSM} de 1161
+{CONJ} efh 5346 5707 {V-IAI-3S} nai 3483 {PRT}
+
      22:28 apekriyh 611 5662 {V-ADI-3S} de 1161 {CONJ} o 3588 {T-NSM}
 ciliarcov 5506 {N-NSM} egw 1473 {P-1NS} pollou 4183 {A-GSN} kefalaiou 2774
 {N-GSN} thn 3588 {T-ASF} politeian 4174 {N-ASF} tauthn 3778 {D-ASF}
