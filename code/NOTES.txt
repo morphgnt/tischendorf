@@ -3946,3 +3946,21 @@ Only changes to lemmas were made.
 I made it so (in lexicon.py) that OTOU (i.e., "O(/TOU" is always 3748
 O(/STIS rather than 3755 O(/TOU.
 
+
+2006-02-11 11:50pm
+
+Corrected as follows:
+
+182c182
+< AC 1:10.17 E)SQH/SESI N-DPF 2067 E)/SQHSIS ! E)SQH/S
+---
+> AC 1:10.17 E)SQH/SESI N-DPF 2066 E)SQH/S ! E)SQH/S
+
+this was done in manual_analyses.txt.
+
+The reasoning goes like this:
+
+a) 2066 is what means "clothing"; 2067 means "government".
+
+b) ANLEX has E)SQH/SESI(N) as E)SQH/S, not E)/SQHSIS.
+
