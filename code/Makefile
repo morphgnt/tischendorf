@@ -1,4 +1,4 @@
-VERSION = 1.3
+VERSION = 1.4
 ZIPFILES = BETA/ Unicode/ README.txt
 ZIPFILE = /tmp/Tischendorf-$(VERSION).zip
 MQLZIPFILE = /tmp/Tischendorf8th_$(VERSION)_MQL.zip
@@ -19,7 +19,7 @@ DERIVED_TXTFILES = lexicon_nonunique.txt tischlexicon_nonunique.txt
 #EMDROSPATH=/opt/EmdrosSQLite120pre140WX
 #EMDROSPATH=/var/home/ulrikp/opt/EmdrosSQLite120pre143WX
 #EMDROSPATH=/var/home/ulrikp/opt/EmdrosSQLite120pre161-O3-noshared-WX-debug
-EMDROSPATH=/home/ulrikp/opt/EmdrosSQLite120pre177-O3-noshared-debug
+EMDROSPATH=/home/ulrikp/opt/EmdrosSQLite120pre202-O3-WX-noshared-debug
 
 
 DB = tisch
@@ -67,10 +67,6 @@ zip: ../text/parsed/README.txt ./RE.TUP
 	for f in ../text/parsed/*.TSP; do NN=`echo $$f | sed -e 's/TSP/txt/g;s_../text/parsed/__g'`; cp $$f $(FULLZIPDIR)/BETA/$$NN; done
 	for f in ./*.TUP; do NN=`echo $$f | sed -e 's/TUP/txt/g'`; cp $$f $(FULLZIPDIR)/Unicode/$$NN; done
 	PWD=`pwd`; cd $(ZIPDIRPREFIX) ; zip -r $(ZIPFILE) $(ZIPDIR) ; cd $$PWD
-
-README.txt : 
-	cp $< $@
-
 
 mqlzip: tisch.mql
 	rm -f $(MQLZIPFILE)

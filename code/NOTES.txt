@@ -3976,3 +3976,19 @@ Reasons:
 
 2) E)SQH/SESI is clearly from the stem E)/SQHSIS, not from E)SQHS.
 
+
+2006-03-14 21:55am
+
+I'm at it again, intending to make a release.
+
+
+2006-03-14 22:58am
+
+I'm done (but have done other things as well.)
+
+
+
+--------------------------- 1.4 released ---------------------------
+
+
+

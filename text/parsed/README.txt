@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 1.3
+                             Version 1.4
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
@@ -143,12 +143,13 @@ Website
 
 This text has a website:
 
-http://ulrikp.org/Tischendorf
+http://morphgnt.org/projects/tischendorf
 
 
 
 Ulrik Petersen
-Aalborg, December 2005
+Aalborg, March 2006
+
 
 
 
@@ -230,3 +231,8 @@ v. 1.3 (2006-01-03)
      A)/RA being misparsed as non-interrogative.
    - Changed structure such that BETA and Unicode versions are in
      separate directories, and the file extension is always .txt.
+
+v. 1.4 (2006-03-14)
+   - Fixed 151 words, some of which were parsing-errors (particularly
+     with respect to 2nd Aorist analyses of stems with *LQ*), and some
+     of which were wrongly assigned lemmas and/or Strong's numbers.
