@@ -651,7 +651,7 @@ class Word:
                 self.parsing = words[index][1:-1] # Strip '{' and '}'
                 index += 1
             else:
-                raise Exception("Error in Word.parse: 3: Unknown kind:" + str(kind) + "'" +str(words[index]) + "'")
+                raise Exception("Error in Word.parse: 3: Unknown kind: " + str(kind) + "'" +str(words[index]) + "' " + str(words))
 
         # So the parsing is read.  The next should either be kind_word
         # or kind_number
