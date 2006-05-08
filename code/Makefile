@@ -77,12 +77,16 @@ mqlzip: tisch.mql
 	cp tisch.mql $(FULLZIPDIR)
 	PWD=`pwd`; cd $(ZIPDIRPREFIX) ; zip -r $(MQLZIPFILE) $(ZIPDIR) ; cd $$PWD
 
+whdb.mql: WH.mql
+	rm -f whdb.mql
+	echo "CREATE DATABASE wh GO" > whdb.mql
+	echo "USE DATABASE wh GO" >> whdb.mql
+	cat GNT_schema_1.2.mql >> whdb.mql
+	cat WH.mql >> whdb.mql
+
 tisch.mql: tischendorfmorph.mql
 	rm -f tisch.mql
 	echo "CREATE DATABASE tisch GO" > tisch.mql
 	echo "USE DATABASE tisch GO" >> tisch.mql
 	cat GNT_schema_1.2.mql >> tisch.mql
 	cat tischendorfmorph.mql >> tisch.mql
-
-
-
