@@ -345,6 +345,13 @@ class Verse:
             w.write_StrippedLinear(f, base_ref, index)
             index += 1
 
+    def write_WHLinear(self, f, verse_copy):
+        base_ref = self.get_MORPH_ref(verse_copy)
+        index = 1
+        for w in self.words:
+            w.write_WHLinear(f, base_ref, index)
+            index += 1
+
     def write_Linear(self, f, verse_copy):
         base_ref = self.get_MORPH_ref(verse_copy)
         index = 1

@@ -232,14 +232,16 @@ class Book:
         mystring = "\n".join(lines)
         words = mystring.split()
         self.end_monad += 1
+        index = -1
         for w in words:
+            index += 1
             if w[0] in "0123456789":
                 myarr = w.split(":")
                 mychapter = int(myarr[0])
                 try:
                     myverse = int(myarr[1])
                 except:
-                    print "UP100: w = '%s'" % w
+                    print "UP100: w = '%s' words[index:+30] = '%s'" % (w, words[index:index+30])
                 chapter_end = self.end_monad-1
                 if self.chapter != mychapter:
                     if self.chapter <> 0:
@@ -406,6 +408,11 @@ class Book:
         for whverse in self.verses:
             whverse.write_StrippedLinear(f, self.getVerseCopy(whverse))
         f.close()
+
+    def write_WHLinear(self, f):
+        self.addVersesToVerseDict()
+        for whverse in self.verses:
+            whverse.write_WHLinear(f, self.getVerseCopy(whverse))
 
     def write_Linear(self, filename):
         self.addVersesToVerseDict()

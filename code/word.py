@@ -815,6 +815,10 @@ class Word:
         ref = "%s" % base_ref
         print >>f, "%s %s" % (ref, RemoveAccents(MixedCaseBETAtoBETAtranslate(self.surface)))
 
+    def write_WHLinear(self, f, base_ref, index):
+        ref = "%s" % base_ref
+        print >>f, "%s %s" % (ref, OLBtoBETAtranslate(self.surface))
+
     def write_Linear(self, f, base_ref, index):
         ref = "%s" % base_ref
         if self.accented_surface != "":

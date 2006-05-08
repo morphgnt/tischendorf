@@ -79,6 +79,13 @@ class Reader:
             olb_bookname = book_list_OLB[index]
             self.books[index].write_StrippedLinear(olb_bookname + ".SLN")
 
+    def write_WHLinear(self):
+        cur_monad = 1
+        f = open("WH-BETA.txt", "w")
+        for index in range(0,27):
+            self.books[index].write_WHLinear(f)
+        f.close()
+
     def write_Linear(self):
         cur_monad = 1
         for index in range(0,27):

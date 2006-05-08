@@ -11,6 +11,7 @@ tischbasedir = "../text/unaccented"
 AccentedTischbasedir = "../text/accented"
 ClintYaleAccentedTischbasedir = "/home/ulrikp/Ongoing/ClintYale4/OLB"
 tisch_out_basedir = "."
+AccentedWHbasedir = "../../westcott-hort-accented/Flat/BETA"
 
 def myambiguityfinder(w):
     return "/" in str(w.Strongs1) or "/" in w.parsing or w.parsing==""
@@ -27,6 +28,13 @@ def read_WH():
     suffix = "WHP"
     rd = reader.Reader(dir, suffix)
     rd.read_NT(reader.read_wh_only)
+    return rd
+
+def read_WHB():
+    dir=AccentedWHbasedir
+    suffix = "WHB"
+    rd = reader.Reader(dir, suffix)
+    rd.read_NT(reader.read_AccentedTischendorf)
     return rd
 
 def read_WH_writeMQL():
@@ -66,6 +74,12 @@ def read_AccentedTischendorf_write_StrippedLinear():
     rd = read_AccentedTischendorf()
     rd.applyMappings()
     rd.write_StrippedLinear()
+    return rd
+
+def read_WH_write_WHLinear():
+    rd = read_WH()
+    rd.applyMappings()
+    rd.write_WHLinear()
     return rd
 
 def read_ClintYaleAccentedTischendorf_write_linear():
@@ -168,6 +182,7 @@ def parseTischendorfBETA():
 #getSingleStrongsList()
 #parseTischendorfBETA()
 #read_AccentedTischendorf_write_StrippedLinear()
+#read_WH_write_WHLinear()
 #read_Tischendorf_WH_compare_them_writeMQL()
 #read_ClintYaleAccentedTischendorf_write_linear()
 #read_AccentedTischendorf_write_linear()
@@ -176,3 +191,4 @@ def parseTischendorfBETA():
 read_Tischendorf_WH_compare_them()
 #read_TSP_writeTUP()
 #read_TSP_writeMQL()
+#read_WHB()
