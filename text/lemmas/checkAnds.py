@@ -22,18 +22,28 @@ class StrongsMapping:
             arr = line.split(" : ")
             strongs = arr[0]
 
-            if "&" in strongs:
-                strongs_single = strongs.split("&")[0]
-                #lemma = arr[1].replace("\n", "").split("!")[0].strip()
-                lemma = arr[1].strip()
-                try:
-                    lemma2 = self.strongs2lemma[strongs_single]
-                    if lemma2 != lemma:
-                        print "UP100: strongs_single = %s lemma2 = %s lemma = %s" % (strongs_single,lemma2,lemma)
-                except:
-                    self.strongs2lemma[strongs_single] = lemma
+            lemma = arr[1].strip()
+            try:
+                lemma2 = self.strongs2lemma[strongs]
+                print "UP101: lemma already exists for strong's %s: original = '%s', new = '%s'." % (strongs, lemma2, lemma)
+            except:
+                self.strongs2lemma[strongs] = lemma
 
         f.close()
+
+        keys = self.strongs2lemma.keys()
+        keys.sort()
+        for strongs in keys:
+            lemma = self.strongs2lemma[strongs]
+            if "&" in strongs:
+                strongs_single = strongs.split("&")[0]
+                try:
+                    lemma_single = self.strongs2lemma[strongs_single]
+                    if lemma_single != lemma:
+                        print "UP100: lemma '%s' for %s != %s for : %s" % (lemma, strongs, lemma_single, strongs_single)
+                except:
+                    print "UP102: strong's single %s does not exist, but strong's %s does, with lemma %s" % (strongs_single, strongs, lemma)
+                    self.strongs2lemma[strongs_single] = lemma
 
 s1 = StrongsMapping()
 s1.read("lemmatable_ANLEX.txt")
