@@ -630,7 +630,7 @@ estaurwsate 4717 5656 {V-AAI-2P} on 3739 {R-ASM} o 3588 {T-NSM} yeov 2316
 {V-RAI-3S} enwpion 1799 {ADV} umwn 4771 {P-2GP} ugihv 5199 {A-NSM}
      4:11 outov 3778 {D-NSM} estin 1510 5719 {V-PAI-3S} o 3588 {T-NSM}
 liyov 3037 {N-NSM} o 3588 {T-NSM} exouyenhyeiv 1848 5685 {V-APP-NSM} uf
-5259 {PREP} umwn 4771 {P-2GP} twn 3588 {T-GPM} oikodomwn 3621 {N-GPM}
+5259 {PREP} umwn 4771 {P-2GP} twn 3588 {T-GPM} oikodomwn 3618 {N-GPM}
 o 3588 {T-NSM} genomenov 1096 5637 {V-2ADP-NSM} eiv 1519 {PREP} kefalhn 
 2776 {N-ASF} gwniav 1137 {N-GSF}
      4:12 kai 2532 {CONJ} ouk 3756 {PRT-N} estin 1510 5719 {V-PAI-3S} en
@@ -2410,7 +2410,7 @@ oikhmati 3612 {N-DSN} pataxav 3960 5660 {V-AAP-NSM} de 1161 {CONJ} thn 3588
 {T-ASF} pleuran 4125 {N-ASF} tou 3588 {T-GSM} petrou 4074 {N-GSM} hgeiren
 1453 5656 {V-AAI-3S} auton 846 {P-ASM} legwn 3004 5723 {V-PAP-NSM} anasta
 450 5628 {V-2AAM-2S} en 1722 {PREP} tacei 5034 {N-DSN} kai 2532 {CONJ}
-exepesan 1601 5656 {V-AAI-3P} autou 846 {P-GSM} ai 3588 {T-NPF} aluseiv 254
+exepesan 1601 5627 {V-2AAI-3P} autou 846 {P-GSM} ai 3588 {T-NPF} aluseiv 254
 {N-NPF} ek 1537 {PREP} twn 3588 {T-GPF} ceirwn 5495 {N-GPF}
      12:8 eipen 3004 5627 {V-2AAI-3S} de 1161 {CONJ} o 3588 {T-NSM} aggelov
 32 {N-NSM} prov 4314 {PREP} auton 846 {P-ASM} zwsai 2224 5669 {V-AMM-2S} kai
@@ -5203,7 +5203,7 @@ aitiav 156 {N-GSF} shmanai 4591 5658 {V-AAN}
 {T-ASM} paulon 3972 {N-ASM} efh 5346 5707 {V-IAI-3S} epitrepetai 2010 5743
 {V-PPI-3S} soi 4771 {P-2DS}  | uper 5228 {PREP} | peri 4012 {PREP} |
 seautou 4572 {F-2GSM} legein 3004 5721 {V-PAN} tote 5119 {ADV} o 3588
-{T-NSM} paulov 3972 {N-NSM} ekteinav 1614 5660 {V-AAP-NSF} thn 3588 {T-ASF}
+{T-NSM} paulov 3972 {N-NSM} ekteinav 1614 5660 {V-AAP-NSM} thn 3588 {T-ASF}
 ceira 5495 {N-ASF} apelogeito 626 5711 {V-INI-3S}
      26:2 peri 4012 {PREP} pantwn 3956 {A-GPN} wn 3739 {R-GPN} egkaloumai
 1458 5743 {V-PPI-1S} upo 5259 {PREP} ioudaiwn 2453 {A-GPM} basileu 935

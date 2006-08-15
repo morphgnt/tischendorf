@@ -166,8 +166,8 @@ econtev 2192 5723 {V-PAP-NPM} sumqucoi 4861 {A-NPM} to 3588 {T-ASN} en 1520
      2:3 mhden 3367 {A-ASN-N} kat 2596 {PREP} eriyeian 2052 {N-ASF} mhde 3366
 {CONJ-N} kata 2596 {PREP} kenodoxian 2754 {N-ASF} alla 235 {CONJ} th 3588
 {T-DSF} tapeinofrosunh 5012 {N-DSF} allhlouv 240 {C-APM} hgoumenoi 2233
-5740 {V-PNP-NPM} uperecontav 5242 5723 {V-PAP-APM} eautwn 1438 {F-3GPM}
-     2:4 mh 3361 {PRT-N} ta 3588 {T-APN} eautwn 1438 {F-3GPM} | ekastoi
+5740 {V-PNP-NPM} uperecontav 5242 5723 {V-PAP-APM} eautwn 1438 {F-2GPM}
+     2:4 mh 3361 {PRT-N} ta 3588 {T-APN} eautwn 1438 {F-2GPM} | ekastoi
 1538 {A-NPM} | ekastov 1538 {A-NSM} | skopountev 4648 5723 {V-PAP-NPM} alla 235
 {CONJ}  | kai 2532 {CONJ} | [kai] 2532 {CONJ} | ta 3588 {T-APN} eterwn 2087
 {A-GPM} ekastoi 1538 {A-NPM}
@@ -204,7 +204,7 @@ yeou 2316 {N-GSM} patrov 3962 {N-GSM}
 3952 {N-DSF} mou 1473 {P-1GS} monon 3440 {ADV} alla 235 {CONJ} nun 3568
 {ADV} pollw 4183 {A-DSN} mallon 3123 {ADV} en 1722 {PREP} th 3588 {T-DSF}
 apousia 666 {N-DSF} mou 1473 {P-1GS} meta 3326 {PREP} fobou 5401 {N-GSM}
-kai 2532 {CONJ} tromou 5156 {N-GSM} thn 3588 {T-ASF} eautwn 1438 {F-3GPM}
+kai 2532 {CONJ} tromou 5156 {N-GSM} thn 3588 {T-ASF} eautwn 1438 {F-2GPM}
 swthrian 4991 {N-ASF} katergazesye 2716 5737 {V-PNM-2P}
      2:13 yeov 2316 {N-NSM} gar 1063 {CONJ} estin 1510 5719 {V-PAI-3S} o
 3588 {T-NSM} energwn 1754 5723 {V-PAP-NSM} en 1722 {PREP} umin 4771 {P-2DP}
@@ -440,7 +440,7 @@ logizesye 3049 5737 {V-PNM-2P}
      4:9 a 3739 {R-APN} kai 2532 {CONJ} emayete 3129 5627 {V-2AAI-2P} kai
 2532 {CONJ} parelabete 3880 5627 {V-2AAI-2P} kai 2532 {CONJ} hkousate 191
 5656 {V-AAI-2P} kai 2532 {CONJ} eidete 3708 5627 {V-2AAI-2P} en 1722 {PREP}
-emoi 1473 {P-1DS} tauta 3778 {D-APN} prassete 4238 5719 {V-PAI-2P} kai 2532
+emoi 1473 {P-1DS} tauta 3778 {D-APN} prassete 4238 5720 {V-PAM-2P} kai 2532
 {CONJ} o 3588 {T-NSM} yeov 2316 {N-NSM} thv 3588 {T-GSF} eirhnhv 1515
 {N-GSF} estai 1510 5695 {V-FDI-3S} mey 3326 {PREP} umwn 4771 {P-2GP}
      4:10 ecarhn 5463 5644 {V-2AOI-1S} de 1161 {CONJ} en 1722 {PREP} kuriw

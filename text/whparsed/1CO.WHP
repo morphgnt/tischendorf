@@ -391,7 +391,7 @@ kaucasai 2744 5736 {V-PNI-2S} wv 5613 {ADV} mh 3361 {PRT-N} labwn 2983 5631
      4:8 hdh 2235 {ADV} kekoresmenoi 2880 5772 {V-RPP-NPM} este 1510 5719
 {V-PAI-2P} hdh 2235 {ADV} eplouthsate 4147 5656 {V-AAI-2P} cwriv 5565 {ADV}
 hmwn 1473 {P-1GP} ebasileusate 936 5656 {V-AAI-2P} kai 2532 {CONJ} ofelon
-3785 {V-2AAI-1S} ge 1065 {PRT} ebasileusate 936 5656 {V-AAI-2P}
+3785 5627 {V-2AAI-1S} ge 1065 {PRT} ebasileusate 936 5656 {V-AAI-2P}
 ina 2443 {CONJ} kai 2532 {CONJ} hmeiv 1473 {P-1NP} umin 4771 {P-2DP} 
 sumbasileuswmen 4821 5661 {V-AAS-1P}
      4:9 dokw 1380 5719 {V-PAI-1S} gar 1063 {CONJ} o 3588 {T-NSM} yeov
@@ -414,7 +414,7 @@ kai 2532 {CONJ} peinwmen 3983 5719 {V-PAI-1P} kai 2532 {CONJ} diqwmen 1372
 5740 {V-PNP-NPM} taiv 3588 {T-DPF} idiaiv 2398 {A-DPF} cersin 5495 {N-DPF}
 loidoroumenoi 3058 5746 {V-PPP-NPM} eulogoumen 2127 5719 {V-PAI-1P}
 diwkomenoi 1377 5746 {V-PPP-NPM} anecomeya 430 5736 {V-PNI-1P}
-     4:13 dusfhmoumenoi 987 5746 {V-PPP-NPM} parakaloumen 3870 5719 {V-PAI-1P}
+     4:13 dusfhmoumenoi 1426 5746 {V-PPP-NPM} parakaloumen 3870 5719 {V-PAI-1P}
 wv 5613 {ADV} perikayarmata 4027 {N-NPN} tou 3588 {T-GSM} kosmou 2889
 {N-GSM} egenhyhmen 1096 5675 {V-AOI-1P} pantwn 3956 {A-GPN} periqhma 4067
 {N-NSN} ewv 2193 {ADV} arti 737 {ADV}
@@ -553,8 +553,8 @@ epi 1909 {PREP} apistwn 571 {A-GPM}
      6:7 hdh 2235 {ADV} men 3303 {PRT} | oun 3767 {CONJ} | [oun] 3767
 {CONJ} | olwv 3654 {ADV} htthma 2275 {N-NSN} umin 4771 {P-2DP} estin 1510
 5719 {V-PAI-3S} oti 3754 {CONJ} krimata 2917 {N-APN} ecete 2192 5719
-{V-PAI-2P} mey 3326 {PREP} eautwn 1438 {F-3GPM} dia 1223 {PREP} ti 5101 
-{I-ASN} ouci 3780 {PRT-I} mallon 3123 {ADV} adikeisye 91 5743 {V-PPI-2P} 
+{V-PAI-2P} mey 3326 {PREP} eautwn 1438 {F-2GPM} dia 1223 {PREP} ti 5101
+{I-ASN} ouci 3780 {PRT-I} mallon 3123 {ADV} adikeisye 91 5743 {V-PPI-2P}
 dia 1223 {PREP} ti 5101 {I-ASN} ouci 3780 {PRT-I} mallon 3123 {ADV} 
 apostereisye 650 5743 {V-PPI-2P}
      6:8 alla 235 {CONJ} umeiv 4771 {P-2NP} adikeite 91 5719 {V-PAI-2P} kai
@@ -621,7 +621,7 @@ tou 3588 {T-GSN} swmatov 4983 {N-GSN} estin 1510 5719 {V-PAI-3S} o 3588
 {N-NSM} tou 3588 {T-GSN} en 1722 {PREP} umin 4771 {P-2DP} agiou 40 {A-GSN}
 pneumatov 4151 {N-GSN} estin 1510 5719 {V-PAI-3S} ou 3739 {R-GSN} ecete
 2192 5719 {V-PAI-2P} apo 575 {PREP} yeou 2316 {N-GSM} kai 2532 {CONJ} ouk
-3756 {PRT-N} este 1510 5719 {V-PAI-2P} eautwn 1438 {F-3GPM}
+3756 {PRT-N} este 1510 5719 {V-PAI-2P} eautwn 1438 {F-2GPM}
      6:20 hgorasyhte 59 5681 {V-API-2P} gar 1063 {CONJ} timhv 5092 {N-GSF}
 doxasate 1392 5657 {V-AAM-2P} dh 1211 {PRT} ton 3588 {T-ASM} yeon 2316
 {N-ASM} en 1722 {PREP} tw 3588 {T-DSN} swmati 4983 {N-DSN} umwn 4771
