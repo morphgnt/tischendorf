@@ -3992,3 +3992,30 @@ I'm done (but have done other things as well.)
 
 
 
+2006-08-19 23:45pm
+
+Today I:
+
+- Fixed the text in a number of places
+- Disambiguated MR 6:4.16
+
+2006-08-20 03:12am
+
+- Disambiguated MR 8:35.16
+
+2006-08-20 03:41am
+
+- Disambiguated:
+
+  - LU 4:24.14
+  - LU 14:26.31
+  - JOH 18:34.4
+  - 2CO 3:13.10
+
+I found out, by reading Thayer, that E(AUTOU= can be both 1st and 
+2nd person, as well as its default third.
+
+That is what I'm going to check next... whether all instances of 
+E(AUTOU= (1438) that are truly not 3rd person, have been assigned 
+as such.
+
