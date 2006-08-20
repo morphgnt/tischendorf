@@ -4019,3 +4019,31 @@ That is what I'm going to check next... whether all instances of
 E(AUTOU= (1438) that are truly not 3rd person, have been assigned 
 as such.
 
+2006-08-20 08:10
+
+I've finished checking all 316 instances of E(AUTOU=.
+
+63 of them needed to be changed.  Done.
+
+I've also removed BETA2GalatiaAndUnicode.py from word.py, instead 
+using lib/morphgnt/convert.py.
+
+Note that I still need to check whether the transition "'" --> "@" 
+is valid in Galatia -- this is the only "improvement" that might 
+be made to convert.py over BETA2GalatiaAndUnicode.py
+
+
+2006-08-20 14:10
+
+I received word from James that for numerals like xc#2 in RE 13:18.21, 
+we should use U+0374 (Kaira) rather than U+2019 (apostrophe).  This 
+URL confirms it:
+
+http://www.tlg.uci.edu/~opoudjis/unicode/numerals.html
+
+and the BETA encoding specification says that  Kaira is "#" in BETA.
+
+So I've changed Tischendorf in RE 13:18.21 to have "#" rather than "'", 
+and also recoced lib/morphgnt/convert.py to do this correctly.
+
+
