@@ -2,7 +2,7 @@ import string
 from variant import *
 from kind import *
 import re
-import BETA2GalatiaAndUnicode
+from morphgnt import convert
 import rptag
 from lexicon import Lexicon
 
@@ -478,7 +478,7 @@ class Word:
         for s in beta.split(" "):
             # Add '\n' at the end to convert final sigma to real final sigma.
             # The '\n' will be stripped out by the conversion
-            galatia, remainder = BETA2GalatiaAndUnicode.beta2galatiatrie.convert(s+"\n")
+            galatia, remainder = convert.beta2galatiatrie.convert(s+"\n")
             if remainder != "":
                 raise Exception("galatia = '" + galatia +"'\nbeta = " + beta + "\n, and remainder was not empty, but was: '" + remainder + "'")
             result += galatia + " "
@@ -489,7 +489,7 @@ class Word:
         for s in beta.split(" "):
             # Add '\n' at the end to convert final sigma to real final sigma.
             # The '\n' will be stripped out by the conversion
-            utf16, remainder = BETA2GalatiaAndUnicode.beta2unicodetrie.convert(s+"\n")
+            utf16, remainder = convert.beta2unicodetrie.convert(s+"\n")
 
             # Convert Unicode string to UTF8
             utf8 = utf16.encode("utf-8")
