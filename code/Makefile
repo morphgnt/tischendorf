@@ -19,7 +19,9 @@ DERIVED_TXTFILES = lexicon_nonunique.txt tischlexicon_nonunique.txt
 #EMDROSPATH=/opt/EmdrosSQLite120pre140WX
 #EMDROSPATH=/var/home/ulrikp/opt/EmdrosSQLite120pre143WX
 #EMDROSPATH=/var/home/ulrikp/opt/EmdrosSQLite120pre161-O3-noshared-WX-debug
-EMDROSPATH=/home/ulrikp/opt/EmdrosSQLite120pre202-O3-WX-noshared-debug
+#EMDROSPATH=/home/ulrikp/opt/EmdrosSQLite120pre202-O3-WX-noshared-debug
+EMDROSPATH=/home/ulrikp/opt/Emdros120pre218-O2-WX-SWIG-shared-nodebug
+
 
 
 DB = tisch
