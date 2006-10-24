@@ -4047,3 +4047,14 @@ So I've changed Tischendorf in RE 13:18.21 to have "#" rather than "'",
 and also recoced lib/morphgnt/convert.py to do this correctly.
 
 
+2006-10-24 06:41am
+
+Back in August, I checked all instances of E(AUTOU=.  At the time, I
+wrote to Dr. Robinsons, who kindly wrote back and pointed out that in
+Luke 17:14.7, I had written "F-APM" rather than the correct "F-2APM".
+
+manual_analyses.txt:
+
+-LU 17:14.7 EAUTOUS F-APM 1438
++LU 17:14.7 EAUTOUS F-2APM 1438
+
