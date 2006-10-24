@@ -188,7 +188,7 @@ def parseTischendorfBETA():
 #read_AccentedTischendorf_write_linear()
 #read_Tischendorf_WH_compare_them_writeSFM()
 #read_TSP_writeSFM()
-read_Tischendorf_WH_compare_them()
 #read_TSP_writeTUP()
 #read_TSP_writeMQL()
 #read_WHB()
+read_Tischendorf_WH_compare_them()
