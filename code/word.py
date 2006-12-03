@@ -410,6 +410,9 @@ class Word:
         self.variant = variant
         self.tag_object = None
 
+    def ends_sentence(self):
+	return self.accented_surface[-1] in [".", ";"]
+
     def isVariant(self):
         return self.variant == variant_second or self.variant == variant_none
 

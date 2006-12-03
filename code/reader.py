@@ -86,6 +86,10 @@ class Reader:
             self.books[index].write_WHLinear(f)
         f.close()
 
+    def parse_sentences(self):
+        for index in range(0,27):
+            self.books[index].parse_sentences()
+
     def write_Linear(self):
         cur_monad = 1
         for index in range(0,27):

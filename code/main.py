@@ -105,6 +105,7 @@ def read_TSP():
 def read_TSP_writeMQL():
     rd = read_TSP()
     rd.applyLemma(kind.kANLEX)
+    rd.parse_sentences()
     rd.write_MQL("tischendorfmorph.mql", False) # False = bUseOldStyle
     return rd
 
@@ -147,6 +148,7 @@ def read_Tischendorf_WH_compare_them_writeAmbiguities():
 
 def read_Tischendorf_WH_compare_them_writeMQL():
     tischrd = read_Tischendorf_WH_compare_them()
+    tischrd.parse_sentences()
     tischrd.write_MQL("tischendorfmorph.mql", False)
     return tischrd
 
@@ -189,6 +191,6 @@ def parseTischendorfBETA():
 #read_Tischendorf_WH_compare_them_writeSFM()
 #read_TSP_writeSFM()
 #read_TSP_writeTUP()
-#read_TSP_writeMQL()
 #read_WHB()
-read_Tischendorf_WH_compare_them()
+#read_Tischendorf_WH_compare_them()
+read_TSP_writeMQL()

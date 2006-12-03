@@ -9,6 +9,28 @@ import word
 
 myverseletters = ["a", "b", "c", "d", "e"]
 
+class Sentence:
+    def __init__(self, starting_monad):
+	self.starting_monad = starting_monad
+	self.ending_monad = starting_monad
+
+    def set_ending_monad(self, ending_monad):
+	self.ending_monad = ending_monad
+
+    def writeMQL(self, f, bUseOldStyle):
+        print >>f, "CREATE OBJECT"
+        print >>f, "FROM MONADS={%d-%d}" % (self.starting_monad, self.ending_monad)
+        if bUseOldStyle:
+            OT = "Sentence"
+        else:
+            OT = ""
+        print >>f, "[%s]" % OT
+
+        if bUseOldStyle:
+            print >>f, "GO\n"
+        else:
+            print >>f, ""
+
 class Book:
     def __init__(self, filename):
         self.filename = filename
@@ -17,6 +39,7 @@ class Book:
         self.verse = -1
         self.chapters = []
         self.verses = []
+	self.sentences = []
         self.verse_dict = {}
         #print filename
 
@@ -266,14 +289,40 @@ class Book:
                 self.end_monad += 1
         self.parseChapter(self.chapter, chapter_end)
 
-                    
-                
+    def parse_sentences(self):
+	words = []
+	for v in self.verses:
+	    words.extend(v.words)
+	del self.sentences
+	self.sentences = []
+	cur_monad = self.start_monad
+	self.sentences.append(Sentence(cur_monad))
+	for w in words:
+	    if w.ends_sentence():
+		ending_monad = w.monad
+		self.sentences[-1].set_ending_monad(ending_monad)
+		if ending_monad != self.end_monad:
+		    self.sentences.append(Sentence(ending_monad+1))
+
+	# End the last sentence if the last word of the book 
+	# did not have an end-of-sentence punctuation
+	if self.sentences[-1].ending_monad != self.end_monad:
+	    self.sentences[-1].set_ending_monad(self.end_monad)
 
     def writeVersesMQL(self, f, bUseOldStyle):
         if not bUseOldStyle:
             print >>f, "CREATE OBJECTS WITH OBJECT TYPE [Verse]"
         for v in self.verses:
             v.writeMQL(f, bUseOldStyle)
+        if not bUseOldStyle:
+            print >>f, "GO"
+        print >>f, ""
+
+    def writeSentencesMQL(self, f, bUseOldStyle):
+        if not bUseOldStyle:
+            print >>f, "CREATE OBJECTS WITH OBJECT TYPE [Sentence]"
+        for s in self.sentences:
+            s.writeMQL(f, bUseOldStyle)
         if not bUseOldStyle:
             print >>f, "GO"
         print >>f, ""
@@ -311,6 +360,7 @@ class Book:
         self.writeBookMQL(f, bUseOldStyle)
         self.writeChaptersMQL(f, bUseOldStyle)
         self.writeVersesMQL(f, bUseOldStyle)
+        self.writeSentencesMQL(f, bUseOldStyle)
         self.writeWordsMQL(f, bUseOldStyle)
         if not bUseOldStyle:
             print >>f, "COMMIT TRANSACTION GO"
