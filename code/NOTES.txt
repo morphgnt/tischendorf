@@ -4058,3 +4058,19 @@ manual_analyses.txt:
 -LU 17:14.7 EAUTOUS F-APM 1438
 +LU 17:14.7 EAUTOUS F-2APM 1438
 
+
+2006-12-07 01:00am
+
+I found out that 3188 is a noun, so I changed the parsing from
+adjective to noun.
+
+manual_analyses.txt:
+
++2CO 3:3.11 MELANI N-DSN 3188
++2JO 1:12.10 MELANOS, N-GSN 3188
++3JO 1:13.9 MELANOS N-GSN 3188
+
+ANLEX considers this an adjective, but Thayer and Strong agree that it
+is a substantive, meaning "Ink" rather than 3189's "black" (ME/LAS).
+
+
