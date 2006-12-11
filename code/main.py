@@ -192,5 +192,5 @@ def parseTischendorfBETA():
 #read_TSP_writeSFM()
 #read_TSP_writeTUP()
 #read_WHB()
-#read_Tischendorf_WH_compare_them()
-read_TSP_writeMQL()
+read_Tischendorf_WH_compare_them()
+#read_TSP_writeMQL()
