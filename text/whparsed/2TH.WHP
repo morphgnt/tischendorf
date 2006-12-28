@@ -89,8 +89,8 @@ apokalufyh 601 5686 {V-APS-3S} o 3588 {T-NSM} anyrwpov 444 {N-NSM} thv 3588
 {T-GSF} anomiav 458 {N-GSF} o 3588 {T-NSM} uiov 5207 {N-NSM} thv 3588
 {T-GSF} apwleiav 684 {N-GSF}
      2:4 o 3588 {T-NSM} antikeimenov 480 5740 {V-PNP-NSM} kai 2532 {CONJ}
-uperairomenov 5229 5746 {V-PPP-NSM} epi 1909 {PREP} panta 3956 {A-APN}
-legomenon 3004 5746 {V-PPP-ASN} yeon 2316 {N-ASM} h 2228 {PRT} sebasma 4574
+uperairomenov 5229 5746 {V-PPP-NSM} epi 1909 {PREP} panta 3956 {A-ASM}
+legomenon 3004 5746 {V-PPP-ASM} yeon 2316 {N-ASM} h 2228 {PRT} sebasma 4574
 {N-ASN} wste 5620 {CONJ} auton 846 {P-ASM} eiv 1519 {PREP} ton 3588 {T-ASM}
 naon 3485 {N-ASM} tou 3588 {T-GSM} yeou 2316 {N-GSM} kayisai 2523 5658
 {V-AAN} apodeiknunta 584 5723 {V-PAP-ASM} eauton 1438 {F-3ASM} oti 3754
@@ -162,7 +162,7 @@ en 1722 {PREP} cariti 5485 {N-DSF}
 {T-APF} kardiav 2588 {N-APF} kai 2532 {CONJ} sthrixai 4741 5659 {V-AAO-3S}
 en 1722 {PREP} panti 3956 {A-DSN} ergw 2041 {N-DSN} kai 2532 {CONJ} logw
 3056 {N-DSM} agayw 18 {A-DSN}
-     3:1 to 3588 {T-NSN} loipon 3063 {A-NSN} proseucesye 4336 5737
+     3:1 to 3588 {T-ASN} loipon 3063 {A-ASN} proseucesye 4336 5737
 {V-PNM-2P} adelfoi 80 {N-VPM} peri 4012 {PREP} hmwn 1473 {P-1GP} ina 2443
 {CONJ} o 3588 {T-NSM} logov 3056 {N-NSM} tou 3588 {T-GSM} kuriou 2962
 {N-GSM} trech 5143 5725 {V-PAS-3S} kai 2532 {CONJ} doxazhtai 1392 5747
@@ -206,7 +206,7 @@ parelabete 3880 5627 {V-2AAI-2P} | parelabosan 3880 5627 {V-2AAI-3P} | par 3844
 epibarhsai 1912 5658 {V-AAN} tina 5100 {X-ASM} umwn 4771 {P-2GP}
      3:9 ouc 3756 {PRT-N} oti 3754 {CONJ} ouk 3756 {PRT-N} ecomen 2192 5719
 {V-PAI-1P} exousian 1849 {N-ASF} all 235 {CONJ} ina 2443 {CONJ} eautouv
-1438 {F-3APM} tupon 5179 {N-ASM} dwmen 1325 5632 {V-2AAS-1P} umin 4771
+1438 {F-1APM} tupon 5179 {N-ASM} dwmen 1325 5632 {V-2AAS-1P} umin 4771
 {P-2DP} eiv 1519 {PREP} to 3588 {T-ASN} mimeisyai 3401 5738 {V-PNN} hmav
 1473 {P-1AP}
      3:10 kai 2532 {CONJ} gar 1063 {CONJ} ote 3753 {ADV} hmen 1510 5707
@@ -237,7 +237,7 @@ hgeisye 2233 5737 {V-PNM-2P} alla 235 {CONJ} nouyeteite 3560 5720
      3:16 autov 846 {P-NSM} de 1161 {CONJ} o 3588 {T-NSM} kuriov 2962
 {N-NSM} thv 3588 {T-GSF} eirhnhv 1515 {N-GSF} dwh 1325 5630 {V-2AAO-3S}
 umin 4771 {P-2DP} thn 3588 {T-ASF} eirhnhn 1515 {N-ASF} dia 1223 {PREP}
-pantov 3956 {A-GSM} en 1722 {PREP} panti 3956 {A-DSM} tropw 5158 {N-DSM} o
+pantov 3956 {A-GSN} en 1722 {PREP} panti 3956 {A-DSM} tropw 5158 {N-DSM} o
 3588 {T-NSM} kuriov 2962 {N-NSM} meta 3326 {PREP} pantwn 3956 {A-GPM} umwn
 4771 {P-2GP}
      3:17 o 3588 {T-NSM} aspasmov 783 {N-NSM} th 3588 {T-DSF} emh 1699

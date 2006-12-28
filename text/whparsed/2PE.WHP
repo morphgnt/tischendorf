@@ -21,7 +21,7 @@ areth 703 {N-DSF} |
 kai 2532 {CONJ} megista 3173 {A-NPN-S} hmin 1473 {P-1DP} epaggelmata 1862
 {N-NPN} dedwrhtai 1433 5769 {V-RPI-3S} ina 2443 {CONJ} dia 1223 {PREP}
 toutwn 3778 {D-GPN} genhsye 1096 5638 {V-2ADS-2P} yeiav 2304 {A-GSF}
-koinwnoi 2844 {A-NPM} fusewv 5449 {N-GSF} apofugontev 668 5631 {V-2AAP-NPM}
+koinwnoi 2844 {N-NPM} fusewv 5449 {N-GSF} apofugontev 668 5631 {V-2AAP-NPM}
 thv 3588 {T-GSF} en 1722 {PREP} tw 3588 {T-DSM} kosmw 2889
 {N-DSM} en 1722 {PREP} epiyumia 1939 {N-DSF} fyorav 5356 {N-GSF}
      1:5 kai 2532 {CONJ} auto 846 {P-NSN} touto 3778 {D-NSN} de 1161 {CONJ}
@@ -148,7 +148,7 @@ throumenouv 5083 5746 {V-PPP-APM}
 nwe 3575 {N-PRI} dikaiosunhv 1343 {N-GSF} khruka 2783 {N-ASM} efulaxen 5442
 5656 {V-AAI-3S} kataklusmon 2627 {N-ASM} kosmw 2889 {N-DSM} asebwn 765
 {A-GPM} epaxav 1863 5660 {V-AAP-NSM}
-     2:6 kai 2532 {CONJ} poleiv 4172 {N-NPF} sodomwn 4670 {N-GPN} kai 2532
+     2:6 kai 2532 {CONJ} poleiv 4172 {N-APF} sodomwn 4670 {N-GPN} kai 2532
 {CONJ} gomorrav 1116 {N-GSF} tefrwsav 5077 5660 {V-AAP-NSM} | | [katastrofh]
 2692 {N-DSF} | katekrinen 2632 5656 {V-AAI-3S} upodeigma 5262 {N-ASN}
 mellontwn 3195 5723 {V-PAP-GPM} | asebesin 765 {A-DPM} | <asebesin> 765
@@ -330,7 +330,7 @@ hgeisye 2233 5737 {V-PNM-2P} kaywv 2531 {ADV} kai 2532 {CONJ} o 3588
 epistolaiv 1992 {N-DPF} lalwn 2980 5723 {V-PAP-NSM} en 1722 {PREP} autaiv
 846 {P-DPF} peri 4012 {PREP} toutwn 3778 {D-GPN} en 1722 {PREP} aiv 3739
 {R-DPF} estin 1510 5719 {V-PAI-3S} dusnohta 1425 {A-NPN} tina 5100 {X-NPN}
-a 3739 {R-NPN} oi 3588 {T-NPM} amayeiv 261 {A-NPM} kai 2532 {CONJ}
+a 3739 {R-APN} oi 3588 {T-NPM} amayeiv 261 {A-NPM} kai 2532 {CONJ}
 asthriktoi 793 {A-NPM} streblousin 4761 5719 {V-PAI-3P} wv 5613 {ADV} kai
 2532 {CONJ} tav 3588 {T-APF} loipav 3062 {A-APF} grafav 1124 {N-APF} prov
 4314 {PREP} thn 3588 {T-ASF} idian 2398 {A-ASF} autwn 846 {P-GPM} apwleian

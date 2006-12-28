@@ -769,8 +769,8 @@ egw 1473 {P-1NS} de 1161 {CONJ} umwn 4771 {P-2GP} feidomai 5339 5736
 {V-PNI-1S}
      7:29 touto 3778 {D-ASN} de 1161 {CONJ} fhmi 5346 5719 {V-PAI-1S}
 adelfoi 80 {N-VPM} o 3588 {T-NSM} kairov 2540 {N-NSM} sunestalmenov 4958
-5772 {V-RPP-NSM} estin 1510 5719 {V-PAI-3S} to 3588 {T-NSN} loipon 3063
-{A-NSN} ina 2443 {CONJ} kai 2532 {CONJ} oi 3588 {T-NPM} econtev 2192 5723
+5772 {V-RPP-NSM} estin 1510 5719 {V-PAI-3S} to 3588 {T-ASN} loipon 3063
+{A-ASN} ina 2443 {CONJ} kai 2532 {CONJ} oi 3588 {T-NPM} econtev 2192 5723
 {V-PAP-NPM} gunaikav 1135 {N-APF} wv 5613 {ADV} mh 3361 {PRT-N} econtev
 2192 5723 {V-PAP-NPM} wsin 1510 5725 {V-PAS-3P}
      7:30 kai 2532 {CONJ} oi 3588 {T-NPM} klaiontev 2799 5723 {V-PAP-NPM}
@@ -1030,7 +1030,7 @@ gegona 1096 5754 {V-2RAI-1S} panta 3956 {A-NPN} ina 2443 {CONJ} pantwv 3843
 {ADV} tinav 5100 {X-APM} swsw 4982 5661 {V-AAS-1S}
      9:23 panta 3956 {A-APN} de 1161 {CONJ} poiw 4160 5719 {V-PAI-1S} 
 dia 1223 {PREP} to 3588 {T-ASN} euaggelion 2098 {N-ASN} ina 2443 {CONJ} 
-sugkoinwnov 4791 {A-NSM} autou 846 {P-GSN} genwmai 1096 5638 {V-2ADS-1S}
+sugkoinwnov 4791 {N-NSM} autou 846 {P-GSN} genwmai 1096 5638 {V-2ADS-1S}
      9:24 ouk 3756 {PRT-N} oidate 1492 5758 {V-RAI-2P} oti 3754 {CONJ} oi
 3588 {T-NPM} en 1722 {PREP} stadiw 4712 {N-DSN} trecontev 5143 5723
 {V-PAP-NPM} pantev 3956 {A-NPM} men 3303 {PRT} trecousin 5143 5719
@@ -1136,7 +1136,7 @@ arton 740 {N-ASM} on 3739 {R-ASM} klwmen 2806 5719 {V-PAI-1P} ouci 3780
      10:18 blepete 991 5720 {V-PAM-2P} ton 3588 {T-ASM} israhl 2474 {N-PRI}
 kata 2596 {PREP} sarka 4561 {N-ASF} ouc 3756 {PRT-N} oi 3588 {T-NPM}
 esyiontev 2068 5723 {V-PAP-NPM} tav 3588 {T-APF} yusiav 2378 {N-APF}
-koinwnoi 2844 {A-NPM} tou 3588 {T-GSN} yusiasthriou 2379 {N-GSN} eisin 1510
+koinwnoi 2844 {N-NPM} tou 3588 {T-GSN} yusiasthriou 2379 {N-GSN} eisin 1510
 5719 {V-PAI-3P}
      10:19 ti 5101 {I-ASN} oun 3767 {CONJ} fhmi 5346 5719 {V-PAI-1S} oti
 3754 {CONJ} eidwloyuton 1494 {A-NSN} ti 5100 {X-NSN} estin 1510 5719
@@ -1146,7 +1146,7 @@ koinwnoi 2844 {A-NPM} tou 3588 {T-GSN} yusiasthriou 2379 {N-GSN} eisin 1510
 5719 {V-PAI-3P} | [ta 3588 {T-NPN} eynh] 1484 {N-NPN} | | daimonioiv 1140
 {N-DPN} kai 2532 {CONJ} ou 3756 {PRT-N} yew 2316 {N-DSM} | yuousin 2380
 5719 {V-PAI-3P} | [yuousin] 2380 5719 {V-PAI-3P} | ou 3756 {PRT-N} yelw
-2309 5719 {V-PAI-1S} de 1161 {CONJ} umav 4771 {P-2AP} koinwnouv 2844 {A-APM} 
+2309 5719 {V-PAI-1S} de 1161 {CONJ} umav 4771 {P-2AP} koinwnouv 2844 {N-APM}
 twn 3588 {T-GPN} daimoniwn 1140 {N-GPN} ginesyai 1096 5738 {V-PNN}
      10:21 ou 3756 {PRT-N} dunasye 1410 5736 {V-PNI-2P} pothrion 4221
 {N-ASN} kuriou 2962 {N-GSM} pinein 4095 5721 {V-PAN} kai 2532 {CONJ}
@@ -1183,7 +1183,7 @@ eterou 2087 {A-GSM}
 3377 5660 {V-AAP-ASM} kai 2532 {CONJ} thn 3588 {T-ASF} suneidhsin 4893
 {N-ASF}
      10:29 suneidhsin 4893 {N-ASF} de 1161 {CONJ} legw 3004 5719 {V-PAI-1S}
-ouci 3780 {PRT-N} thn 3588 {T-ASF} eautou 1438 {F-3GSM} alla 235 {CONJ} thn
+ouci 3780 {PRT-N} thn 3588 {T-ASF} eautou 1438 {F-2GSM} alla 235 {CONJ} thn
 3588 {T-ASF} tou 3588 {T-GSM} eterou 2087 {A-GSM} ina 2443 {CONJ} ti 5101
 {I-ASN} gar 1063 {CONJ} h 3588 {T-NSF} eleuyeria 1657 {N-NSF} mou 1473
 {P-1GS} krinetai 2919 5743 {V-PPI-3S} upo 5259 {PREP} allhv 243 {A-GSF}
@@ -1356,7 +1356,7 @@ swma 4983 {N-ASN}
 {P-2DP} polloi 4183 {A-NPM} asyeneiv 772 {A-NPM} kai 2532 {CONJ} arrwstoi
 732 {A-NPM} kai 2532 {CONJ} koimwntai 2837 5743 {V-PPI-3P} ikanoi 2425
 {A-NPM}
-     11:31 ei 1487 {COND} de 1161 {CONJ} eautouv 1438 {F-3APM} diekrinomen
+     11:31 ei 1487 {COND} de 1161 {CONJ} eautouv 1438 {F-1APM} diekrinomen
 1252 5707 {V-IAI-1P} ouk 3756 {PRT-N} an 302 {PRT} ekrinomeya 2919 5712
 {V-IPI-1P}
      11:32 krinomenoi 2919 5746 {V-PPP-NPM} de 1161 {CONJ} upo 5259 {PREP}
@@ -1629,7 +1629,7 @@ pwv 4459 {ADV-I} gnwsyhsetai 1097 5701 {V-FPI-3S} to 3588 {T-NSN}
 laloumenon 2980 5746 {V-PPP-NSN} esesye 1510 5695 {V-FDI-2P} gar 1063
 {CONJ} eiv 1519 {PREP} aera 109 {N-ASM} lalountev 2980 5723 {V-PAP-NPM}
      14:10 tosauta 5118 {D-NPN} ei 1487 {COND} tucoi 5177 5630 {V-2AAO-3S}
-genh 1085 {N-NPN} fwnwn 5456 {N-GPM} eisin 1510 5719 {V-PAI-3P} en 1722 {PREP}
+genh 1085 {N-NPN} fwnwn 5456 {N-GPF} eisin 1510 5719 {V-PAI-3P} en 1722 {PREP}
 kosmw 2889 {N-DSM} kai 2532 {CONJ} ouden 3762 {A-NSN-N} afwnon 880 {A-NSN}
      14:11 ean 1437 {COND} oun 3767 {CONJ} mh 3361 {PRT-N} eidw 1492 5762
 {V-RAS-1S} thn 3588 {T-ASF} dunamin 1411 {N-ASF} thv 3588 {T-GSF} fwnhv

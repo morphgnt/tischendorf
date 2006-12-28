@@ -270,7 +270,7 @@ pantwn 3956 {A-GPM} agiwn 40 {A-GPM} edoyh 1325 5681 {V-API-3S} h 3588
 anexicniaston 421 {A-ASN} ploutov 4149 {N-ASN} tou 3588 {T-GSM}
 cristou 5547 {N-GSM}
      3:9 kai 2532 {CONJ} fwtisai 5461 5658 {V-AAN} | | [pantav] 3956
-{A-APM} | tiv 5101 {I-NSM} h 3588 {T-NSF} oikonomia 3622 {N-NSF} tou 3588
+{A-APM} | tiv 5101 {I-NSF} h 3588 {T-NSF} oikonomia 3622 {N-NSF} tou 3588
 {T-GSN} musthriou 3466 {N-GSN} tou 3588 {T-GSN} apokekrummenou 613 5772
 {V-RPP-GSN} apo 575 {PREP} twn 3588 {T-GPM} aiwnwn 165 {N-GPM} en 1722
 {PREP} tw 3588 {T-DSM} yew 2316 {N-DSM} tw 3588 {T-DSM} ta 3588 {T-APN}
@@ -475,7 +475,7 @@ carin 5485 {N-ASF} toiv 3588 {T-DPM} akouousin 191 5723 {V-PAP-DPM}
 {N-DSF}
      4:32 ginesye 1096 5737 {V-PNM-2P} [de] 1161 {CONJ} eiv 1519 {PREP}
 allhlouv 240 {C-APM} crhstoi 5543 {A-NPM} eusplagcnoi 2155 {A-NPM}
-carizomenoi 5483 5740 {V-PNP-NPM} eautoiv 1438 {F-3DPM} kaywv 2531 {ADV}
+carizomenoi 5483 5740 {V-PNP-NPM} eautoiv 1438 {F-2DPM} kaywv 2531 {ADV}
 kai 2532 {CONJ} o 3588 {T-NSM} yeov 2316 {N-NSM} en 1722 {PREP} cristw 5547
 {N-DSM} ecarisato 5483 5662 {V-ADI-3S} umin 4771 {P-2DP}
      5:1 ginesye 1096 5737 {V-PNM-2P} oun 3767 {CONJ} mimhtai 3402 {N-NPM}
@@ -551,7 +551,7 @@ kuriou 2962 {N-GSM}
 oinw 3631 {N-DSM} en 1722 {PREP} w 3739 {R-DSM} estin 1510 5719 {V-PAI-3S}
 aswtia 810 {N-NSF} alla 235 {CONJ} plhrousye 4137 5744 {V-PPM-2P} en 1722
 {PREP} pneumati 4151 {N-DSN}
-     5:19 lalountev 2980 5723 {V-PAP-NPM} eautoiv 1438 {F-3DPM} | | [en]
+     5:19 lalountev 2980 5723 {V-PAP-NPM} eautoiv 1438 {F-2DPM} | | [en]
 1722 {PREP} | qalmoiv 5568 {N-DPM} kai 2532 {CONJ} umnoiv 5215 {N-DPM} kai
 2532 {CONJ} wdaiv 5603 {N-DPF} pneumatikaiv 4152 {A-DPF} adontev 103 5723
 {V-PAP-NPM} kai 2532 {CONJ} qallontev 5567 5723 {V-PAP-NPM} th 3588 {T-DSF}
@@ -681,7 +681,7 @@ exousiav 1849 {N-APF} prov 4314 {PREP} touv 3588 {T-APM} kosmokratorav 2888
 4189 {N-GSF} en 1722 {PREP} toiv 3588 {T-DPN} epouranioiv 2032 {A-DPN}
      6:13 dia 1223 {PREP} touto 3778 {D-ASN} analabete 353 5628 {V-2AAM-2P}
 thn 3588 {T-ASF} panoplian 3833 {N-ASF} tou 3588 {T-GSM} yeou 2316 {N-GSM}
-ina 2443 {CONJ} dunhyhte 1410 5667 {V-ADS-2P} antisthnai 436 5629 {V-2AAN}
+ina 2443 {CONJ} dunhyhte 1410 5680 {V-AOS-2P} antisthnai 436 5629 {V-2AAN}
 en 1722 {PREP} th 3588 {T-DSF} hmera 2250 {N-DSF} th 3588 {T-DSF} ponhra
 4190 {A-DSF} kai 2532 {CONJ} apanta 537 {A-APN} katergasamenoi 2716 5666
 {V-ADP-NPM} sthnai 2476 5629 {V-2AAN}

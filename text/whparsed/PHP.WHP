@@ -33,7 +33,7 @@ emoi 1473 {P-1DS} touto 3778 {D-ASN} fronein 5426 5721 {V-PAN} uper 5228
 toiv 3588 {T-DPM} desmoiv 1199 {N-DPM} mou 1473 {P-1GS} kai 2532 {CONJ} en
 1722 {PREP} th 3588 {T-DSF} apologia 627 {N-DSF} kai 2532 {CONJ} bebaiwsei
 951 {N-DSF} tou 3588 {T-GSN} euaggeliou 2098 {N-GSN} sugkoinwnouv 4791
-{A-APM} mou 1473 {P-1GS} thv 3588 {T-GSF} caritov 5485 {N-GSF} pantav 3956
+{N-APM} mou 1473 {P-1GS} thv 3588 {T-GSF} caritov 5485 {N-GSF} pantav 3956
 {A-APM} umav 4771 {P-2AP} ontav 1510 5723 {V-PAP-APM}
      1:8 martuv 3144 {N-NSM} gar 1063 {CONJ} mou 1473 {P-1GS} o 3588
 {T-NSM} yeov 2316 {N-NSM} wv 5613 {ADV} epipoyw 1971 5719 {V-PAI-1S} pantav
@@ -289,7 +289,7 @@ yanatou 2288 {N-GSM} hggisen 1448 5656 {V-AAI-3S} paraboleusamenov 3851
 5666 {V-ADP-NSM} th 3588 {T-DSF} quch 5590 {N-DSF} ina 2443 {CONJ} anaplhrwsh
 378 5661 {V-AAS-3S} to 3588 {T-ASN} umwn 4771 {P-2GP} usterhma 5303 {N-ASN}
 thv 3588 {T-GSF} prov 4314 {PREP} me 1473 {P-1AS} leitourgiav 3009 {N-GSF}
-     3:1 to 3588 {T-NSN} loipon 3063 {A-NSN} adelfoi 80 {N-VPM} mou 1473
+     3:1 to 3588 {T-ASN} loipon 3063 {A-ASN} adelfoi 80 {N-VPM} mou 1473
 {P-1GS} cairete 5463 5720 {V-PAM-2P} en 1722 {PREP} kuriw 2962 {N-DSM} ta
 3588 {T-APN} auta 846 {P-APN} grafein 1125 5721 {V-PAN} umin 4771 {P-2DP}
 emoi 1473 {P-1DS} men 3303 {PRT} ouk 3756 {PRT-N} oknhron 3636 {A-NSN} umin
@@ -430,7 +430,7 @@ panta 3956 {A-ASM} noun 3563 {N-ASM} frourhsei 5432 5692 {V-FAI-3S} tav
 3588 {T-APF} kardiav 2588 {N-APF} umwn 4771 {P-2GP} kai 2532 {CONJ} ta 3588
 {T-APN} nohmata 3540 {N-APN} umwn 4771 {P-2GP} en 1722 {PREP} cristw 5547
 {N-DSM} ihsou 2424 {N-DSM}
-     4:8 to 3588 {T-NSN} loipon 3063 {A-NSN} adelfoi 80 {N-VPM} osa 3745
+     4:8 to 3588 {T-ASN} loipon 3063 {A-ASN} adelfoi 80 {N-VPM} osa 3745
 {K-NPN} estin 1510 5719 {V-PAI-3S} alhyh 227 {A-NPN} osa 3745 {K-NPN} semna
 4586 {A-NPN} osa 3745 {K-NPN} dikaia 1342 {A-NPN} osa 3745 {K-NPN} agna 53
 {A-NPN} osa 3745 {K-NPN} prosfilh 4375 {A-NPN} osa 3745 {K-NPN} eufhma 2163

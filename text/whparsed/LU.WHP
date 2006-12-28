@@ -698,7 +698,7 @@ melloushv 3195 5723 {V-PAP-GSF} orghv 3709 {N-GSF}
      3:8 poihsate 4160 5657 {V-AAM-2P} oun 3767 {CONJ} karpouv 2590 {N-APM}
 axiouv 514 {A-APM} thv 3588 {T-GSF} metanoiav 3341 {N-GSF} kai 2532 {CONJ}
 mh 3361 {PRT-N} arxhsye 756 5672 {V-AMS-2P} legein 3004 5721 {V-PAN} en
-1722 {PREP} eautoiv 1438 {F-3DPM} patera 3962 {N-ASM} ecomen 2192 5719
+1722 {PREP} eautoiv 1438 {F-2DPM} patera 3962 {N-ASM} ecomen 2192 5719
 {V-PAI-1P} ton 3588 {T-ASM} abraam 11 {N-PRI} legw 3004 5719 {V-PAI-1S} gar
 1063 {CONJ} umin 4771 {P-2DP} oti 3754 {CONJ} dunatai 1410 5736 {V-PNI-3S}
 o 3588 {T-NSM} yeov 2316 {N-NSM} ek 1537 {PREP} twn 3588 {T-GPM} liywn 3037
@@ -1119,7 +1119,7 @@ ploiw 4143 {N-DSN} tou 3588 {T-GSM} elyontav 2064 5631 {V-2AAP-APM}
 sullabesyai 4815 5641 {V-2AMN} autoiv 846 {P-DPM} kai 2532 {CONJ} hlyon
 2064 5627 {V-2AAI-3P} kai 2532 {CONJ} eplhsan 4130 5656 {V-AAI-3P} amfotera
 297 {A-APN} ta 3588 {T-APN} ploia 4143 {N-APN} wste 5620 {CONJ} buyizesyai
-1036 5745 {V-PPN} auta 846 {P-NPN}
+1036 5745 {V-PPN} auta 846 {P-APN}
      5:8 idwn 3708 5631 {V-2AAP-NSM} de 1161 {CONJ} simwn 4613 {N-NSM}
 petrov 4074 {N-NSM} prosepesen 4363 5627 {V-2AAI-3S} toiv 3588 {T-DPN}
 gonasin 1119 {N-DPN} ihsou 2424 {N-GSM} legwn 3004 5723 {V-PAP-NSM} exelye
@@ -1134,7 +1134,7 @@ sunelabon 4815 5627 {V-2AAI-3P}
      5:10 omoiwv 3668 {ADV} de 1161 {CONJ} kai 2532 {CONJ} iakwbon 2385
 {N-ASM} kai 2532 {CONJ} iwannhn 2491 {N-ASM} uiouv 5207 {N-APM} zebedaiou
 2199 {N-GSM} oi 3739 {R-NPM} hsan 1510 5707 {V-IAI-3P} koinwnoi 2844
-{A-NPM} tw 3588 {T-DSM} simwni 4613 {N-DSM} kai 2532 {CONJ} eipen 3004 5627
+{N-NPM} tw 3588 {T-DSM} simwni 4613 {N-DSM} kai 2532 {CONJ} eipen 3004 5627
 {V-2AAI-3S} prov 4314 {PREP} ton 3588 {T-ASM} simwna 4613 {N-ASM} | | o
 3588 {T-NSM} | ihsouv 2424 {N-NSM} mh 3361 {PRT-N} fobou 5399 5737
 {V-PNM-2S} apo 575 {PREP} tou 3588 {T-GSM} nun 3568 {ADV} anyrwpouv 444
@@ -1298,8 +1298,8 @@ oudeiv 3762 {A-NSM-N} epiblhma 1915 {N-ASN} apo 575 {PREP} imatiou 2440
 {V-PAI-3S} epi 1909 {PREP} imation 2440 {N-ASN} palaion 3820 {A-ASN} ei
 1487 {COND} de 1161 {CONJ} mh 3361 {PRT-N} ge 1065 {PRT} kai 2532 {CONJ} to
 3588 {T-ASN} kainon 2537 {A-ASN} scisei 4977 5692 {V-FAI-3S} kai 2532 {CONJ} 
-tw 3588 {T-DSN} palaiw 3820 {A-DSN} ou 3756 {PRT-N} sumfwnhsei 4856 5692 
-{V-FAI-3S} to 3588 {T-ASN} epiblhma 1915 {N-ASN} to 3588 {T-ASN} apo 575 
+tw 3588 {T-DSN} palaiw 3820 {A-DSN} ou 3756 {PRT-N} sumfwnhsei 4856 5692
+{V-FAI-3S} to 3588 {T-NSN} epiblhma 1915 {N-NSN} to 3588 {T-NSN} apo 575
 {PREP} tou 3588 {T-GSN} kainou 2537 {A-GSN}
      5:37 kai 2532 {CONJ} oudeiv 3762 {A-NSM-N} ballei 906 5719 {V-PAI-3S}
 oinon 3631 {N-ASM} neon 3501 {A-ASM} eiv 1519 {PREP} askouv 779 {N-APM}
@@ -1323,7 +1323,7 @@ sabbatw 4521 {N-DSN} diaporeuesyai 1279 5738 {V-PNN} auton 846 {P-ASM} dia
 qwcontev 5597 5723 {V-PAP-NPM} taiv 3588 {T-DPF} cersin 5495 {N-DPF}
      6:2 tinev 5100 {X-NPM} de 1161 {CONJ} twn 3588 {T-GPM} farisaiwn 5330
 {N-GPM} eipan 3004 5627 {V-2AAI-3P} ti 5101 {I-ASN} poieite 4160 5719
-{V-PAI-2P} o 3739 {R-NSN} ouk 3756 {PRT-N} exestin 1832 5719 {V-PAI-3S} toiv
+{V-PAI-2P} o 3739 {R-ASN} ouk 3756 {PRT-N} exestin 1832 5719 {V-PAI-3S} toiv
 3588 {T-DPN} sabbasin 4521 {N-DPN}
      6:3 kai 2532 {CONJ} apokriyeiv 611 5679 {V-AOP-NSM} prov 4314 {PREP}
 autouv 846 {P-APM} eipen 3004 5627 {V-2AAI-3S} | [o] 3588 {T-NSM} | o 3588
@@ -1574,7 +1574,7 @@ agayon 18 {A-ASN} kai 2532 {CONJ} o 3588 {T-NSM} ponhrov 4190 {A-NSM} ek
 {V-PAI-3S} to 3588 {T-ASN} ponhron 4190 {A-ASN} ek 1537 {PREP} gar 1063
 {CONJ} perisseumatov 4051 {N-GSN} kardiav 2588 {N-GSF} lalei 2980 5719
 {V-PAI-3S} to 3588 {T-NSN} stoma 4750 {N-NSN} autou 846 {P-GSM}
-     6:46 ti 5101 {I-NSN} de 1161 {CONJ} me 1473 {P-1AS} kaleite 2564 5719
+     6:46 ti 5101 {I-ASN} de 1161 {CONJ} me 1473 {P-1AS} kaleite 2564 5719
 {V-PAI-2P} kurie 2962 {N-VSM} kurie 2962 {N-VSM} kai 2532 {CONJ} ou 3756
 {PRT-N} poieite 4160 5719 {V-PAI-2P} a 3739 {R-APN} legw 3004 5719
 {V-PAI-1S}
@@ -1875,7 +1875,7 @@ podav 4228 {N-APM} mou 1473 {P-1GS}
 4771 {P-2DS} afewntai 863 5769 {V-RPI-3P} ai 3588 {T-NPF} amartiai 266
 {N-NPF} authv 846 {P-GSF} ai 3588 {T-NPF} pollai 4183 {A-NPF} oti 3754
 {CONJ} hgaphsen 25 5656 {V-AAI-3S} polu 4183 {A-ASN} w 3739 {R-DSM} de 1161
-{CONJ} oligon 3641 {A-ASN} afietai 863 5743 {V-PPI-3S} oligon 3641 {A-ASN}
+{CONJ} oligon 3641 {A-NSN} afietai 863 5743 {V-PPI-3S} oligon 3641 {A-ASN}
 agapa 25 5719 {V-PAI-3S}
      7:48 eipen 3004 5627 {V-2AAI-3S} de 1161 {CONJ} auth 846 {P-DSF}
 afewntai 863 5769 {V-RPI-3P} sou 4771 {P-2GS} ai 3588 {T-NPF} amartiai 266
@@ -2172,7 +2172,7 @@ imatiou 2440 {N-GSN} autou 846 {P-GSM} kai 2532 {CONJ} paracrhma 3916 {ADV}
 esth 2476 5627 {V-2AAI-3S} h 3588 {T-NSF} rusiv 4511 {N-NSF} tou 3588
 {T-GSN} aimatov 129 {N-GSN} authv 846 {P-GSF}
      8:45 kai 2532 {CONJ} eipen 3004 5627 {V-2AAI-3S} o 3588 {T-NSM} ihsouv
-2424 {N-NSM} tiv 5101 {I-NSF} o 3588 {T-NSM} aqamenov 680 5671 {V-AMP-NSM}
+2424 {N-NSM} tiv 5101 {I-NSM} o 3588 {T-NSM} aqamenov 680 5671 {V-AMP-NSM}
 mou 1473 {P-1GS} arnoumenwn 720 5740 {V-PNP-GPM} de 1161 {CONJ} pantwn 3956
 {A-GPM} eipen 3004 5627 {V-2AAI-3S} o 3588 {T-NSM} petrov 4074 {N-NSM}
 epistata 1988 {N-VSM} oi 3588 {T-NPM} ocloi 3793 {N-NPM} sunecousin 4912
@@ -2207,7 +2207,7 @@ sou 4771 {P-2GS} mhketi 3371 {ADV-N} skulle 4660 5720 {V-PAM-2S} ton 3588
 5657 {V-AAM-2S} kai 2532 {CONJ} swyhsetai 4982 5701 {V-FPI-3S}
      8:51 elywn 2064 5631 {V-2AAP-NSM} de 1161 {CONJ} eiv 1519 {PREP} thn 3588
 {T-ASF} oikian 3614 {N-ASF} ouk 3756 {PRT-N} afhken 863 5656 {V-AAI-3S}
-eiselyein 1525 5629 {V-2AAN} tina 5100 {X-APN} sun 4862 {PREP} autw 846 {P-DSM} 
+eiselyein 1525 5629 {V-2AAN} tina 5100 {X-ASM} sun 4862 {PREP} autw 846 {P-DSM}
 ei 1487 {COND} mh 3361 {PRT-N} petron 4074 {N-ASM} kai 2532 {CONJ} iwannhn 2491
 {N-ASM} kai 2532 {CONJ} iakwbon 2385 {N-ASM} kai 2532 {CONJ} ton 3588
 {T-ASM} patera 3962 {N-ASM} thv 3588 {T-GSF} paidov 3816 {N-GSF} kai 2532
@@ -3157,7 +3157,7 @@ apostomatizein 653 5721 {V-PAN} auton 846 {P-ASM} peri 4012 {PREP} pleionwn
 3793 {N-GSM} wste 5620 {CONJ} katapatein 2662 5721 {V-PAN} allhlouv 240
 {C-APM} hrxato 756 5662 {V-ADI-3S} legein 3004 5721 {V-PAN} prov 4314
 {PREP} touv 3588 {T-APM} mayhtav 3101 {N-APM} autou 846 {P-GSM} prwton 4412
-{ADV-S} prosecete 4337 5720 {V-PAM-2P} eautoiv 1438 {F-3DPM} apo 575 {PREP}
+{ADV-S} prosecete 4337 5720 {V-PAM-2P} eautoiv 1438 {F-2DPM} apo 575 {PREP}
 thv 3588 {T-GSF} zumhv 2219 {N-GSF} htiv 3748 {R-NSF} estin 1510 5719
 {V-PAI-3S} upokrisiv 5272 {N-NSF} twn 3588 {T-GPM} farisaiwn 5330 {N-GPM}
      12:2 ouden 3762 {A-NSN-N} de 1161 {CONJ} sugkekalummenon 4780 5772
@@ -3252,7 +3252,7 @@ pou 4226 {PRT-I} sunaxw 4863 5692 {V-FAI-1S} touv 3588 {T-APM} karpouv 2590
 poihsw 4160 5692 {V-FAI-1S} kayelw 2507 5692 {V-FAI-1S} mou 1473 {P-1GS}
 tav 3588 {T-APF} apoyhkav 596 {N-APF} kai 2532 {CONJ} meizonav 3173
 {A-APF-C} oikodomhsw 3618 5692 {V-FAI-1S} kai 2532 {CONJ} sunaxw 4863 5692
-{V-FAI-1S} ekei 1563 {ADV} panta 3956 {A-APN} ton 3588 {T-ASM} siton 4621
+{V-FAI-1S} ekei 1563 {ADV} panta 3956 {A-ASM} ton 3588 {T-ASM} siton 4621
 {N-ASM} kai 2532 {CONJ} ta 3588 {T-APN} agaya 18 {A-APN} mou 1473 {P-1GS}
      12:19 kai 2532 {CONJ} erw 2046 5692 {V-FAI-1S} th 3588 {T-DSF} quch
 5590 {N-DSF} mou 1473 {P-1GS} quch 5590 {N-VSF} eceiv 2192 5719 {V-PAI-2S}
@@ -3266,7 +3266,7 @@ keimena 2749 5740 {V-PNP-APN} | eiv 1519 {PREP} eth 2094 {N-APN} polla 4183
 {D-DSF} th 3588 {T-DSF} nukti 3571 {N-DSF} thn 3588 {T-ASF} quchn 5590
 {N-ASF} sou 4771 {P-2GS} | aitousin 154 5719 {V-PAI-3P} |
 apaitousin 523 5719 {V-PAI-3P} | apo 575 {PREP} sou 4771 {P-2GS} a 3739
-{R-NPN} de 1161 {CONJ} htoimasav 2090 5656 {V-AAI-2S} tini 5101 {I-DSM}
+{R-APN} de 1161 {CONJ} htoimasav 2090 5656 {V-AAI-2S} tini 5101 {I-DSM}
 estai 1510 5695 {V-FDI-3S}
      12:21 | [outwv 3779 {ADV} | outwv 3779 {ADV} | o 3588 {T-NSM}
 yhsaurizwn 2343 5723 {V-PAP-NSM} eautw 1438 {F-3DSM} kai 2532 {CONJ} mh
@@ -3330,7 +3330,7 @@ mikron 3398 {A-NSN} poimnion 4168 {N-NSN} oti 3754 {CONJ} eudokhsen 2106
      12:33 pwlhsate 4453 5657 {V-AAM-2P} ta 3588 {T-APN} uparconta 5224
 5723 {V-PAP-APN} umwn 4771 {P-2GP} kai 2532 {CONJ} dote 1325 5628
 {V-2AAM-2P} elehmosunhn 1654 {N-ASF} poihsate 4160 5657 {V-AAM-2P} eautoiv
-1438 {F-3DPM} ballantia 905 {N-APN} mh 3361 {PRT-N} palaioumena 3822 5746
+1438 {F-2DPM} ballantia 905 {N-APN} mh 3361 {PRT-N} palaioumena 3822 5746
 {V-PPP-APN} yhsauron 2344 {N-ASM} anekleipton 413 {A-ASM} en 1722 {PREP}
 toiv 3588 {T-DPM} ouranoiv 3772 {N-DPM} opou 3699 {ADV} klepthv 2812
 {N-NSM} ouk 3756 {PRT-N} eggizei 1448 5719 {V-PAI-3S} oude 3761 {CONJ-N} shv
@@ -3419,7 +3419,7 @@ poihsav 4160 5660 {V-AAP-NSM} prov 4314 {PREP} to 3588 {T-ASN} yelhma 2307
 {V-2AAP-NSM} poihsav 4160 5660 {V-AAP-NSM} de 1161 {CONJ} axia 514 {A-APN}
 plhgwn 4127 {N-GPF} darhsetai 1194 5691 {V-2FPI-3S} oligav 3641 {A-APF}
 panti 3956 {A-DSM} de 1161 {CONJ} w 3739 {R-DSM} edoyh 1325 5681 {V-API-3S}
-polu 4183 {A-ASN} polu 4183 {A-NSN} zhthyhsetai 2212 5701 {V-FPI-3S} par
+polu 4183 {A-NSN} polu 4183 {A-NSN} zhthyhsetai 2212 5701 {V-FPI-3S} par
 3844 {PREP} autou 846 {P-GSM} kai 2532 {CONJ} w 3739 {R-DSM} pareyento 3908
 5639 {V-2AMI-3P} polu 4183 {A-ASN} perissoteron 4053 {A-ASN-C} aithsousin
 154 5692 {V-FAI-3P} auton 846 {P-ASM}
@@ -3680,7 +3680,7 @@ apokteinousa 615 5723 {V-PAP-NSF} touv 3588 {T-APM} profhtav 4396 {N-APM} kai
 apestalmenouv 649 5772 {V-RPP-APM} prov 4314 {PREP} authn 846 {P-ASF}
 posakiv 4212 {ADV} hyelhsa 2309 5656 {V-AAI-1S} episunaxai 1996 5658
 {V-AAN} ta 3588 {T-APN} tekna 5043 {N-APN} sou 4771 {P-2GS} on 3739 {R-ASM}
-tropon 5158 {N-ASM} orniv 3733 {N-NSM} thn 3588 {T-ASF} eauthv 1438
+tropon 5158 {N-ASM} orniv 3733 {N-NSF} thn 3588 {T-ASF} eauthv 1438
 {F-3GSF} nossian 3555 {N-ASF} upo 5259 {PREP} tav 3588 {T-APF} pterugav
 4420 {N-APF} kai 2532 {CONJ} ouk 3756 {PRT-N} hyelhsate 2309 5656
 {V-AAI-2P}
@@ -4110,7 +4110,7 @@ kuriov 2962 {N-NSM} ton 3588 {T-ASM} oikonomon 3623 {N-ASM} thv 3588
 {T-GSN} fwtov 5457 {N-GSN} eiv 1519 {PREP} thn 3588 {T-ASF} genean 1074
 {N-ASF} thn 3588 {T-ASF} eautwn 1438 {F-3GPM} eisin 1510 5719 {V-PAI-3P}
      16:9 kai 2532 {CONJ} egw 1473 {P-1NS} umin 4771 {P-2DP} legw 3004 5719
-{V-PAI-1S} eautoiv 1438 {F-3DPM} poihsate 4160 5657 {V-AAM-2P} filouv 5384
+{V-PAI-1S} eautoiv 1438 {F-2DPM} poihsate 4160 5657 {V-AAM-2P} filouv 5384
 {A-APM} ek 1537 {PREP} tou 3588 {T-GSN} mamwna 3126 {ARAM} thv 3588 {T-GSF}
 adikiav 93 {N-GSF} ina 2443 {CONJ} otan 3752 {CONJ} ekliph 1587 5632 
 {V-2AAS-3S} dexwntai 1209 5667 {V-ADS-3P} umav 4771 {P-2AP} eiv 1519 {PREP} 
@@ -4144,7 +4144,7 @@ panta 3956 {A-APN} oi 3588 {T-NPM} farisaioi 5330 {N-NPM} filarguroi 5366
 5707 {V-IAI-3P} auton 846 {P-ASM}
      16:15 kai 2532 {CONJ} eipen 3004 5627 {V-2AAI-3S} autoiv 846 {P-DPM}
 umeiv 4771 {P-2NP} este 1510 5719 {V-PAI-2P} oi 3588 {T-NPM} dikaiountev
-1344 5723 {V-PAP-NPM} eautouv 1438 {F-3APM} enwpion 1799 {ADV} twn 3588
+1344 5723 {V-PAP-NPM} eautouv 1438 {F-2APM} enwpion 1799 {ADV} twn 3588
 {T-GPM} anyrwpwn 444 {N-GPM} o 3588 {T-NSM} de 1161 {CONJ} yeov 2316
 {N-NSM} ginwskei 1097 5719 {V-PAI-3S} tav 3588 {T-APF} kardiav 2588 {N-APF}
 umwn 4771 {P-2GP} oti 3754 {CONJ} to 3588 {T-NSN} en 1722 {PREP} anyrwpoiv
@@ -4252,7 +4252,7 @@ kai 2532 {CONJ} erriptai 4496 5769 {V-RPI-3S} eiv 1519 {PREP} thn 3588
 {T-ASF} yalassan 2281 {N-ASF} h 2228 {PRT} ina 2443 {CONJ} skandalish 4624
 5661 {V-AAS-3S} twn 3588 {T-GPM} mikrwn 3398 {A-GPM} toutwn 3778 {D-GPM}
 ena 1520 {A-ASM}
-     17:3 prosecete 4337 5720 {V-PAM-2P} eautoiv 1438 {F-3DPM} ean 1437
+     17:3 prosecete 4337 5720 {V-PAM-2P} eautoiv 1438 {F-2DPM} ean 1437
 {COND} amarth 264 5632 {V-2AAS-3S} o 3588 {T-NSM} adelfov 80 {N-NSM} sou
 4771 {P-2GS} epitimhson 2008 5657 {V-AAM-2S} autw 846 {P-DSM} kai 2532
 {CONJ} ean 1437 {COND} metanohsh 3340 5661 {V-AAS-3S} afev 863 5628
@@ -4309,7 +4309,7 @@ esthsan 2476 5627 {V-2AAI-3P} | porrwyen 4207 {ADV}
 1988 {N-VSM} elehson 1653 5657 {V-AAM-2S} hmav 1473 {P-1AP}
      17:14 kai 2532 {CONJ} idwn 3708 5631 {V-2AAP-NSM} eipen 3004 5627
 {V-2AAI-3S} autoiv 846 {P-DPM} poreuyentev 4198 5679 {V-AOP-NPM} epideixate
-1925 5657 {V-AAM-2P} eautouv 1438 {F-3APM} toiv 3588 {T-DPM} iereusin 2409
+1925 5657 {V-AAM-2P} eautouv 1438 {F-2APM} toiv 3588 {T-DPM} iereusin 2409
 {N-DPM} kai 2532 {CONJ} egeneto 1096 5633 {V-2ADI-3S} en 1722 {PREP} tw
 3588 {T-DSN} upagein 5217 5721 {V-PAN} autouv 846 {P-APM} ekayarisyhsan
 2511 5681 {V-API-3P}
@@ -5167,7 +5167,7 @@ o 3588 {T-NSM} kairov 2540 {N-NSM} hggiken 1448 5758 {V-RAI-3S} mh 3361
      21:9 otan 3752 {CONJ} de 1161 {CONJ} akoushte 191 5661 {V-AAS-2P}
 polemouv 4171 {N-APM} kai 2532 {CONJ} akatastasiav 181 {N-APF} mh 3361
 {PRT-N} ptohyhte 4422 5686 {V-APS-2P} dei 1163 5719 {V-PAI-3S} gar 1063
-{CONJ} tauta 3778 {D-NPN} genesyai 1096 5635 {V-2ADN} prwton 4412 {ADV-S} all
+{CONJ} tauta 3778 {D-APN} genesyai 1096 5635 {V-2ADN} prwton 4412 {ADV-S} all
 235 {CONJ} ouk 3756 {PRT-N} euyewv 2112 {ADV} to 3588 {T-NSN} telov 5056
 {N-NSN}
      21:10 tote 5119 {ADV} elegen 3004 5707 {V-IAI-3S} autoiv 846 {P-DPM}
@@ -5279,14 +5279,14 @@ estin 1510 5719 {V-PAI-3S} h 3588 {T-NSF} basileia 932 {N-NSF} tou 3588
      21:32 amhn 281 {HEB} legw 3004 5719 {V-PAI-1S} umin 4771 {P-2DP} oti
 3754 {CONJ} ou 3756 {PRT-N} mh 3361 {PRT-N} parelyh 3928 5632 {V-2AAS-3S} h
 3588 {T-NSF} genea 1074 {N-NSF} auth 3778 {D-NSF} ewv 2193 {ADV} | [an]
-302 {PRT} | an 302 {PRT} | panta 3956 {A-APN} genhtai 1096 5638
+302 {PRT} | an 302 {PRT} | panta 3956 {A-NPN} genhtai 1096 5638
 {V-2ADS-3S}
      21:33 o 3588 {T-NSM} ouranov 3772 {N-NSM} kai 2532 {CONJ} h 3588
 {T-NSF} gh 1093 {N-NSF} pareleusontai 3928 5695 {V-FDI-3P} oi 3588 {T-NPM}
 de 1161 {CONJ} logoi 3056 {N-NPM} mou 1473 {P-1GS} ou 3756 {PRT-N} mh 3361
 {PRT-N} pareleusontai 3928 5695 {V-FDI-3P}
      21:34 prosecete 4337 5720 {V-PAM-2P} de 1161 {CONJ} eautoiv 1438
-{F-3DPM} mhpote 3379 {ADV-N} barhywsin 916 5686 {V-APS-3P} | ai 3588 {T-NPF}
+{F-2DPM} mhpote 3379 {ADV-N} barhywsin 916 5686 {V-APS-3P} | ai 3588 {T-NPF}
 kardiai 2588 {N-NPF} umwn 4771 {P-2GP} | umwn 4771 {P-2GP} ai 3588 {T-NPF}
 kardiai 2588 {N-NPF} | en 1722 {PREP} kraipalh 2897 {N-DSF} kai 2532 {CONJ}
 meyh 3178 {N-DSF} kai 2532 {CONJ} merimnaiv 3308 {N-DPF} biwtikaiv 982
@@ -5341,7 +5341,7 @@ paradounai 3860 5629 {V-2AAN} auton 846 {P-ASM} ater 817 {PREP} oclou 3793
      22:7 hlyen 2064 5627 {V-2AAI-3S} de 1161 {CONJ} h 3588 {T-NSF} hmera
 2250 {N-NSF} twn 3588 {T-GPN} azumwn 106 {A-GPN} | | [en] 1722 {PREP} | h
 3739 {R-DSF} edei 1163 5707 {V-IAI-3S} yuesyai 2380 5745 {V-PPN} to 3588
-{T-NSN} pasca 3957 {ARAM}
+{T-ASN} pasca 3957 {ARAM}
      22:8 kai 2532 {CONJ} apesteilen 649 5656 {V-AAI-3S} petron 4074
 {N-ASM} kai 2532 {CONJ} iwannhn 2491 {N-ASM} eipwn 3004 5631 {V-2AAP-NSM}
 poreuyentev 4198 5679 {V-AOP-NPM} etoimasate 2090 5657 {V-AAM-2P} hmin 1473
@@ -5388,7 +5388,7 @@ en 1722 {PREP} th 3588 {T-DSF} basileia 932 {N-DSF} tou 3588 {T-GSM} yeou
      22:17 kai 2532 {CONJ} dexamenov 1209 5666 {V-ADP-NSM} pothrion 4221
 {N-ASN} eucaristhsav 2168 5660 {V-AAP-NSM} eipen 3004 5627 {V-2AAI-3S}
 labete 2983 5628 {V-2AAM-2P} touto 3778 {D-ASN} kai 2532 {CONJ} diamerisate
-1266 5657 {V-AAM-2P} eiv 1519 {PREP} eautouv 1438 {F-3APM}
+1266 5657 {V-AAM-2P} eiv 1519 {PREP} eautouv 1438 {F-2APM}
      22:18 legw 3004 5719 {V-PAI-1S} gar 1063 {CONJ} umin 4771 {P-2DP} | |
 [oti] 3754 {CONJ} | ou 3756 {PRT-N} mh 3361 {PRT-N} piw 4095 5632
 {V-2AAS-1S} apo 575 {PREP} tou 3588 {T-GSN} nun 3568 {ADV} apo 575 {PREP}
@@ -5800,7 +5800,7 @@ kai 2532 {CONJ} gunaikwn 1135 {N-GPF} ai 3739 {R-NPF} ekoptonto 2875 5710
 autav 846 {P-APF} | | [o] 3588 {T-NSM} | ihsouv 2424 {N-NSM} eipen 3004
 5627 {V-2AAI-3S} yugaterev 2364 {N-VPF} ierousalhm 2419 {N-PRI} mh 3361
 {PRT-N} klaiete 2799 5720 {V-PAM-2P} ep 1909 {PREP} eme 1473 {P-1AS} plhn
-4133 {ADV} ef 1909 {PREP} eautav 1438 {F-3APF} klaiete 2799 5720 {V-PAM-2P}
+4133 {ADV} ef 1909 {PREP} eautav 1438 {F-2APF} klaiete 2799 5720 {V-PAM-2P}
 kai 2532 {CONJ} epi 1909 {PREP} ta 3588 {T-APN} tekna 5043 {N-APN} umwn
 4771 {P-2GP}
      23:29 oti 3754 {CONJ} idou 3708 5628 {V-2AAM-2S} ercontai 2064 5736

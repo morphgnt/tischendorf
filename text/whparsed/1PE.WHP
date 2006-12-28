@@ -412,7 +412,7 @@ kriywsin 2919 5686 {V-APS-3P} men 3303 {PRT} kata 2596 {PREP} anyrwpouv 444
 3767 {CONJ} kai 2532 {CONJ} nhqate 3525 5657 {V-AAM-2P} eiv 1519 {PREP}
 proseucav 4335 {N-APF}
      4:8 pro 4253 {PREP} pantwn 3956 {A-GPM} thn 3588 {T-ASF} eiv 1519
-{PREP} eautouv 1438 {F-3APM} agaphn 26 {N-ASF} ektenh 1618 {A-ASF} econtev
+{PREP} eautouv 1438 {F-2APM} agaphn 26 {N-ASF} ektenh 1618 {A-ASF} econtev
 2192 5723 {V-PAP-NPM} oti 3754 {CONJ} agaph 26 {N-NSF} kaluptei 2572
 5719 {V-PAI-3S} plhyov 4128 {N-ASN} amartiwn 266 {N-GPF}
      4:9 filoxenoi 5382 {A-NPM} eiv 1519 {PREP} allhlouv 240 {C-APM} aneu
@@ -477,7 +477,7 @@ autwn 846 {P-GPM} | en 1722 {PREP} agayopoiia 16 {N-DSF}
 {N-NSM-C} kai 2532 {CONJ} martuv 3144 {N-NSM} twn 3588 {T-GPN} tou 3588
 {T-GSM} cristou 5547 {N-GSM} payhmatwn 3804 {N-GPN} o 3588 {T-NSM} kai 2532
 {CONJ} thv 3588 {T-GSF} melloushv 3195 5723 {V-PAP-GSF} apokaluptesyai 601
-5745 {V-PPN} doxhv 1391 {N-GSF} koinwnov 2844 {A-NSM}
+5745 {V-PPN} doxhv 1391 {N-GSF} koinwnov 2844 {N-NSM}
      5:2 poimanate 4165 5657 {V-AAM-2P} to 3588 {T-ASN} en 1722 {PREP} umin
 4771 {P-2DP} poimnion 4168 {N-ASN} tou 3588 {T-GSM} yeou 2316 {N-GSM} | |
 [episkopountev] 1983 5723 {V-PAP-NPM} | mh 3361 {PRT-N} anagkastwv 317
@@ -512,9 +512,9 @@ yeou 2316 {N-GSM} ina 2443 {CONJ} umav 4771 {P-2AP} uqwsh 5312 5661
 wv 5613 {ADV} lewn 3023 {N-NSM} wruomenov 5612 5740 {V-PNP-NSM} peripatei
 4043 5719 {V-PAI-3S} zhtwn 2212 5723 {V-PAP-NSM} | | [tina] 5101 {I-ASM} |
 katapiein 2666 5629 {V-2AAN}
-     5:9 w 3739 {R-DSM} antisthte 436 5628 {V-2AAM-2P} stereoi 4731 {A-NPF}
+     5:9 w 3739 {R-DSM} antisthte 436 5628 {V-2AAM-2P} stereoi 4731 {A-NPM}
 th 3588 {T-DSF} pistei 4102 {N-DSF} eidotev 1492 5761 {V-RAP-NPM} ta 3588
-{T-NPN} auta 846 {P-NPN} twn 3588 {T-GPN} payhmatwn 3804 {N-GPN} th 3588
+{T-APN} auta 846 {P-APN} twn 3588 {T-GPN} payhmatwn 3804 {N-GPN} th 3588
 {T-DSF} en 1722 {PREP} | tw 3588 {T-DSM} | [tw] 3588 {T-DSM} | kosmw 2889
 {N-DSM} umwn 4771 {P-2GP} adelfothti 81 {N-DSF} epiteleisyai 2005 5745 {V-PPN}
      5:10 o 3588 {T-NSM} de 1161 {CONJ} yeov 2316 {N-NSM} pashv 3956
