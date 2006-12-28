@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 1.4
+                             Version 1.5
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
