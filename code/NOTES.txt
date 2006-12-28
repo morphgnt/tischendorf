@@ -4074,3 +4074,17 @@ ANLEX considers this an adjective, but Thayer and Strong agree that it
 is a substantive, meaning "Ink" rather than 3189's "black" (ME/LAS).
 
 
+2006-12-28 19:18pm
+
+Today I received all of Dr. Robinson's databases.  This brings
+whparsed up-to-date.
+
+There are some 123 updates to Tischendorf due to this WH update.
+
+I had to manually disambiguate one word as a result:
+
+manual_analyses.txt:
+
++MR 10:26.7 EAUTOUS F-3APM 1438
+
+
