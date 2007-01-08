@@ -124,10 +124,8 @@ def parse_gender(str, rptag):
     return remainder
 
 def parse_gender_number(str, rptag):
-    remainder = parse_gender(str, rptag)
-    remainder = parse_number(remainder, rptag)
+    remainder = parse_number(str, rptag)
     remainder = parse_gender(remainder, rptag)
-    remainder = parse_number(remainder, rptag)
     return remainder
 
 def parse_psp_noun_like(str, rptag):
@@ -388,8 +386,8 @@ class RobinsonPierpontTag:
             return False
 
 
-t = RobinsonPierpontTag("N-NFS")
-t = RobinsonPierpontTag("N-NFS")
+t = RobinsonPierpontTag("N-NSF")
+t = RobinsonPierpontTag("N-NSF")
 t = RobinsonPierpontTag("V-PAI-3S")
 t = RobinsonPierpontTag("P-2DS")
 t = RobinsonPierpontTag("V-PAN")
