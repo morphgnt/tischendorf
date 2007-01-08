@@ -1,0 +1,232 @@
+			 Parsing Information
+				 for
+			     Tischendorf
+
+
+Introduction
+============
+
+This document describes the parsing used in all Robinson-Pierpont
+texts.  Since my Tischendorf-analysis is a derivative of
+Dr. Robinson's Westcott-Hort analysis, it follows the same schema.
+
+The parts of speech are listed below.
+
+Then, for each group of "similar" parts of speech, a section is given
+which shows what pattern the group follows.  For example, the
+noun-like parts of speech have this pattern:
+
+  pos case number gender [suffix]
+
+here "pos" means "part of speech", and can be either "N-" (for noun),
+"A-" (for adjective), or "T-" (for article).
+
+After the part of speech, three fields always appear, namely "case",
+"number", and "gender".  Then, an optional "suffix" may be present.
+The fact that "[suffix]" is in [square brackets] shows that it is
+optional.
+
+In order to see what options are available for a given category, find
+the corresponding section below which describes the category, such as
+"Gender", "Number", etc.
+
+Not all combinations are used in Tischendorf, nor are all possible
+category-members used.
+
+
+Ulrik Petersen
+
+
+
+
+Parts of speech
+===============
+
+  N-    : noun
+  A-    : adjective
+  T-    : article
+  V-    : verb
+  P-    : personal pronoun
+  R-    : relative pronoun
+  C-    : reciprocal pronoun
+  D-    : demonstrative pronoun
+  K-    : correlative pronoun
+  I-    : interrogative pronoun
+  X-    : indefinite pronoun
+  Q-    : correlative or interrogative pronoun
+  F-    : reflexive pronoun
+  S-    : possessive pronoun
+  ADV   : adverb
+  CONJ  : conjunction
+  COND  : cond
+  PRT   : particle
+  PREP  : preposition
+  INJ   : interjection
+  ARAM  : aramaic
+  HEB   : hebrew
+  N-PRI : proper noun indeclinable
+  A-NUI : numeral indeclinable
+  N-LI  : letter indeclinable
+  N-OI  : noun other type indeclinable
+
+
+Parts of speech with Case, Number, Gender
+=========================================
+
+  N- : noun
+  A- : adjective
+  T- : article
+
+Pattern:
+
+  pos case number gender [suffix]
+
+
+Verbs
+=====
+
+  V- : verb
+
+Patterns:
+
+  V- tense voice I person number [verb-extra]
+  V- tense voice S person number [verb-extra]
+  V- tense voice O person number [verb-extra]
+  V- tense voice M person number [verb-extra]
+  V- tense voice N 
+  V- tense voice P case number gender [verb-extra]
+  V- tense voice R case number gender [verb-extra]
+
+
+Pronominal parts of speech
+==========================
+  P- : personal pronoun
+  R- : relative pronoun
+  C- : reciprocal pronoun
+  D- : demonstrative pronoun
+  K- : correlative pronoun
+  I- : interrogative pronoun
+  X- : indefinite pronoun
+  Q- : correlative or interrogative pronoun
+  F- : reflexive pronoun
+  S- : possessive pronoun
+
+Pattern:
+
+  pos [person] case number [gender] [suffix]
+
+
+Indeclinable parts of speech
+============================
+  ADV : adverb
+  CONJ : conjunction
+  COND : cond
+  PRT : particle
+  PREP : preposition
+  INJ : interjection
+  ARAM : aramaic
+  HEB : hebrew
+  N-PRI : proper noun indeclinable
+  A-NUI : numeral indeclinable
+  N-LI : letter indeclinable
+  N-OI : noun other type indeclinable
+
+Pattern:
+
+  pos [suffix]
+
+Case
+====
+
+  N : nominative
+  V : vocative
+  G : genitive
+  D : dative
+  A : accusative
+
+Number
+======
+
+  S : singular
+  P : plural
+
+
+Gender
+======
+
+  M : masculine
+  F : feminine
+  N : neuter
+
+
+Person
+======
+
+  1 : first person
+  2 : second person
+  3 : third person
+
+
+Tense
+=====
+
+  P  : present
+  I  : imperfect
+  F  : future
+  2F : second future
+  A  : aorist
+  2A : second aorist
+  R  : perfect
+  2R : second perfect
+  L  : pluperfect
+  2L : second pluperfect
+  X  : no tense stated
+
+Voice
+=====
+
+  A : active
+  M : middle
+  P : passive
+  E : middle or passive
+  D : middle deponent
+  O : passive deponent
+  N : middle or passive deponent
+  Q : impersonal active
+  X : no voice
+
+
+Mood
+====
+
+  I : indicative
+  S : subjunctive
+  O : optative
+  M : imperative
+  N : infinitive
+  P : participle
+  R : imperative participle
+
+
+Extra information on verbs (verb-extra)
+=======================================
+
+  -M   : middle significance
+  -C   : contracted form
+  -T   : transitive
+  -A   : aeolic
+  -ATT : attic
+  -AP  : apocopated form
+  -IRR : irregular or impure form
+
+Extra information on other parts of speech (suffix)
+===================================================
+
+  -S   : superlative
+  -C   : comparative
+  -ABB : abbreviated
+  -I   : interrogative
+  -N   : negative
+  -ATT : attic
+  -P   : particle attached
+  -K   : crasis
