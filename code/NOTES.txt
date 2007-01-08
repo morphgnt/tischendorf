@@ -4088,3 +4088,16 @@ manual_analyses.txt:
 +MR 10:26.7 EAUTOUS F-3APM 1438
 
 
+2007-01-08 23:46PM CET
+
+Today I received another shipment of WH from Dr. Robinson.  A few
+parsings had changed.  I only needed to make one change, namely this
+addition:
+
++RE 9:21.10 TWN T-GPF 3588
+
+This is because Dr. Robinson had changed this word to T-GPN.  That is
+understandable for W-H, because the next word reads "FARMAKWN" in W-H,
+which is neuter.  But Tischendorf reads "FARMAKIWN", which is
+feminine.
+
