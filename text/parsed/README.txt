@@ -161,10 +161,8 @@ Tagging scheme
 ==============
 
 The tagging scheme is exactly the same as that used by Dr. Robinson in
-all of his texts.  See the following Internet URL for more
-information:
-
-http://www.byztxt.com
+all of his texts.  It is described in the accompanying file, called
+"parsing.txt".
 
 
 Lemmas
@@ -236,3 +234,8 @@ v. 1.4 (2006-03-14)
    - Fixed 151 words, some of which were parsing-errors (particularly
      with respect to 2nd Aorist analyses of stems with *LQ*), and some
      of which were wrongly assigned lemmas and/or Strong's numbers.
+
+v. 1.5 (2007-01-09)
+   - Fixed 350 words, most of which were parsing errors, but some of
+     which were lemamtization errors.
+
