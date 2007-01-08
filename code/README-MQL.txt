@@ -10,13 +10,22 @@ Using it with Emdros
 
 Run the tisch.mql file through the mql program:
 
-- If on MySQL or PostgreSQL:
+- If on MySQL:
 
-  mql -p <password> -u <dbuser> tisch.mql
+  mql -b my -p <password> -u <dbuser> tisch.mql
 
-- If on SQLite:
+- If on PostgreSQL:
 
-  mql tisch.mql
+  mql -b pg -p <password> -u <dbuser> tisch.mql
+
+- If on SQLite 2:
+
+  mql -b l tisch.mql
+
+- If on SQLite 3:
+
+  mql -b 3 tisch.mql
+
 
 This will create and populate the database "tisch".
 
