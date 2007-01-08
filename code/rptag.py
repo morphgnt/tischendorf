@@ -90,13 +90,13 @@ def parse_re(regex, str):
         
 
 def parse_suffix(str, rptag):
-    suffix, remainder = parse_re(rptag.suffix_re, str)
+    suffix, remainder = parse_re(suffix_re, str)
     if suffix != "":
         rptag.suffix = suffix
     return remainder
 
 def parse_extra(str, rptag):
-    extra, remainder = parse_re(rptag.extra_re, str)
+    extra, remainder = parse_re(extra_re, str)
     if extra != "":
         rptag.extra = extra
     return remainder
@@ -106,19 +106,19 @@ def parse_psp_indeclinable(str, rptag):
     return remainder
 
 def parse_case(str, rptag):
-    case, remainder = parse_re(rptag.case_re, str)
+    case, remainder = parse_re(case_re, str)
     if case != "":
         rptag.case = case
     return remainder
 
 def parse_number(str, rptag):
-    number, remainder = parse_re(rptag.number_re, str)
+    number, remainder = parse_re(number_re, str)
     if number != "":
         rptag.number = number
     return remainder
 
 def parse_gender(str, rptag):
-    gender, remainder = parse_re(rptag.gender_re, str)
+    gender, remainder = parse_re(gender_re, str)
     if gender != "":
         rptag.gender = gender
     return remainder
@@ -136,7 +136,7 @@ def parse_psp_noun_like(str, rptag):
     return remainder
 
 def parse_person(str, rptag):
-    person, remainder = parse_re(rptag.person_re, str)
+    person, remainder = parse_re(person_re, str)
     if person != "":
         rptag.person = person
     else:
@@ -167,20 +167,20 @@ def parse_psp_pronoun_2(str, rptag):
     return remainder
 
 def parse_tense(str, rptag):
-    tense, remainder = parse_re(rptag.tense_re, str)
+    tense, remainder = parse_re(tense_re, str)
     if tense != "":
         rptag.tense = tense
     return remainder
 
 def parse_voice(str, rptag):
-    voice, remainder = parse_re(rptag.voice_re, str)
+    voice, remainder = parse_re(voice_re, str)
     if voice != "":
         rptag.voice = voice
     return remainder
 
 
 def parse_mood(str, rptag):
-    mood, remainder = parse_re(rptag.mood_re, str)
+    mood, remainder = parse_re(mood_re, str)
     if mood != "":
         rptag.mood = mood
     return remainder
@@ -330,6 +330,19 @@ psp_dict = {
     }
 
 
+person_re = get_re_from_dict(person_dict)
+gender_re = get_re_from_dict(gender_dict)
+suffix_re = get_re_from_dict(suffix_dict)
+case_re = get_re_from_dict(case_dict)
+number_re = get_re_from_dict(number_dict)
+gender_re = get_re_from_dict(gender_dict)
+tense_re = get_re_from_dict(tense_dict)
+voice_re = get_re_from_dict(voice_dict)
+mood_re = get_re_from_dict(mood_dict)
+extra_re = get_re_from_dict(extra_dict)
+psp_re = get_re_from_dict(psp_dict)
+
+
 
 class RobinsonPierpontTag:
     def __init__(self, tag):
@@ -344,17 +357,6 @@ class RobinsonPierpontTag:
         self.mood = "NA"
         self.extra = "NA"
         self.person = "NA"
-        self.person_re = get_re_from_dict(person_dict)
-        self.gender_re = get_re_from_dict(gender_dict)
-        self.suffix_re = get_re_from_dict(suffix_dict)
-        self.case_re = get_re_from_dict(case_dict)
-        self.number_re = get_re_from_dict(number_dict)
-        self.gender_re = get_re_from_dict(gender_dict)
-        self.tense_re = get_re_from_dict(tense_dict)
-        self.voice_re = get_re_from_dict(voice_dict)
-        self.mood_re = get_re_from_dict(mood_dict)
-        self.extra_re = get_re_from_dict(extra_dict)
-        self.psp_re = get_re_from_dict(psp_dict)
         self.parsetag()
 
     def parsetag(self):
