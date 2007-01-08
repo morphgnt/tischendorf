@@ -6,6 +6,12 @@ import linearreader
 from manual_analyses import ManualAnalyses
 import kind
 
+try:
+    import psyco
+    psyco.full()
+except:
+    pass
+
 WHParsedBasedir = "../text/whparsed"
 tischbasedir = "../text/unaccented"
 AccentedTischbasedir = "../text/accented"
