@@ -57,12 +57,12 @@ UnAccented: RE.TSP
 Accented: Accented/RE.SLN
 	for f in Accented/*.SLN; do cat $$f | sed -e 's/\([0-9]\+\).[a-z]/\1/' > /tmp/SLN; mv /tmp/SLN $$f; done
 
-zip: ../text/parsed/README.txt ./RE.TUP
+zip: ../text/parsed/README.txt ../text/parsed/parsing.txt ./RE.TUP
 	rm -f  $(ZIPFILE)
 	rm -rf $(FULLZIPDIR)
 	mkdir -p $(FULLZIPDIR)/BETA
 	mkdir -p $(FULLZIPDIR)/Unicode
-	cp ../text/parsed/README.txt $(FULLZIPDIR)
+	cp -p ../text/parsed/README.txt ../text/parsed/parsing.txt $(FULLZIPDIR)
 	for f in ../text/parsed/*.TSP; do NN=`echo $$f | sed -e 's/TSP/txt/g;s_../text/parsed/__g'`; cp $$f $(FULLZIPDIR)/BETA/$$NN; done
 	for f in ./*.TUP; do NN=`echo $$f | sed -e 's/TUP/txt/g'`; cp $$f $(FULLZIPDIR)/Unicode/$$NN; done
 	PWD=`pwd`; cd $(ZIPDIRPREFIX) ; zip -r $(ZIPFILE) $(ZIPDIR) ; cd $$PWD
