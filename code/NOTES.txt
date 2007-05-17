@@ -4101,3 +4101,13 @@ understandable for W-H, because the next word reads "FARMAKWN" in W-H,
 which is neuter.  But Tischendorf reads "FARMAKIWN", which is
 feminine.
 
+
+2007-05-17 23:45PM CET
+
+Today I fixed this in manual analyses.
+
++LU 6:49.23 SUNEPESEN V-2AAI-3S 4098
+
+It used to be 4842 ("SUMPE/MPW"), but it should be 4098 ("PI/PTW").
+It would have been better with a lemma saying "SUMPI/PTW", but such a
+lemma does not exist in Strong's.
