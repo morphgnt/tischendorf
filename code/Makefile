@@ -72,6 +72,7 @@ mqlzip: tisch.mql
 	rm -rf $(FULLZIPDIR)
 	mkdir -p $(FULLZIPDIR)
 	cat README-MQL.txt ../text/parsed/README.txt > $(FULLZIPDIR)/README.txt
+	cp -p ../text/parsed/parsing.txt $(FULLZIPDIR)/
 	cp tisch.cfg $(FULLZIPDIR)
 	cp tisch.mql $(FULLZIPDIR)
 	PWD=`pwd`; cd $(ZIPDIRPREFIX) ; zip -r $(MQLZIPFILE) $(ZIPDIR) ; cd $$PWD
