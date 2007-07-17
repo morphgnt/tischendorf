@@ -225,7 +225,7 @@ eidwmen 1492 5762 {V-RAS-1P} ta 3588 {T-APN} upo 5259 {PREP} tou 3588
 3756 {PRT-N} en 1722 {PREP} didaktoiv 1318 {A-DPM} anyrwpinhv 442 {A-GSF}
 sofiav 4678 {N-GSF} logoiv 3056 {N-DPM} all 235 {CONJ} en 1722 {PREP}
 didaktoiv 1318 {A-DPM} pneumatov 4151 {N-GSN} pneumatikoiv 4152 {A-DPN}
-4152 {A-DPM} pneumatika 4152 {A-APN} sugkrinontev 4793 5723 {V-PAP-NPM}
+{A-DPM} pneumatika 4152 {A-APN} sugkrinontev 4793 5723 {V-PAP-NPM}
      2:14 qucikov 5591 {A-NSM} de 1161 {CONJ} anyrwpov 444 {N-NSM} ou 3756
 {PRT-N} decetai 1209 5736 {V-PNI-3S} ta 3588 {T-APN} tou 3588 {T-GSN}
 pneumatov 4151 {N-GSN} tou 3588 {T-GSM} yeou 2316 {N-GSM} mwria 3472
@@ -676,8 +676,8 @@ gamhsai 1060 5658 {V-AAN} | h 2228 {PRT} purousyai 4448 5745 {V-PPN}
 {P-1NS} alla 235 {CONJ} o 3588 {T-NSM} kuriov 2962
 {N-NSM} gunaika 1135 {N-ASF} apo 575 {PREP} androv 435 {N-GSM} mh 3361
 {PRT-N} cwrisyhnai 5563 5683 {V-APN}
-     7:11 ean 1437 {COND} de 1161 {CONJ} kai 2532 {CONJ} cwrisyh 5563 5681
-{V-API-3S} menetw 3306 5720 {V-PAM-3S} agamov 22 {N-NSF} h 2228 {PRT} tw
+     7:11 ean 1437 {COND} de 1161 {CONJ} kai 2532 {CONJ} cwrisyh 5563 5686
+{V-APS-3S} menetw 3306 5720 {V-PAM-3S} agamov 22 {N-NSF} h 2228 {PRT} tw
 3588 {T-DSM} andri 435 {N-DSM} katallaghtw 2644 5649 {V-2APM-3S} kai 2532
 {CONJ} andra 435 {N-ASM} gunaika 1135 {N-ASF} mh 3361 {PRT-N} afienai 863
 5721 {V-PAN}
@@ -1372,8 +1372,8 @@ sunercomenoi 4905 5740 {V-PNP-NPM} eiv 1519 {PREP} to 3588 {T-ASN} fagein
 mh 3361 {PRT-N} eiv 1519 {PREP} krima 2917 {N-ASN} sunerchsye 4905 5741
 {V-PNS-2P} ta 3588 {T-APN} de 1161 {CONJ} loipa 3062 {A-APN} wv 5613 {ADV}
 an 302 {PRT} elyw 2064 5632 {V-2AAS-1S} diataxomai 1299 5695 {V-FDI-1S}
-     12:1 peri 4012 {PREP} de 1161 {CONJ} twn 3588 {T-GPN} 3588 {T-GPM} 
-pneumatikwn 4152 {A-GPN} 4152 {A-GPM} adelfoi 80 {N-VPM} ou 3756 {PRT-N} 
+     12:1 peri 4012 {PREP} de 1161 {CONJ} twn 3588 {T-GPN} {T-GPM}
+pneumatikwn 4152 {A-GPN} {A-GPM} adelfoi 80 {N-VPM} ou 3756 {PRT-N}
 yelw 2309 5719 {V-PAI-1S} umav 4771 {P-2AP} agnoein 50 5721 {V-PAN}
      12:2 oidate 1492 5758 {V-RAI-2P} oti 3754 {CONJ} ote 3753 {ADV} eynh
 1484 {N-NPN} hte 1510 5707 {V-IAI-2P} prov 4314 {PREP} ta 3588 {T-APN}
@@ -1577,7 +1577,7 @@ merouv 3313 {N-GSN} tote 5119 {ADV} de 1161 {CONJ} epignwsomai 1921 5695
 {V-FDI-1S} kaywv 2531 {ADV} kai 2532 {CONJ} epegnwsyhn 1921 5681 {V-API-1S}
      13:13 nuni 3570 {ADV} de 1161 {CONJ} menei 3306 5719 {V-PAI-3S} pistiv
 4102 {N-NSF} elpiv 1680 {N-NSF} agaph 26 {N-NSF} ta 3588 {T-NPN} tria 5140
-{A-NPN} tauta 3778 {D-NPN} meizwn 3187 {A-NSF-C} de 1161 {CONJ} toutwn 3778
+{A-NPN} tauta 3778 {D-NPN} meizwn 3173 {A-NSF-C} de 1161 {CONJ} toutwn 3778
 {D-GPF} h 3588 {T-NSF} agaph 26 {N-NSF}
      14:1 diwkete 1377 5720 {V-PAM-2P} thn 3588 {T-ASF} agaphn 26 {N-ASF}
 zhloute 2206 5720 {V-PAM-2P} de 1161 {CONJ} ta 3588 {T-APN} pneumatika 4152
@@ -1598,7 +1598,7 @@ eauton 1438 {F-3ASM} oikodomei 3618 5719 {V-PAI-3S} o 3588 {T-NSM} de 1161
      14:5 yelw 2309 5719 {V-PAI-1S} de 1161 {CONJ} pantav 3956 {A-APM} umav
 4771 {P-2AP} lalein 2980 5721 {V-PAN} glwssaiv 1100 {N-DPF} mallon 3123
 {ADV} de 1161 {CONJ} ina 2443 {CONJ} profhteuhte 4395 5725 {V-PAS-2P}
-meizwn 3187 {A-NSM-C} de 1161 {CONJ} o 3588 {T-NSM} profhteuwn 4395 5723
+meizwn 3173 {A-NSM-C} de 1161 {CONJ} o 3588 {T-NSM} profhteuwn 4395 5723
 {V-PAP-NSM} h 2228 {PRT} o 3588 {T-NSM} lalwn 2980 5723 {V-PAP-NSM}
 glwssaiv 1100 {N-DPF} ektov 1622 {ADV} ei 1487 {COND} mh 3361 {PRT-N}
 diermhneuh 1329 5725 {V-PAS-3S} ina 2443 {CONJ} h 3588 {T-NSF} ekklhsia 
@@ -1999,7 +1999,7 @@ adelfoi 80 {N-VPM} oti 3754 {CONJ} sarx 4561 {N-NSF} kai 2532 {CONJ} aima
 {V-AAN} ou 3756 {PRT-N} dunatai 1410 5736 {V-PNI-3S} oude 3761 {CONJ-N} h 3588
 {T-NSF} fyora 5356 {N-NSF} thn 3588 {T-ASF} afyarsian 861 {N-ASF}
 klhronomei 2816 5719 {V-PAI-3S}
-     15:51 idou 3708 5628 {V-2AAM-2S} musthrion 3466 {N-ASN} umin 4771
+     15:51 idou 3708 5640 {V-2AMM-2S} musthrion 3466 {N-ASN} umin 4771
 {P-2DP} legw 3004 5719 {V-PAI-1S} pantev 3956 {A-NPM} ou 3756 {PRT-N}
 koimhyhsomeya 2837 5701 {V-FPI-1P} pantev 3956 {A-NPM} de 1161 {CONJ}
 allaghsomeya 236 5691 {V-2FPI-1P}

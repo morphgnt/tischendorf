@@ -147,7 +147,7 @@ en 1722 {PREP} hsucia 2271 {N-DSF}
 5681 {V-API-3S} eita 1534 {ADV} eua 2096 {N-NSF}
      2:14 kai 2532 {CONJ} adam 76 {N-PRI} ouk 3756 {PRT-N} hpathyh 538 5681
 {V-API-3S} h 3588 {T-NSF} de 1161 {CONJ} gunh 1135 {N-NSF} exapathyeisa
-1818 5660 {V-AAP-NSF} en 1722 {PREP} parabasei 3847 {N-DSF} gegonen 1096 5754
+1818 5685 {V-APP-NSF} en 1722 {PREP} parabasei 3847 {N-DSF} gegonen 1096 5754
 {V-2RAI-3S}
      2:15 swyhsetai 4982 5701 {V-FPI-3S} de 1161 {CONJ} dia 1223 {PREP} thv
 3588 {T-GSF} teknogoniav 5042 {N-GSF} ean 1437 {COND} meinwsin 3306 5661
@@ -347,7 +347,7 @@ thn 3588 {T-ASF} prwthn 4413 {A-ASF-S} pistin 4102 {N-ASF} hyethsan 114 5656
 manyanousin 3129 5719 {V-PAI-3P} periercomenai 4022 5740 {V-PNP-NPF} tav
 3588 {T-APF} oikiav 3614 {N-APF} ou 3756 {PRT-N} monon 3440 {ADV} de 1161
 {CONJ} argai 692 {A-NPF} alla 235 {CONJ} kai 2532 {CONJ} fluaroi 5397
-{A-NPF} kai 2532 {CONJ} periergoi 4021 {A-NPM} lalousai 2980 5723
+{A-NPF} kai 2532 {CONJ} periergoi 4021 {A-NPF} lalousai 2980 5723
 {V-PAP-NPF} ta 3588 {T-APN} mh 3361 {PRT-N} deonta 1163 5723 {V-PAP-APN}
      5:14 boulomai 1014 5736 {V-PNI-1S} oun 3767 {CONJ} newterav 3501
 {A-APF-C} gamein 1060 5721 {V-PAN} teknogonein 5041 5721 {V-PAN}
@@ -356,7 +356,7 @@ didonai 1325 5721 {V-PAN} tw 3588 {T-DSM} antikeimenw 480 5740 {V-PNP-DSM}
 loidoriav 3059 {N-GSF} carin 5484 {ADV}
      5:15 hdh 2235 {ADV} gar 1063 {CONJ} tinev 5100 {X-NPM} exetraphsan
 1624 5648 {V-2API-3P} opisw 3694 {ADV} tou 3588 {T-GSM} satana 4567 {N-GSM}
-     5:16 ei 1487 {COND} tiv 5100 {X-NSM} pisth 4103 {A-NSF} ecei 2192 5719
+     5:16 ei 1487 {COND} tiv 5100 {X-NSF} pisth 4103 {A-NSF} ecei 2192 5719
 {V-PAI-3S} chrav 5503 {N-APF} eparkeitw 1884 5720 {V-PAM-3S} autaiv 846
 {P-DPF} kai 2532 {CONJ} mh 3361 {PRT-N} bareisyw 916 5744 {V-PPM-3S} h 3588
 {T-NSF} ekklhsia 1577 {N-NSF} ina 2443 {CONJ} taiv 3588 {T-DPF} ontwv 3689
@@ -462,7 +462,7 @@ periepeiran 4044 5656 {V-AAI-3P} odunaiv 3601 {N-DPF} pollaiv 4183 {A-DPF}
 yeou 2316 {N-GSM} tauta 3778 {D-APN} feuge 5343 5720 {V-PAM-2S} diwke 1377
 5720 {V-PAM-2S} de 1161 {CONJ} dikaiosunhn 1343 {N-ASF} eusebeian 2150
 {N-ASF} pistin 4102 {N-ASF} agaphn 26 {N-ASF} upomonhn 5281 {N-ASF}
-praupayian 4236 {N-ASF}
+praupayian 4240 {N-ASF}
      6:12 agwnizou 75 5737 {V-PNM-2S} ton 3588 {T-ASM} kalon 2570 {A-ASM}
 agwna 73 {N-ASM} thv 3588 {T-GSF} pistewv 4102 {N-GSF} epilabou 1949 5634
 {V-2ADM-2S} thv 3588 {T-GSF} aiwniou 166 {A-GSF} zwhv 2222 {N-GSF} eiv 1519
