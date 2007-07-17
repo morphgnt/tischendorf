@@ -20,7 +20,7 @@ class StrongsMapping:
     def read(self, filename):
         f = open(filename, "r")
         for line in f.readlines():
-            arr = line.split(" : ")
+            arr = line.strip().split("#")[0].split(" : ")
             strongs = arr[0]
             
             if "&" in strongs:
