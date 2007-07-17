@@ -4111,3 +4111,17 @@ Today I fixed this in manual analyses.
 It used to be 4842 ("SUMPE/MPW"), but it should be 4098 ("PI/PTW").
 It would have been better with a lemma saying "SUMPI/PTW", but such a
 lemma does not exist in Strong's.
+
+
+2007-07-17 20:47PM CET
+
+Today I:
+
+- Got new DBs from Dr. Robinson
+- Ran the processes on the new data
+- Added the folowing disambiguation in manual_analyses.txt:
+
++AC 19:27.18 IERON N-ASN 2411
+
+
+The new W-H DB resulted in 384 changes.
