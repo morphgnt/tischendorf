@@ -5,6 +5,7 @@ import re
 from morphgnt import convert
 import rptag
 from lexicon import Lexicon
+from morphgnt import booknames
 
 state_surface = 0
 state_strongs1 = 1
@@ -462,6 +463,7 @@ class Word:
         else:
             surfaceUTF8 = self.beta2utf8(OLBtoBETAtranslate(self.surface))
         print >>f, "\\text %s\r" % surfaceUTF8
+        print >>f, "\\trans %s %d:%d" % (booknames.book_lists["UBS"][booknumber-1], chapter, verse)
         if len(self.parsing) > 0:
             print >>f, "\\pars %s\r" % self.parsing
         print >>f, "\\monad %d\r" % monad
