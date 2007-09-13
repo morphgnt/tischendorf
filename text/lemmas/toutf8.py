@@ -4,7 +4,7 @@ from morphgnt import convert
 import unicodedata
 
 for line in sys.stdin.readlines():
-    line = line.decode('utf-8').strip()
+    line = line.decode('utf-8').strip().split("#")[0].strip()
     arr = line.split(u" : ")
     lemma_arr = arr[1].split(u" ! ")
     lemma_arr_utf8 = [convert.beta2unicode(x) for x in lemma_arr]
