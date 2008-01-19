@@ -357,7 +357,7 @@ def TischSpellingDifferenceOK(BETA_selfsurface, BETA_tischsurface):
         return 0
 
 def olbstrip(olbword):
-    return reolbstrip.sub("", OLBtoBETAtranslate(olbword.surface))
+    return reolbstrip.sub("", OLBtoBETAtranslate(olbword.qere_noaccents))
 
 def RemoveAccents(surface):
     return reaccentsstrip.sub("", surface)
@@ -592,6 +592,7 @@ class Word:
         self.qere = MixedCaseBETAtoBETAtranslateWithStar(self.qere)
         OLB = BETAtoOLBtranslate(self.accented_surface)
         self.surface = RemoveAccents(OLB)
+        self.qere_noaccents = RemoveAccents(BETAtoOLBtranslate(self.qere))
 
     def parse(self, index, words):
         # Advance if this is parens.
@@ -610,6 +611,8 @@ class Word:
             [self.surface, self.qere] = self.surface.split("&")
         else:
             self.qere = self.surface
+        self.qere_noaccents = RemoveAccents(BETAtoOLBtranslate(self.qere))
+
 
         # Advance index
         index += 1

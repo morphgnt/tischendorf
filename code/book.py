@@ -280,6 +280,11 @@ class Book:
             else:
                 wd = word.Word(self.end_monad, variant_none)
                 wd.surface = w
+                if "&" in wd.surface:
+                    [wd.surface, wd.qere] = wd.surface.split("&")
+                else:
+                    wd.qere = wd.surface
+                wd.qere_noaccents = word.RemoveAccents(word.BETAtoOLBtranslate(wd.qere))
                 #wd.parsing = "CONJ"
                 #wd.Strongs1 = 9999
                 wd.makeSurfacesAccentedTischendorf()
