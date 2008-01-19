@@ -6,7 +6,7 @@
 		   and on Dr. Maurice A. Robinson's
 			  Westcott-Hort text
 
-		       Edited by Ulrik Petersen
+		  Edited by Ulrik Sandborg-Petersen
 
 		      The text and its analysis
 		      are in the Public Domain.
@@ -44,4 +44,4 @@ The editor welcomes feedback on the text and its analysis.  The
 contact details can be found via the website.
 
 
-Ulrik Petersen
+Ulrik Sandborg-Petersen

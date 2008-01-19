@@ -6,7 +6,7 @@
                    and on Dr. Maurice A. Robinson's
                    Public Domain Westcott-Hort text
 
-                       Edited by Ulrik Petersen
+		  Edited by Ulrik Sandborg-Petersen
 
                     This text and its analysis are
                   in the Public Domain. Copy freely.
@@ -169,8 +169,8 @@ http://morphgnt.org/projects/tischendorf
 
 
 
-Ulrik Petersen
-Aalborg, March 2006
+Ulrik Sandborg-Petersen
+Aalborg, January 2008
 
 
 
