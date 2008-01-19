@@ -4147,6 +4147,7 @@ Today I:
 
 - Fixed the text where Peter Coad's email said it should be fixed
   (plus many others that I found serendipitously).
+- Released version 2.0 of the Tischendorf text.
 - Wrote to Peter Coad.
 
 I also made an innovation: When there is a & in a surface, it now
