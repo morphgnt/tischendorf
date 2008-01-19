@@ -6,6 +6,7 @@ from morphgnt import convert
 import rptag
 from lexicon import Lexicon
 from morphgnt import booknames
+import unicodedata
 
 state_surface = 0
 state_strongs1 = 1
@@ -504,7 +505,7 @@ class Word:
                 #raise Exception("UTF8 = '" + utf8 +"'\nbeta = " + beta + "\n, and remainder was not empty, but was: '" + remainder + "'")
                 print "UTF8 = '" + utf8 +"'\nbeta = " + beta + "\n, and remainder was not empty, but was: '" + remainder + "'"
             result += utf8 + " "
-        return result[0:-1]
+        return unicodedata.normalize('NFC', result[0:-1])
 
     def getSFMReference(self, f, booknumber, chapter, verse, word_index):
         return "\\rf %02d-%03d-%03d-%03d\r" % (int(booknumber), int(chapter), int(verse), int(word_index))
