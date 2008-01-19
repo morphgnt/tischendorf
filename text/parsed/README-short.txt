@@ -17,7 +17,8 @@
 
 
 The present work is Tischendorf's 8th edition of the Greek New
-Testament, augmented with morphological information and lemmas.
+Testament, augmented with morphological information, Strong's numbers,
+and lemmas.
 
 Even though I am designated as the editor, the bulk of the work in the
 preparation of this text was done by two other men, namely G. Clint
