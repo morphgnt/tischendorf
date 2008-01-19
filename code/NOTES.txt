@@ -4125,3 +4125,31 @@ Today I:
 
 
 The new W-H DB resulted in 384 changes.
+
+
+2008-01-20 12:10PM CET
+
+Today I:
+
+- Got an email from Peter Coad about some changes to the text, and one
+  note about 2248 (H(MA=S) being ascribed to H(MEI=S regularly.  It
+  should, of course be 2249 (H(MEI=S).
+- Changed the lexicon.py:
+
+-                        "HMIN" : ("2248", "P-1DP"),
+-                        "HMAS" : ("2248", "P-1AP"),
+-                        "HMEIS" : ("2248", "P-1NP"),
+-                        "HMWN" : ("2248", "P-1GP"),
++                        "HMIN" : ("2249", "P-1DP"),
++                        "HMAS" : ("2249", "P-1AP"),
++                        "HMEIS" : ("2249", "P-1NP"),
++                        "HMWN" : ("2249", "P-1GP"),
+
+- Fixed the text where Peter Coad's email said it should be fixed
+  (plus many others that I found serendipitously).
+- Wrote to Peter Coad.
+
+I also made an innovation: When there is a & in a surface, it now
+means "Kethiv&Qere".  That is, the Kethiv is what is in the printed
+Tischendorf, but the Qere is what it should be (for whatever reason).
+
