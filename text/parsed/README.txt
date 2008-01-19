@@ -129,6 +129,28 @@ in mutual correction of our respective databases.  All remaining
 errors are, of course, my own responsibility.
 
 
+Kethiv/Qere
+===========
+
+As of version 2.0 of the text, there is an extra field in the
+database, namely the "qere" for each word.  In Hebrew Masoretic texts,
+there is a distinction between the "Kethiv" (that which is written)
+and the "Qere" (that which should be read).  This distinction is
+present in versions 2.0 and above of this database.  The Kethiv is
+that which is written in the printed Tischendorf.  The Qere is what
+the editor thinks it should have been.
+
+Most often, this amounts to differences in accentuation or diacritics.
+In a few cases, it amounts to a change in the word itself (e.g.,
+Revelation 14:18, where the printed text reads TOI\S BO/TRUAS, where
+this editor thinks it should have been TOU\S BO/TRUAS, on account of
+the grammar).
+
+For the vast majority of words, the Qere is identical to the Kethiv.
+
+The parsing always follows the Qere, not the Kethiv.
+
+
 Feedback
 ========
 
@@ -185,18 +207,19 @@ Format
 The format is as follows:
 
 - One word per line
-- Space-separated fields
-- Up to ten fields (at least eight):
-  - Book (corresponds to the filename, which is the Online Bible standard)
-  - Chapter:Verse.word-within-verse
-  - The text
-  - The morphological tag
-  - The Strong's number
-  - The lemma in two versions:
-    - The first version, which corresponds to The NEW Strong's
+- Space-separated fields (except for the last two)
+- - fields:
+  0. Book (corresponds to the filename, which is the Online Bible standard)
+  1. Chapter:Verse.word-within-verse
+  2. The text as it is written in the printed Tischendorf (Kethiv)
+  3. The text as the editor thinks it should have been (Qere)
+  4. The morphological tag (following the Qere)
+  5. The Strong's number (following the Qere)
+  6. The lemma in two versions:
+    6.a The first version, which corresponds to The NEW Strong's
       Complete Dictionary of Bible Words.
-    - Followed by an "exclamation mark" ("!")
-    - Then the second version, which corresponds to Friberg, Friberg
+    6.b Followed by the string " ! "
+    6.c Then the second version, which corresponds to Friberg, Friberg
       and Miller's ANLEX.
     There may be several words in each lemma.
 
@@ -204,7 +227,7 @@ All Strong's numbers are single numbers with 1,2,3, or 4 digits.
 
 The text exists in two versions: One in the "BETA" directory and one
 in the "Unicode" directory. The only difference is the encoding: The
-former is in TLG BETA encoding, whereas the latter is in Unicode
+former is in TLG BETA encoding, whereas the latter is in Unicode NFC
 UTF-8.
 
 
@@ -237,5 +260,12 @@ v. 1.4 (2006-03-14)
 
 v. 1.5 (2007-01-09)
    - Fixed 350 words, most of which were parsing errors, but some of
-     which were lemamtization errors.
+     which were lemmatization errors.
+
+v. 2.0 (2008-01-20)
+   - Fixed Strong's number of H(MEI=S, H(MA=S, H(MI=N, and H(MW=N.
+     All of them should be 2249, but were 2248.
+   - Added kethiv/qere.
+   - Various changes to the text itself.
+   - 448 changes in total.
 
