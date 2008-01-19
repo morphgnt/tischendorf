@@ -29,10 +29,10 @@ Tischendorf_lexicon = { "PROS" : ("4314", "PREP"),
                         "UMWN" : ("5210", "P-2GP"),
                         "UMAS" : ("5210", "P-2AP"),
                         "UMEIS" : ("5210", "P-2NP"),
-                        "HMIN" : ("2248", "P-1DP"),
-                        "HMAS" : ("2248", "P-1AP"),
-                        "HMEIS" : ("2248", "P-1NP"),
-                        "HMWN" : ("2248", "P-1GP"),
+                        "HMIN" : ("2249", "P-1DP"),
+                        "HMAS" : ("2249", "P-1AP"),
+                        "HMEIS" : ("2249", "P-1NP"),
+                        "HMWN" : ("2249", "P-1GP"),
                         "EME" : ("1473", "P-1AS"),  # NOTE: This could also be 1691
                         "EMOI" : ("1473", "P-1DS"), # NOTE: This could also be 1698
                         "EMOU" : ("1473", "P-1GS"), # NOTE: This could also be 1700
