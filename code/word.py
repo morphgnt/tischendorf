@@ -397,7 +397,8 @@ def mangleMQLString(str):
 class Word:
     def __init__(self, monad, variant):
         self.monad = monad
-        self.surface = ""
+        self.surface = ""       # kethiv (i.e., it is written (in the printed Tischendorf))
+        self.qere = ""          # qere (i.e., please read)
         self.accented_surface = ""
         self.parsing = ""
         self.strongslemma = ""
@@ -527,6 +528,8 @@ class Word:
             surfaceBETA = OLBtoBETAtranslate(self.surface)
         print >>f, "  surface:=\"%s\";" % mangleMQLString(surfaceBETA)
         print >>f, "  surfaceutf8:=\"%s\";" % mangleMQLString(self.beta2utf8(surfaceBETA))
+        print >>f, "  qere:=\"%s\";" % mangleMQLString(self.qere)
+        print >>f, "  qereutf8:=\"%s\";" % mangleMQLString(self.beta2utf8(self.qere))
         #print >>f, "  olb_surface:=\"%s\";" % self.surface
         if len(self.parsing) > 0:
             print >>f, "  parsing:=\"%s\";" % self.parsing
@@ -584,8 +587,9 @@ class Word:
 
     def makeSurfacesAccentedTischendorf(self):
         # Convert surface to BETA for accented_surface,
-        # then to OLB for surface.
+        # then to OLB for surface. 
         self.accented_surface = MixedCaseBETAtoBETAtranslateWithStar(self.surface)
+        self.qere = MixedCaseBETAtoBETAtranslateWithStar(self.qere)
         OLB = BETAtoOLBtranslate(self.accented_surface)
         self.surface = RemoveAccents(OLB)
 
@@ -602,6 +606,10 @@ class Word:
         if not recognize(words[index]) == kind_word:
             raise Exception("Error in words: word[index] is not kind_word:" + str(words[index:]))
         self.surface = words[index]
+        if "&" in self.surface:
+            [self.surface, self.qere] = self.surface.split("&")
+        else:
+            self.qere = self.surface
 
         # Advance index
         index += 1
@@ -790,6 +798,7 @@ class Word:
             surf = self.accented_surface
         else:
             surf = OLBtoBETAtranslate(self.surface)
+        qere = self.qere
 
         if bPrintLemma:
             lemma = self.strongslemma
@@ -808,13 +817,14 @@ class Word:
             lemma = self.beta2utf8(lemma)
             ANLEXlemma = self.beta2utf8(ANLEXlemma)
             surf = self.beta2utf8(surf)
+            qere = self.beta2utf(qere)
         else:
             raise "Error: Unknown encodingStyle parameter = %s" % str(encodingStyle)
 
         if bPrintLemma:
-            print >>f, "%s %s %s %s %s ! %s" % (ref, surf, prs, strongs, lemma, ANLEXlemma)
+            print >>f, "%s %s %s %s %s %s ! %s" % (ref, surf, qere, prs, strongs, lemma, ANLEXlemma)
         else:
-            print >>f, "%s %s %s %s" % (ref, surf, prs, strongs)
+            print >>f, "%s %s %s %s %s %s" % (ref, surf, qere, prs, strongs)
 
     def write_StrippedLinear(self, f, base_ref, index):
         ref = "%s" % base_ref
