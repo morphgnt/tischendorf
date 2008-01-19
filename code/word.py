@@ -496,16 +496,18 @@ class Word:
         for s in beta.split(" "):
             # Add '\n' at the end to convert final sigma to real final sigma.
             # The '\n' will be stripped out by the conversion
-            utf16, remainder = convert.beta2unicodetrie.convert(s+"\n")
+            utf16 = convert.beta2unicode(s)
+
+            #print (u"'%s' --> '%s'" % (s, utf16)).encode('utf-8')
 
             # Convert Unicode string to UTF8
-            utf8 = utf16.encode("utf-8")
+            if utf16 == "":
+                utf8 = ""
+            else:
+                utf8 = unicodedata.normalize('NFC', utf16).encode("utf-8")
             
-            if remainder != "":
-                #raise Exception("UTF8 = '" + utf8 +"'\nbeta = " + beta + "\n, and remainder was not empty, but was: '" + remainder + "'")
-                print "UTF8 = '" + utf8 +"'\nbeta = " + beta + "\n, and remainder was not empty, but was: '" + remainder + "'"
             result += utf8 + " "
-        return unicodedata.normalize('NFC', result[0:-1])
+        return result[0:-1]
 
     def getSFMReference(self, f, booknumber, chapter, verse, word_index):
         return "\\rf %02d-%03d-%03d-%03d\r" % (int(booknumber), int(chapter), int(verse), int(word_index))
@@ -821,7 +823,7 @@ class Word:
             lemma = self.beta2utf8(lemma)
             ANLEXlemma = self.beta2utf8(ANLEXlemma)
             surf = self.beta2utf8(surf)
-            qere = self.beta2utf(qere)
+            qere = self.beta2utf8(qere)
         else:
             raise "Error: Unknown encodingStyle parameter = %s" % str(encodingStyle)
 

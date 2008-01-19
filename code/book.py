@@ -158,29 +158,12 @@ class Book:
         for line in lines:
             line = line.replace("\r", "").replace("\n", "")
             myarr = line.split(" ")
-            mybook = myarr[0]
-            mychapterverse = myarr[1]
-            mysurface = myarr[2]
-            mytag = myarr[3]
-            mystrongs = myarr[4]
+            [mybook, mychapterverse, mysurface, myqere, mytag, mystrongs] = myarr[0:6]
             strongslemma = ""
             ANLEXlemma = ""
-            if len(myarr) > 5:
-                whatamIdoing = kStrongs
-                strongslemmas = []
-                ANLEXlemmas = []
-                for mystr in myarr[5:]:
-                    if mystr == "!":
-                        whatamIdoing = kANLEX
-                    else:
-                        if whatamIdoing == kStrongs:
-                            strongslemmas.append(mystr)
-                        else:
-                            ANLEXlemmas.append(mystr)
-                strongslemma = " ".join(strongslemmas)
-                ANLEXlemma = " ".join(ANLEXlemmas)
+            [strongslemma, ANLEXlemma] = " ".join(myarr[6:]).split(" ! ")
             self.process_linear_verse(mychapterverse)
-            self.process_linear_word(mysurface, mytag, mystrongs, strongslemma, ANLEXlemma)
+            self.process_linear_word(mysurface, myqere, mytag, mystrongs, strongslemma, ANLEXlemma)
         self.parseChapter(self.chapter, self.end_monad)
 
     def process_linear_verse(self, mychapterverse):
@@ -203,9 +186,10 @@ class Book:
             self.verses.append(verse)
 
 
-    def process_linear_word(self, mysurface, mytag, mystrongs, strongslemma, ANLEXlemma):
+    def process_linear_word(self, mysurface, myqere, mytag, mystrongs, strongslemma, ANLEXlemma):
         w = word.Word(self.end_monad, variant_none)
         w.surface = mysurface
+        w.qere = myqere
         w.accented_surface = mysurface
         w.parsing = mytag
         w.Strongs1 = mystrongs
