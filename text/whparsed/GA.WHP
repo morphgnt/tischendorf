@@ -48,7 +48,7 @@ tiv 5100 {X-NSM} umav 4771 {P-2AP} euaggelizetai 2097 5731 {V-PMI-3S} par
 {PRT} zhtw 2212 5719 {V-PAI-1S} anyrwpoiv 444 {N-DPM} areskein 700 5721
 {V-PAN} ei 1487 {COND} eti 2089 {ADV} anyrwpoiv 444 {N-DPM} hreskon 700
 5707 {V-IAI-1S} cristou 5547 {N-GSM} doulov 1401 {N-NSM} ouk 3756 {PRT-N}
-an 302 {PRT} hmhn 1510 5707 {V-IAI-1S}
+an 302 {PRT} hmhn 1510 5710 {V-IMI-1S}
      1:11 gnwrizw 1107 5719 {V-PAI-1S} gar 1063 {CONJ} umin 4771 {P-2DP}
 adelfoi 80 {N-VPM} to 3588 {T-ASN} euaggelion 2098 {N-ASN} to 3588 {T-ASN}
 euaggelisyen 2097 5685 {V-APP-ASN} up 5259 {PREP} emou 1473 {P-1GS} oti
@@ -102,7 +102,7 @@ yeou 2316 {N-GSM} oti 3754 {CONJ} ou 3756 {PRT-N} qeudomai 5574 5736
      1:21 epeita 1899 {ADV} hlyon 2064 5627 {V-2AAI-1S} eiv 1519 {PREP} ta
 3588 {T-APN} klimata 2824 {N-APN} thv 3588 {T-GSF} suriav 4947 {N-GSF} kai
 2532 {CONJ} | [thv] 3588 {T-GSF} | thv 3588 {T-GSF} | kilikiav 2791 {N-GSF}
-     1:22 hmhn 1510 5707 {V-IAI-1S} de 1161 {CONJ} agnooumenov 50 5746
+     1:22 hmhn 1510 5710 {V-IMI-1S} de 1161 {CONJ} agnooumenov 50 5746
 {V-PPP-NSM} tw 3588 {T-DSN} proswpw 4383 {N-DSN} taiv 3588 {T-DPF}
 ekklhsiaiv 1577 {N-DPF} thv 3588 {T-GSF} ioudaiav 2449 {N-GSF} taiv 3588
 {T-DPF} en 1722 {PREP} cristw 5547 {N-DSM}
@@ -389,7 +389,7 @@ wn 1510 5723 {V-PAP-NSM}
      4:3 outwv 3779 {ADV} kai 2532 {CONJ} hmeiv 1473 {P-1NP} ote 3753 {ADV}
 hmen 1510 5707 {V-IAI-1P} nhpioi 3516 {A-NPM} upo 5259 {PREP} ta 3588
 {T-APN} stoiceia 4747 {N-APN} tou 3588 {T-GSM} kosmou 2889 {N-GSM} hmeya
-1510 5707 {V-IAI-1P} dedoulwmenoi 1402 5772 {V-RPP-NPM}
+1510 5710 {V-IMI-1P} dedoulwmenoi 1402 5772 {V-RPP-NPM}
      4:4 ote 3753 {ADV} de 1161 {CONJ} hlyen 2064 5627 {V-2AAI-3S} to 3588
 {T-NSN} plhrwma 4138 {N-NSN} tou 3588 {T-GSM} cronou 5550 {N-GSM}
 exapesteilen 1821 5656 {V-AAI-3S} o 3588 {T-NSM} yeov 2316 {N-NSM} ton 3588

@@ -96,12 +96,15 @@ wv 5613 {ADV} cristou 5547 {N-GSM} apostoloi 652 {N-NPM}
 {V-AOI-1P} nhpioi 3516 {A-NPM} en 1722 {PREP} mesw 3319 {A-DSN} umwn 4771
 {P-2GP} wv 5613 {ADV} ean 1437 {COND} trofov 5162 {N-NSF} yalph 2282 5725
 {V-PAS-3S} ta 3588 {T-APN} eauthv 1438 {F-3GSF} tekna 5043 {N-APN}
-     2:8 outwv 3779 {ADV} omeiromenoi 2442 5740 {V-PNP-NPM} umwn 4771 {P-2GP}
-eudokoumen 2106 5707 {V-IAI-1P} metadounai 3330 5629 {V-2AAN} umin 4771
-{P-2DP} ou 3756 {PRT-N} monon 3440 {ADV} to 3588 {T-ASN} euaggelion 2098
-{N-ASN} tou 3588 {T-GSM} yeou 2316 {N-GSM} alla 235 {CONJ} kai 2532 {CONJ}
-tav 3588 {T-APF} eautwn 1438 {F-1GPM} qucav 5590 {N-APF} dioti 1360 {CONJ}
-agaphtoi 27 {A-NPM} hmin 1473 {P-1DP} egenhyhte 1096 5675 {V-AOI-2P}
+
+     2:8 outwv 3779 {ADV} omeiromenoi 2442 5740 {V-PNP-NPM} umwn 4771 
+{P-2GP} | hudokoumen | eudokoumen | 2106 5707 {V-IAI-1P} metadounai
+3330 5629 {V-2AAN} umin 4771 {P-2DP} ou 3756 {PRT-N} monon 3440 {ADV}
+to 3588 {T-ASN} euaggelion 2098 {N-ASN} tou 3588 {T-GSM} yeou 2316
+{N-GSM} alla 235 {CONJ} kai 2532 {CONJ} tav 3588 {T-APF} eautwn 1438
+{F-1GPM} qucav 5590 {N-APF} dioti 1360 {CONJ} agaphtoi 27 {A-NPM} hmin
+1473 {P-1DP} egenhyhte 1096 5675 {V-AOI-2P}
+
      2:9 mnhmoneuete 3421 5719 {V-PAI-2P} gar 1063 {CONJ} adelfoi 80
 {N-VPM} ton 3588 {T-ASM} kopon 2873 {N-ASM} hmwn 1473 {P-1GP} kai 2532
 {CONJ} ton 3588 {T-ASM} mocyon 3449 {N-ASM} nuktov 3571 {N-GSF} kai 2532
@@ -179,9 +182,12 @@ hmwn 1473 {P-1GP} ihsou 2424 {N-GSM} en 1722 {PREP} th 3588 {T-DSF} autou
      2:20 umeiv 4771 {P-2NP} gar 1063 {CONJ} este 1510 5719 {V-PAI-2P} h
 3588 {T-NSF} doxa 1391 {N-NSF} hmwn 1473 {P-1GP} kai 2532 {CONJ} h 3588
 {T-NSF} cara 5479 {N-NSF}
-     3:1 dio 1352 {CONJ} mhketi 3371 {ADV-N} stegontev 4722 5723 {V-PAP-NPM}
-eudokhsamen 2106 5656 {V-AAI-1P} kataleifyhnai 2641 5683 {V-APN} en 1722
-{PREP} ayhnaiv 116 {N-DPF} monoi 3441 {A-NPM}
+
+     3:1 dio 1352 {CONJ} mhketi 3371 {ADV-N} stegontev 4722 5723 
+{V-PAP-NPM} | hudokhsamen | eudokhsamen | 2106 5656 {V-AAI-1P}
+kataleifyhnai 2641 5683 {V-APN} en 1722 {PREP} ayhnaiv 116 {N-DPF}
+monoi 3441 {A-NPM}
+
      3:2 kai 2532 {CONJ} epemqamen 3992 5656 {V-AAI-1P} timoyeon 5095
 {N-ASM} ton 3588 {T-ASM} adelfon 80 {N-ASM} hmwn 1473 {P-1GP} kai 2532
 {CONJ} | diakonon 1249 {N-ASM} | sunergon 4904 {A-ASM} | tou 3588 {T-GSM}
