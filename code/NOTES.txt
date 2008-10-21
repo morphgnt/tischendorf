@@ -4155,3 +4155,17 @@ means "Kethiv&Qere".  That is, the Kethiv is what is in the printed
 Tischendorf, but the Qere is what it should be (for whatever reason).
 
 I also made it so that all Unicode stuff is written as NFC.
+
+
+
+2008-10-21 10:26 AM
+
+Today I received an email from "RonM" (Ron Maxwell) detailing some
+errors to be corrected:
+
++AC 8:4.5 DIHLQON V-2AAI-3P 1330
++AC 11:19.12 DIHLQON V-2AAI-3P 1330
++AC 16:6.1 DIHLQON V-2AAI-3P 1330
++RO 11:21.13 FEISETAI V-FDI-3S 5339
++1CO 10:1.21 DIHLQON V-2AAI-3P 1330
+
