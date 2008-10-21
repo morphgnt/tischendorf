@@ -693,7 +693,7 @@ class Word:
             # If it is a kind_pipe, the verse will take care of it.
             return index
         else:
-            raise Exception("Error in Word.parse: 5: Unknown kind:" + str(kind) + "'" +str(words[index]) + "'")
+            raise Exception("Error in Word.parse: 5: Unknown kind:" + str(kind) + "'" +str(words[index]) + "'... words = " + " ".join(words))
 
         if not state == state_strongs1:
             raise Exception("Error in Word.parse: 6: Unknown state: " + str(state) + ", please correct the logic.")
