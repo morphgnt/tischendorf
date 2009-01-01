@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 1.5
+                             Version 2.5
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
@@ -170,7 +170,7 @@ http://morphgnt.org/projects/tischendorf
 
 
 Ulrik Sandborg-Petersen
-Aalborg, January 2008
+Aalborg, January 2009
 
 
 
@@ -211,15 +211,17 @@ The format is as follows:
 - - fields:
   0. Book (corresponds to the filename, which is the Online Bible standard)
   1. Chapter:Verse.word-within-verse
-  2. The text as it is written in the printed Tischendorf (Kethiv)
-  3. The text as the editor thinks it should have been (Qere)
-  4. The morphological tag (following the Qere)
-  5. The Strong's number (following the Qere)
-  6. The lemma in two versions:
-    6.a The first version, which corresponds to The NEW Strong's
+  2. Pagraph break ("P") / Chapter break ("C") / No break (".") (see
+     below)
+  3. The text as it is written in the printed Tischendorf (Kethiv)
+  4. The text as the editor thinks it should have been (Qere)
+  5. The morphological tag (following the Qere)
+  6. The Strong's number (following the Qere)
+  7. The lemma in two versions:
+    7.a The first version, which corresponds to The NEW Strong's
       Complete Dictionary of Bible Words.
-    6.b Followed by the string " ! "
-    6.c Then the second version, which corresponds to Friberg, Friberg
+    7.b Followed by the string " ! "
+    7.c Then the second version, which corresponds to Friberg, Friberg
       and Miller's ANLEX.
     There may be several words in each lemma.
 
@@ -229,6 +231,23 @@ The text exists in two versions: One in the "BETA" directory and one
 in the "Unicode" directory. The only difference is the encoding: The
 former is in TLG BETA encoding, whereas the latter is in Unicode NFC
 UTF-8.
+
+The third column (designated "2." above) has precisely one of three
+values:
+
+- "." : No break occurs
+- "P" : A paragraph break occurs
+- "C" : A chapter break occurs
+
+Most paragraph breaks occur on a verse boundary, but not all paragraph
+breaks do.
+
+A program counting the "C"s can rely on them to count the chapters,
+i.e., even if a chapter break occurs in a verse which belongs to
+chapter X, that means that Tischendorf thought that that verse belongs
+to chapter X+1.  This occurs, for example, in Revelation 12:18, where
+the chapter break occurs in chapter 12, meaning that verse 12:18 needs
+to be shown with chapter 13.
 
 
 ChangeLog
@@ -268,4 +287,13 @@ v. 2.0 (2008-01-20)
    - Added kethiv/qere.
    - Various changes to the text itself.
    - 448 changes in total.
+
+v. 2.5 (2009-XX-XX)
+   - Added paragraph breaks and chapter breaks.
+   - Changed the punctuation to be more in accordance with the printed
+     Tischendorf.
+   - Got rid of some [square brackets] which were not in Tischendorf.
+   - Fixed a few typos in the text itself, thereby making the text
+     conform more to the printed Tischendorf.
+   - Updated the analysis and lemma assignment for a number of words.
 
