@@ -289,7 +289,7 @@ v. 2.0 (2008-01-20)
    - 448 changes in total.
 
 v. 2.5 (2009-XX-XX)
-   - Added paragraph breaks and chapter breaks.
+   - Added an extra column with paragraph breaks and chapter breaks.
    - Changed the punctuation to be more in accordance with the printed
      Tischendorf.
    - Got rid of some [square brackets] which were not in Tischendorf.
