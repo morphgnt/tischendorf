@@ -398,6 +398,7 @@ def mangleMQLString(str):
 class Word:
     def __init__(self, monad, variant):
         self.monad = monad
+        self.break_kind = "."   # Can be 'C' for chapter-break, 'P' for paragraph-break, or '.' for no break.
         self.surface = ""       # kethiv (i.e., it is written (in the printed Tischendorf))
         self.qere = ""          # qere (i.e., please read)
         self.accented_surface = ""
@@ -601,9 +602,10 @@ class Word:
         # Advance if this is parens.
         # This is such things as (26-61) indicating (I think)
         # that NA27 starts the verse here (26:61).
+
         if recognize(words[index]) == kind_parens:
             index += 1
-        
+
         state = state_surface
         
         # Read surface
@@ -828,9 +830,9 @@ class Word:
             raise "Error: Unknown encodingStyle parameter = %s" % str(encodingStyle)
 
         if bPrintLemma:
-            print >>f, "%s %s %s %s %s %s ! %s" % (ref, surf, qere, prs, strongs, lemma, ANLEXlemma)
+            print >>f, "%s %s %s %s %s %s %s ! %s" % (ref, self.break_kind, surf, qere, prs, strongs, lemma, ANLEXlemma)
         else:
-            print >>f, "%s %s %s %s %s %s" % (ref, surf, qere, prs, strongs)
+            print >>f, "%s %s %s %s %s %s %s" % (ref, self.break_kind, surf, qere, prs, strongs)
 
     def write_StrippedLinear(self, f, base_ref, index):
         ref = "%s" % base_ref
