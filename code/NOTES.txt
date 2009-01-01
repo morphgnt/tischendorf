@@ -4215,3 +4215,47 @@ lot of UP printings, some of which were corrected:
 +JOH 21:3.14 ECHLQON V-2AAI-3P 1831
 
 I am not done correcting the printouts.
+
+
+2008-12-31
+
+Today I finished adding paragraph markers and chapter markers to the
+text.
+
+
+2009-01-01
+
+Today I:
+
+- Fixed some typos in the accented text.
+
+- Corrected some mistakes in the paragraph/chapter breaks.
+
+- Made the code work with the paragraph breaks and chapter breaks.
+
+- Finished correcting the printouts from when Robinson sent his latest
+  shipment (two entries back in this diary).
+
+
+--- manual_analyses.txt (revision 1011)
++++ manual_analyses.txt (working copy)
++MR 14:55.19 EURISKON V-IAI-3P 2147
+-MR 15:43.3 [O] T-NSM 3588
++MR 15:43.3 O T-NSM 3588
++JOH 8:7.b.17 AUTH T-DSF 3588
++AC 1:10.14 PAREISTHKEISAN V-LAI-3P 3936
++AC 2:37.6 EIPON V-2AAI-3P 3004
++AC 4:19.7 EIPON V-2AAI-3P 3004
++AC 6:15.11 EIDON V-2AAI-3P 3708
++AC 9:7.7 EISTHKEISAN V-LAI-3P 2476
++AC 9:25.14 SPURIDI N-DSF 4711
++AC 14:24.5 HLQON V-2AAI-3P 2064
+-AC 25:17.3 [AUTWN] P-GPM 846
++AC 25:17.3 AUTWN P-GPM 846
+-AC 26:26.15 [TI] X-ASN 5100
++AC 26:26.15 TI X-ASN 5100
++AC 28:4.3 EIDON V-2AAI-3P 3708
++AC 28:23.5 HLQON V-2AAI-3P 2064
++1TH 3:1.4 EUDOKHSAMEN V-AAI-1P 2106
++RE 7:11.5 EISTHKEISAN V-LAI-3P 2476
++RE 15:6.2 ECHLQON V-2AAI-3P 1831
