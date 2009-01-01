@@ -399,7 +399,7 @@ class Verse:
                         tischword.setStrongs(lexnonuniqueentry[0])
                     else:
                         print "\n-----------------------------"
-                        print "UP12: %s : Tisch = %s" % (self.getRef(), olbstrip(tischword))
+                        print "UP12: Analysis not found at all: %s : Tisch = '%s'/'%s'" % (self.getRef(), olbstrip(tischword), tischword)
             tischindex = tischindex + 1
                         
     def entriesHaveDifferentCNG(self,tischword,whword):
