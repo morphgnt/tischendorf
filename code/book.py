@@ -158,12 +158,12 @@ class Book:
         for line in lines:
             line = line.replace("\r", "").replace("\n", "")
             myarr = line.split(" ")
-            [mybook, mychapterverse, mysurface, myqere, mytag, mystrongs] = myarr[0:6]
+            [mybook, mychapterverse, mybreak_kind, mysurface, myqere, mytag, mystrongs] = myarr[0:7]
             strongslemma = ""
             ANLEXlemma = ""
-            [strongslemma, ANLEXlemma] = " ".join(myarr[6:]).split(" ! ")
+            [strongslemma, ANLEXlemma] = " ".join(myarr[7:]).split(" ! ")
             self.process_linear_verse(mychapterverse)
-            self.process_linear_word(mysurface, myqere, mytag, mystrongs, strongslemma, ANLEXlemma)
+            self.process_linear_word(mybreak_kind, mysurface, myqere, mytag, mystrongs, strongslemma, ANLEXlemma)
         self.parseChapter(self.chapter, self.end_monad)
 
     def process_linear_verse(self, mychapterverse):
@@ -186,8 +186,9 @@ class Book:
             self.verses.append(verse)
 
 
-    def process_linear_word(self, mysurface, myqere, mytag, mystrongs, strongslemma, ANLEXlemma):
+    def process_linear_word(self, mybreak_kind, mysurface, myqere, mytag, mystrongs, strongslemma, ANLEXlemma):
         w = word.Word(self.end_monad, variant_none)
+        w.break_kind = mybreak_kind
         w.surface = mysurface
         w.qere = myqere
         w.accented_surface = mysurface
