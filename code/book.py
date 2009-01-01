@@ -240,6 +240,7 @@ class Book:
         words = mystring.split()
         self.end_monad += 1
         index = -1
+        break_kind = "."
         for w in words:
             index += 1
             if w[0] in "0123456789":
@@ -261,6 +262,12 @@ class Book:
                 verse.first_monad = self.end_monad
                 verse.last_monad = self.end_monad
                 self.verses.append(verse)
+            elif w == "{P}":
+                break_kind = "P"
+            elif w == "{C}":
+                break_kind = "C"
+            elif w == "-":
+                pass # Remove silently. FIXME: Do something more intelligent!
             else:
                 wd = word.Word(self.end_monad, variant_none)
                 wd.surface = w
@@ -272,6 +279,8 @@ class Book:
                 #wd.parsing = "CONJ"
                 #wd.Strongs1 = 9999
                 wd.makeSurfacesAccentedTischendorf()
+                wd.break_kind = break_kind
+                break_kind = "."
                 #print wd.surface, wd.accented_surface
                 self.verses[-1].words.append(wd)
                 self.verses[-1].last_monad = self.end_monad
