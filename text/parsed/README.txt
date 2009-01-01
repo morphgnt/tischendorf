@@ -288,12 +288,13 @@ v. 2.0 (2008-01-20)
    - Various changes to the text itself.
    - 448 changes in total.
 
-v. 2.5 (2009-XX-XX)
+v. 2.5 (2009-01-01)
    - Added an extra column with paragraph breaks and chapter breaks.
    - Changed the punctuation to be more in accordance with the printed
      Tischendorf.
    - Got rid of some [square brackets] which were not in Tischendorf.
    - Fixed a few typos in the text itself, thereby making the text
      conform more to the printed Tischendorf.
+   - Proof-read the "preicope adulterae" (John 7:53-8:11).
    - Updated the analysis and lemma assignment for a number of words.
 
