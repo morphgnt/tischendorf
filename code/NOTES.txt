@@ -4259,3 +4259,14 @@ Today I:
 +1TH 3:1.4 EUDOKHSAMEN V-AAI-1P 2106
 +RE 7:11.5 EISTHKEISAN V-LAI-3P 2476
 +RE 15:6.2 ECHLQON V-2AAI-3P 1831
+
+
+
+2009-01-14
+
+Today I:
+
+- Added paragraph- and chapter-markers to the books of Titus, 1 John,
+  2 John, and 3 John.  Now the NT is complete w.r.t. this information.
+
+T00:30: Development
