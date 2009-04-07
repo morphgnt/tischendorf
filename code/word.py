@@ -528,12 +528,14 @@ class Word:
 
         if self.accented_surface != "":
             surfaceBETA = self.accented_surface
+            qere = self.qere
         else:
             surfaceBETA = OLBtoBETAtranslate(self.surface)
+            qere = OLBtoBETAtranslate(self.qere)
         print >>f, "  surface:=\"%s\";" % mangleMQLString(surfaceBETA)
         print >>f, "  surfaceutf8:=\"%s\";" % mangleMQLString(self.beta2utf8(surfaceBETA))
-        print >>f, "  qere:=\"%s\";" % mangleMQLString(self.qere)
-        print >>f, "  qereutf8:=\"%s\";" % mangleMQLString(self.beta2utf8(self.qere))
+        print >>f, "  qere:=\"%s\";" % mangleMQLString(qere)
+        print >>f, "  qereutf8:=\"%s\";" % mangleMQLString(self.beta2utf8(qere))
         #print >>f, "  olb_surface:=\"%s\";" % self.surface
         if len(self.parsing) > 0:
             print >>f, "  parsing:=\"%s\";" % self.parsing
