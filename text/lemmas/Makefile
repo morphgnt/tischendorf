@@ -1,5 +1,6 @@
 DERIVED_FILES = lemmatable_utf8.txt lemmatable_ANLEX_utf8.txt \
-                lemmatable_SBL.txt lemmatable_ANLEX_SBL.txt
+                lemmatable_SBL.txt lemmatable_ANLEX_SBL.txt \
+                lemmatable_BETA.txt lemmatable_ANLEX_BETA.txt
 
 CLEANFILES = *~ $(DERIVED_FILES)
 
@@ -23,3 +24,10 @@ lemmatable_SBL.txt: lemmatable.txt toSBL.py
 
 lemmatable_ANLEX_SBL.txt: lemmatable_ANLEX.txt toSBL.py
 	python toSBL.py < lemmatable_ANLEX.txt > lemmatable_ANLEX_SBL.txt
+
+
+lemmatable_BETA.txt: lemmatable.txt toBETA.py
+	python toBETA.py < lemmatable.txt > lemmatable_BETA.txt
+
+lemmatable_ANLEX_BETA.txt: lemmatable_ANLEX.txt toBETA.py
+	python toBETA.py < lemmatable_ANLEX.txt > lemmatable_ANLEX_BETA.txt
