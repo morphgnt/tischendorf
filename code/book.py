@@ -6,6 +6,11 @@ from chapter import Chapter
 from variant import *
 from kind import *
 import word
+import re
+
+chapter_verse_re = re.compile(r'^\d+:\d+$')
+
+
 
 myverseletters = ["a", "b", "c", "d", "e"]
 
@@ -207,7 +212,8 @@ class Book:
     def parse_lines(self, lines, read_what):
         verse_lines = []
         for ln in lines:
-            if (read_what == reader.read_stephens and ln[0] in string.digits) or (read_what != reader.read_stephens and ln[0:4] == "    "):
+            arr = ln.split()
+            if len(arr) > 0 and chapter_verse_re.match(arr[0]) != None:
                 if not len(verse_lines) == 0:
                     self.parseVerse(verse_lines, self.end_monad + 1, 0, read_what)
                     del verse_lines
