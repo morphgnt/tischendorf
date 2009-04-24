@@ -15,6 +15,8 @@ text_strongs_varparsing_varparsing_re = re.compile(r'(\s+[a-z\[\]]+\s+[0-9]+\s+)
 
 text_strongs_vartext_varstrongs_parsing = re.compile(r'\|\s+([a-z\[\]]+\s+[0-9]+)\s+\|\s+([a-z\[\]]+\s+[0-9]+)\s+\|\s+(\{[A-Z0-9\-]+\})\s+')
 
+text_zerostrongs_re = re.compile(r'([a-z\[\]]+)\s+0\s+')
+
 
 
 class Verse:
@@ -69,6 +71,10 @@ class Verse:
         # Concatenate all lines
         overall_line = " ".join(self.verse_lines)
         #print overall_line
+
+        # Get rid of Zero Strong's
+        if text_zerostrongs_re.search(overall_line) != None:
+            overall_line = text_zerostrongs_re.sub(r'\1 ', overall_line)
 
         if text_variant_strongs_parsing_re.search(overall_line) != None:
             overall_line = text_variant_strongs_parsing_re.sub(r'| \1\3 | \2\3 | ', overall_line)
