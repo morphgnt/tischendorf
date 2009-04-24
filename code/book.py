@@ -163,7 +163,7 @@ class Book:
         for line in lines:
             line = line.replace("\r", "").replace("\n", "")
             myarr = line.split(" ")
-            [mybook, mychapterverse, mybreak_kind, mysurface, myqere, mytag, mystrongs] = myarr[0:7]
+            [mybook, mychapterverse, mybreak_kind, mysurface, myqere, mytag, mystrongs] = myarr[0:7]            
             strongslemma = ""
             ANLEXlemma = ""
             [strongslemma, ANLEXlemma] = " ".join(myarr[7:]).split(" ! ")
@@ -406,7 +406,7 @@ class Book:
     def addToLexicon(self, lexicon):
         for whverse in self.verses:
             for whword in whverse.words:
-                lexicon.addDefinition(word.olbstrip(whword),whword.Strongs1, whword.parsing)
+                lexicon.addDefinition(word.olbstrip_surface(whword),whword.Strongs1, whword.parsing)
 
     def addToVerseDict(self, myverse):
         ref = myverse.getRef()
