@@ -36,6 +36,13 @@ def read_WH():
     rd.read_NT(reader.read_wh_only)
     return rd
 
+def read_WH_MT():
+    dir=WHParsedBasedir
+    suffix = "WHP"
+    rd = reader.Reader(dir, suffix)
+    rd.read_MT(reader.read_wh_only)
+    return rd
+
 def read_WHB():
     dir=AccentedWHbasedir
     suffix = "WHB"
@@ -44,7 +51,7 @@ def read_WHB():
     return rd
 
 def read_WH_writeMQL():
-    rd = read_WH()
+    rd = read_W27Var_NA27()
     rd.applyMappings()
     rd.write_MQL("WH.mql", False)
     return rd
@@ -68,11 +75,27 @@ def read_Tischendorf():
     return rd
 
 
+def read_Tischendorf_MT():
+    dir = tischbasedir
+    suffix = ""
+    rd = reader.Reader(dir, suffix)
+    rd.read_MT(reader.read_tischendorf)
+    return rd
+
+
 def read_AccentedTischendorf():
     dir = AccentedTischbasedir
     suffix = ""
     rd = reader.Reader(dir, suffix)
     rd.read_NT(reader.read_AccentedTischendorf)
+    return rd
+
+
+def read_AccentedTischendorf_MT():
+    dir = AccentedTischbasedir
+    suffix = ""
+    rd = reader.Reader(dir, suffix)
+    rd.read_MT(reader.read_AccentedTischendorf)
     return rd
 
 
@@ -146,6 +169,25 @@ def read_Tischendorf_WH_compare_them():
     tischrd.produceLexicon(tischlexicon).writeLexicon("tischlexicon_nonunique.txt", False)
     return tischrd
 
+def read_Tischendorf_WH_Matthew_compare_them():
+    lexicon = Lexicon()
+    tischrd = read_AccentedTischendorf_MT()
+    ma = ManualAnalyses("./manual_analyses.txt")
+    #whrd = read_WH_writeMQL()
+    whrd = read_WH_MT();
+    #trstephrd = read_Stephanus()
+    #byzrd = read_Byzantine()
+    #lexicon = byzrd.produceLexicon(lexicon)
+    #lexicon = trstephrd.produceLexicon(lexicon)
+    whrd.compareTischendorf(tischrd, lexicon, ma)
+    tischrd.applyMappings()    
+    tischrd.writeBooks_MORPH_style(tisch_out_basedir, "TSP", kind.kBETA)
+    lexicon = whrd.lexicon
+    lexicon.writeLexicon("lexicon_nonunique.txt", False)
+    tischlexicon = Lexicon()
+    tischrd.produceLexicon(tischlexicon).writeLexicon("tischlexicon_nonunique.txt", False)
+    return tischrd
+
 def read_Tischendorf_WH_compare_them_writeAmbiguities():
     ma = ManualAnalyses("./manual_analyses.txt")
     tischrd = read_Tischendorf_WH_compare_them()
@@ -197,6 +239,7 @@ def parseTischendorfBETA():
 #read_Tischendorf_WH_compare_them_writeSFM()
 #read_TSP_writeSFM()
 #read_WHB()
+#read_Tischendorf_WH_Matthew_compare_them()
 read_Tischendorf_WH_compare_them()
 #read_TSP_writeTUP()
 #read_TSP_writeMQL()
