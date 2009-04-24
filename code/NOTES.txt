@@ -4270,3 +4270,80 @@ Today I:
   2 John, and 3 John.  Now the NT is complete w.r.t. this information.
 
 T00:30: Development
+
+
+2009-04-24
+
+Today I:
+
+- Updated to the latest W-H of 2009-03-31 (downloaded via
+  Dr. Robinson's Finnish website).
+
+- Fixed a few bugs that resulted from this, in the reader-code.
+
+- Fixed a lot of errors thrown because of the incorporation of the new text.
+
+
+
+--- manual_analyses.txt	(revision 1081)
++++ manual_analyses.txt	(working copy)
++MT 3:15.7 AUTON P-ASM 846
++MT 13:30.31 SUNAGAGETE V-AAM-2P 4863
++MT 15:14.6 TUFLWN A-GPM 5185
++MT 16:20.2 DIESTEILATO V-AMI-3S 1291
++MT 17:15.12 PASXEI V-PAI-3S 3958
++MT 18:16.7 SEAUTOU F-2GSM 4572
++MT 26:61.14 AUTON P-ASM 846
++MT 26:71.3 AUTON P-ASM 846
++MR 6:22.5 AUTHS P-GSF 846
++MR 6:29.14 AUTON P-ASM 846
++MR 6:33.7 AUTOUS P-APM 846
++MR 13:28.9 AUTHS P-GSF 846
++MR 14:40.4 AUTOUS P-APM 846
++MR 16:1.19 AUTON P-ASM 846
++MR 16:18.9 AUTOUS P-APM 846
++LU 1:21.13 AUTON P-ASM 846
++LU 3:14.14 AUTOUS P-APM 846
++LU 7:13.8 AUTHN P-ASF 846
++LU 7:47.6 AUTHS P-GSF 846
++LU 21:34.10 KRAIPALH N-DSF 2897
++LU 22:57.4 AUTON P-ASM 846
++JOH 1:43.2 AUTON P-ASM 846
++JOH 1:48.7 AUTON P-ASM 846
++JOH 2:3.18 AUTON P-ASM 846
++JOH 6:17.13 AUTOUS P-APM 846
++JOH 6:71.10 AUTON P-ASM 846
++JOH 8:4.a.4 AUTON P-ASM 846
+-JOH 8:3.b.11 EN PREP 1722
++JOH 8:3.b.9 AUTON P-ASM 846
++JOH 8:3.b.11 EN PREP 1722
++JOH 8:7.b.9 AUTOUS P-APM 846
++JOH 13:32.17 AUTON P-ASM 846
++JOH 14:7.15 AUTON P-ASM 846
++JOH 17:6.17 AUTOUS P-APM 846
++JOH 18:7.3 AUTOUS P-APM 846
++JOH 19:27.15 AUTHN P-ASF 846
++JOH 19:38.36 AUTON P-ASM 846
++AC 9:37.13 AUTHN P-ASF 846
++AC 23:30.19 AUTOUS P-APM 846
++RO 1:27.34 EAUTOIS F-3DPM 1438
++RO 16:2.2 AUTHN P-ASF 846
++2CO 3:5.11 EAUTWN F-1GPM 1438
++EPH 1:20.12 AUTON P-ASM 846
++RE 2:20.12 AUTHN P-ASF 846
++RE 20:3.27 AUTON P-ASM 846
++RE 20:11.10 AUTON P-ASM 846
++RE 22:18.20 AUTON P-ASM 846
+
+
+
++++ lexicon.py	(working copy)
++                        "ANABAINWN" : ("305", "V-PAP-NSM"),
++                        "POLUTIMOU" : ("4186", "A-GSN"),
++                        #"POISAS" : ("4160", "V-AAP-NSM"), # This has GOT to be a spelling mistake!
++                        "POIHSAS" : ("4160", "V-AAP-NSM"),
++                        "PROSHNEXQH" : ("4374", "V-API-3S"),
++                        "THRHSON" : ("5083", "V-AAM-2S"),
++                        "PISTEUSWMEN" : ("4100", "V-AAS-1P"),
++                        "ESTHKASIN" : ("2476", "V-RAI-3P"),
+
