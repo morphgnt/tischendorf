@@ -56,6 +56,9 @@ class Reader:
         for bkname in book_list_OLB:
             self.read_book(bkname, read_what)
 
+    def read_MT(self, read_what):
+        self.read_book("MT", read_what)
+
     def write_SFM(self):
         cur_monad = 1
         for index in range(0,27):
@@ -145,14 +148,15 @@ class Reader:
         f.close()
 
     def write_book_MORPH_style(self, index, bookname, output_dir, output_suffix, encodingStyle):
-        if output_suffix == "":
-            print bookname
-            filename = output_dir + "/" + bookname
-        else:
-            print bookname + "." + output_suffix
-            filename = output_dir + "/" + bookname + "." + output_suffix
-        book = self.books[index]
-        book.write_MORPH_style(filename, encodingStyle)
+        if index < len(self.books):
+            if output_suffix == "":
+                print bookname
+                filename = output_dir + "/" + bookname
+            else:
+                print bookname + "." + output_suffix
+                filename = output_dir + "/" + bookname + "." + output_suffix
+            book = self.books[index]
+            book.write_MORPH_style(filename, encodingStyle)
         
     def write_subset_MORPH_style(self, f, index, word_predicate, manualanalyses, encodingStyle):
         book = self.books[index]
