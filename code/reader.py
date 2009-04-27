@@ -106,6 +106,34 @@ class Reader:
         fout.close()
 
 
+    def write_OSIS(self, osisfilename):
+        fout = open(osisfilename, "w")
+        fout.write("""<?xml version='1.0' encoding='utf-8' ?>
+<osis xmlns="http://www.bibletechnologies.net/2003/OSIS/namespace"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.bibletechnologies.net/osisCore.2.0.xsd">
+<osisText osisIDWork="GK.TischNT" osisRefWork="NA" xml:lang="gk">
+<header>
+<work osisWork="GK.TischNT">
+    <title>Tischendorf's 8th Greek New Testament</title>
+    <date event="original" type="Gregorian">1868</date>
+    <date event="eversion" type="Gregorian">2009</date>
+    <type type="x-bible">Bible</type>
+    <language type="ISO-639-2">GK</language>
+    <rights>Public Domain. Copy freely.</rights>
+</work>
+</header>
+<div type="bookGroup">
+<title>Tischendorf's 8th Greek New Testament</title>
+""")
+
+        for index in range(0,27):
+            self.books[index].writeOSIS(fout)
+
+        fout.write("""</div></osisText></osis>""")
+        fout.close()
+
+
     def applyLemma(self, lemmaType):
         if lemmaType == kStrongs:
             mapping = read_StrongsLemmas()

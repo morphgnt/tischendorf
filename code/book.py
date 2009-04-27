@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import string
 import sys
 import reader
@@ -13,6 +14,92 @@ chapter_verse_re = re.compile(r'^\d+:\d+$')
 
 
 myverseletters = ["a", "b", "c", "d", "e"]
+
+
+bookdict = {
+    # OLB, unbound, enum, dkabbrev, BibleWorks, OSIS, longEnglish
+    "1.Mosebog" : ("GE", "01O", "Genesis", "1. Mos", "", "Gen", "Genesis"),
+    "2.Mosebog" : ("EX", "02O", "Exodus", "2. Mos", "", "Exod", "Exodus"),
+    "3.Mosebog" : ("LE", "03O", "Leviticus", "3. Mos", "", "Lev", "Leviticus"),
+    "4.Mosebog" : ("NU", "04O", "Numbers", "4. Mos", "", "Num", "Numbers"),
+    "5.Mosebog" : ("DE", "05O", "Deuteronomy", "5. Mos", "", "Deut", "Deuteronomy"),
+    "Josua" : ("JOS", "06O", "Joshua", "Jos", "", "Josh", "Joshua"),
+    "Dommer" : ("JUD", "07O", "Judges", "Dom", "", "Judg", "Judges"),
+    "Rut" : ("RU", "08O", "Ruth", "Rut", "", "Ruth", "Ruth"),
+    "1.Samuel" : ("1SA", "09O", "I_Samuel", "1. Sam", "", "1Sam", "1 Samuel"),
+    "2.Samuel" : ("2SA", "10O", "II_Samuel", "2. Sam", "", "2Sam", "2 Samuel"),
+    "Første Kongebog".decode('latin1') : ("1KI", "11O", "I_Kings", "1. Kong", "", "1Kgs", "1 Kings"),
+    "Anden Kongebog" : ("2KI", "12O", "II_Kings", "2. Kong", "", "2Kgs", "2 Kings"),
+    "Første Krønikebog".decode('latin1', "") : ("1CH", "13O", "I_Chronicles", "1. Krøn".decode('latin1'), "", "1Chr", "1 Chronicles"),
+    "Anden Krønikebog".decode('latin1') : ("2CH", "14O", "II_Chronicles", "2. Krøn".decode('latin1'), "", "2Chr", "2 Chronicles"),
+    "Ezra" : ("EZR", "15O", "Ezra", "Ezr", "", "Ezra", "Ezra"),
+    "Nehemias" : ("NE", "16O", "Nehemiah", "Neh", "", "Neh", "Nehemiah"),
+    "Ester" : ("ES", "17O", "Esther", "Est", "", "Esth", "Esther"),
+    "Job" : ("JOB", "18O", "Job", "Job", "", "Job", "Job"),
+    "Salmerne" : ("PS", "19O", "Psalms", "Sl", "", "Ps", "Psalms"), # Salmerne is the heading for the entire book
+    "Salme" : ("PS", "19O", "Psalms", "Sl", "", "Ps", "Psalms"), # Salme is what is at the begining of each chapter
+    "Ordsprogene" : ("PR", "20O", "Proverbs", "Ordsp", "", "Prov", "Proverbs"),
+    "Prædikeren".decode('latin1') : ("EC", "21O", "Ecclesiastes", "Præd".decode('latin1'), "", "Eccl", "Ecclesiastes"),
+    "Højsangen".decode('latin1') : ("SO", "22O", "Canticles", "Højs".decode('latin1'), "", "Song", "Song of Solomon"),
+    "Esajas" : ("ISA", "23O", "Isaiah", "Es", "", "Isa", "Isaiah"),
+    "Jeremias" : ("JER", "24O", "Jeremiah", "Jer", "", "Jer", "Jeremiah"),
+    "Klagesangene" : ("LA", "25O", "Lamentations", "Klag", "", "Lam", "Lamentations"),
+    "Ezekiel" : ("EZE", "26O", "Ezekiel", "Ezek", "", "Ezek", "Ezekiel"),
+    "Daniel" : ("DA", "27O", "Daniel", "Dan", "", "Dan", "Daniel"),
+    "Hoseas" : ("HO", "28O", "Hosea", "Hos", "", "Hos", "Hosea"),
+    "Joel" : ("JOE", "29O", "Joel", "Joel", "", "Joel", "Joel"),
+    "Amos" : ("AM", "30O", "Amos", "Amos", "", "Amos", "Amos"),
+    "Obadias" : ("OB", "31O", "Obadiah", "Obad", "", "Obad", "Obadiah"),
+    "Jonas" : ("JON", "32O", "Jonah", "Jon", "", "Jonah", "Jonah"),
+    "Mikas" : ("MIC", "33O", "Micah", "Mik", "", "Mic", "Micah"),
+    "Nahum" : ("NA", "34O", "Nahum", "Nah", "", "Nah", "Nahum"),
+    "Habakkuk" : ("HAB", "35O", "Habakkuk", "Hab", "", "Hab", "Habakkuk"),
+    "Zefanias" : ("ZEP", "36O", "Zephaniah", "Zef", "", "Zeph", "Zephaniah"),
+    "Haggaj" : ("HAG", "37O", "Haggai", "Hag", "", "Hag", "Haggai"),
+    "Zakarias" : ("ZEC", "38O", "Zechariah", "Zak", "", "Zech", "Zechariah"),
+    "Malakias" : ("MAL", "39O", "Malachi", "Mal", "", "Mal", "Malachi"),
+    "Matt." : ("MT", "40N", "Matthew", "Matt", "Mat", "Matt", "Matthew"),
+    "Markus" : ("MR", "41N", "Mark", "Mark", "Mar", "Mark", "Mark"),
+    "Lukas" : ("LU", "42N", "Luke", "Luk", "Luk", "Luke", "Luke"),
+    "Johannes" : ("JOH", "43N", "John", "Joh", "Joh", "John", "John"),
+    "Apostlenes Gerninger" : ("AC", "44N", "Acts", "ApG", "Act", "Acts", "Acts"),
+    "Romerne" : ("RO", "45N", "Romans", "Rom", "Rom", "Rom", "Romans"),
+    "1.Korinterne" : ("1CO", "46N", "I_Corinthians", "1.Kor", "1Co", "1Cor", "1 Corinthians"),
+    "2.Korinterne" : ("2CO", "47N", "II_Corinthians", "2. Kor", "2Co", "2Cor", "2 Corinthians"),
+    "Galaterne" : ("GA", "48N", "Galatians", "Gal", "Gal", "Gal", "Galatians"),
+    "Efeserne" : ("EPH", "49N", "Ephesians", "Ef", "Eph", "Eph", "Ephesians"),
+    "Filipperne" : ("PHP", "50N", "Philippians", "Fil", "Phi", "Phil", "Philippians"),
+    "Kolossenserne" : ("COL", "51N", "Colossians", "Kol", "Col", "Col", "Colossians"),
+    "1.Tessalonikerne" : ("1TH", "52N", "I_Thessalonians", "1. Tess", "1Th", "1Thess", "1 Thessalonians"),
+    "2.Tessalonikerne" : ("2TH", "53N", "II_Thessalonians", "2. Tess", "2Th", "2Thess", "2 Thessalonians"),
+    "1.Timoteus" : ("1TI", "54N", "I_Timothy", "1. Tim", "1Ti", "1Tim", "1 Timothy"),
+    "2.Timoteus" : ("2TI", "55N", "II_Timothy", "2. Tim", "2Ti", "2Tim", "2 Timothy"),
+    "Titus" : ("TIT", "56N", "Titus", "Tit", "Tit", "Titus", "Titus"),
+    "Filemon" : ("PHM", "57N", "Philemon", "Filem", "Phm", "Phlm", "Philemon"),
+    "Hebræerne".decode('latin1') : ("HEB", "58N", "Hebrews", "Hebr", "Heb", "Heb", "Hebrews"),
+    "Jakob" : ("JAS", "59N", "James", "Jak", "Jam", "Jas", "James"),
+    "1.Peter" : ("1PE", "60N", "I_Peter", "1. Pet", "1Pe", "1Pet", "1 Peter"),
+    "2.Peter" : ("2PE", "61N", "II_Peter", "2. Pet", "2Pe", "2Pet", "2 Peter"),
+    "1.Johannes" : ("1JO", "62N", "I_John", "1. Joh", "1Jo", "1John", "1 John"),
+    "2.Johannes" : ("2JO", "63N", "II_John", "2. Joh", "2Jo", "2John", "2 John"),
+    "3.Johannes" : ("3JO", "64N", "III_John", "3. Joh", "3Jo", "3John", "3 John"),
+    "Judas" : ("JUDE", "65N", "Jude", "Jud", "Jud", "Jude", "Jude"),
+    "Aabenbaringen" : ("RE", "66N", "Revelation", "Åb", "Rev", "Rev", "Revelation"),
+}
+
+OLB2OSIS_dict = { }
+OLB2LongEnglish_dict = { }
+
+
+for key in bookdict:
+    (OLB, unbound, enum, dkabbrev, BibleWorks, OSIS, longEnglish) = bookdict[key]
+    OLB2OSIS_dict[OLB] = OSIS
+    OLB2LongEnglish_dict[OLB] = longEnglish
+
+
+
+
+
 
 class Sentence:
     def __init__(self, starting_monad):
@@ -51,6 +138,10 @@ class Book:
     def parse_filename(self, filename):
         path_ingridients = filename.split("/")
         bk = path_ingridients[-1].split(".")[0].upper()
+        self.OLBbook = bk
+        self.OSISBook = OLB2OSIS_dict[self.OLBbook]
+        self.LongEnglishBook = OLB2LongEnglish_dict[self.OLBbook]
+
         if bk == "MT":
             self.bookname = "Matthew"
             self.booknumber = 1
@@ -369,6 +460,55 @@ class Book:
         self.writeWordsMQL(f, bUseOldStyle)
         if not bUseOldStyle:
             print >>f, "COMMIT TRANSACTION GO"
+
+    def writeOSIS(self, f):
+        f.write("""<div type="book" osisID="%s"><title>%s</title>""" % (self.OSISBook, self.LongEnglishBook))
+
+        running_chapter = 0
+
+        words = []
+        for v in self.verses:
+            for w in v.words:
+                words.append((w, v.chapter, v.verse))
+
+        prev_chapter = 0
+        prev_verse = 0
+        for index in xrange(0, len(words)):
+            w = words[index][0]
+            chapter = words[index][1]
+            verse = words[index][2]
+            
+            if w.break_kind == "C":
+                running_chapter += 1
+                osisIDChapter = "%s.%s" % (self.OSISBook, running_chapter)
+                if prev_chapter != 0:
+                    f.write("""</p>
+
+</chapter>""")
+                f.write("""<chapter osisID="%s">
+
+<p>
+""" % osisIDChapter)
+                pass
+            elif w.break_kind == "P":
+                f.write("""</p>
+
+<p>""")
+
+            if prev_chapter != chapter:
+                prev_chapter = chapter
+    
+            if prev_verse != verse: 
+                osisIDVerse = "%s.%s.%s" % (self.OSISBook, chapter, verse)
+
+                f.write("""\n<verse osisID="%s"/>""" % osisIDVerse)
+
+                prev_verse = verse
+
+            f.write("""%s """ % w.beta2utf8(w.qere))
+
+        f.write("""</p>
+</chapter></div>""")
 
     def writeSFM(self, f, cur_monad):
         for v in self.verses:

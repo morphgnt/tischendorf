@@ -138,6 +138,13 @@ def read_TSP_writeMQL():
     rd.write_MQL("tischendorfmorph.mql", False) # False = bUseOldStyle
     return rd
 
+def read_TSP_writeOSIS():
+    rd = read_TSP()
+    rd.applyLemma(kind.kANLEX)
+    rd.parse_sentences()
+    rd.write_OSIS("tischendorfmorph.osis.xml")
+    return rd
+
 def read_TSP_writeSFM():
     rd = read_TSP()
     rd.applyLemma(kind.kANLEX)
@@ -243,3 +250,4 @@ def parseTischendorfBETA():
 read_Tischendorf_WH_compare_them()
 #read_TSP_writeTUP()
 #read_TSP_writeMQL()
+read_TSP_writeOSIS()
