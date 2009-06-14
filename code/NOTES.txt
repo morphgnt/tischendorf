@@ -4352,3 +4352,16 @@ T03:25: Development
 +                        "PISTEUSWMEN" : ("4100", "V-AAS-1P"),
 +                        "ESTHKASIN" : ("2476", "V-RAI-3P"),
 
+
+
+2009-06-15 
+
+manual_analyses.txt
++JOH 8:7.b.17 AUTH P-DSF 846
++JOH 13:32.6 AUTW P-DSM 846
++JOH 20:10.5 AUTOUS P-APM 846
++EPH 2:15.19 AUTW P-DSM 846
++PHP 3:21.22 AUTW P-DSM 846
++1TI 6:11.15 PRAUPAQIAN N-ASF 4240
++RE 18:7.3 AUTHN P-ASF 846
+
