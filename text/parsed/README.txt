@@ -298,3 +298,14 @@ v. 2.5 (2009-01-01)
    - Proof-read the "preicope adulterae" (John 7:53-8:11).
    - Updated the analysis and lemma assignment for a number of words.
 
+v 2.6 (2009-??-??)
+   - Added paragraph- and chapter-breaks for the books of Titus, 1
+     John, 2 John, and 3 John (they were missing in 2.5)
+   - Updated BETA version to have paragraph- and chapter-breaks (they
+     were missing from the BETA encoded version entirely in 2.5)
+   - Updated tags of possessive pronouns (e.g., E)MO/S, SO/S,
+     H(ME/TEROS, U(ME/TEROS) to provide the number of the possessor as
+     well as the number of the possessed.
+   - Forms of KREI/TTWN now have a -C (comparative) suffix.
+   - Various other fixes to the text and the analyses.
+
