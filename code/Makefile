@@ -16,7 +16,7 @@ DERIVED_MQLFILES = Byzantine.mql Stephens.mql \
 
 DERIVED_TXTFILES = lexicon_nonunique.txt tischlexicon_nonunique.txt
 
-EMDROSPATH=/home/ulrikp/opt/Emdros301-O3-withWX-shared-nodebug-withSWIG
+EMDROSPATH=/usr
 
 
 
