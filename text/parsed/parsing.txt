@@ -115,6 +115,15 @@ Pattern:
 
   pos [person] case number [gender] [suffix]
 
+For possessive pronouns (S-), the pattern is:
+
+  S- person-of-possessor number-of-possessor case-of-possessed number-of-possessed gender-of-possessed
+
+For example, SOU/S is S-2SAPM, because the number of the possessor is
+second person singular, whereas the possessed is accusative plural
+masculine.
+
+
 
 Indeclinable parts of speech
 ============================
