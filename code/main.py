@@ -248,6 +248,6 @@ def parseTischendorfBETA():
 #read_WHB()
 #read_Tischendorf_WH_Matthew_compare_them()
 read_Tischendorf_WH_compare_them()
-#read_TSP_writeTUP()
+read_TSP_writeTUP()
 #read_TSP_writeMQL()
-read_TSP_writeOSIS()
+#read_TSP_writeOSIS()
