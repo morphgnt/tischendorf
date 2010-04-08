@@ -15,7 +15,7 @@
  {X-DPM} mh 3361 {PRT-N} eterodidaskalein 2085 5721 {V-PAN}
 1:4 mhde 3366 {CONJ-N} prosecein 4337 5721 {V-PAN} muyoiv 3454
  {N-DPM} kai 2532 {CONJ} genealogiaiv 1076 {N-DPF} aperantoiv 562
- {A-DPF} aitinev 3748 {R-NPF} ekzhthseiv 2214 {N-APF} parecousin 3930
+ {A-DPF} aitinev 3748 {R-NPF} ekzhthseiv 0 2214 {N-APF} parecousin 3930
  5719 {V-PAI-3P} mallon 3123 {ADV} h 2228 {PRT} oikonomian 3622
  {N-ASF} yeou 2316 {N-GSM} thn 3588 {T-ASF} en 1722 {PREP} pistei
  4102 {N-DSF}
@@ -256,7 +256,7 @@
  kekausthriasmenwn 2743 5772 {V-RPP-GPM} thn 3588 {T-ASF} idian 2398
  {A-ASF} suneidhsin 4893 {N-ASF}
 4:3 kwluontwn 2967 5723 {V-PAP-GPM} gamein 1060 5721 {V-PAN}
- apecesyai 567 5733 {V-PMN} brwmatwn 1033 {N-GPN} a 3739 {R-APN} o
+ apecesyai 568 5733 {V-PMN} brwmatwn 1033 {N-GPN} a 3739 {R-APN} o
  3588 {T-NSM} yeov 2316 {N-NSM} ektisen 2936 5656 {V-AAI-3S} eiv 1519
  {PREP} metalhmqin 3336 {N-ASF} meta 3326 {PREP} eucaristiav 2169
  {N-GSF} toiv 3588 {T-DPM} pistoiv 4103 {A-DPM} kai 2532 {CONJ}
@@ -471,7 +471,7 @@
  3055 {N-APF} ex 1537 {PREP} wn 3739 {R-GPF} ginetai 1096 5736
  {V-PNI-3S} fyonov 5355 {N-NSM} eriv 2054 {N-NSF} blasfhmiai 988
  {N-NPF} uponoiai 5283 {N-NPF} ponhrai 4190 {A-NPF}
-6:5 diaparatribai 3859 {N-NPF} diefyarmenwn 1311 5772 {V-RPP-GPM}
+6:5 diaparatribai 0 3859 {N-NPF} diefyarmenwn 1311 5772 {V-RPP-GPM}
  anyrwpwn 444 {N-GPM} ton 3588 {T-ASM} noun 3563 {N-ASM} kai 2532
  {CONJ} apesterhmenwn 650 5772 {V-RPP-GPM} thv 3588 {T-GSF} alhyeiav
  225 {N-GSF} nomizontwn 3543 5723 {V-PAP-GPM} porismon 4200 {N-ASM}
@@ -505,7 +505,7 @@
  yeou 2316 {N-GSM} tauta 3778 {D-APN} feuge 5343 5720 {V-PAM-2S}
  diwke 1377 5720 {V-PAM-2S} de 1161 {CONJ} dikaiosunhn 1343 {N-ASF}
  eusebeian 2150 {N-ASF} pistin 4102 {N-ASF} agaphn 26 {N-ASF}
- upomonhn 5281 {N-ASF} praupayian 4240 {N-ASF}
+ upomonhn 5281 {N-ASF} praupayian 0 4240 {N-ASF}
 6:12 agwnizou 75 5737 {V-PNM-2S} ton 3588 {T-ASM} kalon 2570 {A-ASM}
  agwna 73 {N-ASM} thv 3588 {T-GSF} pistewv 4102 {N-GSF} epilabou 1949
  5634 {V-2ADM-2S} thv 3588 {T-GSF} aiwniou 166 {A-GSF} zwhv 2222

@@ -192,7 +192,7 @@
  plhroforiav 4136 {N-GSF} thv 3588 {T-GSF} sunesewv 4907 {N-GSF} eiv
  1519 {PREP} epignwsin 1922 {N-ASF} tou 3588 {T-GSN} musthriou 3466
  {N-GSN} tou 3588 {T-GSM} yeou 2316 {N-GSM} cristou 5547 {N-GSM}
-2:3 en 1722 {PREP} w 3739 {R-DSN} eisin 1510 5719 {V-PAI-3P} pantev
+2:3 en 1722 {PREP} w 3739 {R-DSM} eisin 1510 5719 {V-PAI-3P} pantev
  3956 {A-NPM} oi 3588 {T-NPM} yhsauroi 2344 {N-NPM} thv 3588 {T-GSF}
  sofiav 4678 {N-GSF} kai 2532 {CONJ} gnwsewv 1108 {N-GSF} apokrufoi
  614 {A-NPM}
@@ -238,13 +238,13 @@
  swmatov 4983 {N-GSN} thv 3588 {T-GSF} sarkov 4561 {N-GSF} en 1722
  {PREP} th 3588 {T-DSF} peritomh 4061 {N-DSF} tou 3588 {T-GSM}
  cristou 5547 {N-GSM}
-2:12 suntafentev 4916 5651 {V-2APP-NPM} autw 846 {P-DSM} en 1722
- {PREP} tw 3588 {T-DSN} | baptismati 908 {N-DSN} | baptismw 909
- {N-DSM} | en 1722 {PREP} w 3739 {R-DSN} kai 2532 {CONJ} sunhgeryhte
- 4891 5681 {V-API-2P} dia 1223 {PREP} thv 3588 {T-GSF} pistewv 4102
- {N-GSF} thv 3588 {T-GSF} energeiav 1753 {N-GSF} tou 3588 {T-GSM}
- yeou 2316 {N-GSM} tou 3588 {T-GSM} egeirantov 1453 5660 {V-AAP-GSM}
- auton 846 {P-ASM} ek 1537 {PREP} nekrwn 3498 {A-GPM}
+2:12 suntafentev 4916 5651 {V-2APP-NPM} autw 846 {P-DSM} en 1722 {PREP}
+ tw 3588 | {T-DSN} | {T-DSM} | | baptismati 908 {N-DSN} | baptismw 909
+ {N-DSM} | en 1722 {PREP} w 3739 | {R-DSN} | {R-DSM} | kai 2532 {CONJ}
+ sunhgeryhte 4891 5681 {V-API-2P} dia 1223 {PREP} thv 3588 {T-GSF}
+ pistewv 4102 {N-GSF} thv 3588 {T-GSF} energeiav 1753 {N-GSF} tou 3588
+ {T-GSM} yeou 2316 {N-GSM} tou 3588 {T-GSM} egeirantov 1453 5660
+ {V-AAP-GSM} auton 846 {P-ASM} ek 1537 {PREP} nekrwn 3498 {A-GPM}
 2:13 kai 2532 {CONJ} umav 4771 {P-2AP} nekrouv 3498 {A-APM} ontav
  1510 5723 {V-PAP-APM} | | [en] 1722 {PREP} | toiv 3588 {T-DPN}
  paraptwmasin 3900 {N-DPN} kai 2532 {CONJ} th 3588 {T-DSF} akrobustia
@@ -498,11 +498,12 @@
  teleioi 5046 {A-NPM} kai 2532 {CONJ} peplhroforhmenoi 4135 5772
  {V-RPP-NPM} en 1722 {PREP} panti 3956 {A-DSN} yelhmati 2307 {N-DSN}
  tou 3588 {T-GSM} yeou 2316 {N-GSM}
-4:13 marturw 3140 5719 {V-PAI-1S} gar 1063 {CONJ} autw 846 {P-DSM}
- oti 3754 {CONJ} ecei 2192 5719 {V-PAI-3S} polun 4183 {A-ASM} ponon
- 4192 {N-ASM} uper 5228 {PREP} umwn 4771 {P-2GP} kai 2532 {CONJ} twn
- 3588 {T-GPM} en 1722 {PREP} laodikeia 2993 {N-DSF} kai 2532 {CONJ}
- twn 3588 {T-GPM} en 1722 {PREP} ierapolei 2404 {N-DSF}
+4:13 marturw 3140 5719 {V-PAI-1S} gar 1063 {CONJ} autw 846 {P-DSM} oti
+ 3754 {CONJ} ecei 2192 5719 {V-PAI-3S} polun 4183 {A-ASM} ponon 4192
+ {N-ASM} uper 5228 {PREP} umwn 4771 {P-2GP} kai 2532 {CONJ} twn 3588
+ {T-GPM} en 1722 {PREP} laodikeia 2993 {N-DSF} kai 2532 {CONJ} twn 3588
+ {T-GPM} en 1722 {PREP} | iera 2413 {A-DSF} polei 4172 {N-DSF} |
+ ierapolei 2404 {N-DSF} |
 4:14 aspazetai 782 5736 {V-PNI-3S} umav 4771 {P-2AP} loukav 3065
  {N-NSM} o 3588 {T-NSM} iatrov 2395 {N-NSM} o 3588 {T-NSM} agaphtov
  27 {A-NSM} kai 2532 {CONJ} dhmav 1214 {N-NSM}

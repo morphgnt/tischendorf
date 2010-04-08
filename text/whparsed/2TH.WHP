@@ -16,13 +16,13 @@
  26 {N-NSF} enov 1520 {A-GSM} ekastou 1538 {A-GSM} pantwn 3956
  {A-GPM} umwn 4771 {P-2GP} eiv 1519 {PREP} allhlouv 240 {C-APM}
 1:4 wste 5620 {CONJ} autouv 846 {P-APM} hmav 1473 {P-1AP} en 1722
- {PREP} umin 4771 {P-2DP} egkaucasyai 2744 5738 {V-PNN} en 1722
- {PREP} taiv 3588 {T-DPF} ekklhsiaiv 1577 {N-DPF} tou 3588 {T-GSM}
- yeou 2316 {N-GSM} uper 5228 {PREP} thv 3588 {T-GSF} upomonhv 5281
- {N-GSF} umwn 4771 {P-2GP} kai 2532 {CONJ} pistewv 4102 {N-GSF} en
- 1722 {PREP} pasin 3956 {A-DPM} toiv 3588 {T-DPM} diwgmoiv 1375
- {N-DPM} umwn 4771 {P-2GP} kai 2532 {CONJ} taiv 3588 {T-DPF} yliqesin
- 2347 {N-DPF} aiv 3739 {R-DPF} anecesye 430 5736 {V-PNI-2P}
+ {PREP} umin 4771 {P-2DP} | enkaucasyai | egkaucasyai | 0 2744 5738
+ {V-PNN} en 1722 {PREP} taiv 3588 {T-DPF} ekklhsiaiv 1577 {N-DPF} tou
+ 3588 {T-GSM} yeou 2316 {N-GSM} uper 5228 {PREP} thv 3588 {T-GSF}
+ upomonhv 5281 {N-GSF} umwn 4771 {P-2GP} kai 2532 {CONJ} pistewv 4102
+ {N-GSF} en 1722 {PREP} pasin 3956 {A-DPM} toiv 3588 {T-DPM} diwgmoiv
+ 1375 {N-DPM} umwn 4771 {P-2GP} kai 2532 {CONJ} taiv 3588 {T-DPF}
+ yliqesin 2347 {N-DPF} aiv 3739 {R-DPF} anecesye 430 5736 {V-PNI-2P}
 1:5 endeigma 1730 {N-NSN} thv 3588 {T-GSF} dikaiav 1342 {A-GSF}
  krisewv 2920 {N-GSF} tou 3588 {T-GSM} yeou 2316 {N-GSM} eiv 1519
  {PREP} to 3588 {T-ASN} kataxiwyhnai 2661 5683 {V-APN} umav 4771
@@ -243,8 +243,8 @@
  {N-GSF} ergazomenoi 2038 5740 {V-PNP-NPM} ton 3588 {T-ASM} eautwn
  1438 {F-3GPM} arton 740 {N-ASM} esyiwsin 2068 5725 {V-PAS-3P}
 3:13 umeiv 4771 {P-2NP} de 1161 {CONJ} adelfoi 80 {N-VPM} mh 3361
- {PRT-N} egkakhshte 1573 5661 {V-AAS-2P} kalopoiountev 2569 5723
- {V-PAP-NPM}
+ {PRT-N} | enkakhshte | egkakhshte | 1573 5661 {V-AAS-2P} kalopoiountev
+ 2569 5723 {V-PAP-NPM}
 3:14 ei 1487 {COND} de 1161 {CONJ} tiv 5100 {X-NSM} ouc 3756 {PRT-N}
  upakouei 5219 5719 {V-PAI-3S} tw 3588 {T-DSM} logw 3056 {N-DSM} hmwn
  1473 {P-1GP} dia 1223 {PREP} thv 3588 {T-GSF} epistolhv 1992 {N-GSF}

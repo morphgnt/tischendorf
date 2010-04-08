@@ -473,7 +473,7 @@
  5613 {ADV} aggelon 32 {N-ASM} yeou 2316 {N-GSM} edexasye 1209 5662
  {V-ADI-2P} me 1473 {P-1AS} wv 5613 {ADV} criston 5547 {N-ASM} ihsoun
  2424 {N-ASM}
-4:15 pou 4226 {PRT-I} oun 3767 {CONJ} o 3588 {T-NSM} makarismov 3108
+4:15 pou 4226 {ADV-I} oun 3767 {CONJ} o 3588 {T-NSM} makarismov 3108
  {N-NSM} umwn 4771 {P-2GP} marturw 3140 5719 {V-PAI-1S} gar 1063
  {CONJ} umin 4771 {P-2DP} oti 3754 {CONJ} ei 1487 {COND} dunaton 1415
  {A-NSN} touv 3588 {T-APM} ofyalmouv 3788 {N-APM} umwn 4771 {P-2GP}
@@ -645,7 +645,7 @@
 5:21 fyonoi 5355 {N-NPM} meyai 3178 {N-NPF} kwmoi 2970 {N-NPM} kai
  2532 {CONJ} ta 3588 {T-NPN} omoia 3664 {A-NPN} toutoiv 3778 {D-DPN}
  a 3739 {R-APN} prolegw 4302 5719 {V-PAI-1S} umin 4771 {P-2DP} kaywv
- 2531 {ADV} proeipon 4277 5627 {V-2AAI-1S} oti 3754 {CONJ} oi 3588
+ 2531 {ADV} proeipon 4302 5627 {V-2AAI-1S} oti 3754 {CONJ} oi 3588
  {T-NPM} ta 3588 {T-APN} toiauta 5108 {D-APN} prassontev 4238 5723
  {V-PAP-NPM} basileian 932 {N-ASF} yeou 2316 {N-GSM} ou 3756 {PRT-N}
  klhronomhsousin 2816 5692 {V-FAI-3P}
@@ -708,9 +708,10 @@
  4151 {N-ASN} ek 1537 {PREP} tou 3588 {T-GSN} pneumatov 4151 {N-GSN}
  yerisei 2325 5692 {V-FAI-3S} zwhn 2222 {N-ASF} aiwnion 166 {A-ASF}
 6:9 to 3588 {T-ASN} de 1161 {CONJ} kalon 2570 {A-ASN} poiountev 4160
- 5723 {V-PAP-NPM} mh 3361 {PRT-N} egkakwmen 1573 5725 {V-PAS-1P}
- kairw 2540 {N-DSM} gar 1063 {CONJ} idiw 2398 {A-DSM} yerisomen 2325
- 5692 {V-FAI-1P} mh 3361 {PRT-N} ekluomenoi 1590 5746 {V-PPP-NPM}
+ 5723 {V-PAP-NPM} mh 3361 {PRT-N} | enkakwmen | egkakwmen | 1573 5725
+ {V-PAS-1P} kairw 2540 {N-DSM} gar 1063 {CONJ} idiw 2398 {A-DSM}
+ yerisomen 2325 5692 {V-FAI-1P} mh 3361 {PRT-N} ekluomenoi 1590 5746
+ {V-PPP-NPM}
 6:10 ara 686 {PRT} oun 3767 {CONJ} wv 5613 {ADV} kairon 2540 {N-ASM}
  | ecwmen 2192 5725 {V-PAS-1P} | ecomen 2192 5719 {V-PAI-1P} |
  ergazwmeya 2038 5741 {V-PNS-1P} to 3588 {T-ASN} agayon 18 {A-ASN}

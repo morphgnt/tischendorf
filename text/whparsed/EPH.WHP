@@ -85,10 +85,10 @@
  5723 {V-PAP-NSM} uper 5228 {PREP} umwn 4771 {P-2GP} mneian 3417
  {N-ASF} poioumenov 4160 5734 {V-PMP-NSM} epi 1909 {PREP} twn 3588
  {T-GPF} proseucwn 4335 {N-GPF} mou 1473 {P-1GS}
-1:17 ina 2443 {CONJ} o 3588 {T-NSM} yeov 2316 {N-NSM} tou 3588
- {T-GSM} kuriou 2962 {N-GSM} hmwn 1473 {P-1GP} ihsou 2424 {N-GSM}
- cristou 5547 {N-GSM} o 3588 {T-NSM} pathr 3962 {N-NSM} thv 3588
- {T-GSF} doxhv 1391 {N-GSF} dwh 1325 5630 {V-2AAO-3S} umin 4771
+1:17 ina 2443 {CONJ} o 3588 {T-NSM} yeov 2316 {N-NSM} tou 3588 {T-GSM}
+ kuriou 2962 {N-GSM} hmwn 1473 {P-1GP} ihsou 2424 {N-GSM} cristou 5547
+ {N-GSM} o 3588 {T-NSM} pathr 3962 {N-NSM} thv 3588 {T-GSF} doxhv 1391
+ {N-GSF} dwh 1325 | 5630 {V-2AAO-3S} | 5632 {V-2AAS-3S} | umin 4771
  {P-2DP} pneuma 4151 {N-ASN} sofiav 4678 {N-GSF} kai 2532 {CONJ}
  apokaluqewv 602 {N-GSF} en 1722 {PREP} epignwsei 1922 {N-DSF} autou
  846 {P-GSM}
@@ -313,11 +313,11 @@
  3588 {T-ASF} parrhsian 3954 {N-ASF} kai 2532 {CONJ} prosagwghn 4318
  {N-ASF} en 1722 {PREP} pepoiyhsei 4006 {N-DSF} dia 1223 {PREP} thv
  3588 {T-GSF} pistewv 4102 {N-GSF} autou 846 {P-GSM}
-3:13 dio 1352 {CONJ} aitoumai 154 5731 {V-PMI-1S} mh 3361 {PRT-N}
- egkakein 1573 5721 {V-PAN} en 1722 {PREP} taiv 3588 {T-DPF} yliqesin
- 2347 {N-DPF} mou 1473 {P-1GS} uper 5228 {PREP} umwn 4771 {P-2GP}
- htiv 3748 {R-NSF} estin 1510 5719 {V-PAI-3S} doxa 1391 {N-NSF} umwn
- 4771 {P-2GP}
+3:13 dio 1352 {CONJ} aitoumai 154 5731 {V-PMI-1S} mh 3361 {PRT-N} |
+ enkakein | egkakein | 1573 5721 {V-PAN} en 1722 {PREP} taiv 3588
+ {T-DPF} yliqesin 2347 {N-DPF} mou 1473 {P-1GS} uper 5228 {PREP} umwn
+ 4771 {P-2GP} htiv 3748 {R-NSF} estin 1510 5719 {V-PAI-3S} doxa 1391
+ {N-NSF} umwn 4771 {P-2GP}
 3:14 toutou 3778 {D-GSN} carin 5484 {ADV} kamptw 2578 5719 {V-PAI-1S}
  ta 3588 {T-APN} gonata 1119 {N-APN} mou 1473 {P-1GS} prov 4314
  {PREP} ton 3588 {T-ASM} patera 3962 {N-ASM}
@@ -347,10 +347,10 @@
  2443 {CONJ} plhrwyhte 4137 5686 {V-APS-2P} eiv 1519 {PREP} pan 3956
  {A-ASN} to 3588 {T-ASN} plhrwma 4138 {N-ASN} tou 3588 {T-GSM} yeou
  2316 {N-GSM}
-3:20 tw 3588 {T-DSM} de 1161 {CONJ} dunamenw 1410 5740 {V-PNP-DSM}
- uper 5228 {PREP} panta 3956 {A-APN} poihsai 4160 5658 {V-AAN} uper
- 5228 {PREP} ekperissou 0 4055 {ADV} wn 3739 {R-GPN} aitoumeya 154 5731
- {V-PMI-1P} h 2228 {PRT} nooumen 3539 5719 {V-PAI-1P} kata 2596
+3:20 tw 3588 {T-DSM} de 1161 {CONJ} dunamenw 1410 5740 {V-PNP-DSM} uper
+ 5228 {PREP} panta 3956 {A-APN} poihsai 4160 5658 {V-AAN}
+ uperekperissou 0 5228 1537 4053 {ADV} wn 3739 {R-GPN} aitoumeya 154
+ 5731 {V-PMI-1P} h 2228 {PRT} nooumen 3539 5719 {V-PAI-1P} kata 2596
  {PREP} thn 3588 {T-ASF} dunamin 1411 {N-ASF} thn 3588 {T-ASF}
  energoumenhn 1754 5734 {V-PMP-ASF} en 1722 {PREP} hmin 1473 {P-1DP}
 3:21 autw 846 {P-DSM} h 3588 {T-NSF} doxa 1391 {N-NSF} en 1722 {PREP}
@@ -472,7 +472,7 @@
  {V-PAI-3S} alhyeia 225 {N-NSF} en 1722 {PREP} tw 3588 {T-DSM} ihsou
  2424 {N-DSM}
 4:22 apoyesyai 659 5641 {V-2AMN} umav 4771 {P-2AP} kata 2596 {PREP}
- thn 3588 {T-ASF} proteran 4387 {A-ASF-C} anastrofhn 391 {N-ASF} ton
+ thn 3588 {T-ASF} proteran 4386 {A-ASF-C} anastrofhn 391 {N-ASF} ton
  3588 {T-ASM} palaion 3820 {A-ASM} anyrwpon 444 {N-ASM} ton 3588
  {T-ASM} fyeiromenon 5351 5746 {V-PPP-ASM} kata 2596 {PREP} tav 3588
  {T-APF} epiyumiav 1939 {N-APF} thv 3588 {T-GSF} apathv 539 {N-GSF}

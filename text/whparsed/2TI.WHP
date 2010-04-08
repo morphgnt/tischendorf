@@ -124,8 +124,8 @@
  {V-PPI-3S} ean 1437 {COND} mh 3361 {PRT-N} nomimwv 3545 {ADV} aylhsh
  118 5661 {V-AAS-3S}
 2:6 ton 3588 {T-ASM} kopiwnta 2872 5723 {V-PAP-ASM} gewrgon 1092
- {N-ASM} dei 1163 5719 {V-PAI-3S} prwton 4412 {ADV-S} twn 3588
- {T-GPM} karpwn 2590 {N-GPM} metalambanein 3335 5721 {V-PAN}
+ {N-ASM} dei 1163 5719 {V-PAI-3S} prwton 4412 {ADV-S} 4413 {A-ASN-S}
+ twn 3588 {T-GPM} karpwn 2590 {N-GPM} metalambanein 3335 5721 {V-PAN}
 2:7 noei 3539 5720 {V-PAM-2S} o 3739 {R-ASN} legw 3004 5719
  {V-PAI-1S} dwsei 1325 5692 {V-FAI-3S} gar 1063 {CONJ} soi 4771
  {P-2DS} o 3588 {T-NSM} kuriov 2962 {N-NSM} sunesin 4907 {N-ASF} en
@@ -221,7 +221,7 @@
  pantav 3956 {A-APM} didaktikon 1317 {A-ASM} anexikakon 420 {A-ASM}
 2:25 en 1722 {PREP} prauthti 4240 {N-DSF} paideuonta 3811 5723
  {V-PAP-ASM} touv 3588 {T-APM} antidiatiyemenouv 475 5734 {V-PMP-APM}
- mhpote 3379 {ADV-N} dwh 1325 5630 {V-2AAO-3S} 1325 5632 {V-2AAS-3S}
+ mhpote 3379 {ADV-N} dwh 1325 | 5630 {V-2AAO-3S} | 5632 {V-2AAS-3S} |
  autoiv 846 {P-DPM} o 3588 {T-NSM} yeov 2316 {N-NSM} metanoian 3341
  {N-ASF} eiv 1519 {PREP} epignwsin 1922 {N-ASF} alhyeiav 225 {N-GSF}
 2:26 kai 2532 {CONJ} ananhqwsin 366 5661 {V-AAS-3P} ek 1537 {PREP}
@@ -305,7 +305,7 @@
  {N-DSM}
 3:16 pasa 3956 {A-NSF} grafh 1124 {N-NSF} yeopneustov 2315 {A-NSF}
  kai 2532 {CONJ} wfelimov 5624 {A-NSM} prov 4314 {PREP} didaskalian
- 1319 {N-ASF} prov 4314 {PREP} elegmon 1650 {N-ASM} prov 4314 {PREP}
+ 1319 {N-ASF} prov 4314 {PREP} elegmon 0 1650 {N-ASM} prov 4314 {PREP}
  epanorywsin 1882 {N-ASF} prov 4314 {PREP} paideian 3809 {N-ASF} thn
  3588 {T-ASF} en 1722 {PREP} dikaiosunh 1343 {N-DSF}
 3:17 ina 2443 {CONJ} artiov 739 {A-NSM} h 1510 5725 {V-PAS-3S} o 3588
