@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 2.5
+                             Version 2.6
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
@@ -170,7 +170,7 @@ http://morphgnt.org/projects/tischendorf
 
 
 Ulrik Sandborg-Petersen
-Aalborg, January 2009
+Aalborg, April 2010
 
 
 
@@ -298,7 +298,7 @@ v. 2.5 (2009-01-01)
    - Proof-read the "preicope adulterae" (John 7:53-8:11).
    - Updated the analysis and lemma assignment for a number of words.
 
-v 2.6 (2009-??-??)
+v 2.6 (2010-??-??)
    - Added paragraph- and chapter-breaks for the books of Titus, 1
      John, 2 John, and 3 John (they were missing in 2.5)
    - Updated BETA version to have paragraph- and chapter-breaks (they
@@ -308,4 +308,3 @@ v 2.6 (2009-??-??)
      well as the number of the possessed.
    - Forms of KREI/TTWN now have a -C (comparative) suffix.
    - Various other fixes to the text and the analyses.
-
