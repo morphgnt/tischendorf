@@ -3499,7 +3499,7 @@
  {PRT-N} ecw 2192 5719 {V-PAI-1S} pou 4226 {ADV-I} sunaxw 4863 5692
  {V-FAI-1S} touv 3588 {T-APM} karpouv 2590 {N-APM} mou 1473 {P-1GS}
 12:18 kai 2532 {CONJ} eipen 3004 5627 {V-2AAI-3S} touto 3778 {D-ASN}
- poihsw 4160 5692 {V-FAI-1S} kayelw 2507 5692 {V-FAI-1S} mou 1473
+ poihsw 4160 5692 {V-FAI-1S} kayelw 2507 5687 {V-2FAI-1S} mou 1473
  {P-1GS} tav 3588 {T-APF} apoyhkav 596 {N-APF} kai 2532 {CONJ}
  meizonav 3173 {A-APF-C} oikodomhsw 3618 5692 {V-FAI-1S} kai 2532
  {CONJ} sunaxw 4863 5692 {V-FAI-1S} ekei 1563 {ADV} panta 3956
@@ -4938,7 +4938,7 @@
  {V-PNI-3P}
 
 18:25 eukopwteron 2123 {A-NSN-C} gar 1063 {CONJ} estin 1510 5719
- {V-PAI-3S} kamhlon 2574 {N-ASM} dia 1223 {PREP} trhmatov 0 5169
+ {V-PAI-3S} kamhlon 2574 {N-ASF} dia 1223 {PREP} trhmatov 0 5169
  {N-GSN} belonhv 0 956 {N-GSF} eiselyein 1525 5629 {V-2AAN} h 2228
  {PRT} plousion 4145 {A-ASM} eiv 1519 {PREP} thn 3588 {T-ASF}
  basileian 932 {N-ASF} tou 3588 {T-GSM} yeou 2316 {N-GSM} eiselyein
@@ -5667,12 +5667,13 @@
  eynwn 1484 {N-GPN} acri 891 {ADV} ou 3739 {R-GSM} plhrwywsin 4137
  5686 {V-APS-3P} | [kai 2532 {CONJ} esontai] 1510 5695 {V-FDI-3P} | |
  kairoi 2540 {N-NPM} eynwn 1484 {N-GPN}
-21:25 kai 2532 {CONJ} esontai 1510 5695 {V-FDI-3P} shmeia 4592
- {N-NPN} en 1722 {PREP} hliw 2246 {N-DSM} kai 2532 {CONJ} selhnh 4582
- {N-DSF} kai 2532 {CONJ} astroiv 798 {N-DPN} kai 2532 {CONJ} epi 1909
- {PREP} thv 3588 {T-GSF} ghv 1093 {N-GSF} sunoch 4928 {N-NSF} eynwn
- 1484 {N-GPN} en 1722 {PREP} aporia 640 {N-DSF} hcouv 2279 {N-GSN}
- yalasshv 2281 {N-GSF} kai 2532 {CONJ} salou 4535 {N-GSM}
+21:25 kai 2532 {CONJ} esontai 1510 5695 {V-FDI-3P} shmeia 4592 {N-NPN}
+ en 1722 {PREP} hliw 2246 {N-DSM} kai 2532 {CONJ} selhnh 4582 {N-DSF}
+ kai 2532 {CONJ} astroiv 798 {N-DPN} kai 2532 {CONJ} epi 1909 {PREP}
+ thv 3588 {T-GSF} ghv 1093 {N-GSF} sunoch 4928 {N-NSF} eynwn 1484
+ {N-GPN} en 1722 {PREP} aporia 640 {N-DSF} hcouv | 0 2279 {N-GSF} |
+ 2279 {N-GSN} | yalasshv 2281 {N-GSF} kai 2532 {CONJ} salou 4535
+ {N-GSM}
 21:26 apoqucontwn 674 5723 {V-PAP-GPM} anyrwpwn 444 {N-GPM} apo 575
  {PREP} fobou 5401 {N-GSM} kai 2532 {CONJ} prosdokiav 4329 {N-GSF}
  twn 3588 {T-GPM} epercomenwn 1904 5740 {V-PNP-GPM} th 3588 {T-DSF}

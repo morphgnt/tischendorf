@@ -221,8 +221,8 @@
 3:6 cristov 5547 {N-NSM} de 1161 {CONJ} wv 5613 {ADV} uiov 5207
  {N-NSM} epi 1909 {PREP} ton 3588 {T-ASM} oikon 3624 {N-ASM} autou
  846 {P-GSM} ou 3739 {R-GSM} oikov 3624 {N-NSM} esmen 1510 5719
- {V-PAI-1P} hmeiv 1473 {P-1NP} | ean 1437 {COND} | <eanper> 0 1437 4007 {COND} |
- thn 3588 {T-ASF} parrhsian 3954 {N-ASF} kai 2532 {CONJ} to
+ {V-PAI-1P} hmeiv 1473 {P-1NP} | ean 1437 | <eanper> 0 1437 4007 |
+ {COND} thn 3588 {T-ASF} parrhsian 3954 {N-ASF} kai 2532 {CONJ} to
  3588 {T-ASN} kauchma 2745 {N-ASN} thv 3588 {T-GSF} elpidov 1680
  {N-GSF} | [mecri 3360 {ADV} telouv 5056 {N-GSN} bebaian] 949 {A-ASF}
  | | katascwmen 2722 5632 {V-2AAS-1P}
@@ -330,7 +330,7 @@
 4:7 palin 3825 {ADV} tina 5100 {X-ASF} orizei 3724 5719 {V-PAI-3S}
  hmeran 2250 {N-ASF} shmeron 4594 {ADV} en 1722 {PREP} dauid 1138
  {N-PRI} legwn 3004 5723 {V-PAP-NSM} meta 3326 {PREP} tosouton 5118
- {D-ASM} cronon 5550 {N-ASM} kaywv 2531 {ADV} proeirhtai 4280 5769
+ {D-ASM} cronon 5550 {N-ASM} kaywv 2531 {ADV} proeirhtai 4302 5769
  {V-RPI-3S} shmeron 4594 {ADV} ean 1437 {COND} thv 3588 {T-GSF} fwnhv
  5456 {N-GSF} autou 846 {P-GSM} akoushte 191 5661 {V-AAS-2P} mh 3361
  {PRT-N} sklhrunhte 4645 5725 {V-PAS-2P} tav 3588 {T-APF} kardiav
@@ -1186,7 +1186,7 @@
  {N-ASF} alla 235 {CONJ} pistewv 4102 {N-GSF} eiv 1519 {PREP}
  peripoihsin 4047 {N-ASF} quchv 5590 {N-GSF}
 11:1 estin 1510 5719 {V-PAI-3S} de 1161 {CONJ} pistiv 4102 {N-NSF}
- elpizomenwn 1679 5746 {V-PPP-GPM} upostasiv 5287 {N-NSF} pragmatwn
+ elpizomenwn 1679 5746 {V-PPP-GPN} upostasiv 5287 {N-NSF} pragmatwn
  4229 {N-GPN} elegcov 1650 {N-NSM} ou 3756 {PRT-N} blepomenwn 991
  5746 {V-PPP-GPN}
 11:2 en 1722 {PREP} tauth 3778 {D-DSF} gar 1063 {CONJ} emarturhyhsan

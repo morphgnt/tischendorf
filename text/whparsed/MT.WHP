@@ -320,7 +320,7 @@
 3:4 autov 846 {P-NSM} de 1161 {CONJ} o 3588 {T-NSM} iwannhv 2491
  {N-NSM} eicen 2192 5707 {V-IAI-3S} to 3588 {T-ASN} enduma 1742
  {N-ASN} autou 846 {P-GSM} apo 575 {PREP} tricwn 2359 {N-GPF} kamhlou
- 2574 {N-GSM} kai 2532 {CONJ} zwnhn 2223 {N-ASF} dermatinhn 1193
+ 2574 {N-GSF} kai 2532 {CONJ} zwnhn 2223 {N-ASF} dermatinhn 1193
  {A-ASF} peri 4012 {PREP} thn 3588 {T-ASF} osfun 3751 {N-ASF} autou
  846 {P-GSM} h 3588 {T-NSF} de 1161 {CONJ} trofh 5160 {N-NSF} hn 1510
  5707 {V-IAI-3S} autou 846 {P-GSM} akridev 200 {N-NPF} kai 2532
@@ -3865,7 +3865,7 @@
  basileian 932 {N-ASF} twn 3588 {T-GPM} ouranwn 3772 {N-GPM}
 19:24 palin 3825 {ADV} de 1161 {CONJ} legw 3004 5719 {V-PAI-1S} umin
  4771 {P-2DP} eukopwteron 2123 {A-NSN-C} estin 1510 5719 {V-PAI-3S}
- kamhlon 2574 {N-ASM} dia 1223 {PREP} | trhmatov 0 5169 {N-GSN} rafidov
+ kamhlon 2574 {N-ASF} dia 1223 {PREP} | trhmatov 0 5169 {N-GSN} rafidov
  4476 {N-GSF} eiselyein 1525 5629 {V-2AAN} h 2228 {PRT} plousion 4145
  {A-ASM} | truphmatov 5169 {N-GSN} rafidov 4476 {N-GSF} dielyein 1330
  5629 {V-2AAN} h 2228 {PRT} plousion 4145 {A-ASM} eiselyein 1525 5629
@@ -4085,8 +4085,8 @@
  | uiov 5207 {N-NSM} dauid 1138 {N-PRI}
 20:31 o 3588 {T-NSM} de 1161 {CONJ} oclov 3793 {N-NSM} epetimhsen
  2008 5656 {V-AAI-3S} autoiv 846 {P-DPM} ina 2443 {CONJ} siwphswsin
- 4623 5661 {V-AAS-3P} oi 3588 {T-NPM} de 1161 {CONJ} meizon 3185
- {ADV} ekraxan 2896 5656 {V-AAI-3P} legontev 3004 5723 {V-PAP-NPM} |
+ 4623 5661 {V-AAS-3P} oi 3588 {T-NPM} de 1161 {CONJ} meizon 3173
+ {ADV-C} ekraxan 2896 5656 {V-AAI-3P} legontev 3004 5723 {V-PAP-NPM} |
  kurie 2962 {N-VSM} elehson 1653 5657 {V-AAM-2S} hmav 1473 {P-1AP} |
  elehson 1653 5657 {V-AAM-2S} hmav 1473 {P-1AP} kurie 2962 {N-VSM} |
  uiov 5207 {N-NSM} dauid 1138 {N-PRI}
@@ -4766,7 +4766,7 @@
  863 5658 {V-AAN} | afienai 863 5721 {V-PAN} |
 23:24 odhgoi 3595 {N-VPM} tufloi 5185 {A-VPM} | | oi 3588 {T-NPM} |
  diulizontev 1368 5723 {V-PAP-NPM} ton 3588 {T-ASM} kwnwpa 2971
- {N-ASM} thn 3588 {T-ASF} de 1161 {CONJ} kamhlon 2574 {N-ASM}
+ {N-ASM} thn 3588 {T-ASF} de 1161 {CONJ} kamhlon 2574 {N-ASF}
  katapinontev 2666 5723 {V-PAP-NPM}
 23:25 ouai 3759 {INJ} umin 4771 {P-2DP} grammateiv 1122 {N-VPM} kai
  2532 {CONJ} farisaioi 5330 {N-VPM} upokritai 5273 {N-VPM} oti 3754
@@ -4981,7 +4981,7 @@
  planasyai 4105 5745 {V-PPN} | planhsai 4105 5658 {V-AAN} | ei 1487
  {COND} dunaton 1415 {A-NSN} kai 2532 {CONJ} touv 3588 {T-APM}
  eklektouv 1588 {A-APM}
-24:25 idou 3708 5640 {V-2AMM-2S} proeirhka 4280 5758 {V-RAI-1S} umin
+24:25 idou 3708 5640 {V-2AMM-2S} proeirhka 4302 5758 {V-RAI-1S} umin
  4771 {P-2DP}
 24:26 ean 1437 {COND} oun 3767 {CONJ} eipwsin 3004 5632 {V-2AAS-3P}
  umin 4771 {P-2DP} idou 3708 5640 {V-2AMM-2S} en 1722 {PREP} th 3588
@@ -6064,8 +6064,8 @@
  {A-ASF} wran 5610 {N-ASF} | ebohsen 994 5656 {V-AAI-3S} | anebohsen
  310 5656 {V-AAI-3S} | o 3588 {T-NSM} ihsouv 2424 {N-NSM} fwnh 5456
  {N-DSF} megalh 3173 {A-DSF} legwn 3004 5723 {V-PAP-NSM} | elwi 1682
- {ARAM} elwi 1682 {ARAM} | hli 2241 {HEB} hli 2241 {HEB} | lema 2982 {ARAM} 
- | sabacyanei 4518 {ARAM} | sabacyani 4518 {HEB} |
+ {ARAM} elwi 1682 {ARAM} | hli 2241 {HEB} hli 2241 {HEB} | lema 2982 |
+ {ARAM} | {HEB} | | sabacyanei | sabacyani | 4518 | {ARAM} | {HEB} |
  tout 3778 {D-NSN} estin 1510 5719 {V-PAI-3S} yee 2316 {N-VSM} mou 1473
  {P-1GS} yee 2316 {N-VSM} mou 1473 {P-1GS} ina 2443 {CONJ} ti 5101
  {I-ASN} me 1473 {P-1AS} egkatelipev 1459 5627 {V-2AAI-2S}

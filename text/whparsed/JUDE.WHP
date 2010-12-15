@@ -97,7 +97,7 @@
  {A-DPF} muriasin 3461 {N-DPF} autou 846 {P-GSM}
 1:15 poihsai 4160 5658 {V-AAN} krisin 2920 {N-ASF} kata 2596 {PREP}
  pantwn 3956 {A-GPM} kai 2532 {CONJ} elegxai 1651 5658 {V-AAN} |
- pantav 3956 {A-APM} touv 3588 {T-APM} asebeiv 765 {A-NPM} | pasan
+ pantav 3956 {A-APM} touv 3588 {T-APM} asebeiv 765 {A-APM} | pasan
  3956 {A-ASF} quchn 5590 {N-ASF} | peri 4012 {PREP} pantwn 3956
  {A-GPN} twn 3588 {T-GPN} ergwn 2041 {N-GPN} asebeiav 763 {N-GSF}
  autwn 846 {P-GPM} wn 3739 {R-GPN} hsebhsan 764 5656 {V-AAI-3P} kai
@@ -114,7 +114,7 @@
  {N-APN} wfeleiav 5622 {N-GSF} carin 5484 {ADV}
 1:17 umeiv 4771 {P-2NP} de 1161 {CONJ} agaphtoi 27 {A-VPM} mnhsyhte
  3403 5682 {V-APM-2P} twn 3588 {T-GPN} rhmatwn 4487 {N-GPN} twn 3588
- {T-GPN} proeirhmenwn 4280 5772 {V-RPP-GPN} upo 5259 {PREP} twn 3588
+ {T-GPN} proeirhmenwn 4302 5772 {V-RPP-GPN} upo 5259 {PREP} twn 3588
  {T-GPM} apostolwn 652 {N-GPM} tou 3588 {T-GSM} kuriou 2962 {N-GSM}
  hmwn 1473 {P-1GP} ihsou 2424 {N-GSM} cristou 5547 {N-GSM}
 1:18 oti 3754 {CONJ} elegon 3004 5707 {V-IAI-3P} umin 4771 {P-2DP} |
@@ -137,13 +137,13 @@
  {V-PNP-NPM} to 3588 {T-ASN} eleov 1656 {N-ASN} tou 3588 {T-GSM}
  kuriou 2962 {N-GSM} hmwn 1473 {P-1GP} ihsou 2424 {N-GSM} cristou
  5547 {N-GSM} eiv 1519 {PREP} zwhn 2222 {N-ASF} aiwnion 166 {A-ASF}
-1:22 kai 2532 {CONJ} ouv 3739 {R-APM} men 3303 {PRT} eleate 1653 5720
+1:22 kai 2532 {CONJ} ouv 3739 {R-APM} men 3303 {PRT} eleate 0 1653 5720
  {V-PAM-2P} diakrinomenouv 1252 5734 {V-PMP-APM} | swzete 4982 5720
  {V-PAM-2P} ek 1537 {PREP} purov 4442 {N-GSN} arpazontev 726 5723
  {V-PAP-NPM} | |
 1:23 ouv 3739 {R-APM} de 1161 {CONJ} | | swzete 4982 5720 {V-PAM-2P}
  ek 1537 {PREP} purov 4442 {N-GSN} arpazontev 726 5723 {V-PAP-NPM}
- ouv 3739 {R-APM} de 1161 {CONJ} | eleate 1653 5720 {V-PAM-2P} en
+ ouv 3739 {R-APM} de 1161 {CONJ} | eleate 0 1653 5720 {V-PAM-2P} en
  1722 {PREP} fobw 5401 {N-DSM} misountev 3404 5723 {V-PAP-NPM} kai
  2532 {CONJ} ton 3588 {T-ASM} apo 575 {PREP} thv 3588 {T-GSF} sarkov
  4561 {N-GSF} espilwmenon 4695 5772 {V-RPP-ASM} citwna 5509 {N-ASM}
