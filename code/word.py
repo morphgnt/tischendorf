@@ -694,7 +694,7 @@ class Word:
 		    self.parsing = words[index][1:-1] # Strip '{' and '}'
 		    index += 1
 		else:
-		    raise Exception("Error in Word.parse: 2: Unknown kind:" + str(kind) + " '" +str(words[index]) + "', words = " + str(words))
+		    raise Exception("Error in Word.parse: 2: Unknown kind:" + str(kind) + " '" +str(words[index]) + "' index=" + str(index) +", words = " + str(words[index:]))
 	    elif state == state_strongs2:
 		kind = recognize(words[index])
 		
