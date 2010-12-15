@@ -1,3 +1,4 @@
+import sys
 import string
 from word import *
 from variant import *
@@ -9,15 +10,19 @@ import re
  
 
  
-text_variant_strongs_parsing_re= re.compile(r'\|\s+([a-z\[\]]+)\s+\|\s+([a-z\[\]]+)\s+\|([0-9\s]+\{[A-Z0-9\-]+\})\s*')
+text_variant_strongs_parsing_re= re.compile(r'\|\s+([a-z\[\]<>]+)\s+\|\s+([a-z\[\]<>]+)\s+\|([0-9\s]+\{[A-Z0-9\-]+\})\s*')
 
-text_strongs_varparsing_varparsing_re = re.compile(r'(\s+[a-z\[\]]+\s+[0-9]+\s+)\|\s+(\{[A-Z0-9\-]+\})\s+\|\s+(\{[A-Z0-9\-]+\})\s+')
+text_strongs_varparsing_varparsing_re = re.compile(r'(\s+[a-z\[\]<>]+\s+[0-9]+\s+)\|\s+(\{[A-Z0-9\-]+\})\s+\|\s+(\{[A-Z0-9\-]+\})\s+')
 
-text_strongs_vartext_varstrongs_parsing = re.compile(r'\|\s+([a-z\[\]]+\s+[0-9]+)\s+\|\s+([a-z\[\]]+\s+[0-9]+)\s+\|\s+(\{[A-Z0-9\-]+\})\s+')
+text_strongs_vartext_varstrongs_parsing = re.compile(r'\|\s+([a-z\[\]<>]+\s+[0-9]+)\s+\|\s+([a-z\[\]<>]+\s+[0-9]+)\s+\|\s+(\{[A-Z0-9\-]+\})\s+')
 
-text_zerostrongs_re = re.compile(r'([a-z\[\]]+)\s+0\s+')
+text_zerostrongs_re = re.compile(r'\s+0\s+([0-9]+)')
 
+text_variant_strongs_parsing_variant_strongs_parsing = re.compile(r'([a-z\[\]<>]+)\s+\|\s+([0-9]+\s+\{[A-Z0-9\-]+\})\s+\|\s+([0-9]+\s+\{[A-Z0-9\-]+\})\s+\|')
 
+text_strongs_variant_strongs_parsing_variant_strongs_parsing = re.compile(r'([a-z\[\]<>]+\s+[0-9]+)\s+\|\s+([0-9]+\s+\{[A-Z0-9\-]+\})\s+\|\s+([0-9]+\s+\{[A-Z0-9\-]+\})\s+\|')
+
+text_strongs_variant_text_strongs_strongs_variant_parsing = re.compile(r'\|\s+([a-z\[\]<>]+\s+[0-9]+)\s+\|\s+([a-z\[\]<>]+\s+[0-9]+\s+[0-9]+)\s+\|\s+(\{[A-Z0-9\-]+\})\s+')
 
 class Verse:
     def __init__(self, verse_lines, bookname, booknumber):
@@ -74,17 +79,32 @@ class Verse:
 
         # Get rid of Zero Strong's
         if text_zerostrongs_re.search(overall_line) != None:
-            overall_line = text_zerostrongs_re.sub(r'\1 ', overall_line)
+            overall_line = text_zerostrongs_re.sub(r' \1 ', overall_line)
 
         if text_variant_strongs_parsing_re.search(overall_line) != None:
-            overall_line = text_variant_strongs_parsing_re.sub(r'| \1\3 | \2\3 | ', overall_line)
+            overall_line = text_variant_strongs_parsing_re.sub(r'| \1 \3 | \2 \3 | ', overall_line)
 
         if text_strongs_varparsing_varparsing_re.search(overall_line) != None:
-            overall_line = text_strongs_varparsing_varparsing_re.sub(r'| \1\2 | \1\3 | ', overall_line)
+            overall_line = text_strongs_varparsing_varparsing_re.sub(r'| \1 \2 | \1 \3 | ', overall_line)
 
         if text_strongs_vartext_varstrongs_parsing.search(overall_line) != None:
             overall_line = text_strongs_vartext_varstrongs_parsing.sub(r'| \1 \3 | \2 \3 | ', overall_line)
             
+        if text_variant_strongs_parsing_variant_strongs_parsing.search(overall_line) != None:
+            sys.stderr.write("UP200!\n")
+            overall_line = text_variant_strongs_parsing_variant_strongs_parsing.sub(r'| \1 \2 | \1 \3 | ', overall_line)
+
+        if text_strongs_variant_strongs_parsing_variant_strongs_parsing.search(overall_line) != None:
+            sys.stderr.write("UP201!\n")
+            overall_line = text_strongs_variant_strongs_parsing_variant_strongs_parsing.sub(r'| \1 \2 | \1 \3 | ', overall_line)
+
+        if text_strongs_variant_text_strongs_strongs_variant_parsing.search(overall_line) != None:
+            sys.stderr.write("UP202!\n")
+            overall_line = text_strongs_variant_text_strongs_strongs_variant_parsing.sub(r'| \1 \3 | \2 \3 | ', overall_line)
+            
+            
+
+
 
         # In Romans 16:27, we find the line ends with "{HEB}|".
         # We need this to be "{HEB} |".
