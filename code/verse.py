@@ -91,11 +91,9 @@ class Verse:
             overall_line = text_strongs_vartext_varstrongs_parsing.sub(r'| \1 \3 | \2 \3 | ', overall_line)
             
         if text_variant_strongs_parsing_variant_strongs_parsing.search(overall_line) != None:
-            sys.stderr.write("UP200!\n")
             overall_line = text_variant_strongs_parsing_variant_strongs_parsing.sub(r'| \1 \2 | \1 \3 | ', overall_line)
 
         if text_strongs_variant_strongs_parsing_variant_strongs_parsing.search(overall_line) != None:
-            sys.stderr.write("UP201!\n")
             overall_line = text_strongs_variant_strongs_parsing_variant_strongs_parsing.sub(r'| \1 \2 | \1 \3 | ', overall_line)
 
         if text_strongs_variant_text_strongs_strongs_variant_parsing.search(overall_line) != None:
