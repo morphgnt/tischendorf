@@ -4429,3 +4429,25 @@ Today I:
 +RE 16:16.10 ARMAGEDWN N-PRI 717
 +RE 18:12.21 QUION A-ASN 2367
 +RE 18:17.19 ESTHSAN V-AAI-3P 2476
+
+
+2011-04-18
+
+Today I:
+
+- Got the latest (2011-03-15) WH parsed text from Dr. Robinson's
+  Finnish friend's website.
+
+- Imported it into the process.
+
+- Wrote to Dr. Robinson with some oddities in his parsing relating to
+  the gender and number of *SO/DOMA.
+
+- Added the following to manual_analyses.txt:
+
++++ b/code/manual_analyses.txt
++RO 9:29.13 SODOMA N-NPN 4670
++JUDE 1:7.2 SODOMA N-NPN 4670
++RE 11:8.15 SODOMA N-NPN 4670
+
+30 minutes
