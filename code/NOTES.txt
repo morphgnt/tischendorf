@@ -4450,4 +4450,9 @@ Today I:
 +JUDE 1:7.2 SODOMA N-NPN 4670
 +RE 11:8.15 SODOMA N-NPN 4670
 
-30 minutes
+- Fixed the fact that Luke 19:1 was a paragraph boundary rather than a
+  chapter boundary.
+
+- Did some release-engineering, preparing for 2.7.
+
+60 minutes
