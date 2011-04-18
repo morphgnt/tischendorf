@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 2.6
+                             Version 2.7
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
@@ -308,3 +308,12 @@ v 2.6 (2010-??-??)
      well as the number of the possessed.
    - Forms of KREI/TTWN now have a -C (comparative) suffix.
    - Various other fixes to the text and the analyses.
+
+v 2.7 (2011-04-19)
+   - Update to latest Westcott-Hort base analysis from 2011-03-15, but
+     differing from this in the analysis of *SO/DOMA in three places
+     (to harmonize it as neuter plural, not feminine singular).
+   - This led to changes to the anlaysis for some 133 words.
+   - Luke 19:1 is now a chapter boundary (it was a paragraph boundary
+     in Version 2.6).
+
