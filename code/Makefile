@@ -62,8 +62,11 @@ zip: ../text/parsed/README.txt ../text/parsed/README-short.txt ../text/parsed/pa
 	mkdir -p $(FULLZIPDIR)/BETA
 	mkdir -p $(FULLZIPDIR)/Unicode
 	cp -p ../text/parsed/README.txt ../text/parsed/README-short.txt ../text/parsed/parsing.txt $(FULLZIPDIR)
-	for f in ../*.TSP; do NN=`echo $$f | sed -e 's/TSP/txt/g;s_../text/parsed/__g'`; cp $$f $(FULLZIPDIR)/BETA/$$NN; done
+	for f in ./*.TSP; do NN=`echo $$f | sed -e 's/TSP/txt/g;s_../text/parsed/__g'`; cp $$f $(FULLZIPDIR)/BETA/$$NN; done
 	for f in ./*.TUP; do NN=`echo $$f | sed -e 's/TUP/txt/g'`; cp $$f $(FULLZIPDIR)/Unicode/$$NN; done
+	dos2unix $(FULLZIPDIR)/BETA/*.txt $(FULLZIPDIR)/Unicode/*.txt
+	unix2dos $(FULLZIPDIR)/BETA/*.txt $(FULLZIPDIR)/Unicode/*.txt
+	dos2unix $(FULLZIPDIR)/*.txt ; unix2dos $(FULLZIPDIR)/*.txt 
 	PWD=`pwd`; cd $(ZIPDIRPREFIX) ; zip -r $(ZIPFILE) $(ZIPDIR) ; cd $$PWD
 
 mqlzip: tisch.mql
