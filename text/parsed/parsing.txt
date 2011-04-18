@@ -89,13 +89,13 @@ Verbs
 
 Patterns:
 
-  V- tense voice I person number [verb-extra]
-  V- tense voice S person number [verb-extra]
-  V- tense voice O person number [verb-extra]
-  V- tense voice M person number [verb-extra]
+  V- tense voice I- person number [verb-extra]
+  V- tense voice S- person number [verb-extra]
+  V- tense voice O- person number [verb-extra]
+  V- tense voice M- person number [verb-extra]
   V- tense voice N 
-  V- tense voice P case number gender [verb-extra]
-  V- tense voice R case number gender [verb-extra]
+  V- tense voice P- case number gender [verb-extra]
+  V- tense voice R- case number gender [verb-extra]
 
 
 Pronominal parts of speech
