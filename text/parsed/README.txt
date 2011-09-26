@@ -309,7 +309,7 @@ v 2.6 (2010-??-??)
    - Forms of KREI/TTWN now have a -C (comparative) suffix.
    - Various other fixes to the text and the analyses.
 
-v 2.7 (2011-04-19)
+v 2.7 (2011-09-26)
    - Update to latest Westcott-Hort base analysis from 2011-03-15, but
      differing from this in the analysis of *SO/DOMA in three places
      (to harmonize it as neuter plural, not feminine singular).
