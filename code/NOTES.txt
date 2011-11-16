@@ -4456,3 +4456,25 @@ Today I:
 - Did some release-engineering, preparing for 2.7.
 
 60 minutes
+
+
+2011-11-16
+
+Today I:
+
+- Reworked the MQL schema and rptag to simply the tense (get rid of
+  2nd aorist, future, perfect, and pluperfect) and the voice (get rid
+  of deponents and impersonal actives). Result: GNT_schema_1.4.mql
+
+- Redid the analysis of two words in manual_analyses.txt, in order to
+  add the possesor number.
+
+-LU 16:12.10 UMETERON S-2APN 5212
++LU 16:12.10 UMETERON S-2PAPN 5212
+-AC 24:3.14 SHS S-2GSF 4674
++AC 24:3.14 SHS S-2SGSF 4674
+
+- Added ":" to the punctuation that ends a sentence (w.ends_sentence).
+
+- Added a level of clauses.
+
