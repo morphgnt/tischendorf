@@ -101,7 +101,7 @@ for key in bookdict:
 
 
 
-class Sentence:
+class SRObject:
     def __init__(self, starting_monad):
 	self.starting_monad = starting_monad
 	self.ending_monad = starting_monad
@@ -109,11 +109,14 @@ class Sentence:
     def set_ending_monad(self, ending_monad):
 	self.ending_monad = ending_monad
 
+    def getOTN(self):
+        raise Exception("Implement getOTN in the child class!")
+
     def writeMQL(self, f, bUseOldStyle):
         print >>f, "CREATE OBJECT"
         print >>f, "FROM MONADS={%d-%d}" % (self.starting_monad, self.ending_monad)
         if bUseOldStyle:
-            OT = "Sentence"
+            OT = self.getOTN()
         else:
             OT = ""
         print >>f, "[%s]" % OT
@@ -122,6 +125,20 @@ class Sentence:
             print >>f, "GO\n"
         else:
             print >>f, ""
+
+class Sentence(SRObject):
+    def __init__(self, starting_monad):
+	SRObject.__init__(self, starting_monad)
+
+    def getOTN(self):
+        return "Sentence"
+
+class Clause(SRObject):
+    def __init__(self, starting_monad):
+	SRObject.__init__(self, starting_monad)
+
+    def getOTN(self):
+        return "Clause"
 
 class Book:
     def __init__(self, filename):
@@ -132,6 +149,7 @@ class Book:
         self.chapters = []
         self.verses = []
 	self.sentences = []
+	self.clauses = []
         self.verse_dict = {}
         #print filename
 
@@ -394,7 +412,7 @@ class Book:
 	cur_monad = self.start_monad
 	self.sentences.append(Sentence(cur_monad))
 	for w in words:
-	    if w.ends_sentence():
+            if w.ends_sentence():
 		ending_monad = w.monad
 		self.sentences[-1].set_ending_monad(ending_monad)
 		if ending_monad != self.end_monad:
@@ -404,6 +422,30 @@ class Book:
 	# did not have an end-of-sentence punctuation
 	if self.sentences[-1].ending_monad != self.end_monad:
 	    self.sentences[-1].set_ending_monad(self.end_monad)
+
+    def parse_clauses(self):
+	words = []
+	for v in self.verses:
+	    words.extend(v.words)
+	del self.clauses
+	self.clauses = []
+	cur_monad = self.start_monad
+	self.clauses.append(Clause(cur_monad))
+        bHasSeenVerb = False
+	for w in words:
+            if w.isVerb():
+                bHasSeenVerb = True
+            if (w.ends_with_comma() and bHasSeenVerb) or w.ends_sentence():
+		ending_monad = w.monad
+		self.clauses[-1].set_ending_monad(ending_monad)
+		if ending_monad != self.end_monad:
+		    self.clauses.append(Clause(ending_monad+1))
+                bHasSeenVerb = False
+
+	# End the last clause if the last word of the book 
+	# did not have an end-of-clause punctuation
+	if self.clauses[-1].ending_monad != self.end_monad:
+	    self.clauses[-1].set_ending_monad(self.end_monad)
 
     def writeVersesMQL(self, f, bUseOldStyle):
         if not bUseOldStyle:
@@ -419,6 +461,15 @@ class Book:
             print >>f, "CREATE OBJECTS WITH OBJECT TYPE [Sentence]"
         for s in self.sentences:
             s.writeMQL(f, bUseOldStyle)
+        if not bUseOldStyle:
+            print >>f, "GO"
+        print >>f, ""
+
+    def writeClausesMQL(self, f, bUseOldStyle):
+        if not bUseOldStyle:
+            print >>f, "CREATE OBJECTS WITH OBJECT TYPE [Clause]"
+        for c in self.clauses:
+            c.writeMQL(f, bUseOldStyle)
         if not bUseOldStyle:
             print >>f, "GO"
         print >>f, ""
@@ -456,6 +507,7 @@ class Book:
         self.writeBookMQL(f, bUseOldStyle)
         self.writeChaptersMQL(f, bUseOldStyle)
         self.writeVersesMQL(f, bUseOldStyle)
+        self.writeClausesMQL(f, bUseOldStyle)
         self.writeSentencesMQL(f, bUseOldStyle)
         self.writeWordsMQL(f, bUseOldStyle)
         if not bUseOldStyle:
