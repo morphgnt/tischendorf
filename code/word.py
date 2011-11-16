@@ -448,6 +448,12 @@ class Word:
     def ends_sentence(self):
 	return self.accented_surface[-1] in [".", ";", ":"]
 
+    def ends_with_comma(self):
+	return self.accented_surface[-1] == ","
+
+    def isVerb(self):
+        return self.parsing[0] == "V"
+
     def isVariant(self):
         return self.variant == variant_second or self.variant == variant_none
 
