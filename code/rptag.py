@@ -117,6 +117,14 @@ def parse_number(str, rptag):
         rptag.number = number
     return remainder
 
+def parse_possessor_number(str, rptag):
+    number, remainder = parse_re(number_re, str)
+    if number != "":
+        rptag.possessor_number = number
+    else:
+        raise Exception("Unknown ending: %s" % str)
+    return remainder
+
 def parse_gender(str, rptag):
     gender, remainder = parse_re(gender_re, str)
     if gender != "":
@@ -144,6 +152,15 @@ def parse_person(str, rptag):
     return remainder
 
 
+def parse_possessor_person(str, rptag):
+    person, remainder = parse_re(person_re, str)
+    if person != "":
+        rptag.person = person
+    else:
+        raise Exception("Unknown ending: %s" % str)
+    return remainder
+
+
 def parse_psp_pronoun(str, rptag):
     remainder = parse_person(str, rptag)
     if rptag.person == "3":
@@ -159,6 +176,16 @@ def parse_psp_pronoun(str, rptag):
 
 def parse_psp_pronoun_2(str, rptag):
     remainder = parse_person(str, rptag)
+    remainder = parse_case(remainder, rptag)
+    remainder = parse_number(remainder, rptag)
+    remainder = parse_gender(remainder, rptag)
+    if remainder != "":
+        remainder = parse_suffix(remainder, rptag)
+    return remainder
+
+def parse_psp_pronoun_3(str, rptag):
+    remainder = parse_possessor_person(str, rptag)
+    remainder = parse_possessor_number(remainder, rptag)
     remainder = parse_case(remainder, rptag)
     remainder = parse_number(remainder, rptag)
     remainder = parse_gender(remainder, rptag)
@@ -249,13 +276,13 @@ tense_dict = {
     "P" : "present",
     "I" : "imperfect",
     "F" : "future",
-    "2F" : "second_future",
+    "2F" : "future",
     "A" : "aorist",
-    "2A" : "second_aorist",
+    "2A" : "aorist",
     "R" : "perfect",
-    "2R" : "second_perfect",
+    "2R" : "perfect",
     "L" : "pluperfect",
-    "2L" : "second_pluperfect",
+    "2L" : "pluperfect",
     "X" : "no_tense_stated"
     }
 
@@ -265,10 +292,10 @@ voice_dict = {
     "M" : "middle",
     "P" : "passive",
     "E" : "middle_or_passive",
-    "D" : "middle_deponent",
-    "O" : "passive_deponent",
-    "N" : "middle_or_passive_deponent",
-    "Q" : "impersonal_active",
+    "D" : "middle",
+    "O" : "passive",
+    "N" : "middle_or_passive",
+    "Q" : "active",
     "X" : "no_voice"
     }
 
@@ -324,7 +351,7 @@ psp_dict = {
   "X-" : ("indefinite_pronoun", parse_psp_pronoun),
   "Q-" : ("correlative_or_interrogative_pronoun", parse_psp_pronoun),
   "F-" : ("reflexive_pronoun", parse_psp_pronoun_2),
-  "S-" : ("possessive_pronoun", parse_psp_pronoun_2),
+  "S-" : ("possessive_pronoun", parse_psp_pronoun_3),
   "P-" : ("personal_pronoun", parse_psp_pronoun),
   "V-" : ("verb", parse_psp_verb),
     }
@@ -357,6 +384,7 @@ class RobinsonPierpontTag:
         self.mood = "NA"
         self.extra = "NA"
         self.person = "NA"
+        self.possessor_number = "NA"
         self.parsetag()
 
     def parsetag(self):
@@ -373,6 +401,7 @@ class RobinsonPierpontTag:
         printMQL(f, "psp", self.psp, psp_dict)
         printMQL(f, "case", self.case, case_dict)
         printMQL(f, "number", self.number, number_dict)
+        printMQL(f, "possessor_number", self.possessor_number, number_dict)
         printMQL(f, "gender", self.gender, gender_dict)
         printMQL(f, "suffix", self.suffix, suffix_dict)
         printMQL(f, "tense", self.tense, tense_dict)
@@ -396,6 +425,7 @@ t = RobinsonPierpontTag("V-PAN")
 t = RobinsonPierpontTag("P-ASF")
 t = RobinsonPierpontTag("CONJ")
 t = RobinsonPierpontTag("V-PAP-NSM")
+t = RobinsonPierpontTag("V-2AAP-NSM")
 t = RobinsonPierpontTag("P-ASM")
 t = RobinsonPierpontTag("V-AAN")
 t = RobinsonPierpontTag("V-AOI-3S")
@@ -413,3 +443,4 @@ t = RobinsonPierpontTag("N-GSM")
 t = RobinsonPierpontTag("V-ADI-3S")
 t = RobinsonPierpontTag("T-NSF")
 t = RobinsonPierpontTag("PRT-N")
+t = RobinsonPierpontTag("S-1PNSF")
