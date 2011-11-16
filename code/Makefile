@@ -30,13 +30,13 @@ clean: cleantisch
 $(DB): tischendorfmorph.mql
 	-echo "DROP DATABASE $(DB)" | $(EMDROSPATH)/bin/mql 
 	echo "CREATE DATABASE $(DB)" | $(EMDROSPATH)/bin/mql 
-	$(EMDROSPATH)/bin/mql -d $(DB) GNT_schema_1.3.mql
+	$(EMDROSPATH)/bin/mql -d $(DB) GNT_schema_1.4.mql
 	$(EMDROSPATH)/bin/mql -d $(DB) -n tischendorfmorph.mql
 
 wh: WH.mql
 	-echo "DROP DATABASE wh" | $(EMDROSPATH)/bin/mql
 	echo "CREATE DATABASE wh" | $(EMDROSPATH)/bin/mql 
-	$(EMDROSPATH)/bin/mql -d wh GNT_schema_1.3.mql
+	$(EMDROSPATH)/bin/mql -d wh GNT_schema_1.4.mql
 	$(EMDROSPATH)/bin/mql -d wh -n WH.mql
 
 
@@ -83,12 +83,12 @@ whdb.mql: WH.mql
 	rm -f whdb.mql
 	echo "CREATE DATABASE wh GO" > whdb.mql
 	echo "USE DATABASE wh GO" >> whdb.mql
-	cat GNT_schema_1.3.mql >> whdb.mql
+	cat GNT_schema_1.4.mql >> whdb.mql
 	cat WH.mql >> whdb.mql
 
 tisch.mql: tischendorfmorph.mql
 	rm -f tisch.mql
 	echo "CREATE DATABASE tisch GO" > tisch.mql
 	echo "USE DATABASE tisch GO" >> tisch.mql
-	cat GNT_schema_1.3.mql >> tisch.mql
+	cat GNT_schema_1.4.mql >> tisch.mql
 	cat tischendorfmorph.mql >> tisch.mql
