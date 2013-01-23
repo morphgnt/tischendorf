@@ -27,11 +27,14 @@ all:
 clean: cleantisch
 	rm -f $(CLEANFILES)
 
+db3: $(DB)
+
 $(DB): tischendorfmorph.mql
-	-echo "DROP DATABASE $(DB)" | $(EMDROSPATH)/bin/mql 
-	echo "CREATE DATABASE $(DB)" | $(EMDROSPATH)/bin/mql 
-	$(EMDROSPATH)/bin/mql -d $(DB) GNT_schema_1.4.mql
-	$(EMDROSPATH)/bin/mql -d $(DB) -n tischendorfmorph.mql
+	-echo "DROP DATABASE $(DB)" | $(EMDROSPATH)/bin/mql -b 3
+	echo "CREATE DATABASE $(DB)" | $(EMDROSPATH)/bin/mql  -b 3
+	$(EMDROSPATH)/bin/mql -b 3 -d $(DB) GNT_schema_1.4.mql
+	$(EMDROSPATH)/bin/mql -b 3 -d $(DB) -n tischendorfmorph.mql
+	echo "VACUUM DATABASE ANALYZE GO" | $(EMDROSPATH)/bin/mql -b 3 -d $(DB)
 
 wh: WH.mql
 	-echo "DROP DATABASE wh" | $(EMDROSPATH)/bin/mql
