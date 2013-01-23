@@ -1,6 +1,6 @@
             Tischendorf's 8th edition Greek New Testament
                        with morphological tags
-                             Version 2.7
+			     Version 2.8
 
               Based on G. Clint Yale's Tischendorf text
                    and on Dr. Maurice A. Robinson's
@@ -109,13 +109,11 @@ compared to Strong's dictionary.  This and other factors entail that
 ANLEX has, in some respects, a more fine-grained lemma-division than
 Strong's.  
 
-Now, the lemmas were added automatically, based solely on the assigned
-Strong's number.  Therefore, in a few cases, a distinction which ANLEX
-makes is lost, since it was not made by Strong.  One such example is
-H)=XOS which in ANLEX is two lemmas, one being masculine and the other
-being neuter.  In Strong's dictionary, there is only one lemma, hence
-only one number, and hence, since the lemmas are based on the Strong's
-number, the distinction is lost.
+Most of the lemmas were added automatically, based solely on the
+assigned Strong's number.  Therefore, in a few cases, a distinction
+which ANLEX makes is lost, since it was not made by Strong.  The
+editor has, however, added correct lemmas where it was obvious that
+the lemma assignment based on Stron's was patently wrong.
 
 The process was carried out with constant reference to a number of
 grammars and lexica, including BDAG, Thayer, Strong's, Abbott-Smith,
@@ -165,12 +163,12 @@ Website
 
 This text has a website:
 
-http://morphgnt.org/projects/tischendorf
+http://morphgnt.org/
 
 
 
 Ulrik Sandborg-Petersen
-Aalborg, April 2010
+Aalborg, January, 2013
 
 
 
@@ -317,3 +315,9 @@ v 2.7 (2011-09-26)
    - Luke 19:1 is now a chapter boundary (it was a paragraph boundary
      in Version 2.6).
 
+v 2.8 (2013-01-23)
+   - Update to latest Westcott-Hort base analysis from 2012-10-03.
+   - Correct assignment of ANLEX lemmas in 99 places, where Strong's
+     is not sufficient.
+   - Changes in some 166 words.
+  

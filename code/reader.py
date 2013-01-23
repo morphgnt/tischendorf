@@ -1,5 +1,6 @@
 from book import Book
 from strongsmapping import StrongsMapping
+from form_tag_lemma_dict import FormTagLemmaDict
 from lexicon import Lexicon
 from kind import *
 from word import *
@@ -152,6 +153,14 @@ class Reader:
     def applyMappings(self):
         self.applyMappingStrongs()
         self.applyMappingANLEX()
+
+    def applyANLEXLemmaDictionary(self, form_tag_lemma_filename):
+        ftl_dict = FormTagLemmaDict(form_tag_lemma_filename)
+        self.applyFormTagLemmaDict(ftl_dict)
+
+    def applyFormTagLemmaDict(self, ftl_dict):
+        for index in range(0,len(self.books)):
+            self.books[index].applyFormTagLemmaDict(ftl_dict)
 
     def read_book(self, bookname, read_what):
         if self.suffix == "":

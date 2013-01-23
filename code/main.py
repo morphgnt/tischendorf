@@ -169,6 +169,7 @@ def read_Tischendorf_WH_compare_them():
     #lexicon = trstephrd.produceLexicon(lexicon)
     whrd.compareTischendorf(tischrd, lexicon, ma)
     tischrd.applyMappings()    
+    tischrd.applyANLEXLemmaDictionary("../text/lemmas/nonstrongs_forms_tags_lemmas.txt")
     tischrd.writeBooks_MORPH_style(tisch_out_basedir, "TSP", kind.kBETA)
     lexicon = whrd.lexicon
     lexicon.writeLexicon("lexicon_nonunique.txt", False)

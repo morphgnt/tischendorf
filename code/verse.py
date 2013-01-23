@@ -79,7 +79,7 @@ class Verse:
 
         # Get rid of Zero Strong's
         if text_zerostrongs_re.search(overall_line) != None:
-            overall_line = text_zerostrongs_re.sub(r' \1 ', overall_line)
+            overall_line = text_zerostrongs_re.sub(r' 0\1 ', overall_line)
 
         if text_variant_strongs_parsing_re.search(overall_line) != None:
             overall_line = text_variant_strongs_parsing_re.sub(r'| \1 \3 | \2 \3 | ', overall_line)

@@ -623,6 +623,11 @@ class Book:
         for w in words:
             w.applyLemma(mapping, lemma_kind)
 
+    def applyFormTagLemmaDict(self, ftl_dict):
+        words = self.getWords()
+        for w in words:
+            w.applyFormTagLemmaDict(ftl_dict)
+
     def getVerseCopy(self, whverse):
         ref = whverse.getRef()
         mylist = self.verse_dict[ref]

@@ -436,6 +436,8 @@ class Word:
         self.alt_parsing = ""
         self.Strongs1 = -1
         self.Strongs2 = -1
+        self.Strongs1_has_zero = False
+        self.bFormTagLemmaDictUsed = False
         self.alt_Strongs1 = -1
         self.alt_Strongs2 = -1
         self.altlemma = ""
@@ -482,6 +484,14 @@ class Word:
             self.Strongs1 = strongs
         else:
             self.Strongs1 = int(strongs)
+
+    def applyFormTagLemmaDict(self, ftl_dict):
+        beta_surface = OLBtoBETAtranslate(self.surface)
+        anlex_lemma = ftl_dict.getLemma(beta_surface, self.parsing)
+        if anlex_lemma != None:
+            self.ANLEXlemma = anlex_lemma
+            self.Strongs1_has_zero = True
+            self.bFormTagLemmaDictUsed = True
 
     def applyLemma(self, mapping, lemma_kind):
         strongs = self.getStrongs()
@@ -672,6 +682,9 @@ class Word:
 		kind = recognize(words[index])
 		if kind == kind_number:
 		    self.Strongs1 = int(self.parseStrongs(words[index]))
+                    if words[index][0] == '0':
+                        self.Strongs1_has_zero = True
+
 		    state = state_strongs1
 		    # In Romans, the text "[tou 3588]" occurs.
 		    if self.surface[0] == '[' and words[index][-1] == ']':
@@ -1005,6 +1018,7 @@ class Word:
         if self.hasNoAnalysis():
             self.parsing = whword.parsing
             self.Strongs1 = whword.Strongs1
+
             # FIXME: Should we add whword.Strongs2?
 
     def write_MORPH_style(self, f, base_ref, index, bPrintLemma, encodingStyle):
@@ -1020,6 +1034,9 @@ class Word:
             strongs = str(self.Strongs1)
         else:
             strongs = "%s&%s" % (str(self.Strongs1), str(self.Strongs2))
+        #if self.Strongs1_has_zero:
+        #    strongs = "0" + strongs
+
         if self.accented_surface != "":
             surf = self.accented_surface
         else:

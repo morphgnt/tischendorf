@@ -48,8 +48,12 @@ class StrongsMapping:
                 lemma = self.strongs2lemma_single[strongs_single]
                 self.strongs2lemma_additions[strongs] = lemma
             except KeyError:
-                lemma = ""
-                print "UP256: strongs missing: %s" % strongs_single
+                try:
+                    lemma = self.strongs2lemma_single[str(int(strongs_single))]
+                    self.strongs2lemma_additions[strongs] = lemma
+                except KeyError:
+                    lemma = ""
+                    print "UP256: strongs missing: %s" % strongs_single
             return lemma
 
     def getSingleNumberKeys(self):
