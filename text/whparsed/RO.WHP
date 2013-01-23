@@ -447,7 +447,7 @@
  autou 846 {P-GSM} aimati 129 {N-DSN} eiv 1519 {PREP} endeixin 1732
  {N-ASF} thv 3588 {T-GSF} dikaiosunhv 1343 {N-GSF} autou 846 {P-GSM}
  dia 1223 {PREP} thn 3588 {T-ASF} paresin 3929 {N-ASF} twn 3588
- {T-GPN} progegonotwn 4266 5761 {V-RAP-GPN} amarthmatwn 265 {N-GPN}
+ {T-GPN} progegonotwn 4266 5756 {V-2RAP-GPN} amarthmatwn 265 {N-GPN}
 3:26 en 1722 {PREP} th 3588 {T-DSF} anoch 463 {N-DSF} tou 3588
  {T-GSM} yeou 2316 {N-GSM} prov 4314 {PREP} thn 3588 {T-ASF} endeixin
  1732 {N-ASF} thv 3588 {T-GSF} dikaiosunhv 1343 {N-GSF} autou 846
@@ -1188,7 +1188,7 @@
  {V-PAI-3S} | [o 3588 {T-NSM} yeov] 2316 {N-NSM} | | eiv 1519 {PREP}
  agayon 18 {A-ASN} toiv 3588 {T-DPM} kata 2596 {PREP} proyesin 4286
  {N-ASF} klhtoiv 2822 {A-DPM} ousin 1510 5723 {V-PAP-DPM}
-8:29 oti 3754 {CONJ} ouv 3739 {R-APM} proegnw 4267 5656 {V-AAI-3S}
+8:29 oti 3754 {CONJ} ouv 3739 {R-APM} proegnw 4267 5627 {V-2AAI-3S}
  kai 2532 {CONJ} prowrisen 4309 5656 {V-AAI-3S} summorfouv 4832
  {A-APM} thv 3588 {T-GSF} eikonov 1504 {N-GSF} tou 3588 {T-GSM} uiou
  5207 {N-GSM} autou 846 {P-GSM} eiv 1519 {PREP} to 3588 {T-ASN} einai
@@ -1381,7 +1381,7 @@
  3588 {T-ASF} ouk 3756 {PRT-N} hgaphmenhn 25 5772 {V-RPP-ASF}
  hgaphmenhn 25 5772 {V-RPP-ASF}
 9:26 kai 2532 {CONJ} estai 1510 5695 {V-FDI-3S} en 1722 {PREP} tw
- 3588 {T-DSM} topw 5117 {N-DSM} ou 3739 {R-GSM} erreyh 2046 5681
+ 3588 {T-DSM} topw 5117 {N-DSM} ou 3757 {ADV} erreyh 2046 5681
  {V-API-3S} | [autoiv] 846 {P-DPM} | autoiv 846 {P-DPM} | ou 3756
  {PRT-N} laov 2992 {N-NSM} mou 1473 {P-1GS} umeiv 4771 {P-2NP} ekei
  1563 {ADV} klhyhsontai 2564 5701 {V-FPI-3P} uioi 5207 {N-NPM} yeou
@@ -1550,7 +1550,7 @@
  {N-GSF} | beniamein | beniamin | 958 {N-PRI}
 11:2 ouk 3756 {PRT-N} apwsato 683 5662 {V-ADI-3S} o 3588 {T-NSM} yeov
  2316 {N-NSM} ton 3588 {T-ASM} laon 2992 {N-ASM} autou 846 {P-GSM} on
- 3739 {R-ASM} proegnw 4267 5656 {V-AAI-3S} h 2228 {PRT} ouk 3756
+ 3739 {R-ASM} proegnw 4267 5627 {V-2AAI-3S} h 2228 {PRT} ouk 3756
  {PRT-N} oidate 1492 5758 {V-RAI-2P} en 1722 {PREP} hlia 2243 {N-DSM}
  ti 5101 {I-ASN} legei 3004 5719 {V-PAI-3S} h 3588 {T-NSF} grafh 1124
  {N-NSF} wv 5613 {ADV} entugcanei 1793 5719 {V-PAI-3S} tw 3588
@@ -2006,7 +2006,7 @@
  {V-RPI-1S} en 1722 {PREP} kuriw 2962 {N-DSM} ihsou 2424 {N-DSM} oti
  3754 {CONJ} ouden 3762 {A-NSN-N} koinon 2839 {A-NSN} di 1223 {PREP}
  eautou 1438 {F-3GSM} ei 1487 {COND} mh 3361 {PRT-N} tw 3588 {T-DSM}
- logizomenw 3049 5740 {V-PNP-DSM} ti 5100 {X-ASN} koinon 2839 {A-ASN}
+ logizomenw 3049 5740 {V-PNP-DSM} ti 5100 {X-NSN} koinon 2839 {A-NSN}
  einai 1510 5721 {V-PAN} ekeinw 1565 {D-DSM} koinon 2839 {A-NSN}
 14:15 ei 1487 {COND} gar 1063 {CONJ} dia 1223 {PREP} brwma 1033
  {N-ASN} o 3588 {T-NSM} adelfov 80 {N-NSM} sou 4771 {P-2GS} lupeitai

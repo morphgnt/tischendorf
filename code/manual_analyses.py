@@ -18,7 +18,11 @@ class ManualAnalyses:
         mysurface = myarr[2]
         mytag = myarr[3]
         mystrongs = myarr[4]
-        mytuple = tuple((mysurface, mytag, mystrongs))
+        if len(myarr) > 5:
+            myanlex_lemma = " ".join(myarr[5:])
+            mytuple = tuple((mysurface, mytag, mystrongs, myanlex_lemma))
+        else:
+            mytuple = tuple((mysurface, mytag, mystrongs))
 
         try:
             self.mydict[myref]

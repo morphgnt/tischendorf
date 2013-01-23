@@ -1,4 +1,4 @@
-1:1 o 3739 {R-ASN} hn 1510 5707 {V-IAI-3S} ap 575 {PREP} archv 746
+1:1 o 3739 {R-NSN} hn 1510 5707 {V-IAI-3S} ap 575 {PREP} archv 746
  {N-GSF} o 3739 {R-ASN} akhkoamen 191 5754 {V-2RAI-1P-ATT} o 3739
  {R-ASN} ewrakamen 3708 5758 {V-RAI-1P-ATT} toiv 3588 {T-DPM}
  ofyalmoiv 3788 {N-DPM} hmwn 1473 {P-1GP} o 3739 {R-ASN} eyeasameya
@@ -540,9 +540,9 @@
  ecei 2192 5719 {V-PAI-3S} o 3588 {T-NSM} de 1161 {CONJ} foboumenov
  5399 5740 {V-PNP-NSM} ou 3756 {PRT-N} teteleiwtai 5048 5769
  {V-RPI-3S} en 1722 {PREP} th 3588 {T-DSF} agaph 26 {N-DSF}
-4:19 hmeiv 1473 {P-1NP} agapwmen 25 5719 {V-PAI-1P} 25 5725
- {V-PAS-1P} oti 3754 {CONJ} autov 846 {P-NSM} prwtov 4413 {A-NSM-S}
- hgaphsen 25 5656 {V-AAI-3S} hmav 1473 {P-1AP}
+4:19 hmeiv 1473 {P-1NP} agapwmen 25 5719 {V-PAI-1P} oti 3754 {CONJ}
+ autov 846 {P-NSM} prwtov 4413 {A-NSM-S} hgaphsen 25 5656 {V-AAI-3S}
+ hmav 1473 {P-1AP}
 4:20 ean 1437 {COND} tiv 5100 {X-NSM} eiph 3004 5632 {V-2AAS-3S} oti
  3754 {CONJ} agapw 25 5719 {V-PAI-1S} ton 3588 {T-ASM} yeon 2316
  {N-ASM} kai 2532 {CONJ} ton 3588 {T-ASM} adelfon 80 {N-ASM} autou
