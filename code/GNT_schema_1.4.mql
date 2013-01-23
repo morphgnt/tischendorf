@@ -228,6 +228,7 @@ HAVING UNIQUE FIRST MONADS
    psp : psp_t;
    case : case_t;
    number : number_t;
+   possessor_number : number_t;
    gender : gender_t;
    suffix : suffix_t;
    tense  : tense_t;
