@@ -7,8 +7,7 @@ with morphology, Strong's numbers, and lemmatization.
 
 Dr. Ulrik Sandborg-Petersen of Scripture Systems Aps, Denmark.
 
-With qmountains of help from G. Clint Yale and Dr. Maurice
-A. Robinson.
+With mountains of help from G. Clint Yale and Dr. Maurice A. Robinson.
 
 ## Website
 
