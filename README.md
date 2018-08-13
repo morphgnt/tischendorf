@@ -15,9 +15,14 @@ http://morphgnt.org/
 
 ## Downloads
 
-Please see the following GitHub project:
+https://github.com/morphgnt/tischendorf/downloads
 
-https://github.com/morphgnt/tischendorf-data
+## What's this repo?
+
+This repo is the development repo, also containing downloads.  The
+data is published in release form in the following GitHub repo:
+
+https://github.com/morphgnt/tischendorf-data/
 
 ## Status
 
