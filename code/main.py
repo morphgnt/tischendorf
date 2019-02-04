@@ -142,7 +142,7 @@ def read_TSP_writeOSIS():
     rd = read_TSP()
     rd.applyLemma(kind.kANLEX)
     rd.parse_sentences_and_clauses()
-    rd.write_OSIS("tischendorfmorph.osis.xml")
+    rd.write_OSIS("tischendorfmorph.OSIS.xml")
     return rd
 
 def read_TSP_writeSFM():
@@ -250,5 +250,5 @@ def parseTischendorfBETA():
 #read_Tischendorf_WH_Matthew_compare_them()
 read_Tischendorf_WH_compare_them()
 read_TSP_writeTUP()
-read_TSP_writeMQL()
-#read_TSP_writeOSIS()
+#read_TSP_writeMQL()
+read_TSP_writeOSIS()
