@@ -4501,3 +4501,9 @@ Today I:
 
 - The update to latest W-H resulted in some 700 corrections.
 
+- Added osisCore.2.1.1.xsd to GitHub.
+
+- Update OSIS XML ouput so that it validates against
+  osisCore.2.1.1.xsd.
+
+
