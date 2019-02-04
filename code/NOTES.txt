@@ -4478,3 +4478,23 @@ Today I:
 
 - Added a level of clauses.
 
+2019-02-04
+
+Today I:
+
+- Added the missing Python file, form_tag_lemma_dict.py, to GitHub.
+
+- Bumped to version 2.8 in the Makefile.
+
+- Update to latest UWH Westcott-Hort from
+
+  https://github.com/byztxt/greektext-westcott-hort/parsed
+
+- Translate 'q' to 'y' and 'y' to 'q' in ../texts/unparsed/.  Now
+  unaccented Tischendorf is in conformanc with latest Westcott-Hort.
+
+- Swap 'y' and 'q' in word.py.
+
+- Add the following to manual_analyses.txt:
+
+  +1CO 15:54.10 QNHTON A-NSN 2349
