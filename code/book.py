@@ -554,9 +554,9 @@ class Book:
                 if index == 0:
                     osisIDVerse = "%s.%s.%s" % (self.OSISBook, chapter, verse)
 
-                    f.write("""\n<verse osisID="%s" sID="%s"/>""" % (osisIDVerse, osisIDVerse))
+                    f.write("""<verse osisID="%s" sID="%s"/>""" % (osisIDVerse, osisIDVerse))
 
-                f.write("""<w lemma="strong:G%s" morph="robinson:%s">%s</w> """ % (w.Strongs1, w.parsing, w.beta2utf8(w.qere)))
+                f.write("""<w lemma="strong:G%s lemma:%s" morph="robinson:%s">%s</w> """ % (w.Strongs1, w.beta2utf8(w.ANLEXlemma), w.parsing, w.beta2utf8(w.qere)))
 
                 if index == len(words)-1:
                     f.write("""<verse eID="%s"/>""" % osisIDVerse)
