@@ -113,7 +113,7 @@ class Reader:
         fout.write("""<?xml version='1.0' encoding='utf-8' ?>
 <osis xmlns="http://www.bibletechnologies.net/2003/OSIS/namespace"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.bibletechnologies.net/osisCore.2.0.xsd">
+      xsi:schemaLocation="http://www.bibletechnologies.net/osisCore.2.1.1.xsd">
 <osisText osisIDWork="GK.TischNT" osisRefWork="NA" xml:lang="gk">
 <header>
 <work osisWork="GK.TischNT">
