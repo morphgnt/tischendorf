@@ -518,46 +518,49 @@ class Book:
 
         running_chapter = 0
 
-        words = []
+        prev_chapter = 0
+        prev_verse = 0
+
         for v in self.verses:
+            words = []
             for w in v.words:
                 words.append((w, v.chapter, v.verse))
 
-        prev_chapter = 0
-        prev_verse = 0
-        for index in xrange(0, len(words)):
-            w = words[index][0]
-            chapter = words[index][1]
-            verse = words[index][2]
+            for index in xrange(0, len(words)):
+                w = words[index][0]
+                chapter = words[index][1]
+                verse = words[index][2]
             
-            if w.break_kind == "C":
-                running_chapter += 1
-                osisIDChapter = "%s.%s" % (self.OSISBook, running_chapter)
-                if prev_chapter != 0:
-                    f.write("""</p>
+                if w.break_kind == "C":
+                    running_chapter += 1
+                    osisIDChapter = "%s.%s" % (self.OSISBook, running_chapter)
+                    if prev_chapter != 0:
+                        f.write("""</p>
 
 </chapter>""")
-                f.write("""<chapter osisID="%s">
+                    f.write("""<chapter osisID="%s">
 
 <p>
 """ % osisIDChapter)
-                pass
-            elif w.break_kind == "P":
-                f.write("""</p>
+                    pass
+                elif w.break_kind == "P":
+                    f.write("""</p>
 
 <p>""")
 
-            if prev_chapter != chapter:
-                prev_chapter = chapter
+                if prev_chapter != chapter:
+                    prev_chapter = chapter
     
-            if prev_verse != verse: 
-                osisIDVerse = "%s.%s.%s" % (self.OSISBook, chapter, verse)
+                if index == 0:
+                    osisIDVerse = "%s.%s.%s" % (self.OSISBook, chapter, verse)
 
-                f.write("""\n<verse osisID="%s"/>""" % osisIDVerse)
+                    f.write("""\n<verse osisID="%s" sID="%s"/>""" % (osisIDVerse, osisIDVerse))
 
-                prev_verse = verse
+                f.write("""%s """ % w.beta2utf8(w.qere))
 
-            f.write("""%s """ % w.beta2utf8(w.qere))
+                if index == len(words)-1:
+                    f.write("""<verse eID="%s"/>""" % osisIDVerse)
+
 
         f.write("""</p>
 </chapter></div>""")
