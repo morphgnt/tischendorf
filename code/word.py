@@ -25,12 +25,16 @@ state_alt_strongs3 = 8
 state_alt_parsing = 9
 
 
-OLBtoBETAtrans = string.maketrans("abgdezhyiklmnxoprsvtufcqw", "ABGDEZHQIKLMNCOPRSSTUFXYW")
-OLBtoGALATIAtrans = string.maketrans("abgdezhyiklmnxoprsvtufcqw", "abgdezjqiklmnxoprsvtufcyw")
+# Old OLB: y = theta, q = phi
+#OLBtoBETAtrans = string.maketrans("abgdezhyiklmnxoprsvtufcqw", "ABGDEZHQIKLMNCOPRSSTUFXYW")
+
+# New OLB: q = phi, y = theta
+OLBtoBETAtrans = string.maketrans("abgdezhqiklmnxoprsvtufcyw", "ABGDEZHQIKLMNCOPRSSTUFXYW")
+OLBtoGALATIAtrans = string.maketrans("abgdezhqiklmnxoprsvtufcyw", "abgdezjqiklmnxoprsvtufcyw")
 BETAtoGALATIAtrans = string.maketrans("ABGDEZHQIKLMNCOPRSSTUFXYW", "abgdezjqiklmnxoprsvtufcyw")
 MixedCaseBETAtoBETAtrans = string.maketrans("AaBbGgDdEeZzHhQqIiKkLlMmNnCcOoPpRrSsJjTtUuFfXxYyWw", "AABBGGDDEEZZHHQQIIKKLLMMNNCCOOPPRRSSSSTTUUFFXXYYWW")
 
-BETAtoOLBtrans = string.maketrans("ABGDEZHQIKLMNCOPRSTUFXYW", "abgdezhyiklmnxoprstufcqw")
+BETAtoOLBtrans = string.maketrans("ABGDEZHQIKLMNCOPRSTUFXYW", "abgdezhqiklmnxoprstufcyw")
 
 
 
