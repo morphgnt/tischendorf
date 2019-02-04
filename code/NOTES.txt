@@ -4498,3 +4498,6 @@ Today I:
 - Add the following to manual_analyses.txt:
 
   +1CO 15:54.10 QNHTON A-NSN 2349
+
+- The update to latest W-H resulted in some 700 corrections.
+
