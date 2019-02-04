@@ -8,6 +8,7 @@ FULLZIPDIR = $(ZIPDIRPREFIX)/$(ZIPDIR)
 
 CLEANFILES = out.txt *~ *.pyc *.TD2 *.TSP *.TUP \
              $(DERIVED_MQLFILES) $(DERIVED_TXTFILES) \
+             tischendorfmorph.OSIS.xml \
              README.txt 
 
 DERIVED_MQLFILES = Byzantine.mql Stephens.mql \
