@@ -37,14 +37,14 @@ which was constructed on an as-needed basis.  Finally, numerous checks
 were made, using the linguistic search engine called "Emdros",
 followed by manual correction where necessary.
 
-The text has a homepage here:
+The can be found here:
 
-http://morphgnt.org/
+https://github.com/morphgnt/tischendorf-data/
 
 The editor welcomes feedback on the text and its analysis.  You can
 contact him at:
 
-ulrikp[a-t]emergence|do-t]dk
+ulrikp[a-t]emdros|do-t]org
 
 
 Ulrik Sandborg-Petersen

@@ -161,14 +161,18 @@ ulrikp<write-the-sign>emdros.org
 Website
 =======
 
-This text has a website:
+This text can be found on GitHub:
 
-http://morphgnt.org/
+https://github.com/morphgnt/tischendorf-data
+
+and
+
+https://github.com/morphgnt/tischendorf
 
 
 
 Ulrik Sandborg-Petersen
-Aalborg, January, 2013
+Aalborg, February, 2019
 
 
 
@@ -315,9 +319,10 @@ v 2.7 (2011-09-26)
    - Luke 19:1 is now a chapter boundary (it was a paragraph boundary
      in Version 2.6).
 
-v 2.8 (2013-01-23)
-   - Update to latest Westcott-Hort base analysis from 2012-10-03.
+v 2.8 (2019-01-05)
+   - Update to latest Westcott-Hort base analysis from 2017.
    - Correct assignment of ANLEX lemmas in 99 places, where Strong's
      is not sufficient.
-   - Changes in some 166 words.
+   - Changes in some 700 words.
+   - Also emit OSIS XML.
   
