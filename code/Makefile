@@ -50,6 +50,9 @@ cleantisch:
 
 tischclean: cleantisch
 
+copy: RE.TSP
+	cp *.TSP ../text/parsed/
+
 UnAccented: RE.TSP
 	rm -rf UnAccented
 	mkdir UnAccented
