@@ -1,4 +1,4 @@
-VERSION = 2.7
+VERSION = 2.8
 ZIPFILES = BETA/ Unicode/ README.txt
 ZIPFILE = /tmp/Tischendorf-$(VERSION).zip
 MQLZIPFILE = /tmp/Tischendorf8th_$(VERSION)_MQL.zip
