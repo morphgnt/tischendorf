@@ -119,7 +119,7 @@ class Reader:
 <work osisWork="GK.TischNT">
     <title>Tischendorf's 8th Greek New Testament</title>
     <date event="original" type="Gregorian">1868</date>
-    <date event="eversion" type="Gregorian">2009</date>
+    <date event="eversion" type="Gregorian">2019</date>
     <type type="x-bible">Bible</type>
     <language type="ISO-639-2">GK</language>
     <rights>Public Domain. Copy freely.</rights>
