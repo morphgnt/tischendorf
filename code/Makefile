@@ -1,5 +1,5 @@
 VERSION = 2.8
-ZIPFILES = BETA/ Unicode/ README.txt
+ZIPFILES = BETA/ Unicode/ README.txt OSISXML/
 ZIPFILE = /tmp/Tischendorf-$(VERSION).zip
 MQLZIPFILE = /tmp/Tischendorf8th_$(VERSION)_MQL.zip
 ZIPDIR = Tischendorf-$(VERSION)
@@ -60,12 +60,14 @@ UnAccented: RE.TSP
 Accented: Accented/RE.SLN
 	for f in Accented/*.SLN; do cat $$f | sed -e 's/\([0-9]\+\).[a-z]/\1/' > /tmp/SLN; mv /tmp/SLN $$f; done
 
-zip: ../text/parsed/README.txt ../text/parsed/README-short.txt ../text/parsed/parsing.txt ./RE.TUP
+zip: ../text/parsed/README.txt ../text/parsed/README-short.txt ../text/parsed/parsing.txt ./RE.TUP tischendorfmorph.OSIS.xml
 	rm -f  $(ZIPFILE)
 	rm -rf $(FULLZIPDIR)
 	mkdir -p $(FULLZIPDIR)/BETA
 	mkdir -p $(FULLZIPDIR)/Unicode
+	mkdir -p $(FULLZIPDIR)/OSISXML
 	cp -p ../text/parsed/README.txt ../text/parsed/README-short.txt ../text/parsed/parsing.txt $(FULLZIPDIR)
+	cp -p tischendorfmorph.OSIS.xml osisCore.2.1.1.xsd $(FULLZIPDIR)/OSISXML/ 
 	for f in ./*.TSP; do NN=`echo $$f | sed -e 's/TSP/txt/g;s_../text/parsed/__g'`; cp $$f $(FULLZIPDIR)/BETA/$$NN; done
 	for f in ./*.TUP; do NN=`echo $$f | sed -e 's/TUP/txt/g'`; cp $$f $(FULLZIPDIR)/Unicode/$$NN; done
 	dos2unix $(FULLZIPDIR)/BETA/*.txt $(FULLZIPDIR)/Unicode/*.txt
