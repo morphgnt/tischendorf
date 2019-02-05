@@ -4514,3 +4514,4 @@ Today I:
 - Added convert.py and booknames.py, thereby making this a
   self-contained project.
 
+- Released version 2.8.
