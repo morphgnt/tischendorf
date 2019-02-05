@@ -50,8 +50,9 @@ cleantisch:
 
 tischclean: cleantisch
 
-copy: RE.TSP
+copy: RE.TSP tischendorfmorph.OSIS.xml
 	cp *.TSP ../text/parsed/
+	cp tischendorfmorph.OSIS.xml ../text/osisxml/
 
 UnAccented: RE.TSP
 	rm -rf UnAccented
