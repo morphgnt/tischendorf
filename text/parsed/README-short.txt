@@ -37,9 +37,9 @@ which was constructed on an as-needed basis.  Finally, numerous checks
 were made, using the linguistic search engine called "Emdros",
 followed by manual correction where necessary.
 
-The can be found here:
+The website is at:
 
-https://github.com/morphgnt/tischendorf-data/
+http://morphgnt.org/
 
 The editor welcomes feedback on the text and its analysis.  You can
 contact him at:
