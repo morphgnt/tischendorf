@@ -2,10 +2,10 @@ import string
 from variant import *
 from kind import *
 import re
-from gnt import convert
+import convert
 import rptag
 from lexicon import Lexicon
-from gnt import booknames
+import booknames
 import unicodedata
 
 #state_surface = 0
