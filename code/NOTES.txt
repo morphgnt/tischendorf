@@ -4507,3 +4507,10 @@ Today I:
   osisCore.2.1.1.xsd.
 
 
+2019-02-05
+
+Today I:
+
+- Added convert.py and booknames.py, thereby making this a
+  self-contained project.
+
