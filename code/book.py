@@ -564,6 +564,52 @@ class Book:
         f.write("""</p>
 </chapter></div>""")
 
+    def writeJSON(self, f):
+        if self.LongEnglishBook != 'Matthew':
+            f.write( """,\n""" )
+        f.write(""""%s": [""" % (self.LongEnglishBook))
+
+        running_chapter = 0
+
+        prev_chapter = 0
+        prev_verse = 0
+
+        for v in self.verses:
+            words = []
+            for w in v.words:
+                words.append((w, v.chapter, v.verse))
+
+            for index in xrange(0, len(words)):
+                w = words[index][0]
+                chapter = words[index][1]
+                verse = words[index][2]
+
+                if w.break_kind == "C":
+                    running_chapter += 1
+                    if prev_chapter != 0:
+                        f.write("""],\n""")
+                    f.write("""[""")
+                    pass
+
+                if prev_chapter != chapter:
+                    prev_chapter = chapter
+
+                if index == 0:
+                    if verse != 1:
+                        f.write(""",\n""")
+                    f.write("""[""")
+
+                f.write("""["%s","G%s","%s"]""" % (w.beta2utf8(w.qere, w.Strongs1, w.parsing))
+                # for removing accents: f.write("""["%s","G%s","%s"]""" % (w.beta2utf8(w.remove_accents()), w.Strongs1, w.parsing))
+
+                if index != len(words)-1:
+                    f.write(""",""")
+
+                if index == len(words)-1:
+                    f.write("""]""")
+
+        f.write("""] ]""")
+
     def writeSFM(self, f, cur_monad):
         for v in self.verses:
             cur_monad = v.writeSFM(f, cur_monad)
