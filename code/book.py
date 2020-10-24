@@ -272,7 +272,7 @@ class Book:
         for line in lines:
             line = line.replace("\r", "").replace("\n", "")
             myarr = line.split(" ")
-            [mybook, mychapterverse, mybreak_kind, mysurface, myqere, mytag, mystrongs] = myarr[0:7]            
+            [mybook, mychapterverse, mybreak_kind, mysurface, myqere, mytag, mystrongs] = myarr[0:7]
             strongslemma = ""
             ANLEXlemma = ""
             [strongslemma, ANLEXlemma] = " ".join(myarr[7:]).split(" ! ")
@@ -312,12 +312,12 @@ class Book:
         w.ANLEXlemma = ANLEXlemma
         self.verses[-1].words.append(w)
         self.verses[-1].last_monad = self.end_monad
-        
+
 
     def open_file(self):
         f = open(self.filename, "r")
         return f
-            
+
     def parse_lines(self, lines, read_what):
         verse_lines = []
         for ln in lines:
@@ -418,7 +418,7 @@ class Book:
 		if ending_monad != self.end_monad:
 		    self.sentences.append(Sentence(ending_monad+1))
 
-	# End the last sentence if the last word of the book 
+	# End the last sentence if the last word of the book
 	# did not have an end-of-sentence punctuation
 	if self.sentences[-1].ending_monad != self.end_monad:
 	    self.sentences[-1].set_ending_monad(self.end_monad)
@@ -442,7 +442,7 @@ class Book:
 		    self.clauses.append(Clause(ending_monad+1))
                 bHasSeenVerb = False
 
-	# End the last clause if the last word of the book 
+	# End the last clause if the last word of the book
 	# did not have an end-of-clause punctuation
 	if self.clauses[-1].ending_monad != self.end_monad:
 	    self.clauses[-1].set_ending_monad(self.end_monad)
@@ -530,7 +530,7 @@ class Book:
                 w = words[index][0]
                 chapter = words[index][1]
                 verse = words[index][2]
-            
+
                 if w.break_kind == "C":
                     running_chapter += 1
                     osisIDChapter = "%s.%s" % (self.OSISBook, running_chapter)
@@ -549,7 +549,7 @@ class Book:
 
                 if prev_chapter != chapter:
                     prev_chapter = chapter
-    
+
                 if index == 0:
                     osisIDVerse = "%s.%s.%s" % (self.OSISBook, chapter, verse)
 
@@ -579,6 +579,10 @@ class Book:
             for w in v.words:
                 words.append((w, v.chapter, v.verse))
 
+            if v.verse > prev_verse+1:
+                f.write(""",\n[]""")
+            prev_verse = v.verse
+
             for index in xrange(0, len(words)):
                 w = words[index][0]
                 chapter = words[index][1]
@@ -599,8 +603,8 @@ class Book:
                         f.write(""",\n""")
                     f.write("""[""")
 
-                f.write("""["%s","G%s","%s"]""" % (w.beta2utf8(w.qere, w.Strongs1, w.parsing))
-                # for removing accents: f.write("""["%s","G%s","%s"]""" % (w.beta2utf8(w.remove_accents()), w.Strongs1, w.parsing))
+                f.write("""["%s","G%s","%s"]""" % (w.beta2utf8(w.qere), w.Strongs1, w.parsing) )
+                #f.write("""["%s","G%s","%s"]""" % (w.beta2utf8(w.remove_accents()), w.Strongs1, w.parsing))
 
                 if index != len(words)-1:
                     f.write(""",""")
@@ -641,7 +645,7 @@ class Book:
         for tischverse in self.verses:
             verse_copy = self.getVerseCopy(tischverse)
             tischverse.addNonParseTischWords(verse_copy, lexicon, manualanalyses)
-        
+
 
     def addToLexicon(self, lexicon):
         for whverse in self.verses:
@@ -701,7 +705,7 @@ class Book:
     def write_subset_MORPH_style(self, f, word_predicate, manualanalyses, encodingStyle):
         for whverse in self.verses:
             whverse.write_subset_MORPH_style(f, self.getVerseCopy(whverse), word_predicate, manualanalyses, encodingStyle)
-            
+
     def write_StrippedLinear(self, filename):
         self.addVersesToVerseDict()
         f = open(filename, "w")
