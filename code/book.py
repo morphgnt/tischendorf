@@ -564,10 +564,25 @@ class Book:
         f.write("""</p>
 </chapter></div>""")
 
+    def convertNamesToOsisStandard(self, name):
+        name = name.replace('1 Corinthians','I Corinthians')
+        name = name.replace('2 Corinthians','II Corinthians')
+        name = name.replace('1 Thessalonians','I Thessalonians')
+        name = name.replace('2 Thessalonians','II Thessalonians')
+        name = name.replace('1 Timothy','I Timothy')
+        name = name.replace('2 Timothy','II Timothy')
+        name = name.replace('1 Peter','I Peter')
+        name = name.replace('2 Peter','II Peter')
+        name = name.replace('1 John','I John')
+        name = name.replace('2 John','II John')
+        name = name.replace('3 John','III John')
+        name = name.replace('Revelation','Revelation of John')
+        return name
+
     def writeJSON(self, f):
         if self.LongEnglishBook != 'Matthew':
             f.write( """,\n""" )
-        f.write(""""%s": [""" % (self.LongEnglishBook))
+        f.write(""""%s": [""" % (self.convertNamesToOsisStandard(self.LongEnglishBook)))
 
         running_chapter = 0
 
@@ -579,24 +594,19 @@ class Book:
             for w in v.words:
                 words.append((w, v.chapter, v.verse))
 
-            if v.verse > prev_verse+1:
+            if v.verse > prev_verse + 1:
                 f.write(""",\n[]""")
-            prev_verse = v.verse
 
             for index in xrange(0, len(words)):
                 w = words[index][0]
-                chapter = words[index][1]
-                verse = words[index][2]
-
-                if w.break_kind == "C":
-                    running_chapter += 1
-                    if prev_chapter != 0:
-                        f.write("""],\n""")
-                    f.write("""[""")
-                    pass
+                chapter = v.chapter
+                verse = v.verse
 
                 if prev_chapter != chapter:
+                    if prev_chapter != 0:
+                        f.write("""],\n""")
                     prev_chapter = chapter
+                    f.write("""[""")
 
                 if index == 0:
                     if verse != 1:
@@ -611,6 +621,8 @@ class Book:
 
                 if index == len(words)-1:
                     f.write("""]""")
+
+            prev_verse = v.verse
 
         f.write("""] ]""")
 
