@@ -145,6 +145,13 @@ def read_TSP_writeOSIS():
     rd.write_OSIS("tischendorfmorph.OSIS.xml")
     return rd
 
+def read_TSP_writeJSON():
+    rd = read_TSP()
+    rd.applyLemma(kind.kANLEX)
+    rd.parse_sentences_and_clauses()
+    rd.write_JSON("tischendorfmorph.OSIS.json")
+    return rd
+
 def read_TSP_writeSFM():
     rd = read_TSP()
     rd.applyLemma(kind.kANLEX)
@@ -252,3 +259,4 @@ read_Tischendorf_WH_compare_them()
 read_TSP_writeTUP()
 #read_TSP_writeMQL()
 read_TSP_writeOSIS()
+read_TSP_writeJSON()

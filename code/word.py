@@ -651,6 +651,9 @@ class Word:
         self.surface = RemoveAccents(OLB)
         self.qere_noaccents = RemoveAccents(BETAtoOLBtranslate(self.qere))
 
+    def remove_accents(self):
+        return RemoveAccents(self.qere)
+
     def parse(self, index, words):
 	"""Parses up to the end of this word. Returns the index that points
 	one after the end of the word."""

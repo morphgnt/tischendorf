@@ -135,6 +135,16 @@ class Reader:
         fout.write("""</div></osisText></osis>""")
         fout.close()
 
+    def write_JSON(self, osisfilename):
+        fout = open(osisfilename, "w")
+        fout.write("""{"version": "TISCH", "versionName": "Tischendorf", "meta": {"description": "Tischendorf's 8th Greek New Testament", "source": "https://github.com/morphgnt/tischendorf", "encoding": null, "language": "gk", "license": "Public Domain. Copy freely", "copyright": null}, "books":{""")
+
+        for index in range(0,27):
+            self.books[index].writeJSON(fout)
+
+        fout.write("""} }""")
+        fout.close()
+
 
     def applyLemma(self, lemmaType):
         if lemmaType == kStrongs:

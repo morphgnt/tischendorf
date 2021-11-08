@@ -6,3 +6,4 @@ code/*.TUP
 code/lexicon_nonunique.txt
 code/tischendorfmorph.OSIS.xml
 code/tischlexicon_nonunique.txt
+.DS_Store
